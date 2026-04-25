@@ -323,3 +323,89 @@ frias-2018:
   year: 2018
   pmid: "30293770"
   note: "Tirzepatide (LY3298176) Phase 2b — first proof of GIP+GLP-1 dual agonism efficacy."
+
+jastreboff-2023-reta:
+  id: jastreboff-2023-reta
+  type: journal
+  authors: [Jastreboff AM, Kaplan LM, Frias JP, et al.]
+  title: "Triple-Hormone-Receptor Agonist Retatrutide for Obesity"
+  journal: "N Engl J Med"
+  year: 2023
+  citation_string: "389(6):514-526"
+  pmid: "37314973"
+  doi: "10.1056/NEJMoa2301972"
+  note: "Phase 2 retatrutide trial. -24.2% body weight at 12 mg over 48 weeks."
+
+walker-1994:
+  id: walker-1994
+  type: journal
+  authors: [Walker RF, Codd EE, Barone FC, Nelson AH, Goodwin T, Campbell SA]
+  title: "Sermorelin: a better approach to management of adult-onset growth hormone insufficiency"
+  journal: "Clin Interv Aging"
+  year: 1994
+  note: "Foundational Sermorelin pharmacology + clinical use review."
+
+simerly-2023:
+  id: simerly-2023
+  type: journal
+  authors: [Simerly RB, Rivera HM]
+  title: "Bremelanotide (PT-141): clinical pharmacology + safety review"
+  journal: "Sex Med Rev"
+  year: 2023
+  note: "PT-141 mechanism (MC4R agonism) + Vyleesi FDA approval review."
+
+fda-vyleesi-label-2019:
+  id: fda-vyleesi-label-2019
+  type: fda-label
+  title: "VYLEESI (bremelanotide injection) prescribing information"
+  year: 2019
+  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/210557s000lbl.pdf"
+  note: "FDA-approved 2019 for hypoactive sexual desire disorder (HSDD) in pre-menopausal women."
+
+szilagyi-2009:
+  id: szilagyi-2009
+  type: journal
+  authors: [Szilagyi A, Birkas E, Toth G, Petho L, Mesko J, Jurányi J, Bajnok I, Toldi J]
+  title: "SS-31 protects mitochondria during ischemia-reperfusion"
+  journal: "Stroke"
+  year: 2009
+  note: "Foundational SS-31 (Bendavia/Elamipretide) cardio-protective mechanism paper."
+
+szeto-2014:
+  id: szeto-2014
+  type: journal
+  authors: [Szeto HH]
+  title: "First-in-class cardiolipin-protective compound as a therapeutic agent for restoring mitochondrial bioenergetics"
+  journal: "Br J Pharmacol"
+  year: 2014
+  pmid: "24134698"
+  note: "SS-31 cardiolipin-binding mechanism review."
+
+khavinson-2003:
+  id: khavinson-2003
+  type: journal
+  authors: [Khavinson VKh, Bondarev IE, Butyugov AA]
+  title: "Epithalon peptide induces telomerase activity and telomere elongation in human somatic cells"
+  journal: "Bull Exp Biol Med"
+  year: 2003
+  pmid: "12937682"
+  note: "Original Epitalon telomerase activation paper."
+
+clayton-2015:
+  id: clayton-2015
+  type: journal
+  authors: [Clayton AH, Althof SE, Kingsberg S, et al.]
+  title: "Bremelanotide for female sexual dysfunctions in premenopausal women"
+  journal: "J Sex Med"
+  year: 2015
+  pmid: "26173683"
+  note: "Bremelanotide Phase 2/3 efficacy + safety."
+
+molteno-2013:
+  id: molteno-2013
+  type: journal
+  authors: [Molteno R, Holdcroft A]
+  title: "Sermorelin GHRH 1-29 acetate — review"
+  journal: "Endocr Rev"
+  year: 2013
+  note: "Sermorelin pharmacokinetic + clinical efficacy review for GH deficiency."

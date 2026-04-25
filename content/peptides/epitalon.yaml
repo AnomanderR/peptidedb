@@ -1,0 +1,131 @@
+# =========================================================
+# Epitalon (Epithalon, Epithalamin synthetic analog)
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: epitalon
+name: Epitalon
+peptide_class: Tetrapeptide bioregulator
+classification: Pineal bioregulator · Telomerase activator
+categories: [longevity, anti-aging, telomere, sleep]
+aliases: [Epithalon, "Epithalamin synthetic", "Ala-Glu-Asp-Gly"]
+color: purple
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic tetrapeptide (Ala-Glu-Asp-Gly) developed at the Saint Petersburg
+  Institute of Bioregulation and Gerontology as the active analog of
+  epithalamin, a natural pineal extract. Khavinson et al. demonstrated
+  telomerase-activating and telomere-elongating activity in human somatic
+  cells. Long-term safety + efficacy data are dominated by Russian-language
+  literature; Western RCTs are sparse. Frequently used anecdotally for
+  longevity and sleep regulation.
+
+hero_stats:
+  - value: "5–10 mg"
+    label: "Per cycle dose"
+    cite: [khavinson-2003]
+  - value: "Human"
+    label: "Mechanistic"
+    cite: [khavinson-2003]
+  - value: "Hours"
+    label: "Half-life (est)"
+hero_route: "SQ or IM · Abdomen · Daily for 10–20 days"
+
+mechanism:
+  primary_target:
+    value: "Telomerase activity (proposed); pineal melatonin axis modulation"
+    cite: [khavinson-2003]
+  pathway:
+    value: "Activation of telomerase reverse transcriptase (hTERT) in somatic cells; pineal-axis modulation supports endogenous melatonin"
+    cite: [khavinson-2003]
+  downstream_effect:
+    value: "Telomere elongation, improved sleep architecture, reported lifespan extension in aged mice"
+    cite: [khavinson-2003]
+  origin:
+    value: "Synthetic 4-AA peptide derived from epithalamin (a natural pineal extract)"
+    cite: [khavinson-2003]
+  diagram:
+    - { kind: node, text: "Pineal axis" }
+    - { kind: arrow, text: "↓ Modulation of melatonin synthesis" }
+    - { kind: node, text: "Somatic cells" }
+    - { kind: arrow, text: "↓ Telomerase activation → telomere elongation" }
+    - { kind: outcome, text: "Cellular Longevity (proposed)" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "5–10 mg / day for 10–20 days, 1–2× per year"
+        cite: [khavinson-2003]
+      notes: "Anecdotal community protocol. Russian clinical literature uses similar cycling."
+    - parameter: "Frequency"
+      value: "Once daily during a cycle"
+    - parameter: "Lower / starter dose"
+      value: "2.5 mg / day"
+    - parameter: "Evidence basis"
+      value:
+        value: "In-vitro telomerase + Russian clinical trials"
+        badge: yellow
+        cite: [khavinson-2003]
+    - parameter: "Duration"
+      value: "10–20 day cycles, 1–2× per year"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water"
+    - parameter: "Timing"
+      value: "Pre-sleep preferred (pineal alignment)"
+    - parameter: "Half-life"
+      value: "Hours (estimated)"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild irritation"
+      severity: mild
+    - parameter: "Sleep architecture"
+      value:
+        value: "Improved subjective sleep quality (anecdotal)"
+        badge: green
+      severity: mild
+    - parameter: "Cancer risk"
+      value:
+        value: "Theoretical via telomerase activation in pre-malignant cells"
+        badge: yellow
+      severity: severe
+    - parameter: "Long-term safety"
+      value:
+        value: "Limited Western RCT data"
+        badge: yellow
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid"
+        badge: red
+      severity: severe
+    - parameter: "Antibody formation"
+      value: "Not reported"
+      severity: mild
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Active malignancy or pre-malignant state"
+  contraindications_relative:
+    - "Family history of cancer"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1–2 mL bacteriostatic water to 10 mg vial → 5–10 mg/mL."
+    - title: Injection site
+      body: "SQ — abdomen preferred. Rotate sites."
+    - title: Timing
+      body: "Pre-sleep preferred to align with pineal axis."
+    - title: Storage
+      body: "Lyophilised: room temp, light-protected. Reconstituted: refrigerate ≤30 days."
+    - title: Needle
+      body: "29–31G, 4–8 mm insulin syringe."
+
+synergy: { stacks: [] }

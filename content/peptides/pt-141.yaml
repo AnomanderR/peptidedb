@@ -1,0 +1,147 @@
+# =========================================================
+# PT-141 / Bremelanotide (Vyleesi)
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: pt-141
+name: PT-141
+peptide_class: Melanocortin-4 Receptor Agonist
+classification: MC4R Agonist · FDA-Approved (HSDD)
+categories: [sexual-function, mc4r, fda-approved, melanocortin]
+aliases: [Bremelanotide, Vyleesi, "PT 141"]
+color: rose
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 2019
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Cyclic 7-amino-acid peptide and MC4R-selective agonist derived from
+  α-MSH. FDA-approved 2019 (Vyleesi) for hypoactive sexual desire disorder
+  in pre-menopausal women — the first centrally-acting peptide for sexual
+  dysfunction. Acts on hypothalamic melanocortin pathways to drive arousal
+  independent of vascular pathways (unlike PDE5 inhibitors).
+
+hero_stats:
+  - value: "1.75 mg"
+    label: "Per dose"
+    cite: [fda-vyleesi-label-2019]
+  - value: "Pre-sex"
+    label: "Timing"
+    cite: [fda-vyleesi-label-2019]
+  - value: "~2.7 hr"
+    label: "Half-life"
+    cite: [fda-vyleesi-label-2019]
+hero_route: "SQ · Abdomen / thigh · ≥45 min before sex"
+
+mechanism:
+  primary_target:
+    value: "Melanocortin-4 receptor (MC4R) in hypothalamus"
+    cite: [simerly-2023, fda-vyleesi-label-2019]
+  pathway:
+    value: "MC4R agonism in paraventricular nucleus → autonomic + neuroendocrine sexual arousal pathways"
+    cite: [simerly-2023]
+  downstream_effect:
+    value: "Increased sexual desire and arousal; central rather than peripheral mechanism"
+    cite: [clayton-2015]
+  origin:
+    value: "Cyclic 7-AA peptide derived from α-MSH (agonist Ac-Nle-Asp-His-D-Phe-Arg-Trp-Lys-OH cyclic)"
+    cite: [fda-vyleesi-label-2019]
+  diagram:
+    - { kind: node, text: "Hypothalamus (PVN)" }
+    - { kind: arrow, text: "↓ PT-141 activates MC4R" }
+    - { kind: node, text: "Sexual arousal centres" }
+    - { kind: arrow, text: "↓ Autonomic + neuroendocrine outflow" }
+    - { kind: outcome, text: "Increased Desire / Arousal" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "1.75 mg SQ"
+        cite: [fda-vyleesi-label-2019]
+      notes: "Single dose ≥45 min before anticipated sexual activity. Max 1 dose / 24 hr."
+    - parameter: "Frequency"
+      value: "PRN, max 8 doses / month"
+      cite: [fda-vyleesi-label-2019]
+    - parameter: "Lower / starter dose"
+      value: "1 mg (off-label)"
+    - parameter: "Evidence basis"
+      value:
+        value: "FDA-approved (HSDD pre-menopausal women)"
+        badge: green
+        cite: [fda-vyleesi-label-2019, clayton-2015]
+    - parameter: "Duration"
+      value: "PRN; reassess if no benefit after 8 doses"
+    - parameter: "Reconstitution"
+      value: "Pre-filled commercial pen (Vyleesi). Research vial: bacteriostatic water."
+    - parameter: "Timing"
+      value: "≥45 min before sexual activity"
+    - parameter: "Half-life"
+      value:
+        value: "~2.7 hr"
+        cite: [fda-vyleesi-label-2019]
+
+side_effects:
+  rows:
+    - parameter: "Nausea"
+      value:
+        value: "Common (~40%); often transient"
+        badge: yellow
+        cite: [fda-vyleesi-label-2019]
+      severity: moderate
+    - parameter: "Flushing"
+      value: "Common, transient"
+      severity: mild
+    - parameter: "Injection site reaction"
+      value: "Erythema, mild pain"
+      severity: mild
+    - parameter: "Headache"
+      value: "Common"
+      severity: mild
+    - parameter: "Hyperpigmentation (focal)"
+      value:
+        value: "Rare focal skin darkening; reversible after discontinuation"
+        badge: yellow
+        cite: [fda-vyleesi-label-2019]
+      severity: moderate
+    - parameter: "Hypertension (transient)"
+      value:
+        value: "Mean ↑6 mmHg systolic peaking ~4 h post-dose; resolves within 12 h"
+        badge: yellow
+        cite: [fda-vyleesi-label-2019]
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Contraindicated"
+        badge: red
+      severity: severe
+    - parameter: "Cardiovascular disease"
+      value:
+        value: "Use caution; transient BP rise"
+        badge: yellow
+      severity: moderate
+  contraindications_absolute:
+    - "Uncontrolled hypertension"
+    - "Known cardiovascular disease (caution)"
+    - "Pregnancy"
+  contraindications_relative:
+    - "Pre-existing hyperpigmentation disorders"
+    - "MC4R-pathway-dependent psychiatric conditions"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Vyleesi: pre-filled auto-injector. Research vial: 2 mL bacteriostatic water per 10 mg → 5 mg/mL."
+    - title: Injection site
+      body: "SQ — abdomen or thigh."
+    - title: Timing
+      body: "≥45 min before sexual activity for peak effect. Effect persists ~6–8 h."
+    - title: Storage
+      body: "Vyleesi: room temp ≤30 °C. Research vial: refrigerate after reconstitution."
+    - title: Needle
+      body: "Auto-injector (Vyleesi) or 29–31G, 4–8 mm insulin syringe."
+
+synergy: { stacks: [] }

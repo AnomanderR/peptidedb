@@ -137,14 +137,21 @@ export type FatLossSection = z.infer<typeof FatLossSection>;
 
 export const SideEffectsSection = z.object({
   rows: z.array(TableRow),
-  contraindications_absolute: z.array(z.string()).optional(),
-  contraindications_relative: z.array(z.string()).optional(),
+  /**
+   * Contraindications now accept either terse strings (back-compat) or
+   * explicit { value, cite, badge?, note? } objects. Output is always
+   * object-shaped so the trust metric can include them.
+   */
+  contraindications_absolute: z.array(CitableValue).optional(),
+  contraindications_relative: z.array(CitableValue).optional(),
 });
 export type SideEffectsSection = z.infer<typeof SideEffectsSection>;
 
 export const AdminStep = z.object({
   title: TextLabel,
   body: z.string().min(1),
+  /** Optional citations for protocol guidance (vial label, FDA, etc). */
+  cite: z.array(CiteRef).default([]),
 });
 export type AdminStep = z.infer<typeof AdminStep>;
 

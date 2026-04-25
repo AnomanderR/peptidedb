@@ -1,0 +1,138 @@
+# =========================================================
+# Retatrutide (LY3437943) — triple-agonist GLP-1/GIP/glucagon
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: retatrutide
+name: Retatrutide
+peptide_class: GLP-1 / GIP / Glucagon Triple Agonist
+classification: Triple-receptor agonist · Phase 3
+categories: [glp-1, gip, glucagon, lipolytic, weight-management]
+aliases: [LY3437943]
+color: rose
+evidence_level: phase-2
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Investigational triple-receptor agonist of GLP-1, GIP, and glucagon receptors
+  developed by Eli Lilly. The Phase 2 trial (Jastreboff et al., NEJM 2023)
+  demonstrated 24.2% body-weight reduction at 12 mg over 48 weeks — the
+  largest weight-loss effect of any peptide tested in obesity. Phase 3 trials
+  ongoing as of 2026.
+
+hero_stats:
+  - value: "1–12 mg"
+    label: "Weekly dose"
+    cite: [jastreboff-2023-reta]
+  - value: "24.2%"
+    label: "Body-weight ↓"
+    cite: [jastreboff-2023-reta]
+  - value: "~6 days"
+    label: "Half-life (est)"
+hero_route: "SQ · Abdomen · Once weekly"
+
+mechanism:
+  primary_target:
+    value: "GLP-1R + GIPR + Glucagon receptor (triple agonism)"
+    cite: [jastreboff-2023-reta]
+  pathway:
+    value: "Triple-receptor activation → ↑insulin (GLP-1+GIP), ↓gastric emptying, ↑lipid handling, ↑energy expenditure (glucagon component)"
+    cite: [jastreboff-2023-reta]
+  downstream_effect:
+    value: "Maximal weight loss across class. Glucagon component drives lipolysis and energy expenditure beyond GLP-1+GIP alone"
+    cite: [jastreboff-2023-reta]
+  origin:
+    value: "Synthetic peptide engineered for balanced affinity at three incretin / glucagon receptors"
+    cite: [jastreboff-2023-reta]
+  diagram:
+    - { kind: node, text: "Pancreatic β-cells + α-cells" }
+    - { kind: arrow, text: "↓ ↑insulin, ↓glucagon (paradox: agonist at glucagon-R but β-cell reverses net glucose)" }
+    - { kind: node, text: "Adipose + Liver" }
+    - { kind: arrow, text: "↓ ↑ lipid oxidation, ↑ thermogenesis" }
+    - { kind: node, text: "Hypothalamus" }
+    - { kind: arrow, text: "↓ ↓ appetite, ↑ energy expenditure" }
+    - { kind: outcome, text: "24% Body-Weight Reduction" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "12 mg / week (max efficacy)"
+        cite: [jastreboff-2023-reta]
+      notes: "Phase 2 trial dose. Phase 3 dosing TBD."
+    - parameter: "Frequency"
+      value: "Once weekly"
+    - parameter: "Titration schedule"
+      value: "2 mg → 4 mg → 8 mg → 12 mg over 16 weeks"
+      cite: [jastreboff-2023-reta]
+    - parameter: "Evidence basis"
+      value:
+        value: "Phase 2 trial; Phase 3 ongoing"
+        badge: yellow
+        cite: [jastreboff-2023-reta]
+    - parameter: "Duration"
+      value: "Indefinite for chronic indication (presumed)"
+    - parameter: "Reconstitution"
+      value: "Investigational; not commercially available"
+    - parameter: "Timing"
+      value: "Any time of day"
+    - parameter: "Half-life"
+      value: "~6 days (estimated from class)"
+
+side_effects:
+  rows:
+    - parameter: "GI symptoms"
+      value:
+        value: "Nausea, vomiting, diarrhea (very common, dose-dependent)"
+        badge: yellow
+        cite: [jastreboff-2023-reta]
+      severity: moderate
+    - parameter: "Heart rate"
+      value:
+        value: "↑ resting HR (3–7 bpm at 12 mg)"
+        badge: yellow
+        cite: [jastreboff-2023-reta]
+      severity: moderate
+    - parameter: "Glucose handling"
+      value: "Glycemic improvement; rare hyperglycemia from glucagon component"
+      severity: moderate
+    - parameter: "Pancreatitis risk"
+      value:
+        value: "Class warning"
+        badge: yellow
+      severity: severe
+    - parameter: "Thyroid C-cell tumours"
+      value:
+        value: "Class warning (presumed)"
+        badge: yellow
+      severity: severe
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid (insufficient data)"
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - "MTC personal or family history (presumed class effect)"
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Severe gastroparesis"
+    - "History of pancreatitis"
+    - "Severe cardiovascular disease (HR signal)"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Investigational peptide. Research vials reconstituted with bacteriostatic water per label."
+    - title: Injection site
+      body: "SQ — abdomen, thigh, or upper arm. Rotate weekly."
+    - title: Timing
+      body: "Once weekly, same day."
+    - title: Storage
+      body: "Refrigerate 2–8 °C. Light-protected."
+    - title: Needle
+      body: "27–31G, 4–8 mm insulin syringe."
+
+synergy: { stacks: [] }

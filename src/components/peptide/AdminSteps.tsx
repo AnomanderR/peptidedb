@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import { CitationChip } from "./CitationChip";
 import type { AdminStep } from "@/lib/schemas/peptide";
 
 /**
@@ -40,8 +41,11 @@ export function AdminSteps({
             {i + 1}
           </span>
           <div className="flex-1 min-w-0">
-            <div className="text-[14px] font-semibold text-[var(--color-text)]">
+            <div className="text-[14px] font-semibold text-[var(--color-text)] flex items-baseline gap-2">
               {step.title}
+              {step.cite && step.cite.length > 0 && (
+                <CitationChip refs={step.cite} />
+              )}
             </div>
             <div className="mt-1 text-[13px] text-[var(--color-text-secondary)] leading-relaxed">
               {step.body}

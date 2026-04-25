@@ -1,0 +1,147 @@
+# =========================================================
+# Sermorelin (GHRH 1-29) — short-acting GHRH analogue
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: sermorelin
+name: Sermorelin
+peptide_class: GHRH Analogue (1-29)
+classification: GHRH 1-29 fragment · Short-acting
+categories: [gh-axis, ghrh, short-acting]
+aliases: [GHRH 1-29, GRF 1-29, "sermorelin acetate"]
+color: blue
+evidence_level: phase-3
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  29-amino-acid synthetic analogue of the bioactive N-terminal fragment of
+  human GHRH. Was FDA-approved (1990s) under the brand Geref for diagnosis of
+  GH deficiency in children but withdrawn from the market for commercial
+  reasons (not safety). Acts at the same GHRH receptor as native GHRH and
+  tesamorelin but with shorter half-life (~12 min) and unmodified backbone,
+  making it the simplest GHRH analogue.
+
+hero_stats:
+  - value: "100–500 mcg"
+    label: "Per dose"
+    cite: [molteno-2013]
+  - value: "Phase 3"
+    label: "Evidence level"
+    cite: [walker-1994, molteno-2013]
+  - value: "~12 min"
+    label: "Half-life"
+    cite: [molteno-2013]
+hero_route: "SQ · Pre-sleep · 1×/day"
+
+mechanism:
+  primary_target:
+    value: "Pituitary GHRH receptor"
+    cite: [walker-1994]
+  pathway:
+    value: "GHRH-R → Gαs → cAMP → PKA → GH vesicle exocytosis"
+    cite: [walker-1994]
+  downstream_effect:
+    value: "Pulsatile GH release; subsequent IGF-1 elevation"
+    cite: [molteno-2013]
+  feedback_intact:
+    value: "Yes — short pulse preserves feedback"
+    badge: green
+  origin:
+    value: "Unmodified active 29-AA fragment of human GHRH (1-44)"
+    cite: [walker-1994]
+  diagram:
+    - { kind: node, text: "Anterior Pituitary" }
+    - { kind: arrow, text: "↓ Sermorelin binds GHRH-R" }
+    - { kind: node, text: "Pulsatile GH release" }
+    - { kind: arrow, text: "↓ Liver IGF-1 synthesis" }
+    - { kind: outcome, text: "Recovery / Growth" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "100–500 mcg per injection"
+        cite: [molteno-2013]
+    - parameter: "Frequency"
+      value: "Once daily, pre-sleep"
+    - parameter: "Lower / starter dose"
+      value: "100 mcg per dose"
+    - parameter: "Evidence basis"
+      value:
+        value: "Phase 3 (Geref pediatric); clinical practice"
+        badge: yellow
+        cite: [walker-1994, molteno-2013]
+    - parameter: "Duration"
+      value: "8–12 weeks per cycle"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water"
+    - parameter: "Timing"
+      value: "Pre-sleep, fasted preferred"
+    - parameter: "Half-life"
+      value:
+        value: "~12 min (plasma)"
+        cite: [molteno-2013]
+      notes: "Shorter than tesamorelin (~26 min) — simpler GHRH analogue."
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild erythema, transient pain"
+      severity: mild
+    - parameter: "Flushing / headache"
+      value: "Common transient effect"
+      severity: mild
+    - parameter: "IGF-1 elevation"
+      value: "Modest at standard doses"
+      severity: mild
+    - parameter: "Cancer risk"
+      value:
+        value: "Contraindicated in active malignancy (GH/IGF-1 axis)"
+        badge: red
+      severity: severe
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid"
+        badge: red
+      severity: severe
+    - parameter: "Glucose handling"
+      value: "Generally neutral"
+      severity: mild
+  contraindications_absolute:
+    - "Active malignancy"
+    - "Pregnancy / breastfeeding"
+    - "Disrupted hypothalamic-pituitary axis"
+  contraindications_relative:
+    - "Untreated diabetes"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 2 mL bacteriostatic water to 5 mg vial → 2.5 mg/mL = 250 mcg per 0.1 mL."
+    - title: Injection site
+      body: "SQ — abdomen or thigh. Rotate sites."
+    - title: Timing
+      body: "Pre-sleep, fasted."
+    - title: Storage
+      body: "Lyophilised: room temp, light-protected. Reconstituted: refrigerate ≤30 days."
+    - title: Needle
+      body: "29–31G, 4–8 mm insulin syringe."
+
+synergy:
+  stacks:
+    - partner_slug: ipamorelin
+      partner_label: Ipamorelin
+      synergy: strong
+      rationale: >-
+        Sermorelin (GHRH analogue) and ipamorelin (selective GHRP) form the
+        prototypical GHRH+GHRP dual-axis stack at the lowest cost. Both peak
+        within 30 min and produce a sharp physiological GH pulse without
+        cortisol/prolactin elevation.
+      protocol:
+        Sermorelin: "200–300 mcg SQ · pre-sleep"
+        Ipamorelin: "200–300 mcg SQ · same injection"
+      primary_benefit: "Pulsatile GH stimulation, recovery, body composition"
+      cite: [raun-1998, walker-1994]

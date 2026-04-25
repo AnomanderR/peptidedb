@@ -1,0 +1,144 @@
+# =========================================================
+# SS-31 / Elamipretide / Bendavia
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: ss-31
+name: SS-31
+peptide_class: Mitochondrial-targeted tetrapeptide
+classification: Cardiolipin-binding · Mitochondrial protective
+categories: [mitochondrial, cardiovascular, longevity, ischemia-reperfusion]
+aliases: [Elamipretide, Bendavia, MTP-131]
+color: teal
+evidence_level: phase-3
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic four-amino-acid peptide that selectively localises to the inner
+  mitochondrial membrane by binding cardiolipin. Stabilises cristae structure,
+  preserves electron transport chain efficiency, and reduces ROS generation
+  in stressed mitochondria. Multiple Phase 3 trials in ischemia-reperfusion,
+  primary mitochondrial myopathy (Barth syndrome), and dry AMD; not yet
+  FDA-approved as of 2026.
+
+hero_stats:
+  - value: "40 mg"
+    label: "Daily dose"
+    cite: [szeto-2014]
+  - value: "Phase 3"
+    label: "Evidence level"
+    cite: [szilagyi-2009, szeto-2014]
+  - value: "~3 hr"
+    label: "Half-life"
+hero_route: "SQ · Abdomen · Once daily"
+
+mechanism:
+  primary_target:
+    value: "Cardiolipin in inner mitochondrial membrane"
+    cite: [szeto-2014]
+  pathway:
+    value: "Cardiolipin binding → cristae stabilisation → ETC integrity → reduced ROS + preserved ATP synthesis"
+    cite: [szeto-2014, szilagyi-2009]
+  downstream_effect:
+    value: "Mitochondrial bioenergetic preservation; cardio-, neuro-, and reno-protective effects in animal + clinical studies"
+    cite: [szeto-2014]
+  origin:
+    value: "Synthetic tetrapeptide D-Arg-Dmt-Lys-Phe-NH₂; cell-permeable, mitochondrial-selective"
+    cite: [szeto-2014]
+  diagram:
+    - { kind: node, text: "Cell membrane" }
+    - { kind: arrow, text: "↓ SS-31 enters via lipid solubility" }
+    - { kind: node, text: "Inner mitochondrial membrane" }
+    - { kind: arrow, text: "↓ Cardiolipin binding stabilises cristae" }
+    - { kind: node, text: "Electron transport chain" }
+    - { kind: arrow, text: "↓ ↓ ROS, ↑ ATP synthesis efficiency" }
+    - { kind: outcome, text: "Mitochondrial Resilience" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "40 mg / day SQ (clinical trials)"
+        cite: [szeto-2014]
+      notes: "Anecdotal community range 5-10 mg/day. Phase 3 trials use 40 mg."
+    - parameter: "Frequency"
+      value: "Once daily"
+    - parameter: "Lower / starter dose"
+      value: "5 mg / day (anecdotal)"
+    - parameter: "Evidence basis"
+      value:
+        value: "Multiple Phase 3 trials (Barth, AMD, ischemia-reperfusion)"
+        badge: yellow
+        cite: [szeto-2014, szilagyi-2009]
+    - parameter: "Duration"
+      value: "Indefinite for mitochondrial disease; cycled for healthspan use"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water"
+    - parameter: "Timing"
+      value: "Morning fasted preferred; pre-workout for exercise-induced mitochondrial stress"
+    - parameter: "Half-life"
+      value: "~3 h plasma; tissue uptake longer"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Erythema, mild pruritus"
+      severity: mild
+    - parameter: "GI symptoms"
+      value: "Nausea (uncommon)"
+      severity: mild
+    - parameter: "Headache"
+      value: "Reported in some Phase 3 trials"
+      severity: mild
+    - parameter: "Cardiovascular"
+      value: "Cardio-protective in studies; no signal of harm"
+      severity: mild
+    - parameter: "Long-term safety"
+      value:
+        value: "Phase 3 data over 24+ months; no major safety signals"
+        badge: green
+        cite: [szeto-2014]
+      severity: mild
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid — insufficient data"
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Hypersensitivity to peptide"
+  contraindications_relative:
+    - "None established"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add bacteriostatic water per label. Light-protected handling."
+    - title: Injection site
+      body: "SQ — abdomen or thigh. Rotate sites."
+    - title: Timing
+      body: "Morning fasted; pre-workout for exercise-augmented mitochondrial stress."
+    - title: Storage
+      body: "Lyophilised: refrigerate, light-protected. Reconstituted: refrigerate ≤30 days."
+    - title: Needle
+      body: "29–31G, 4–8 mm insulin syringe."
+
+synergy:
+  stacks:
+    - partner_slug: mots-c
+      partner_label: MOTS-c
+      synergy: moderate
+      rationale: >-
+        SS-31 and MOTS-c address mitochondrial decline through complementary
+        axes. SS-31 protects existing mitochondrial structure (cardiolipin
+        binding, cristae stabilisation). MOTS-c upregulates AMPK/PGC-1α,
+        triggering biogenesis of new mitochondria. Together they pair
+        preservation with renewal — anecdotally favoured in healthspan and
+        post-cardio-event recovery protocols.
+      protocol:
+        SS-31: "5–10 mg SQ · daily morning"
+        MOTS-c: "5 mg SQ · 2× per week pre-workout"
+      primary_benefit: "Mitochondrial preservation + biogenesis"

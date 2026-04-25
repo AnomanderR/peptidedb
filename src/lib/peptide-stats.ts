@@ -95,7 +95,16 @@ export function computePeptideStats(p: Peptide): PeptideStats {
   visit(p.dosage, "dosage");
   if (p.fat_loss) visit(p.fat_loss, "fat_loss");
   visit(p.side_effects, "side_effects");
-  // administration intentionally omitted — protocol prose, not research claims
+  // Contraindications are CitableValue post-parse and visit handles them
+  // as part of the side_effects walk above.
+
+  // Administration steps: each step body is a guidance claim; count it
+  // governed by the step-level cite[].
+  for (let i = 0; i < p.administration.steps.length; i++) {
+    const step = p.administration.steps[i];
+    countClaim(step.cite ?? [], `administration.steps[${i}].body`);
+  }
+
   if (p.synergy) visit(p.synergy, "synergy");
   visit(p.hero_stats, "hero_stats");
 
