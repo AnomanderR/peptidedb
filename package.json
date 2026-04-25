@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/generate-citations.mjs && node scripts/audit-trust-metric.mjs",
-    "prebuild": "node scripts/generate-citations.mjs && node scripts/audit-trust-metric.mjs",
+    "predev": "node scripts/generate-citations.mjs && bun run scripts/audit-trust-metric.ts",
+    "prebuild": "node scripts/generate-citations.mjs && bun run scripts/audit-trust-metric.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "gen:citations": "node scripts/generate-citations.mjs",
-    "audit:trust": "node scripts/audit-trust-metric.mjs"
+    "audit:trust": "bun run scripts/audit-trust-metric.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

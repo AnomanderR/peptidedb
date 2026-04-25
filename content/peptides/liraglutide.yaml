@@ -1,0 +1,155 @@
+# =========================================================
+# Liraglutide (Saxenda / Victoza) — daily GLP-1 RA
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: liraglutide
+name: Liraglutide
+peptide_class: GLP-1 Receptor Agonist
+classification: Daily GLP-1 RA · FDA-Approved
+categories: [glp-1, glucagon-like-peptide, weight-management, fda-approved]
+aliases: [Saxenda, Victoza]
+color: amber
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 2010
+last_reviewed: "2026-04-25"
+maturity: verified
+contributors: [peptidedb-core]
+
+summary: >-
+  Modified human GLP-1 with C-16 fatty-acid acylation enabling albumin
+  binding and a ~13 hour half-life. FDA-approved 2010 (Victoza, type 2
+  diabetes) and 2014 (Saxenda, chronic weight management). The LEADER
+  trial (Marso et al., NEJM 2016) demonstrated cardiovascular event
+  reduction in T2D with high CV risk. Predecessor to once-weekly
+  semaglutide and tirzepatide.
+
+hero_stats:
+  - value: "0.6–3.0 mg"
+    label: "Daily dose"
+    cite: [fda-saxenda-label-2014]
+  - value: "5–10%"
+    label: "Body-weight ↓"
+    cite: [fda-saxenda-label-2014]
+  - value: "~13 hr"
+    label: "Half-life"
+    cite: [fda-saxenda-label-2014]
+hero_route: "SQ · Abdomen / thigh / arm · Once daily"
+
+mechanism:
+  primary_target:
+    value: "GLP-1 receptor (GLP-1R)"
+    cite: [fda-saxenda-label-2014]
+  pathway:
+    value: "GLP-1R agonism → ↑glucose-dependent insulin, ↓glucagon, ↓gastric emptying, ↓appetite"
+    cite: [fda-saxenda-label-2014, wegovy-pioglitazone-2010]
+  downstream_effect:
+    value: "Glycemic improvement, modest body-weight reduction, cardiovascular event reduction in high-risk T2D"
+    cite: [wegovy-pioglitazone-2010]
+  origin:
+    value: "Modified GLP-1(7-37) with Lys26 substitution (Arg34) and C-16 palmitoyl-glutamate acylation for albumin binding"
+    cite: [fda-saxenda-label-2014]
+  feedback_intact:
+    value: "Glucose-dependent insulin release preserves physiological feedback"
+    badge: green
+  diagram:
+    - { kind: node, text: "Pancreatic β-cells" }
+    - { kind: arrow, text: "↓ Glucose-dependent insulin" }
+    - { kind: node, text: "Stomach" }
+    - { kind: arrow, text: "↓ Slowed gastric emptying" }
+    - { kind: node, text: "Hypothalamus" }
+    - { kind: arrow, text: "↓ Reduced appetite" }
+    - { kind: outcome, text: "Glycemic + CV + Modest Weight" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose (T2D, Victoza)"
+      value:
+        value: "1.2–1.8 mg / day"
+        cite: [fda-saxenda-label-2014]
+    - parameter: "Standard dose (weight, Saxenda)"
+      value:
+        value: "3.0 mg / day (after 5-week titration)"
+        cite: [fda-saxenda-label-2014]
+    - parameter: "Frequency"
+      value: "Once daily, same time each day"
+    - parameter: "Titration schedule"
+      value: "0.6 → 1.2 → 1.8 → 2.4 → 3.0 mg over 5 weeks"
+      cite: [fda-saxenda-label-2014]
+      notes: "Mitigates GI side effects."
+    - parameter: "Evidence basis"
+      value:
+        value: "FDA-approved · Phase 3 RCTs (LEADER, SCALE)"
+        badge: green
+        cite: [wegovy-pioglitazone-2010, fda-saxenda-label-2014]
+    - parameter: "Duration"
+      value: "Indefinite for chronic indication"
+    - parameter: "Reconstitution"
+      value: "Pre-filled commercial pen (no reconstitution)"
+    - parameter: "Timing"
+      value: "Any time of day; consistent"
+    - parameter: "Half-life"
+      value:
+        value: "~13 hr"
+        cite: [fda-saxenda-label-2014]
+
+side_effects:
+  rows:
+    - parameter: "GI symptoms"
+      value:
+        value: "Nausea, vomiting, diarrhea (very common during titration)"
+        badge: yellow
+        cite: [fda-saxenda-label-2014]
+      severity: moderate
+    - parameter: "Pancreatitis risk"
+      value:
+        value: "Rare; discontinue if suspected"
+        badge: yellow
+      severity: severe
+    - parameter: "Thyroid C-cell tumours"
+      value:
+        value: "Boxed warning — contraindicated in MEN2 / MTC history"
+        badge: red
+        cite: [fda-saxenda-label-2014]
+      severity: severe
+    - parameter: "Hypoglycemia"
+      value: "Low risk as monotherapy; elevated with sulfonylureas / insulin"
+      severity: moderate
+    - parameter: "Heart rate"
+      value: "Modest ↑ resting HR (~2-3 bpm)"
+      severity: mild
+    - parameter: "Cardiovascular benefit"
+      value:
+        value: "↓ MACE in high-risk T2D (LEADER trial)"
+        badge: green
+        cite: [wegovy-pioglitazone-2010]
+      severity: mild
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Contraindicated"
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - "MTC personal or family history; MEN2"
+    - "Pregnancy / breastfeeding"
+    - "Hypersensitivity to liraglutide"
+  contraindications_relative:
+    - "Severe gastroparesis"
+    - "History of pancreatitis"
+    - "Severe gastrointestinal disease"
+
+administration:
+  steps:
+    - title: Reconstitution / device
+      body: "Commercial pre-filled pen, no reconstitution required."
+    - title: Injection site
+      body: "SQ — abdomen, thigh, or upper arm. Rotate sites."
+    - title: Timing
+      body: "Once daily, same time each day. Take with or without food."
+    - title: Storage
+      body: "Refrigerate 2–8 °C unopened; room temp ≤30 °C up to 30 days after first use."
+    - title: Needle
+      body: "Pen-supplied 32G needle."
+
+synergy: { stacks: [] }

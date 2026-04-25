@@ -1,0 +1,142 @@
+# =========================================================
+# KPV — α-MSH C-terminal anti-inflammatory tripeptide
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: kpv
+name: KPV
+peptide_class: Tripeptide (Lys-Pro-Val)
+classification: α-MSH C-terminal · Anti-inflammatory
+categories: [anti-inflammatory, gut, skin, healing, ibd]
+aliases: ["Lys-Pro-Val", "alpha-MSH 11-13"]
+color: cyan
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  Tripeptide (Lys-Pro-Val) corresponding to the C-terminus of α-melanocyte-
+  stimulating hormone (α-MSH). Retains the anti-inflammatory and immune-
+  modulatory properties of full α-MSH without the pigmentation effects.
+  Multiple animal studies support efficacy in inflammatory bowel disease,
+  acne, and atopic dermatitis. Often paired orally / topically with
+  BPC-157 for gut and skin protocols.
+
+hero_stats:
+  - value: "200–500 mcg"
+    label: "Daily dose"
+    cite: [dalle-pang-2024]
+  - value: "Animal"
+    label: "Evidence level"
+    cite: [dalle-pang-2024]
+  - value: "Hours"
+    label: "Half-life (est)"
+hero_route: "SQ / oral / topical · Local · Daily or 2-3×/week"
+
+mechanism:
+  primary_target:
+    value: "Intracellular targets bypassing melanocortin receptors (proposed)"
+    cite: [dalle-pang-2024]
+  pathway:
+    value: "NF-κB inhibition + cytokine modulation (TNF-α, IL-1β, IL-6) → reduced inflammation"
+    cite: [dalle-pang-2024]
+  downstream_effect:
+    value: "Anti-inflammatory action without α-MSH pigmentation effects; gut barrier protection"
+    cite: [dalle-pang-2024]
+  origin:
+    value: "Synthetic tripeptide; the C-terminal Lys-Pro-Val residues of α-MSH (residues 11-13)"
+    cite: [dalle-pang-2024]
+  feedback_intact:
+    value: "No melanocortin receptor binding"
+    badge: green
+  diagram:
+    - { kind: node, text: "Cell membrane (no MC-R required)" }
+    - { kind: arrow, text: "↓ Direct intracellular uptake" }
+    - { kind: node, text: "NF-κB inhibition" }
+    - { kind: arrow, text: "↓ ↓ TNF-α, IL-1β, IL-6" }
+    - { kind: outcome, text: "Anti-inflammation (no pigmentation)" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "200–500 mcg / day SQ or oral"
+        cite: [dalle-pang-2024]
+    - parameter: "Frequency"
+      value: "Daily or 2–3× per week"
+    - parameter: "Lower / starter dose"
+      value: "100 mcg / day"
+    - parameter: "Evidence basis"
+      value:
+        value: "Animal-strong + emerging clinical data in IBD"
+        badge: yellow
+        cite: [dalle-pang-2024]
+    - parameter: "Duration"
+      value: "4–8 weeks per cycle"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water (SQ form)"
+    - parameter: "Timing"
+      value: "No specific time; often taken with / before meals (oral)"
+    - parameter: "Half-life"
+      value: "Hours (estimated; rapid tissue uptake)"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild irritation"
+      severity: mild
+    - parameter: "GI symptoms"
+      value: "Rare nausea (oral form)"
+      severity: mild
+    - parameter: "Pigmentation"
+      value:
+        value: "None (unlike full α-MSH)"
+        badge: green
+        cite: [dalle-pang-2024]
+      severity: mild
+    - parameter: "Long-term safety"
+      value:
+        value: "Limited human data"
+        badge: yellow
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid — insufficient data"
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Active autoimmune disease (theoretical)"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1 mL bacteriostatic water to vial per labelling."
+    - title: Form
+      body: "SQ injection (acute), oral capsule (chronic / gut), topical for skin indications."
+    - title: Timing
+      body: "Morning preferred; oral form taken with / before meals."
+    - title: Storage
+      body: "Lyophilised: room temp, light-protected. Reconstituted: refrigerate ≤30 days."
+    - title: Needle
+      body: "29–31G insulin syringe (SQ form)."
+
+synergy:
+  stacks:
+    - partner_slug: bpc-157
+      partner_label: BPC-157
+      synergy: strong
+      rationale: >-
+        KPV (NF-κB inhibition, cytokine reduction) + BPC-157 (VEGF-driven
+        angiogenesis, tissue regeneration) form the classic gut-healing
+        stack. KPV reduces inflammatory drive; BPC-157 promotes mucosal
+        repair. Anecdotally favoured for IBD, ulcerative colitis, and
+        post-surgical gut recovery.
+      protocol:
+        KPV: "200–500 mcg oral · daily"
+        BPC-157: "250–500 mcg oral or SQ · daily"
+      primary_benefit: "Combined anti-inflammation + mucosal repair for gut conditions"
+      cite: [dalle-pang-2024, sikiric-2018]

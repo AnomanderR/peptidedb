@@ -1,0 +1,139 @@
+# =========================================================
+# Selank — anxiolytic / cognitive heptapeptide
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: selank
+name: Selank
+peptide_class: Heptapeptide bioregulator
+classification: Anxiolytic + Cognitive · Russian Pharma
+categories: [cognitive, anxiolytic, immunomodulator, peptide-bioregulator]
+aliases: ["Selanc", "Selankum", "TP-7"]
+color: purple
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic 7-amino-acid peptide developed at the Russian Academy of Medical
+  Sciences from the immunomodulator tuftsin. Demonstrates anxiolytic effects
+  comparable to benzodiazepines but without sedation, cognitive impairment,
+  or dependency. Acts via modulation of monoamine neurotransmission and the
+  immune-CNS axis. Licensed in Russia + Ukraine; not approved elsewhere.
+
+hero_stats:
+  - value: "150–300 mcg/dose"
+    label: "Intranasal"
+    cite: [zaderej-2014]
+  - value: "Human"
+    label: "Mechanistic"
+    cite: [zaderej-2014, medvedev-2007]
+  - value: "~30 min"
+    label: "Onset"
+hero_route: "Intranasal · 2–3×/day during stress / cognitive demand"
+
+mechanism:
+  primary_target:
+    value: "Monoamine system (serotonin / GABA modulation) + immunomodulation via tuftsin domain"
+    cite: [zaderej-2014]
+  pathway:
+    value: "Tuftsin-derived immune signaling + CNS monoamine modulation → reduced anxiety + improved mood / cognition"
+    cite: [medvedev-2007]
+  downstream_effect:
+    value: "Anxiolytic + cognitive enhancement; immunomodulation via increased IL-6 + IFN-γ"
+    cite: [medvedev-2007, zaderej-2014]
+  origin:
+    value: "Synthetic 7-AA peptide derived from human tuftsin (immune-system tetrapeptide)"
+    cite: [zaderej-2014]
+  feedback_intact:
+    value: "No GABA-receptor binding; no dependence reported"
+    badge: green
+    cite: [medvedev-2007]
+  diagram:
+    - { kind: node, text: "Intranasal absorption" }
+    - { kind: arrow, text: "↓ BBB-permeable; rapid CNS uptake" }
+    - { kind: node, text: "Monoamine system" }
+    - { kind: arrow, text: "↓ Serotonin / GABA modulation" }
+    - { kind: node, text: "Limbic system" }
+    - { kind: arrow, text: "↓ Reduced anxiety, improved cognition" }
+    - { kind: outcome, text: "Anxiolysis + Cognitive Boost" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "150–300 mcg / dose intranasal"
+        cite: [zaderej-2014]
+    - parameter: "Frequency"
+      value: "2–3× per day during stress"
+    - parameter: "Lower / starter dose"
+      value: "75 mcg / dose"
+    - parameter: "Evidence basis"
+      value:
+        value: "Human-mechanistic + Russian clinical trials"
+        badge: yellow
+        cite: [medvedev-2007]
+    - parameter: "Duration"
+      value: "10–14 day cycles, repeated as needed"
+    - parameter: "Reconstitution"
+      value: "Pre-formulated nasal spray (commercial); research vial: bacteriostatic water"
+    - parameter: "Timing"
+      value: "Morning + early afternoon preferred"
+    - parameter: "Half-life"
+      value: "Short (minutes plasma); CNS effect lasts ~3 hr"
+
+side_effects:
+  rows:
+    - parameter: "Nasal irritation"
+      value: "Mild burning or congestion (transient)"
+      severity: mild
+    - parameter: "Sedation"
+      value:
+        value: "None — distinct from benzodiazepines"
+        badge: green
+        cite: [medvedev-2007]
+      severity: mild
+    - parameter: "Dependence / withdrawal"
+      value:
+        value: "None reported in clinical use"
+        badge: green
+        cite: [zaderej-2014]
+      severity: mild
+    - parameter: "Cognitive impairment"
+      value: "None — opposite effect (enhancement)"
+      severity: mild
+    - parameter: "Allergic reaction"
+      value: "Rare hypersensitivity"
+      severity: mild
+    - parameter: "Long-term safety"
+      value:
+        value: "Limited Western RCT data"
+        badge: yellow
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid — insufficient data"
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Hypersensitivity to peptide"
+  contraindications_relative:
+    - "Active autoimmune disease (theoretical via immunomodulation)"
+
+administration:
+  steps:
+    - title: Form
+      body: "Pre-formulated nasal spray (commercial) or research vial reconstituted with bacteriostatic water."
+    - title: Administration
+      body: "Intranasal — 1–3 sprays per nostril per dose. Tilt head slightly back."
+    - title: Timing
+      body: "Morning + early afternoon for cognitive demand; PRN for acute anxiety."
+    - title: Storage
+      body: "Refrigerate after reconstitution; ≤30 days. Light-protected."
+    - title: Caveat
+      body: "Avoid co-administration with strong sedatives or other anxiolytics initially."
+
+synergy: { stacks: [] }

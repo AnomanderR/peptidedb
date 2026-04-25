@@ -100,6 +100,11 @@ export function computePeptideStats(p: Peptide): PeptideStats {
     }
   }
 
+  // Top-level CitableValues — visible hero prose. Must be counted or
+  // /api/stats[slug].uncited_fields silently omits them.
+  visit(p.summary, "summary");
+  visit(p.hero_route, "hero_route");
+
   visit(p.mechanism, "mechanism");
   visit(p.dosage, "dosage");
   if (p.fat_loss) visit(p.fat_loss, "fat_loss");
