@@ -4,7 +4,7 @@ import { CitationChip } from "./CitationChip";
 import type { CitableValue } from "@/lib/schemas/peptide";
 
 /**
- * Render a CitableValue (string OR { value, cite, badge, note }).
+ * Render a CitableValue (always object-shaped post-parse: { value, cite, badge?, note? }).
  * Inline citation chip after the value text. Optional badge color.
  */
 export function CitableValueView({
@@ -16,13 +16,15 @@ export function CitableValueView({
   className?: string;
   inline?: boolean;
 }) {
-  if (typeof value === "string") {
-    return <span className={cn(className)}>{value}</span>;
-  }
   const { value: text, cite, badge, note } = value;
   const Wrap = inline ? "span" : "div";
   return (
-    <Wrap className={cn(inline && "inline-flex items-baseline flex-wrap gap-1", className)}>
+    <Wrap
+      className={cn(
+        inline && "inline-flex items-baseline flex-wrap gap-1",
+        className,
+      )}
+    >
       {badge ? (
         <Badge color={badge}>{text}</Badge>
       ) : (

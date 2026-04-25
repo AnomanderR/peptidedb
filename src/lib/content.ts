@@ -23,7 +23,9 @@ let _peptidesCache: Peptide[] | null = null;
 export function loadAllPeptides(): Peptide[] {
   if (_peptidesCache) return _peptidesCache;
 
-  const files = readdirSync(PEPTIDES_DIR).filter((f) => f.endsWith(".yaml"));
+  const files = readdirSync(PEPTIDES_DIR).filter(
+    (f) => f.endsWith(".yaml") && !f.startsWith("_"),
+  );
   const peptides: Peptide[] = files.map((file) => {
     const path = join(PEPTIDES_DIR, file);
     const raw = readFileSync(path, "utf-8");

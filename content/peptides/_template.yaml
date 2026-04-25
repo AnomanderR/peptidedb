@@ -1,0 +1,116 @@
+# =========================================================
+# Peptide profile template
+# Copy this file to content/peptides/<slug>.yaml and edit.
+# Schema: src/lib/schemas/peptide.ts
+# Add citations to content/refs.yaml; reference them by ID.
+# =========================================================
+schema_version: 1
+slug: example-peptide
+name: Example Peptide
+peptide_class: Example Peptide Class
+classification: Short tagline shown under quick-card name
+categories: [example-category]
+aliases: ["Alternate Name", "Another Brand Name"]
+color: blue   # blue | green | purple | amber | rose | cyan | teal
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [your-github-handle]
+
+summary: >-
+  One- to three-sentence overview. What it is, what receptor / pathway it
+  targets, what is the level of human evidence, and how it differs from
+  closely related peptides.
+
+hero_stats:
+  - value: "X mg"
+    label: "Standard dose"
+    cite: [some-ref-id]
+  - value: "Phase 1"
+    label: "Evidence level"
+    cite: [some-ref-id]
+  - value: "~30 min"
+    label: "Half-life"
+    cite: [some-ref-id]
+hero_route: "SQ · Site · Frequency"
+
+mechanism:
+  primary_target:
+    value: "Receptor / target string"
+    cite: [some-ref-id]
+  pathway:
+    value: "Step 1 → Step 2 → Step 3"
+    cite: [some-ref-id]
+  downstream_effect:
+    value: "What happens at the tissue / system level"
+    cite: [some-ref-id]
+  origin:
+    value: "Synthetic / endogenous / modified-fragment-of-X"
+    cite: [some-ref-id]
+  diagram:
+    - { kind: node, text: "First step location" }
+    - { kind: arrow, text: "↓ description" }
+    - { kind: node, text: "Second step location" }
+    - { kind: arrow, text: "↓ description" }
+    - { kind: outcome, text: "Final outcome" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "X mg / day"
+        cite: [some-ref-id]
+      notes: "Optional context"
+    - parameter: "Frequency"
+      value: "Daily / weekly / cycling"
+    # ...
+
+side_effects:
+  rows:
+    - parameter: "Effect name"
+      value:
+        value: "Detail"
+        badge: yellow   # green | yellow | red | teal | blue | purple
+        cite: [some-ref-id]
+      severity: moderate   # mild | moderate | severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "..."
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "How to reconstitute."
+    - title: Injection site
+      body: "Where to inject."
+    - title: Timing
+      body: "When to inject."
+    - title: Storage
+      body: "How to store before / after reconstitution."
+    - title: Needle
+      body: "Recommended needle gauge / length."
+
+# Optional fat-loss section. Include if the peptide has metabolic / VAT
+# / body-composition evidence.
+# fat_loss:
+#   evidence_strength: 50
+#   evidence_level: animal-strong
+#   evidence_meta: "Animal studies + ..."
+#   rows:
+#     - parameter: "Primary fat target"
+#       value: "..."
+
+# Optional synergy section.
+# synergy:
+#   stacks:
+#     - partner_slug: other-peptide
+#       partner_label: Other Peptide
+#       synergy: strong   # strong | moderate | weak | multi-pathway
+#       rationale: "Why these work together..."
+#       protocol:
+#         "Example Peptide": "X mg SQ · timing"
+#         "Other Peptide": "Y mcg SQ · timing"
+#       primary_benefit: "Combined effect"
+#       cite: [some-ref-id]

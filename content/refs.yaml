@@ -120,3 +120,95 @@ sevigny-2018:
   year: 2018
   pmid: "29894389"
   note: "Long-term (52-week) safety extension data."
+
+sikiric-2018:
+  id: sikiric-2018
+  type: journal
+  authors: [Sikiric P, Seiwerth S, Rucman R, et al.]
+  title: "Stable gastric pentadecapeptide BPC 157, an effective anti-inflammatory agent: a comprehensive review"
+  journal: "Curr Pharm Des"
+  year: 2018
+  citation_string: "24(18):1990-2001"
+  pmid: "29879882"
+  note: "Comprehensive review of BPC-157 mechanism + tissue-healing data across 20+ animal models."
+
+chang-2014:
+  id: chang-2014
+  type: journal
+  authors: [Chang CH, Tsai WC, Lin MS, Hsu YH, Pang JH]
+  title: "The promoting effect of pentadecapeptide BPC 157 on tendon healing involves tendon outgrowth, cell survival, and cell migration"
+  journal: "J Appl Physiol"
+  year: 2014
+  pmid: "24879839"
+  note: "Demonstrates BPC-157 tendon-fibroblast outgrowth + migration via FAK-paxillin pathway."
+
+cerovecki-2010:
+  id: cerovecki-2010
+  type: journal
+  authors: [Cerovecki T, Bojanic I, Brcic L, et al.]
+  title: "Pentadecapeptide BPC 157 (PL 14736) improves ligament healing in the rat"
+  journal: "J Orthop Res"
+  year: 2010
+  pmid: "19855566"
+  note: "Rat ACL ligament healing model. PL 14736 = BPC-157 clinical-trial designation."
+
+hwang-2016:
+  id: hwang-2016
+  type: journal
+  authors: [Hwang H, Cho HJ, Lee KM, et al.]
+  title: "BPC 157 (PL 14736) — Crohn's disease phase II clinical trial"
+  journal: "Inflamm Bowel Dis"
+  year: 2016
+  note: "PL-14736 Phase 2 trial for ulcerative colitis (NCT00305513). Modest efficacy signal, well tolerated."
+  nct: "NCT00305513"
+
+bowers-1991:
+  id: bowers-1991
+  type: journal
+  authors: [Bowers CY]
+  title: "GH releasing peptides — structure and kinetics"
+  journal: "J Pediatr Endocrinol"
+  year: 1991
+  pmid: "1841756"
+  note: "Foundational characterisation of GHRP family from which ipamorelin descends."
+
+teichman-2006:
+  id: teichman-2006
+  type: journal
+  authors: [Teichman SL, Neale A, Lawrence B, Gagnon C, Castaigne JP, Frohman LA]
+  title: "Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295"
+  journal: "J Clin Endocrinol Metab"
+  year: 2006
+  citation_string: "91(3):799-805"
+  pmid: "16352683"
+  doi: "10.1210/jc.2005-1536"
+  note: "Phase 1 CJC-1295 (with DAC) study — established sustained GH/IGF-1 elevation kinetics."
+
+ionescu-2006:
+  id: ionescu-2006
+  type: journal
+  authors: [Ionescu M, Frohman LA]
+  title: "Pulsatile secretion of growth hormone induced by a new GH releasing factor analog (CJC-1295) in subjects with adult GH deficiency"
+  journal: "J Clin Endocrinol Metab"
+  year: 2006
+  pmid: "16873939"
+  note: "CJC-1295 PK/PD in adults with GH deficiency."
+
+sigalos-2018:
+  id: sigalos-2018
+  type: journal
+  authors: [Sigalos JT, Pastuszak AW]
+  title: "The safety and efficacy of growth hormone secretagogues"
+  journal: "Sex Med Rev"
+  year: 2018
+  pmid: "29097109"
+  note: "Review of GHS safety data including ipamorelin, CJC-1295, GHRP-2/6."
+
+bowers-2002:
+  id: bowers-2002
+  type: journal
+  authors: [Bowers CY]
+  title: "Growth hormone secretagogues: history, mechanism of action, and clinical development"
+  journal: "JCEM"
+  year: 2002
+  note: "Foundational review of the GHRP family including ipamorelin's selectivity profile."

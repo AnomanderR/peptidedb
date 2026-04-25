@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PeptideDB
 
-## Getting Started
+> Open research peptide reference. Side-by-side, citation-dense, version-controlled.
 
-First, run the development server:
+PeptideDB is the first peer-reviewable, citation-native peptide research reference. Every claim links to a paper. Every change ships as a pull request. Every contributor is named.
+
+[**Live site →**](https://peptidedb-topaz.vercel.app)
+
+## Why PeptideDB
+
+The peptide research literature is scattered across PubMed, NEJM, Reddit threads, vendor blogs, and individual reviews. Existing online references are text-only, closed-source, and not designed for comparison or stack analysis. PeptideDB exists to:
+
+1. **Compare any two (or three) peptides** at the parameter level — mechanism, dosage, evidence, side effects, stack synergy.
+2. **Cite every claim** to a PubMed / NEJM / DOI / ClinicalTrials.gov source.
+3. **Make the data peer-reviewable** by storing each peptide as a YAML file in this public repo. Pull requests for additions or corrections.
+4. **Stay free and open** — MIT-licensed code and content. No paywalls. No accounts.
+
+## Features
+
+- **Per-peptide profile** with six structured sections: Mechanism, Dosage, Fat-Loss / Metabolic, Side Effects, Administration, Stack Synergy
+- **N-way comparison** at `/compare/<a>-vs-<b>` (and `<a>-vs-<b>-vs-<c>` for triples)
+- **Citation chips** linking out to PubMed / DOI / NCT
+- **Citation density tracker** — each peptide page surfaces how many claims are cited vs uncited
+- **Maturity tier** — Verified · Reviewed · Draft
+- **Evidence rubric** — FDA-approved, Phase 3, Phase 2, Phase 1, animal-strong, animal-mechanistic, anecdotal, theoretical
+- **Open API** at `/api/peptides` and `/api/peptides/[slug]`
+- **schema.org/Drug structured data** per page for AI / search citation
+- **Dark + light theme**, DM Sans + JetBrains Mono
+- **MIT-licensed** code and content
+
+## Getting started (development)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The build script regenerates `src/generated/citations.ts` from `content/refs.yaml` automatically on `bun run dev` and `bun run build`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How content works
 
-## Learn More
+Content lives as YAML in:
 
-To learn more about Next.js, take a look at the following resources:
+- `content/peptides/<slug>.yaml` — one file per peptide
+- `content/refs.yaml` — flat dictionary of citation entries keyed by stable IDs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Each peptide YAML validates against [`src/lib/schemas/peptide.ts`](./src/lib/schemas/peptide.ts) at build. **Build fails on**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- schema violation
+- citation reference that does not exist in `refs.yaml`
+- slug-filename mismatch
+- duplicate slug
+- citation key that does not match its `id` field
 
-## Deploy on Vercel
+Every claim-bearing value carries a `cite: [...]` slot — even when uncited (empty array), making the absence of citation programmatically queryable.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+PRs welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the peptide template, citation style, and review checklist.
+
+## License
+
+[MIT](./LICENSE) — code and content. PeptideDB content is for research and educational reference only. It is not medical advice.
+
+## Maintainers
+
+PeptideDB is maintained by an open-source community of researchers and engineers who care about a clean, citable peptide reference.
