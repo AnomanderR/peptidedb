@@ -15,6 +15,7 @@ import { EvidenceBar } from "@/components/peptide/EvidenceBar";
 import { MaturityBadge } from "@/components/peptide/MaturityBadge";
 import { EvidenceLevelBadge } from "@/components/peptide/EvidenceLevelBadge";
 import { CitationDensityBadge } from "@/components/peptide/CitationDensityBadge";
+import { CitableValueView } from "@/components/peptide/CitableValue";
 import { SectionFilter } from "@/components/site/SectionFilter";
 import { SectionFilterProvider } from "@/components/site/SectionFilterContext";
 import { FilteredSection } from "@/components/site/FilteredSection";
@@ -37,10 +38,10 @@ export async function generateMetadata({
   if (!p) return { title: "Not found" };
   return {
     title: `${p.name} — ${p.peptide_class}`,
-    description: p.summary,
+    description: p.summary.value,
     openGraph: {
       title: `${p.name} · PeptideDB`,
-      description: p.summary,
+      description: p.summary.value,
       type: "article",
     },
     alternates: {
@@ -76,7 +77,7 @@ export default async function PeptidePage({
     "@type": "Drug",
     name: p.name,
     alternateName: p.aliases,
-    description: p.summary,
+    description: p.summary.value,
     drugClass: p.peptide_class,
     legalStatus: p.fda_approved ? "FDA-approved" : "Research use only",
     url: `https://peptidedb.org/p/${p.slug}`,
@@ -126,9 +127,9 @@ export default async function PeptidePage({
             </span>
           </div>
 
-          <p className="max-w-3xl text-[15px] leading-relaxed text-[var(--color-text-secondary)]">
-            {p.summary}
-          </p>
+          <div className="max-w-3xl text-[15px] leading-relaxed text-[var(--color-text-secondary)]">
+            <CitableValueView value={p.summary} />
+          </div>
 
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-3xl">
             <QuickCard peptide={p} />

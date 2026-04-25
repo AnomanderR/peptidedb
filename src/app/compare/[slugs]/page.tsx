@@ -95,7 +95,7 @@ export default async function ComparisonPage({
     "@type": "Article",
     headline: `${peptides.map((p) => p.name).join(" vs ")} — Peptide Comparison`,
     description: peptides
-      .map((p) => `${p.name}: ${p.summary.slice(0, 100)}...`)
+      .map((p) => `${p.name}: ${p.summary.value.slice(0, 100)}...`)
       .join(" "),
     url: `https://peptidedb.org/compare/${combined}`,
   };

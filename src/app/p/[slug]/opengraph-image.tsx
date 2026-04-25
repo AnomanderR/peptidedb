@@ -141,8 +141,8 @@ export default async function OGImage({
             maxWidth: 1000,
           }}
         >
-          {p.summary.slice(0, 220)}
-          {p.summary.length > 220 ? "…" : ""}
+          {p.summary.value.slice(0, 220)}
+          {p.summary.value.length > 220 ? "…" : ""}
         </div>
 
         {/* Stats row */}

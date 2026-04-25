@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
+import { CitationChip } from "./CitationChip";
+import type { CitableValue } from "@/lib/schemas/peptide";
 
 /**
  * Animated 0–100 evidence-strength bar. Animates in on intersection
@@ -19,7 +21,8 @@ export function EvidenceBar({
 }: {
   label: string;
   percent: number;
-  meta?: string;
+  /** Evidence meta is a citable claim ('816-person RCT · FDA Phase 3'). */
+  meta?: CitableValue;
   color?: "blue" | "green" | "purple" | "amber" | "teal" | "rose" | "cyan";
   dotClassName?: string;
   className?: string;
@@ -80,7 +83,10 @@ export function EvidenceBar({
         </div>
       </div>
       {meta && (
-        <div className="text-[12px] text-[var(--color-text-muted)]">{meta}</div>
+        <div className="text-[12px] text-[var(--color-text-muted)]">
+          {meta.value}
+          {meta.cite && meta.cite.length > 0 && <CitationChip refs={meta.cite} />}
+        </div>
       )}
     </div>
   );

@@ -38,6 +38,9 @@ function isCitableShape(v) {
  * Each entry is a JSONPath-style array of keys to descend.
  */
 const REQUIRED_CITABLE_FIELDS = [
+  // top-level visible prose claims
+  ["summary"],
+  ["hero_route"],
   // mechanism object fields
   ["mechanism", "primary_target"],
   ["mechanism", "pathway"],
@@ -53,6 +56,7 @@ const REQUIRED_CITABLE_FIELDS = [
   ["dosage", "rows", "*", "value"],
   ["dosage", "rows", "*", "notes"],
   // fat_loss
+  ["fat_loss", "evidence_meta"],
   ["fat_loss", "rows", "*", "value"],
   ["fat_loss", "rows", "*", "notes"],
   // side_effects

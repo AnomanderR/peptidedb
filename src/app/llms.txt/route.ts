@@ -27,7 +27,7 @@ export async function GET() {
   lines.push("");
   for (const p of peptides) {
     lines.push(
-      `- [${p.name}](https://peptidedb.org/p/${p.slug}): ${p.peptide_class}. ${p.summary.replace(/\s+/g, " ").slice(0, 240)}`,
+      `- [${p.name}](https://peptidedb.org/p/${p.slug}): ${p.peptide_class}. ${p.summary.value.replace(/\s+/g, " ").slice(0, 240)}`,
     );
   }
   lines.push("");

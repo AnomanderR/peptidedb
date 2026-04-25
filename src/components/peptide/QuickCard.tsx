@@ -1,5 +1,6 @@
 import { cn } from "@/lib/cn";
 import { CitationChip } from "./CitationChip";
+import { CitableValueView } from "./CitableValue";
 import type { Peptide } from "@/lib/schemas/peptide";
 
 /* Color → CSS variable map. Drives accent + soft fill. */
@@ -91,7 +92,7 @@ export function QuickCard({
       </div>
 
       <div className="mt-5 pt-4 border-t border-[var(--color-border)] text-[12px] text-[var(--color-text-secondary)] font-mono">
-        {peptide.hero_route}
+        <CitableValueView value={peptide.hero_route} inline />
       </div>
     </div>
   );

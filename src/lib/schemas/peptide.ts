@@ -135,7 +135,8 @@ export type DosageSection = z.infer<typeof DosageSection>;
 export const FatLossSection = z.object({
   evidence_strength: z.number().min(0).max(100),
   evidence_level: EvidenceLevel,
-  evidence_meta: z.string().min(1),
+  /** Evidence meta is visible prose ('816-person RCT · FDA Phase 3 · 26-52 weeks'). Claim-bearing — citable. */
+  evidence_meta: CitableValue,
   rows: z.array(TableRow),
 });
 export type FatLossSection = z.infer<typeof FatLossSection>;
@@ -213,10 +214,14 @@ export const Peptide = z.object({
 
   last_reviewed: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
 
-  summary: z.string().min(40).max(500),
+  /** Summary is the page hero prose — synthesis of mechanism + clinical
+   * status. Claim-bearing, citable. Cite[] can be empty for synthesis
+   * (acknowledged in the trust metric as uncited). */
+  summary: CitableValue,
 
   hero_stats: z.array(QuickStat).length(3),
-  hero_route: z.string().min(4),
+  /** Route line ('SQ · Abdomen · Once Daily'). Protocol claim — citable. */
+  hero_route: CitableValue,
 
   mechanism: MechanismSection,
   dosage: DosageSection,
