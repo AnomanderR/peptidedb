@@ -77,11 +77,20 @@ export function computePeptideStats(p: Peptide): PeptideStats {
     }
 
     if (isStackProtocol(node)) {
-      // A stack contributes TWO claims: the rationale + the primary benefit.
-      // Both are governed by the stack-level cite[].
-      countClaim(node.cite ?? [], `${path}.rationale`);
-      countClaim(node.cite ?? [], `${path}.primary_benefit`);
-      // Don't recurse into protocol.* (those are reference values from dosage)
+      // A stack contributes 2 + N claims (rationale + primary_benefit + each
+      // protocol entry). All claims are governed by the stack-level cite[].
+      // Protocol entries are visible dosing strings ("2 mg SQ · evening")
+      // and must flow through the trust metric so the badge matches what
+      // the user sees on /p/[slug] and /compare/[slugs].
+      const stackCite = node.cite ?? [];
+      countClaim(stackCite, `${path}.rationale`);
+      countClaim(stackCite, `${path}.primary_benefit`);
+      const protocol = (node as { protocol?: Record<string, string> }).protocol;
+      if (protocol && typeof protocol === "object") {
+        for (const key of Object.keys(protocol)) {
+          countClaim(stackCite, `${path}.protocol.${key}`);
+        }
+      }
       return;
     }
 

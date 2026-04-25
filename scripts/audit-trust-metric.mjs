@@ -60,7 +60,7 @@ const isAdminStep = (v) => {
   return true;
 };
 
-/** Stack protocol: rationale + primary_benefit + cite[]. */
+/** Stack protocol: rationale + primary_benefit + protocol{} + cite[]. */
 const isStackProtocol = (v) => {
   if (!v || typeof v !== "object")
     return `expected stack protocol object, got ${typeof v}`;
@@ -72,6 +72,15 @@ const isStackProtocol = (v) => {
     return "stack missing string `partner_slug`";
   if ("cite" in v && !Array.isArray(v.cite))
     return "stack `cite` must be array if present";
+  // protocol is an object map; every entry value MUST be a string.
+  // Each entry counts as a separate claim (governed by stack-level cite).
+  if (!v.protocol || typeof v.protocol !== "object")
+    return "stack missing `protocol` object map";
+  for (const [k, val] of Object.entries(v.protocol)) {
+    if (typeof val !== "string" || !val) {
+      return `stack.protocol.${k} must be a non-empty string`;
+    }
+  }
   return true;
 };
 
