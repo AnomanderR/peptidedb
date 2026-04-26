@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getPeptide, loadAllPeptides } from "@/lib/content";
 import { computePeptideStats } from "@/lib/peptide-stats";
 import { citationsUsedBy } from "@/lib/peptide-cites";
-import { pigmentHexFor } from "@/lib/peptide-motif";
+import { buildMotifNodes, pigmentHexFor } from "@/lib/peptide-motif";
 import { SITE_HOST } from "@/lib/site";
 
 export const runtime = "nodejs";
@@ -22,17 +22,6 @@ const ROMAN: Record<number, string> = {
   22: "XXII", 23: "XXIII", 24: "XXIV", 25: "XXV", 26: "XXVI", 27: "XXVII",
   28: "XXVIII", 29: "XXIX", 30: "XXX",
 };
-
-/* FNV-1a-ish stable hash — matches lib/peptide-motif.tsx so the OG
-   card motif and the in-page motif are pixel-identical. */
-function hash(s: string): number {
-  let h = 0x811c9dc5;
-  for (let i = 0; i < s.length; i++) {
-    h ^= s.charCodeAt(i);
-    h = (h + ((h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24))) >>> 0;
-  }
-  return h >>> 0;
-}
 
 /**
  * /p/[slug]/opengraph-image — 1200×630 Atlas-aesthetic share card.
@@ -87,28 +76,13 @@ export default async function OGImage({
   const pigment = pigmentHexFor(p.peptide_class);
 
   // Build the deterministic motif coordinates (12-node hex coat-of-arms),
-  // matching lib/peptide-motif.tsx so the OG and in-page render the same.
+  // via the shared buildMotifNodes() in lib/peptide-motif.tsx — D16 single
+  // source of truth. The in-page render and the OG card cannot drift apart.
   const motifSize = 280;
-  const cx = motifSize / 2;
-  const cy = motifSize / 2;
-  const ringR = motifSize * 0.34;
-  const innerR = motifSize * 0.18;
-  const h = hash(p.slug);
-  const nodes = Array.from({ length: 12 }).map((_, i) => {
-    const t = (i / 12) * Math.PI * 2;
-    const jitter = ((h >> (i * 2)) & 0x07) - 3.5;
-    const r = ringR + jitter * 1.3;
-    const r2 = i % 3 === 0
-      ? innerR + (((h >> (i * 3)) & 0x05) - 2.5) * 1.2
-      : null;
-    return {
-      x: cx + r * Math.cos(t),
-      y: cy + r * Math.sin(t),
-      x2: r2 == null ? null : cx + r2 * Math.cos(t + Math.PI / 12),
-      y2: r2 == null ? null : cy + r2 * Math.sin(t + Math.PI / 12),
-      bigDot: ((h >> (i + 4)) & 1) === 1,
-    };
-  });
+  const { hash: h, cx, cy, ringR, innerR, nodes } = buildMotifNodes(
+    p.slug,
+    motifSize,
+  );
 
   return new ImageResponse(
     (
