@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useId, useState, useMemo } from "react";
 
 /* =========================================================
    Reconstitution calculator — Atlas-skinned
@@ -33,6 +33,13 @@ export function ReconstitutionCalculator({
   const [waterMl, setWaterMl] = useState<number>(2);
   const [doseMcg, setDoseMcg] = useState<number>(250);
 
+  // Stable per-instance ids so <label htmlFor> binds to the right input
+  // even if multiple calculators ever render on one page.
+  const reactId = useId();
+  const mgId = `${reactId}-mg`;
+  const waterId = `${reactId}-water`;
+  const doseId = `${reactId}-dose`;
+
   const result = useMemo(() => {
     if (mg <= 0 || waterMl <= 0 || doseMcg <= 0) return null;
     const totalMcg = mg * 1000;
@@ -57,12 +64,13 @@ export function ReconstitutionCalculator({
       <div className="col-span-12 lg:col-span-5 space-y-5">
         <div className="at-folio">Inputs</div>
 
-        <label className="block">
-          <span className="at-folio block mb-2">
+        <div>
+          <label htmlFor={mgId} className="at-folio block mb-2">
             Lyophilized peptide in vial
-          </span>
+          </label>
           <div className="flex items-baseline gap-3">
             <input
+              id={mgId}
               type="number"
               min={0.1}
               step={0.1}
@@ -73,14 +81,15 @@ export function ReconstitutionCalculator({
             />
             <span className="at-folio">mg</span>
           </div>
-        </label>
+        </div>
 
-        <label className="block">
-          <span className="at-folio block mb-2">
+        <div>
+          <label htmlFor={waterId} className="at-folio block mb-2">
             Bacteriostatic water added
-          </span>
+          </label>
           <div className="flex items-baseline gap-3">
             <input
+              id={waterId}
               type="number"
               min={0.1}
               step={0.1}
@@ -91,12 +100,15 @@ export function ReconstitutionCalculator({
             />
             <span className="at-folio">mL</span>
           </div>
-        </label>
+        </div>
 
-        <label className="block">
-          <span className="at-folio block mb-2">Desired dose</span>
+        <div>
+          <label htmlFor={doseId} className="at-folio block mb-2">
+            Desired dose
+          </label>
           <div className="flex items-baseline gap-3">
             <input
+              id={doseId}
               type="number"
               min={1}
               step={1}
@@ -107,7 +119,7 @@ export function ReconstitutionCalculator({
             />
             <span className="at-folio">mcg</span>
           </div>
-        </label>
+        </div>
 
         <div className="border-t border-[var(--at-rule)] pt-4 at-folio leading-[1.6] normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)]">
           The calculator does pure mass-to-volume math. It does not

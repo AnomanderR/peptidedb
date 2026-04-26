@@ -106,23 +106,39 @@ export function pigmentHexFor(peptide_class?: string): string {
   return PIGMENT_HEX[cssVar] ?? "#5a5a52";
 }
 
-export function PeptideMotif({
-  slug,
-  peptide_class,
-  size = 200,
-  variant = "card",
-}: MotifProps) {
+/* =========================================================
+   buildMotifNodes — D16, single source of truth for the 12-node
+   hex coat-of-arms geometry. Both the in-page <PeptideMotif> and
+   the /p/[slug] OG card import from here. Pure: same slug + size
+   in → same nodes/cx/cy/ringR/innerR/seedRingDash/seedRotation out.
+   ========================================================= */
+export interface MotifNode {
+  x: number;
+  y: number;
+  x2: number | null;
+  y2: number | null;
+  bigDot: boolean;
+}
+
+export interface MotifGeometry {
+  hash: number;
+  cx: number;
+  cy: number;
+  ringR: number;
+  innerR: number;
+  nodes: MotifNode[];
+  seedRingDash: string;
+  seedRotation: number;
+}
+
+export function buildMotifNodes(slug: string, motifSize: number): MotifGeometry {
   const h = hash(slug);
-  const pigment = pigmentFor(peptide_class);
+  const cx = motifSize / 2;
+  const cy = motifSize / 2;
+  const ringR = motifSize * 0.34;
+  const innerR = motifSize * 0.18;
 
-  /* 12 anchor points in a hexagonal arrangement. Each gets a sub-jitter
-     drawn from the slug hash so every peptide is visually unique. */
-  const cx = size / 2;
-  const cy = size / 2;
-  const ringR = size * 0.34;
-  const innerR = size * 0.18;
-
-  const nodes = Array.from({ length: 12 }).map((_, i) => {
+  const nodes: MotifNode[] = Array.from({ length: 12 }).map((_, i) => {
     const t = (i / 12) * Math.PI * 2;
     const jitter = ((h >> (i * 2)) & 0x07) - 3.5; // -3.5 .. +3.5
     const r = ringR + jitter * 1.3;
@@ -140,6 +156,34 @@ export function PeptideMotif({
   const seedRingDash = `${(h & 0x07) + 2} ${((h >> 4) & 0x07) + 4}`;
   const seedRotation = (h >> 8) % 60;
 
+  return { hash: h, cx, cy, ringR, innerR, nodes, seedRingDash, seedRotation };
+}
+
+/* Format a slug as a human-readable title for accessible labels:
+   "ss-31" → "Ss 31", "tesamorelin" → "Tesamorelin". Used as the
+   <title> text inside the motif SVG when no display name is passed. */
+function slugToTitle(slug: string): string {
+  return slug
+    .split(/[-_]/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+export function PeptideMotif({
+  slug,
+  peptide_class,
+  size = 200,
+  variant = "card",
+}: MotifProps) {
+  const pigment = pigmentFor(peptide_class);
+
+  /* 12 anchor points in a hexagonal arrangement. Each gets a sub-jitter
+     drawn from the slug hash so every peptide is visually unique. */
+  const { hash: h, cx, cy, ringR, innerR, nodes, seedRingDash, seedRotation } =
+    buildMotifNodes(slug, size);
+  const name = slugToTitle(slug);
+
   const isHero = variant === "hero";
   const lineWidth = isHero ? 1.1 : 0.8;
 
@@ -152,6 +196,12 @@ export function PeptideMotif({
       aria-label={`Specimen motif for ${slug}`}
       style={{ display: "block" }}
     >
+      <title>{name} specimen motif</title>
+      <desc>
+        Deterministic 12-node hex coat-of-arms fingerprint for {name},
+        generated from the slug hash. Decorative; the same slug always
+        produces the same motif.
+      </desc>
       {/* Outer compass ring with seeded dash */}
       <circle
         cx={cx}
