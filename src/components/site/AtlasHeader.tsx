@@ -4,12 +4,13 @@ import { MobileNav } from "./MobileNav";
 
 /* Single source of truth for site navigation. Used by both the
    desktop nav (rendered inline at >=sm) and <MobileNav> (rendered
-   below sm). Add /contribute here when Phase 6 ships. */
+   below sm). */
 export const NAV_LINKS = [
   { href: "/catalog", label: "Catalogue" },
   { href: "/compare", label: "Compare" },
   { href: "/stack", label: "Stack" },
   { href: "/ask", label: "Ask" },
+  { href: "/contribute", label: "Contribute" },
 ] as const;
 
 export const EXTERNAL_NAV_LINKS = [
