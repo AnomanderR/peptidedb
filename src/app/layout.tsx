@@ -79,7 +79,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col">
         <AtlasHeader />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">{children}</main>
         <AtlasFooter />
       </body>
     </html>

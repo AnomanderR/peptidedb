@@ -4,7 +4,7 @@
 
 PeptidesDB is the first peer-reviewable, citation-native peptide research reference. Every claim links to a paper. Every change ships as a pull request. Every contributor is named.
 
-[**Live site →**](https://peptidedb-topaz.vercel.app)
+[**Live site →**](https://peptidesdb.org)
 
 ## Why PeptidesDB
 
