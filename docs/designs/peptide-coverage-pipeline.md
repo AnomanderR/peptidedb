@@ -133,6 +133,33 @@ Codex's open questions, unresolved by this review — answer before starting Pha
 - **Who performs the "human review" gate, at what daily throughput?** A single reviewer at 2-3 plates/day = ~12-18 working days for 36 plates. Multi-reviewer requires editorial alignment doc.
 - **Alias/store-product-URL → peptidesdb-slug resolution?** Decide now: implement a redirect map at peptidesdb.org? Or punt to CertaPeptides storefront (link directly to peptidesdb canonical slugs from the store)?
 
+## Eng review decisions (2026-04-26 via /plan-eng-review)
+
+After running engineering review against the plan + 3 companion docs, 3 implementation decisions were resolved:
+
+1. **Maturity enum migration** (was: P1, API consumer breakage). Hard cutover from 3-tier `[draft, reviewed, verified]` to 4-tier `[auto-drafted, human-reviewed, community-edited, flagship]`. Old→new mapping (`draft→auto-drafted`, `reviewed→human-reviewed`, `verified→flagship`; `community-edited` is new and not retroactively assigned) documented in DESIGN.md and the migration script. Acceptable since peptidesdb has no known external API consumers; smallest diff.
+
+2. **evidence_tier precedence rule** (was: P2, taxonomy debt). Computed at build-time, not manually set. `evidence_tier = max(EvidenceLevel)` across claims in `mechanism` + `dosage` + `evidence` + `side_effects` sections; default `theoretical` when none. Implemented in `peptide-stats.ts`; surfaced as a derived field. Maintainer never sets it manually. Eliminates the two-truth-systems concern codex flagged.
+
+3. **PubMed verification depth** (was: P2, existence vs relevance). Verify PMID exists + title fuzzy-match ≥ 0.85 against AI's `title` field. Catches "AI hallucinated a real PMID for a different paper" at the verification layer, before the claim-linker step. Reduces claim-linker workload + API cost.
+
+## Eng review — additional findings (P3, no decision needed)
+
+- **PubMed E-utilities NCBI_API_KEY**: register a free NCBI API key, set as env var. Bumps rate limit 3→10 req/s. Cuts pipeline lookup time from ~3.5min to ~1min for full corpus.
+- **Local PubMed cache**: write esummary results to `scripts/.pubmed-cache.json` (gitignored). Halves real cost on re-runs; provides offline draft-review.
+- **Concurrent claim-linker**: use `p-limit(3)` for the 3 simultaneous Anthropic calls per peptide. Without batching: ~2.5min/plate on linker. With: ~30s/plate.
+- **Module split**: pipeline goes into `scripts/lib/{pubmed-client,claim-linker,draft-plate}.ts` + `scripts/gen-plate.ts` orchestrator. Each <100 LOC, individually testable.
+- **refs.yaml insert path**: pipeline appends to `content/refs.yaml` directly (source-of-truth); existing `gen:citations` regenerates `src/generated/citations.ts` automatically. Confirm refs.yaml entries stay alphabetical-by-id to avoid merge conflicts.
+- **Total API budget estimate**: ~$1.60/plate × 61 plates ≈ ~$100 in Anthropic API cost for full corpus.
+
+## Eng review — critical regression tests (P1)
+
+These tests are mandatory before deploy:
+
+1. **Schema migration regression**: every existing 30 plate parses with the new schema (4-tier `maturity` + new `evidence_tier` field). Default-value backfill correctness verified.
+2. **API consumer regression**: `/api/peptides` returns valid JSON with new maturity values, no 500.
+3. **MaturityBadge rendering**: badge component handles all 4 new tiers (currently hardcodes 3).
+
 ## Risk register (revised)
 
 - **Bioregulator wave** remains highest editorial risk. Recommend `/plan-design-review` on the framing copy before Wave 3 ships.
