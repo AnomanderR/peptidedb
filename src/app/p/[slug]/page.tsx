@@ -9,6 +9,8 @@ import { CITATIONS } from "@/generated/citations";
 import { citationLabel, citationUrl } from "@/lib/citations";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ReconstitutionCalculator } from "@/components/peptide/ReconstitutionCalculator";
+import { SectionFrame } from "@/components/site/SectionFrame";
+import { ContributionBlock } from "@/components/site/ContributionBlock";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -283,12 +285,12 @@ export default async function PeptidePage({
           id="mechanism"
           className="grid grid-cols-12 gap-8 lg:gap-12 pb-20 at-plate scroll-mt-12"
         >
-          <div className="col-span-12 lg:col-span-3">
-            <div className="at-folio mb-3">§ II</div>
-            <h2 className="at-display text-[40px] leading-[1.05]">
-              Mechanism
-            </h2>
-          </div>
+          <SectionFrame
+            slug={p.slug}
+            sectionKey="mechanism"
+            number="§ II"
+            title="Mechanism"
+          >
           <div className="col-span-12 lg:col-span-6 space-y-5">
             <p className="text-[15px] leading-[1.7]">
               <span className="at-folio">Primary target —</span>{" "}
@@ -342,6 +344,7 @@ export default async function PeptidePage({
               </ol>
             </aside>
           ) : null}
+          </SectionFrame>
         </section>
       )}
 
@@ -351,16 +354,13 @@ export default async function PeptidePage({
           id="dosage"
           className="border-t border-[var(--at-rule)] grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate scroll-mt-12"
         >
-          <div className="col-span-12 lg:col-span-3">
-            <div className="at-folio mb-3">§ III</div>
-            <h2 className="at-display text-[40px] leading-[1.05]">
-              Dosage
-            </h2>
-            <p className="at-folio mt-3 leading-[1.6] normal-case tracking-normal text-[12px]">
-              Protocols described in the cited literature; not medical
-              advice.
-            </p>
-          </div>
+          <SectionFrame
+            slug={p.slug}
+            sectionKey="dosage"
+            number="§ III"
+            title="Dosage"
+            caption="Protocols described in the cited literature; not medical advice."
+          >
           <div className="col-span-12 lg:col-span-9">
             <table className="w-full text-[14px]">
               <thead>
@@ -399,6 +399,7 @@ export default async function PeptidePage({
               </tbody>
             </table>
           </div>
+          </SectionFrame>
         </section>
       ) : null}
 
@@ -433,12 +434,12 @@ export default async function PeptidePage({
           id="fat-loss"
           className="border-t border-[var(--at-rule)] grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate scroll-mt-12"
         >
-          <div className="col-span-12 lg:col-span-3">
-            <div className="at-folio mb-3">§ IV</div>
-            <h2 className="at-display text-[40px] leading-[1.05]">
-              Evidence
-            </h2>
-          </div>
+          <SectionFrame
+            slug={p.slug}
+            sectionKey="evidence"
+            number="§ IV"
+            title="Evidence"
+          >
           <div className="col-span-12 lg:col-span-9">
             <div className="at-card p-6 lg:p-8 mb-8 grid grid-cols-12 gap-6 items-end">
               <div className="col-span-12 md:col-span-3">
@@ -498,6 +499,7 @@ export default async function PeptidePage({
               </tbody>
             </table>
           </div>
+          </SectionFrame>
         </section>
       )}
 
@@ -507,15 +509,13 @@ export default async function PeptidePage({
           id="side-effects"
           className="border-t border-[var(--at-rule)] grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate scroll-mt-12"
         >
-          <div className="col-span-12 lg:col-span-3">
-            <div className="at-folio mb-3">§ V</div>
-            <h2 className="at-display text-[40px] leading-[1.05]">
-              Adverse events
-            </h2>
-            <p className="at-folio mt-3 leading-[1.6] normal-case tracking-normal text-[12px]">
-              Severities follow the FDA / CTCAE convention.
-            </p>
-          </div>
+          <SectionFrame
+            slug={p.slug}
+            sectionKey="side_effects"
+            number="§ V"
+            title="Adverse events"
+            caption="Severities follow the FDA / CTCAE convention."
+          >
           <div className="col-span-12 lg:col-span-9 space-y-3">
             {p.side_effects.rows.map((row, i) => (
               <div
@@ -604,6 +604,7 @@ export default async function PeptidePage({
               </div>
             )}
           </div>
+          </SectionFrame>
         </section>
       ) : null}
 
@@ -613,12 +614,12 @@ export default async function PeptidePage({
           id="administration"
           className="border-t border-[var(--at-rule)] grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate scroll-mt-12"
         >
-          <div className="col-span-12 lg:col-span-3">
-            <div className="at-folio mb-3">§ VI</div>
-            <h2 className="at-display text-[40px] leading-[1.05]">
-              Administration
-            </h2>
-          </div>
+          <SectionFrame
+            slug={p.slug}
+            sectionKey="administration"
+            number="§ VI"
+            title="Administration"
+          >
           <ol className="col-span-12 lg:col-span-9 space-y-6">
             {p.administration.steps.map((step, i) => (
               <li
@@ -648,6 +649,7 @@ export default async function PeptidePage({
               </li>
             ))}
           </ol>
+          </SectionFrame>
         </section>
       ) : null}
 
@@ -657,12 +659,12 @@ export default async function PeptidePage({
           id="synergy"
           className="border-t border-[var(--at-rule)] grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate scroll-mt-12"
         >
-          <div className="col-span-12 lg:col-span-3">
-            <div className="at-folio mb-3">§ VII</div>
-            <h2 className="at-display text-[40px] leading-[1.05]">
-              Synergies
-            </h2>
-          </div>
+          <SectionFrame
+            slug={p.slug}
+            sectionKey="synergy"
+            number="§ VII"
+            title="Synergies"
+          >
           <div className="col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-6">
             {p.synergy.stacks.map((s, i) => {
               const partner = all.find((x) => x.slug === s.partner_slug);
@@ -714,6 +716,7 @@ export default async function PeptidePage({
               );
             })}
           </div>
+          </SectionFrame>
         </section>
       ) : null}
 
@@ -815,14 +818,7 @@ export default async function PeptidePage({
           )}
         </div>
         <div className="col-span-12 lg:col-span-5 lg:text-right flex flex-wrap gap-4 lg:justify-end">
-          <a
-            href={`https://github.com/peptidesdb/peptidesdb/blob/main/content/peptides/${p.slug}.yaml`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="at-link"
-          >
-            Edit on GitHub →
-          </a>
+          <ContributionBlock slug={p.slug} />
           <Link href="/catalog" className="at-link">
             Read another →
           </Link>

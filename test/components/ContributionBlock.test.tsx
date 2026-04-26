@@ -1,25 +1,34 @@
 import { describe, expect, test } from "bun:test";
-import { render, screen } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { axe } from "jest-axe";
 import { ContributionBlock } from "@/components/site/ContributionBlock";
 
+/*
+ * Bun's test runner does not auto-clean RTL renders between tests, so each
+ * test scopes its queries to its own render's container via `within(...)`.
+ * That keeps queries from matching across prior renders that linger in the
+ * shared happy-dom document.
+ */
+
 describe("<ContributionBlock />", () => {
   test("renders the three contribution affordances", () => {
-    render(<ContributionBlock slug="tesamorelin" />);
+    const { container } = render(<ContributionBlock slug="tesamorelin" />);
+    const scope = within(container);
     expect(
-      screen.getByRole("link", { name: /Edit tesamorelin on GitHub/ }),
+      scope.getByRole("link", { name: /Edit tesamorelin on GitHub/ }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: /Suggest a citation/ }),
+      scope.getByRole("link", { name: /Suggest a citation/ }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: /All contributors/ }),
+      scope.getByRole("link", { name: /All contributors/ }),
     ).toBeInTheDocument();
   });
 
   test("edit link points at /edit/main/ (not /blob/main/) per D18", () => {
-    render(<ContributionBlock slug="bpc-157" />);
-    const editLink = screen.getByRole("link", {
+    const { container } = render(<ContributionBlock slug="bpc-157" />);
+    const scope = within(container);
+    const editLink = scope.getByRole("link", {
       name: /Edit bpc-157 on GitHub/,
     });
     expect(editLink).toHaveAttribute(
@@ -30,8 +39,10 @@ describe("<ContributionBlock />", () => {
   });
 
   test("citation link points at the add-citation issue template", () => {
-    render(<ContributionBlock slug="ghk-cu" />);
-    const link = screen.getByRole("link", { name: /Suggest a citation/ });
+    const { container } = render(<ContributionBlock slug="ghk-cu" />);
+    const link = within(container).getByRole("link", {
+      name: /Suggest a citation/,
+    });
     expect(link).toHaveAttribute(
       "href",
       "https://github.com/peptidesdb/peptidesdb/issues/new?template=add-citation.yml",
@@ -39,8 +50,10 @@ describe("<ContributionBlock />", () => {
   });
 
   test("contributors link points at the GitHub graph", () => {
-    render(<ContributionBlock slug="ghk-cu" />);
-    const link = screen.getByRole("link", { name: /All contributors/ });
+    const { container } = render(<ContributionBlock slug="ghk-cu" />);
+    const link = within(container).getByRole("link", {
+      name: /All contributors/,
+    });
     expect(link).toHaveAttribute(
       "href",
       "https://github.com/peptidesdb/peptidesdb/graphs/contributors",
@@ -48,8 +61,8 @@ describe("<ContributionBlock />", () => {
   });
 
   test("all links open in new tab with rel=noopener noreferrer", () => {
-    render(<ContributionBlock slug="tesamorelin" />);
-    for (const link of screen.getAllByRole("link")) {
+    const { container } = render(<ContributionBlock slug="tesamorelin" />);
+    for (const link of within(container).getAllByRole("link")) {
       expect(link).toHaveAttribute("target", "_blank");
       expect(link.getAttribute("rel")).toMatch(/noopener/);
       expect(link.getAttribute("rel")).toMatch(/noreferrer/);
