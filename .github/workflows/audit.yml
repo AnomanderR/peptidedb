@@ -9,6 +9,12 @@ on:
 permissions:
   contents: read
 
+# Force JS-based actions (checkout, setup-bun) onto the Node 24 runtime ahead
+# of the 2026-06-02 default switch. Removes the Node 20 deprecation warning;
+# can be removed once all referenced actions ship Node-24 native versions.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 concurrency:
   group: audit-${{ github.ref }}
   cancel-in-progress: true
