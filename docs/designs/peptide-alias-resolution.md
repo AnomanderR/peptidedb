@@ -2,7 +2,7 @@
 
 > Companion doc to [peptide-coverage-pipeline.md](./peptide-coverage-pipeline.md). Answers Codex's open question: "If 'store referrals 404' is the framing, how does an inbound store-product URL resolve to a peptidesdb slug?"
 >
-> Drafted 2026-04-26. Status: **PROPOSAL — recommends a specific approach + provides a starter map.**
+> Drafted 2026-04-26. **Status: DECIDED 2026-04-26 — Option A (storefront-side ResearchRef link).** No peptidesdb redirect map. The fix lives on the CertaPeptides storefront where the user enters the funnel; peptidesdb stays a clean research reference per CONTRIBUTING.md identity.
 
 ## The problem
 
@@ -15,7 +15,7 @@ Adding 57 plates closes the *content* gap. It does NOT solve the *URL* gap unles
 
 The two are decoupled. Inbound is a UX necessity if we promise "no 404". Outbound is a policy choice.
 
-## Recommended approach: do nothing on peptidesdb, fix it on the storefront
+## Selected approach (A): do nothing on peptidesdb, fix it on the storefront
 
 **Reasoning**:
 
@@ -49,7 +49,7 @@ function ResearchReferenceLink({ storeSlug }) {
 
 This is ~20 lines of code on the storefront. No change to peptidesdb. Solves the "user lands on a 404" problem by routing them to peptidesdb canonically before they hit a 404.
 
-## Fallback: a minimal alias resolver on peptidesdb
+## Fallback (NOT selected): a minimal alias resolver on peptidesdb
 
 If you want peptidesdb to handle inbound store-style URLs natively (e.g., `peptidesdb.org/p/sermorelin-acetate` should resolve to `sermorelin`), add a redirect map to `next.config.ts`.
 
@@ -80,15 +80,15 @@ export default {
 
 Cost: ~30 minutes including testing. Reasonable if the storefront fix isn't viable for organizational reasons.
 
-## Recommendation
+## Decision (2026-04-26)
 
-**Pick one**:
+**Selected: A.** CertaPeptides storefront owns the alias-to-plate mapping; peptidesdb takes no redirect work. The storefront PR ships once Wave 1 plates are live.
 
-| Option | Where the work lives | Effort | Reasoning |
-|---|---|---|---|
-| **A** (recommended) | CertaPeptides storefront product pages | ~20 LOC, ~30 min | Correct identity boundary. peptidesdb stays a clean reference. |
-| **B** (fallback) | peptidesdb `next.config.ts` redirects | ~50 LOC, ~30 min | Handles drift if storefront falls behind, but couples peptidesdb to store-aware concerns. |
-| **C** (do both) | both | ~50 LOC, 1 hr | Belt + suspenders. Storefront avoids the 404; peptidesdb redirects catch hand-typed or inbound link drift. |
+| Option | Where the work lives | Effort | Reasoning | Status |
+|---|---|---|---|---|
+| **A** | CertaPeptides storefront product pages | ~20 LOC, ~30 min | Correct identity boundary. peptidesdb stays a clean reference. | ✅ SELECTED |
+| **B** | peptidesdb `next.config.ts` redirects | ~50 LOC, ~30 min | Handles drift if storefront falls behind, but couples peptidesdb to store-aware concerns. | Rejected |
+| **C** | both | ~50 LOC, 1 hr | Belt + suspenders. | Rejected |
 
 ## Starter alias map
 
@@ -121,8 +121,9 @@ After Wave 1-3 plates are authored, extend this map per the new slugs in [peptid
 
 The following match by direct slug equality and need no entry: `aod-9604`, `bpc-157`, `dsip`, `epitalon`, `ghk-cu`, `ipamorelin`, `kpv`, `liraglutide`, `mots-c`, `pinealon`, `retatrutide`, `selank`, `semaglutide`, `semax`, `ss-31`, `tb-500`, `tesamorelin`, `tirzepatide`, `thymosin-alpha-1`, `5-amino-1mq`.
 
-## Decision needed from maintainer
+## Decisions resolved (2026-04-26)
 
-- **Which option** (A / B / C)?
-- **If A or C**: who owns the storefront PR? (Probably the same person who maintains certapeptides-storefront.)
-- **If B or C**: should the redirect map live in `next.config.ts` (manual maintenance) or be generated build-time from a YAML file in `content/aliases.yaml` (parallel to refs.yaml)?
+- **Option selected**: A — storefront-side `ResearchRef` component on each product detail page.
+- **Storefront PR owner**: Alex (founder), same maintainer as certapeptides-storefront.
+- **Trigger**: PR ships once Wave 1 plates (17) are live on peptidesdb. Subsequent waves extend the alias map in lockstep with each plate ship.
+- **Out of scope**: no `next.config.ts` redirect map on peptidesdb. If hand-typed peptidesdb URLs become a real issue post-launch (verify via 404 logs), revisit the fallback option then — not now.

@@ -2,7 +2,7 @@
 
 > Companion doc to [peptide-coverage-pipeline.md](./peptide-coverage-pipeline.md). Answers Codex's open question: "Who performs human review, at what daily throughput?"
 >
-> Drafted 2026-04-26. Status: **TEMPLATE — values must be filled in by maintainer before Phase 0 starts.**
+> Drafted 2026-04-26. **Status: DECIDED 2026-04-26.** Reviewer = Alex (founder). Throughput = 3-4 plates/day at 4 hr/day. Wave 1 (17 plates) is the calibration batch — re-evaluate cadence and add a domain advisor (Wave 3) before bioregulators ship.
 
 ## The bottleneck
 
@@ -39,9 +39,9 @@ For 57 net-new plates:
 - Decide tier when claim-linker flags a citation as low-confidence.
 - Final say on `evidence_tier` + `maturity` per plate.
 
-**Throughput target**: **___ plates/day** (TBD).
+**Throughput target**: **3-4 plates/day** at 4 hr/day (calibration pace; matches Wave 1 wall-clock estimate of ~15-20 working days for 17 plates).
 
-**Person**: **___** (TBD — most likely the founder for editorial control on first wave).
+**Person**: **Alex (founder).** Solo reviewer for Wave 1. Editorial-control rationale: pipeline calibration matters most on the first batch, and the founder owns the brand voice + DESIGN.md compliance bar.
 
 ### Editorial reviewer — secondary (optional)
 
@@ -49,7 +49,7 @@ For 57 net-new plates:
 - Second-pair-of-eyes for the bioregulator wave specifically (highest editorial risk).
 - Sanity-check the `evidence_tier` calls for Russian-tradition peptides.
 
-**Person**: **___** (TBD — could be a domain advisor; could be the founder if 1-reviewer model).
+**Person**: **Deferred.** Wave 1 ships solo. Re-evaluate before Wave 3 (bioregulators) — that's where editorial framing risk concentrates and a domain advisor would add the most value. If pipeline + claim-linker quality holds through Wave 1, consider recruiting a Khavinson-school-aware reviewer for Wave 3 only.
 
 ### Pipeline operator (one-time, can be the maintainer)
 

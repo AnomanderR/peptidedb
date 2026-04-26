@@ -192,3 +192,46 @@ These tests are mandatory before deploy:
 - **Bioregulator wave** remains highest editorial risk. Recommend `/plan-design-review` on the framing copy before Wave 3 ships.
 - **Claim-linker LLM cost** — calling LLM once per claim per peptide is ~50-100 LLM calls per plate. Budget impact non-trivial; rate-limit the linker, batch where possible.
 - **Maturity ladder backfill** — every existing 30 plate needs `maturity` re-set from old 3-value → new 4-value. Ship a migration script that defaults reasonable values, then promote individually.
+
+## Maintainer decisions (2026-04-26)
+
+All 3 prior blockers and 3 slug-collision sub-questions resolved by founder. Pipeline is implementation-ready; no further input required before Phase 0.
+
+| # | Decision | Choice | Reasoning | Impact |
+|---|---|---|---|---|
+| 1 | Reviewer + throughput | **Solo (Alex), 4 hr/day, 3-4 plates/day** | Founder owns brand voice + DESIGN.md compliance bar; Wave 1 (17 plates) is calibration batch. | Wall-clock: ~15-20 working days for Wave 1; re-evaluate cadence + recruit Wave-3 advisor before bioregulators ship. |
+| 2 | Alias resolution (store → peptidesdb) | **Option A — storefront-side ResearchRef link** | peptidesdb stays a clean reference per CONTRIBUTING.md; fix lives where the user enters the funnel. | Storefront PR (~20 LOC) ships once Wave 1 plates are live. No `next.config.ts` redirect map on peptidesdb. Starter alias map at [peptide-alias-resolution.md:99](./peptide-alias-resolution.md). |
+| 3a | P21 slug collision | **One canonical plate `p21`** | Adamantane is a delivery-variant, not a distinct entity in published literature. Matches existing `cjc-1295` pattern. | Wave 2 reduced from 31 → 30 plates. Adamantane variant noted in plate Administration section. Both store SKUs alias to `/p/p21`. |
+| 3b | GLP-1 generic slug | **`glp-1-7-37`** | Specifies the bioactive C-terminal fragment (most common research form). | Action item before authoring: verify isoform from supplier COA; fall back to `glp-1-native` if COA is silent. |
+| 3c | MK-677 categorization | **Skip permanently** | MK-677 is a non-peptide small molecule (oral GH secretagogue). Including it opens scope to all GH secretagogues, dilutes "peptides only" identity. | Stays in Skipped table. peptidesdb already covers peptide-based GH secretagogues (GHRP-2/6, hexarelin, ipamorelin, sermorelin, tesamorelin). |
+
+### Final plate count
+
+- **Already in DB**: 30 plates
+- **Net-new to author**: 60 plates (17 Wave 1 + 30 Wave 2 + 13 Wave 3)
+- **Store SKUs covered**: 91 (30 existing + 61 new — `p21` plate aliases to 2 SKUs)
+- **Total store products audited**: 131
+
+### Implementation-ready state
+
+Phase 0 of the build can begin without further maintainer input:
+
+1. PubMed E-utilities lookup script (Phase 1)
+2. LLM claim-to-PMID linker with `p-limit(3)` concurrency (Phase 2)
+3. Claude SDK plate-drafting wrapper (Phase 3)
+4. Schema migration: 4-tier maturity enum + computed `evidence_tier` + `russian_journal_ref` citation extension (Phase 4)
+5. DESIGN.md § 14 + MaturityBadge atlas rewrite from `~/.gstack/projects/peptidesdb/design-review-20260426.md` (Phase 5)
+6. `bun run gen:plate <slug>` CLI wrapper + integration test (Phase 6)
+7. Wave 1 authoring: 17 well-evidenced GLP-1s + Growth Factors (Phase 7)
+8. Waves 2-3: 30 medium-evidenced + 13 bioregulators (Phases 8-9)
+
+### Re-evaluation triggers
+
+Stop and re-plan if any of the following fire during Wave 1:
+
+- Claim-linker false-positive rate >30% over 5 consecutive plates → tune linker prompt before continuing
+- 3 plates in a row regenerated for AI drift → try different model
+- Reviewer backlog >10 unreviewed `auto-drafted` plates → drafting outpacing review; pause drafting until backlog clears
+- Wave 1 wall-clock exceeds 4 weeks → review cadence and either commit to 8 hr/day or recruit second reviewer
+
+These triggers and their recovery procedures are documented in [peptide-editorial-workflow.md § Pause conditions](./peptide-editorial-workflow.md).

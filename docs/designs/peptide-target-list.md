@@ -2,7 +2,7 @@
 
 Generated 2026-04-26. Source: CertaPeptides WooCommerce store, **131 published products** (page 1 + page 2). Cross-referenced against peptidesdb's 30 existing plates.
 
-> ⚠️ **Scope correction**: Original CEO plan estimated ~36 net-new plates. Actual gap is **~57 net-new plates** after full audit + alias resolution. Update [peptide-coverage-pipeline.md](./peptide-coverage-pipeline.md) effort estimates accordingly: literature review for 57 plates ≈ 8-12 working days, not 5-7.
+> ⚠️ **Scope correction**: Original CEO plan estimated ~36 net-new plates. Actual gap is **60 net-new plates** covering 61 store SKUs after full audit + slug-collision resolution (2026-04-26: P21 collapsed to one canonical plate). Update [peptide-coverage-pipeline.md](./peptide-coverage-pipeline.md) effort estimates accordingly: literature review for 60 plates ≈ 15-20 working days at 4 hr/day reviewer pace (per [peptide-editorial-workflow.md](./peptide-editorial-workflow.md)).
 
 ## Already in DB (30 confirmed via slug or alias)
 
@@ -51,7 +51,7 @@ Target: peptides with substantial peer-reviewed literature (RCTs / human clinica
 | 6 | Dermorphin | `dermorphin` | GLP-1 and Incretin Research Peptides |  |
 | 7 | Follistatin 344 1mg | `follistatin-344` | Growth Factors |  |
 | 8 | GDF-8 1mg | `gdf-8` | Growth Factors |  |
-| 9 | GLP-1 5mg | `glp-1` | GLP-1 and Incretin Research Peptides | generic GLP-1 — slug ambiguous; consider rename |
+| 9 | GLP-1 5mg | `glp-1-7-37` | GLP-1 and Incretin Research Peptides | slug specifies the bioactive C-terminal fragment (most common research form). Verify isoform from supplier COA before authoring; fall back to `glp-1-native` if isoform is unconfirmed. |
 | 10 | IGF-1LR3 | `igf-1lr3` | Growth Factors |  |
 | 11 | IGF-DES 2mg | `igf-des` | Growth Factors |  |
 | 12 | Mazdutide | `mazdutide` | GLP-1 and Incretin Research Peptides |  |
@@ -61,7 +61,7 @@ Target: peptides with substantial peer-reviewed literature (RCTs / human clinica
 | 16 | SLU-PP-332 | `slu-pp-332` | GLP-1 and Incretin Research Peptides |  |
 | 17 | Survodutide 10mg | `survodutide` | GLP-1 and Incretin Research Peptides |  |
 
-## Wave 2 — Medium-evidenced (31 plates)
+## Wave 2 — Medium-evidenced (30 plates)
 
 Target: cyclic neuropeptides, melanocortins, copper/mitochondrial, gonadotropic, thymic. Mixed evidence quality — some have RCTs (HCG, Triptorelin), others are mechanistic only.
 
@@ -89,15 +89,14 @@ Target: cyclic neuropeptides, melanocortins, copper/mitochondrial, gonadotropic,
 | 20 | N-Acetyl Epitalon Amidate 5mg | `n-acetyl-epitalon-amidate` | Copper and Mitochondrial Research Peptides |  |
 | 21 | NAD+ | `nad` | Copper and Mitochondrial Research Peptides |  |
 | 22 | Oxytocin Acetate | `oxytocin` | Gonadotropic Research Peptides |  |
-| 23 | P21 (Adamantane) 10mg | `p21` | Cyclic and Neuropeptide Research Compounds | ⚠️ collision — see Wave 1 |
-| 24 | P21 10mg | `p21` | Cyclic and Neuropeptide Research Compounds | ⚠️ collision — see Wave 1 |
-| 25 | PE 22-28 10mg | `pe-22-28` | Cyclic and Neuropeptide Research Compounds |  |
-| 26 | PNC-27 | `pnc-27` | Copper and Mitochondrial Research Peptides |  |
-| 27 | PTD-DBM 5mg | `ptd-dbm` | Cyclic and Neuropeptide Research Compounds |  |
-| 28 | SNAP-8 10mg | `snap-8` | Melanocortin and Pigment Research Peptides |  |
-| 29 | Teriparatide 10mg | `teriparatide` | Copper and Mitochondrial Research Peptides |  |
-| 30 | Triptorelin Acetate 2mg | `triptorelin` | Gonadotropic Research Peptides |  |
-| 31 | VIP | `vip` | Thymic Research Peptides |  |
+| 23 | P21 10mg + P21 (Adamantane) 10mg | `p21` | Cyclic and Neuropeptide Research Compounds | one canonical plate covers both store SKUs (parent peptide + adamantane-conjugated delivery variant). Adamantane variant noted in Administration section per design decision 2026-04-26. |
+| 24 | PE 22-28 10mg | `pe-22-28` | Cyclic and Neuropeptide Research Compounds |  |
+| 25 | PNC-27 | `pnc-27` | Copper and Mitochondrial Research Peptides |  |
+| 26 | PTD-DBM 5mg | `ptd-dbm` | Cyclic and Neuropeptide Research Compounds |  |
+| 27 | SNAP-8 10mg | `snap-8` | Melanocortin and Pigment Research Peptides |  |
+| 28 | Teriparatide 10mg | `teriparatide` | Copper and Mitochondrial Research Peptides |  |
+| 29 | Triptorelin Acetate 2mg | `triptorelin` | Gonadotropic Research Peptides |  |
+| 30 | VIP | `vip` | Thymic Research Peptides |  |
 
 ## Wave 3 — Bioregulators (13 plates)
 
@@ -170,16 +169,19 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 |---|---|
 | Already in DB | 30 |
 | **Wave 1 (well-evidenced)** | **17** |
-| **Wave 2 (medium-evidenced)** | **31** |
+| **Wave 2 (medium-evidenced)** | **30** |
 | **Wave 3 (bioregulators)** | **13** |
 | Skipped (bundles/blends/SARMs/consumables/oral-variants) | 40 |
-| **TOTAL net-new plates to author** | **61** |
+| **TOTAL net-new plates to author** | **60** |
+| Store SKUs covered by net-new plates | 61 |
 | Total store products audited | 131 |
 
-## Open issues for review
+> **Note**: 60 plates cover 61 store SKUs because the canonical `p21` plate aliases to two store products (P21 + P21 Adamantane).
 
-1. **`p21` slug collision**: `P21 (Adamantane)` and `P21` are two distinct store products. The `(Adamantane)` parenthetical is the disambiguator — might be `p21-adamantane` for one and `p21` for the other. Verify with editorial.
-2. **`glp-1` generic slug**: 'GLP-1 5mg' is the store's name for native GLP-1 (1-37 or 7-37?). Slug `glp-1` is too generic. Consider `glp-1-native` or rename based on which form it actually is.
-3. **CJC-1295 SKUs vs single peptidesdb plate**: Store has CJC-1295 DAC and CJC-1295 Without DAC as separate SKUs but peptidesdb has one `cjc-1295` plate. Either split into two plates (`cjc-1295-dac` + `cjc-1295`) or keep merged with the existing approach (one plate handles both variants — current).
-4. **MOTS-c not in store but in DB**: `mots-c` plate exists; store doesn't sell MOTS-c at the moment. Keep the plate (it's research-relevant) but flag it as not-currently-stocked.
-5. **MK-677 categorized as SARM in store**: It IS in DB (`mk-677`). Per the store, MK-677/Ibutamoren is sold under SARMs category. Decision: is MK-677 a peptide? It's a small molecule (not a peptide) but it's a GH secretagogue functionally adjacent to peptides. Either remove from peptidesdb or keep with explicit framing.
+## Resolved decisions (2026-04-26)
+
+1. **`p21` slug collision** — RESOLVED. One canonical plate `p21` covers both store SKUs ("P21 10mg" + "P21 (Adamantane) 10mg"). Adamantane delivery variant noted in the plate's Administration section. Both store SKUs alias to `/p/p21` per the storefront-side ResearchRef component (Option A from [peptide-alias-resolution.md](./peptide-alias-resolution.md)).
+2. **`glp-1` generic slug** — RESOLVED. Slug = `glp-1-7-37` (specifies the bioactive C-terminal fragment, the most common research form). Action item before authoring: verify isoform from supplier COA. Fall back to `glp-1-native` only if the COA is silent on isoform identity.
+3. **CJC-1295 SKUs vs single peptidesdb plate** — RESOLVED (no change). Existing single `cjc-1295` plate stays as-is and continues to cover both DAC and non-DAC store SKUs. Both alias to `/p/cjc-1295`. This matches the existing pattern and avoids unnecessary plate duplication.
+4. **MOTS-c not in store but in DB** — RESOLVED (no change). Plate stays. peptidesdb is a research reference, not a SKU mirror — research-relevant peptides can exist without active store SKUs. Optional follow-up: if traffic warrants it, surface a "not currently stocked" note on plates with no store SKU. Defer until post-launch.
+5. **MK-677 categorized as SARM in store** — RESOLVED. **Skip permanently.** MK-677/Ibutamoren is a non-peptide small molecule (oral growth-hormone secretagogue mimicking ghrelin at GHSR-1a). Including it would open scope to all GH secretagogues, then to other adjuncts — slippery slope that dilutes peptidesdb's "peptides only" identity. Stays in the Skipped table. peptidesdb already covers the peptide-based GH secretagogues (GHRP-2, GHRP-6, hexarelin, ipamorelin, sermorelin, tesamorelin) — that's the correct lane.
