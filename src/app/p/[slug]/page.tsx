@@ -12,7 +12,7 @@ import { ReconstitutionCalculator } from "@/components/peptide/ReconstitutionCal
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
-export const dynamicParams = false;
+export const dynamicParams = true; // ISR for unknown slugs → custom not-found.tsx
 
 export function generateStaticParams() {
   return loadAllPeptides().map((p) => ({ slug: p.slug }));
