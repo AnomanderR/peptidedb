@@ -1,4 +1,5 @@
 import { loadAllPeptides } from "@/lib/content";
+import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -18,16 +19,16 @@ export async function GET() {
   lines.push("");
   lines.push("## Project");
   lines.push("");
-  lines.push("- Site: https://peptidedb.org");
+  lines.push(`- Site: ${SITE_URL}`);
   lines.push("- Repository: https://github.com/peptidedb/peptidedb");
   lines.push("- License: MIT");
-  lines.push("- API: https://peptidedb.org/api/peptides");
+  lines.push(`- API: ${SITE_URL}/api/peptides`);
   lines.push("");
   lines.push("## Peptides");
   lines.push("");
   for (const p of peptides) {
     lines.push(
-      `- [${p.name}](https://peptidedb.org/p/${p.slug}): ${p.peptide_class}. ${p.summary.value.replace(/\s+/g, " ").slice(0, 240)}`,
+      `- [${p.name}](${SITE_URL}/p/${p.slug}): ${p.peptide_class}. ${p.summary.value.replace(/\s+/g, " ").slice(0, 240)}`,
     );
   }
   lines.push("");

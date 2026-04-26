@@ -5,8 +5,9 @@ import { ComparePicker } from "@/components/compare/ComparePicker";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Compare peptides",
-  description: "Pick any two or three research peptides for side-by-side comparison.",
+  title: "Compare plates",
+  description:
+    "Pick any two or three plates from the Specimen Atlas for side-by-side comparison.",
   alternates: { canonical: "/compare" },
 };
 
@@ -22,23 +23,29 @@ export default function ComparePage() {
   }));
 
   return (
-    <div className="mx-auto max-w-5xl px-4 sm:px-6 py-12 lg:py-20">
-      <header className="max-w-3xl">
-        <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">
-          <span className="size-1.5 rounded-full bg-[var(--color-tesamorelin)]" />
-          Side-by-side comparison
+    <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pt-12 lg:pt-20">
+      <header className="border-b-2 border-[var(--at-ink)] pb-8 mb-12 at-plate at-d1">
+        <div className="at-folio mb-6">§ Comparison</div>
+        <div className="grid grid-cols-12 gap-8 items-end">
+          <h1 className="col-span-12 lg:col-span-9 at-display text-[clamp(48px,7vw,108px)] leading-[0.95]">
+            Compare,{" "}
+            <em
+              className="at-display-italic"
+              style={{ color: "var(--at-pigment-rust)" }}
+            >
+              parameter by parameter.
+            </em>
+          </h1>
+          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[var(--at-ink-soft)]">
+            Pick any two — or three — plates and the atlas will line them
+            up at the same parameter rows: mechanism, dosage, evidence,
+            side effects, and stack synergies, with citations on every
+            claim.
+          </p>
         </div>
-        <h1 className="mt-6 text-[40px] sm:text-[52px] leading-[1.05] font-semibold tracking-tight text-[var(--color-text)]">
-          Compare any two peptides at the parameter level.
-        </h1>
-        <p className="mt-5 text-[15px] leading-relaxed text-[var(--color-text-secondary)] max-w-2xl">
-          Pick the peptides you want to compare. PeptideDB lines them up
-          parameter-by-parameter — mechanism, dosage, evidence, side effects,
-          and stack synergies — with citations on every claim.
-        </p>
       </header>
 
-      <div className="mt-10">
+      <div className="at-plate at-d2">
         <ComparePicker peptides={peptides} />
       </div>
     </div>

@@ -1,9 +1,47 @@
 import { NextResponse, type NextRequest } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { Ratelimit } from "@upstash/ratelimit";
+import { kv } from "@vercel/kv";
 import { citationAppendix, rankByQuery } from "@/lib/ask-corpus";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+
+/* =========================================================
+   Per-IP rate limit on /api/ask. Each Anthropic call costs us
+   real money; without a limit a single bad actor can drain the
+   API budget in minutes. We use Upstash sliding-window rate
+   limiting backed by Vercel KV.
+
+   Limits: 5 questions per minute per IP, 30 per hour per IP.
+   These are conservative — most legitimate users ask 1–3
+   questions per session. Adjust upward later based on logs.
+
+   Falls back gracefully: if KV_URL / KV_REST_API_TOKEN are not
+   configured (e.g. during local dev), we skip rate limiting and
+   log a warning. Production must have these set on Vercel.
+   ========================================================= */
+const KV_CONFIGURED = Boolean(
+  process.env.KV_URL && process.env.KV_REST_API_TOKEN,
+);
+
+const minuteLimiter = KV_CONFIGURED
+  ? new Ratelimit({
+      redis: kv,
+      limiter: Ratelimit.slidingWindow(5, "1 m"),
+      analytics: true,
+      prefix: "peptidedb:ask:m",
+    })
+  : null;
+
+const hourLimiter = KV_CONFIGURED
+  ? new Ratelimit({
+      redis: kv,
+      limiter: Ratelimit.slidingWindow(30, "1 h"),
+      analytics: true,
+      prefix: "peptidedb:ask:h",
+    })
+  : null;
 
 const SYSTEM = `You are PeptideDB, an open-source research peptide reference assistant.
 
@@ -31,6 +69,45 @@ export async function POST(req: NextRequest) {
           "AI assistant unavailable — ANTHROPIC_API_KEY not configured. Set it on Vercel project settings to enable Ask PeptideDB.",
       },
       { status: 503 },
+    );
+  }
+
+  // Rate limit by IP before parsing body — saves CPU on attack vectors.
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    req.headers.get("x-real-ip") ||
+    "anonymous";
+
+  if (minuteLimiter && hourLimiter) {
+    const [m, h] = await Promise.all([
+      minuteLimiter.limit(ip),
+      hourLimiter.limit(ip),
+    ]);
+    if (!m.success || !h.success) {
+      const retry = !m.success
+        ? Math.max(0, m.reset - Date.now())
+        : Math.max(0, h.reset - Date.now());
+      const window = !m.success ? "minute" : "hour";
+      return NextResponse.json(
+        {
+          error: `Rate limit exceeded — too many questions this ${window}. Try again in ${Math.ceil(retry / 1000)}s.`,
+          retry_after_ms: retry,
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(Math.ceil(retry / 1000)),
+            "X-RateLimit-Limit-Minute": "5",
+            "X-RateLimit-Remaining-Minute": String(m.remaining),
+            "X-RateLimit-Limit-Hour": "30",
+            "X-RateLimit-Remaining-Hour": String(h.remaining),
+          },
+        },
+      );
+    }
+  } else if (process.env.NODE_ENV === "production") {
+    console.warn(
+      "[ask] rate limiting DISABLED — set KV_URL + KV_REST_API_TOKEN on Vercel",
     );
   }
 

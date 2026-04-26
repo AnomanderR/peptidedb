@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getPeptide, loadAllPeptides } from "@/lib/content";
+import { pigmentHexFor } from "@/lib/peptide-motif";
+import { SITE_HOST } from "@/lib/site";
 
 export const runtime = "nodejs";
 export const dynamic = "force-static";
@@ -20,19 +22,53 @@ export function generateStaticParams() {
   return params;
 }
 
-const COLOR_HEX: Record<string, string> = {
-  blue: "#5b8cff",
-  green: "#34d399",
-  purple: "#a78bfa",
-  amber: "#fbbf24",
-  rose: "#f87171",
-  cyan: "#22d3ee",
-  teal: "#2dd4bf",
-};
+function hash(s: string): number {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = (h + ((h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24))) >>> 0;
+  }
+  return h >>> 0;
+}
+
+interface MotifNode {
+  x: number;
+  y: number;
+  x2: number | null;
+  y2: number | null;
+  bigDot: boolean;
+}
+
+/* Build the deterministic motif coords for a slug. Inline to avoid
+   a tsx component import at OG-render time (Satori prefers flat SVG). */
+function buildMotif(slug: string, motifSize: number) {
+  const cx = motifSize / 2;
+  const cy = motifSize / 2;
+  const ringR = motifSize * 0.34;
+  const innerR = motifSize * 0.18;
+  const h = hash(slug);
+  const nodes: MotifNode[] = Array.from({ length: 12 }).map((_, i) => {
+    const t = (i / 12) * Math.PI * 2;
+    const jitter = ((h >> (i * 2)) & 0x07) - 3.5;
+    const r = ringR + jitter * 1.3;
+    const r2 = i % 3 === 0
+      ? innerR + (((h >> (i * 3)) & 0x05) - 2.5) * 1.2
+      : null;
+    return {
+      x: cx + r * Math.cos(t),
+      y: cy + r * Math.sin(t),
+      x2: r2 == null ? null : cx + r2 * Math.cos(t + Math.PI / 12),
+      y2: r2 == null ? null : cy + r2 * Math.sin(t + Math.PI / 12),
+      bigDot: ((h >> (i + 4)) & 1) === 1,
+    };
+  });
+  return { cx, cy, ringR, innerR, h, nodes };
+}
 
 /**
- * Comparison OG card. Renders "A vs B" with both peptides' hero stats
- * side-by-side. Drives one-click sharing of any compare URL.
+ * /compare/[slugs]/opengraph-image — Atlas-aesthetic 1200×630 share
+ * card for any two-peptide comparison. Two specimen motifs side-by-
+ * side with a gold "+" between, three hero stats per peptide.
  */
 export default async function ComparisonOGImage({
   params,
@@ -50,9 +86,10 @@ export default async function ComparisonOGImage({
             display: "flex",
             width: "100%",
             height: "100%",
-            background: "#060912",
-            color: "#e6ecf2",
-            fontSize: 48,
+            background: "#f8f6f1",
+            color: "#0c1814",
+            fontFamily: "Georgia, serif",
+            fontSize: 56,
             alignItems: "center",
             justifyContent: "center",
           }}
@@ -65,8 +102,86 @@ export default async function ComparisonOGImage({
   }
   const a = peptides[0]!;
   const b = peptides[1]!;
-  const accentA = COLOR_HEX[a.color] ?? COLOR_HEX.blue;
-  const accentB = COLOR_HEX[b.color] ?? COLOR_HEX.green;
+  const pigA = pigmentHexFor(a.peptide_class);
+  const pigB = pigmentHexFor(b.peptide_class);
+  const gold = "#b8865b";
+
+  const motifSize = 220;
+  const ma = buildMotif(a.slug, motifSize);
+  const mb = buildMotif(b.slug, motifSize);
+
+  const renderMotif = (
+    m: ReturnType<typeof buildMotif>,
+    pigment: string,
+  ) => (
+    <svg
+      width={motifSize}
+      height={motifSize}
+      viewBox={`0 0 ${motifSize} ${motifSize}`}
+    >
+      <circle
+        cx={m.cx}
+        cy={m.cy}
+        r={m.ringR + 14}
+        fill="none"
+        stroke={pigment}
+        strokeOpacity="0.25"
+        strokeDasharray="4 6"
+        strokeWidth="1"
+      />
+      <circle
+        cx={m.cx}
+        cy={m.cy}
+        r={m.innerR}
+        fill="none"
+        stroke={pigment}
+        strokeOpacity="0.4"
+        strokeWidth="1"
+      />
+      {m.nodes.map((n, i) => {
+        const next = m.nodes[(i + 1) % m.nodes.length];
+        const opacity = ((m.h >> i) & 1) === 1 ? 0.55 : 0.22;
+        return (
+          <line
+            key={`e-${i}`}
+            x1={n.x}
+            y1={n.y}
+            x2={next.x}
+            y2={next.y}
+            stroke={pigment}
+            strokeOpacity={opacity}
+            strokeWidth="0.9"
+          />
+        );
+      })}
+      {m.nodes
+        .filter((n) => n.x2 != null && n.y2 != null)
+        .map((n, i) => (
+          <line
+            key={`s-${i}`}
+            x1={n.x}
+            y1={n.y}
+            x2={n.x2!}
+            y2={n.y2!}
+            stroke={pigment}
+            strokeOpacity="0.32"
+            strokeWidth="0.7"
+          />
+        ))}
+      {m.nodes.map((n, i) => (
+        <circle
+          key={`n-${i}`}
+          cx={n.x}
+          cy={n.y}
+          r={n.bigDot ? 4.5 : 2.4}
+          fill={n.bigDot ? pigment : "#f8f6f1"}
+          stroke={pigment}
+          strokeWidth="0.9"
+        />
+      ))}
+      <circle cx={m.cx} cy={m.cy} r="3.2" fill={pigment} />
+    </svg>
+  );
 
   return new ImageResponse(
     (
@@ -76,168 +191,196 @@ export default async function ComparisonOGImage({
           flexDirection: "column",
           width: "100%",
           height: "100%",
-          background: "linear-gradient(135deg, #060912 0%, #0d1320 100%)",
-          color: "#e6ecf2",
-          padding: "48px 56px",
-          fontFamily: "sans-serif",
+          background: "#f8f6f1",
+          color: "#0c1814",
+          fontFamily: "Georgia, serif",
         }}
       >
-        {/* Header */}
+        {/* Two-tone class swatch stripe */}
+        <div style={{ display: "flex", width: "100%", height: 8 }}>
+          <div
+            style={{ display: "flex", flex: 1, background: pigA }}
+          />
+          <div
+            style={{ display: "flex", flex: 1, background: pigB }}
+          />
+        </div>
+
+        {/* Top folio strip */}
         <div
           style={{
             display: "flex",
+            justifyContent: "space-between",
             alignItems: "center",
-            gap: 12,
-            color: "rgba(230, 236, 242, 0.65)",
-            fontSize: 16,
+            padding: "20px 64px",
+            borderBottom: "1px solid rgba(12,24,20,0.14)",
+            fontFamily:
+              "ui-monospace, 'JetBrains Mono', SFMono-Regular, monospace",
+            fontSize: 14,
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "#4a5852",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              width: 24,
-              height: 24,
-              borderRadius: 4,
-              background: accentA,
-              opacity: 0.9,
-            }}
-          />
-          <div
-            style={{
-              display: "flex",
-              width: 24,
-              height: 24,
-              borderRadius: 4,
-              background: accentB,
-              opacity: 0.9,
-              marginLeft: -8,
-            }}
-          />
-          <span style={{ display: "flex", fontWeight: 600, marginLeft: 8 }}>
-            PeptideDB · Comparison
+          <span style={{ display: "flex" }}>
+            Specimen Atlas · Comparison
+          </span>
+          <span style={{ display: "flex" }}>
+            Side-by-side parameter view
           </span>
         </div>
 
-        {/* Title row */}
+        {/* Wordmark */}
         <div
           style={{
             display: "flex",
             alignItems: "baseline",
-            gap: 28,
-            marginTop: 36,
-            fontSize: 80,
-            fontWeight: 700,
-            letterSpacing: "-2px",
-            lineHeight: 1.0,
+            gap: 12,
+            padding: "24px 64px 0 64px",
+            fontFamily: "Georgia, serif",
+            fontSize: 22,
+            color: "#0c1814",
           }}
         >
-          <span style={{ display: "flex", color: accentA }}>{a.name}</span>
+          <span style={{ display: "flex" }}>PeptideDB</span>
           <span
             style={{
               display: "flex",
-              fontSize: 36,
-              color: "rgba(230, 236, 242, 0.45)",
-              fontFamily: "monospace",
+              fontStyle: "italic",
+              color: "#4a5852",
+              fontSize: 18,
             }}
           >
-            vs
+            — an atlas
           </span>
-          <span style={{ display: "flex", color: accentB }}>{b.name}</span>
         </div>
 
-        {/* Two-column stats */}
+        {/* Title row: A + B with motifs */}
         <div
           style={{
             display: "flex",
-            gap: 40,
-            marginTop: 48,
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0 64px",
+            gap: 24,
           }}
         >
-          {[
-            { p: a, accent: accentA },
-            { p: b, accent: accentB },
-          ].map(({ p, accent }, i) => (
+          {/* Left peptide */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              flex: 1,
+              gap: 12,
+            }}
+          >
+            {renderMotif(ma, pigA)}
             <div
-              key={i}
               style={{
                 display: "flex",
-                flexDirection: "column",
-                flex: 1,
-                gap: 12,
-                padding: 24,
-                borderRadius: 12,
-                background: `${accent}10`,
-                border: `1px solid ${accent}40`,
+                fontFamily: "Georgia, serif",
+                fontSize: a.name.length > 12 ? 56 : 72,
+                fontWeight: 400,
+                letterSpacing: "-2px",
+                lineHeight: 0.95,
+                color: "#0c1814",
+                textAlign: "center",
+                marginTop: 8,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  fontSize: 14,
-                  color: "rgba(230, 236, 242, 0.55)",
-                  textTransform: "uppercase",
-                  letterSpacing: "1px",
-                }}
-              >
-                {p.peptide_class}
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 8,
-                }}
-              >
-                {p.hero_stats.map((stat, j) => (
-                  <div
-                    key={j}
-                    style={{
-                      display: "flex",
-                      alignItems: "baseline",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        fontSize: 13,
-                        color: "rgba(230, 236, 242, 0.55)",
-                      }}
-                    >
-                      {stat.label}
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        fontSize: 22,
-                        color: accent,
-                        fontFamily: "monospace",
-                        fontWeight: 600,
-                      }}
-                    >
-                      {stat.value}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              {a.name}
             </div>
-          ))}
+            <div
+              style={{
+                display: "flex",
+                fontFamily: "Georgia, serif",
+                fontStyle: "italic",
+                fontSize: 18,
+                color: "#4a5852",
+              }}
+            >
+              {a.peptide_class}
+            </div>
+          </div>
+
+          {/* Plus sign in gold */}
+          <div
+            style={{
+              display: "flex",
+              fontFamily: "Georgia, serif",
+              fontSize: 96,
+              color: gold,
+              fontStyle: "italic",
+              fontWeight: 400,
+            }}
+          >
+            +
+          </div>
+
+          {/* Right peptide */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              flex: 1,
+              gap: 12,
+            }}
+          >
+            {renderMotif(mb, pigB)}
+            <div
+              style={{
+                display: "flex",
+                fontFamily: "Georgia, serif",
+                fontSize: b.name.length > 12 ? 56 : 72,
+                fontWeight: 400,
+                letterSpacing: "-2px",
+                lineHeight: 0.95,
+                color: "#0c1814",
+                textAlign: "center",
+                marginTop: 8,
+              }}
+            >
+              {b.name}
+            </div>
+            <div
+              style={{
+                display: "flex",
+                fontFamily: "Georgia, serif",
+                fontStyle: "italic",
+                fontSize: 18,
+                color: "#4a5852",
+              }}
+            >
+              {b.peptide_class}
+            </div>
+          </div>
         </div>
 
-        {/* Footer */}
+        {/* Footer: URL */}
         <div
           style={{
             display: "flex",
-            marginTop: "auto",
-            paddingTop: 32,
-            borderTop: "1px solid rgba(255,255,255,0.10)",
-            fontSize: 14,
-            color: "rgba(230, 236, 242, 0.5)",
+            borderTop: "2px solid #0c1814",
+            padding: "20px 64px",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+            fontFamily:
+              "ui-monospace, 'JetBrains Mono', SFMono-Regular, monospace",
+            fontSize: 12,
+            letterSpacing: "0.18em",
             textTransform: "uppercase",
-            letterSpacing: "1px",
+            color: "#4a5852",
           }}
         >
-          peptidedb.org/compare/{combined}
+          <span style={{ display: "flex" }}>
+            Compare · {a.slug} + {b.slug}
+          </span>
+          <span style={{ display: "flex" }}>
+            {SITE_HOST}/compare/{combined}
+          </span>
         </div>
       </div>
     ),

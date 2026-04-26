@@ -1,14 +1,26 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono } from "next/font/google";
-import Script from "next/script";
+import { Instrument_Serif, Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "@/components/site/SiteHeader";
-import { SiteFooter } from "@/components/site/SiteFooter";
+import { AtlasHeader } from "@/components/site/AtlasHeader";
+import { AtlasFooter } from "@/components/site/AtlasFooter";
+import { SITE_URL } from "@/lib/site";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+/* Specimen Atlas typography stack:
+   - Instrument Serif: display (sharp 19th-century lithograph terminals)
+   - Geist: body (modern open grotesque, distinct from Inter)
+   - JetBrains Mono: tabular numerals, folios, citation IDs */
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const geist = Geist({
+  variable: "--font-geist",
+  subsets: ["latin"],
   display: "swap",
 });
 
@@ -20,51 +32,40 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://peptidedb.org"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "PeptideDB — Open Research Peptide Reference",
+    default: "PeptideDB — Specimen Atlas of Research Peptides",
     template: "%s · PeptideDB",
   },
   description:
-    "Open-source, citation-dense, side-by-side comparable peptide research reference. Mechanism, dosage, evidence, side effects, and stack synergies for every research peptide.",
+    "An open-source, citation-dense atlas of research peptides. Mechanism, dosage, evidence, side effects, and stack synergies for every plate. Each claim links to a paper; every paper opens in PubMed.",
   keywords: [
     "peptide research",
     "peptide reference",
     "peptide comparison",
     "research peptides",
-    "peptide dosage",
-    "peptide mechanism",
+    "peptide atlas",
+    "PubMed",
     "PeptideDB",
   ],
   authors: [{ name: "PeptideDB Contributors" }],
   openGraph: {
     type: "website",
-    title: "PeptideDB — Open Research Peptide Reference",
+    title: "PeptideDB — Specimen Atlas of Research Peptides",
     description:
-      "Side-by-side peptide comparison with PubMed-cited mechanism, dosage, and stack data.",
+      "Side-by-side peptide reference with PubMed-cited mechanism, dosage, and stack data.",
     siteName: "PeptideDB",
   },
   twitter: {
     card: "summary_large_image",
     title: "PeptideDB",
-    description: "Open research peptide reference.",
+    description: "An open atlas of research peptides.",
   },
   robots: {
     index: true,
     follow: true,
   },
 };
-
-/**
- * Static, build-time-known bootstrap script. Runs before paint via Next's
- * Script component with beforeInteractive strategy. Reads localStorage
- * preference, falls back to prefers-color-scheme, defaults to dark.
- *
- * Content is a literal string — no user input is interpolated here, so it
- * is XSS-safe. Lives in /public so the response can be cached / inlined
- * by Next without inline-script CSP friction.
- */
-const themeBootstrap = `(function(){try{var t=localStorage.getItem('peptidedb-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`;
 
 export default function RootLayout({
   children,
@@ -74,19 +75,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-theme="dark"
-      className={`${dmSans.variable} ${jetbrainsMono.variable}`}
-      suppressHydrationWarning
+      className={`${geist.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
-      <head>
-        <Script id="theme-bootstrap" strategy="beforeInteractive">
-          {themeBootstrap}
-        </Script>
-      </head>
       <body className="min-h-screen flex flex-col">
-        <SiteHeader />
+        <AtlasHeader />
         <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <AtlasFooter />
       </body>
     </html>
   );

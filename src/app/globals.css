@@ -1,43 +1,81 @@
 @import "tailwindcss";
 
 /* =========================================================
-   PeptideDB — Design System
-   Inherited from reference dashboard tokens, ported to CSS
-   custom properties + Tailwind v4 @theme directives.
+   PeptideDB — Specimen Atlas design system
+   Atlas is the singular site aesthetic. Bone-white monograph
+   with Werner mineral pigments, Instrument Serif display,
+   Geist body, JetBrains Mono for tabular data and folios.
    ========================================================= */
 
-:root,
-[data-theme="dark"] {
-  /* Surfaces */
-  --color-background: #060912;
-  --color-surface: #0d1320;
-  --color-surface-offset: #131a2c;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-strong: rgba(255, 255, 255, 0.16);
+:root {
+  /* Atlas surfaces */
+  --at-bone: #f8f6f1;
+  --at-bone-deep: #efece4;
+  --at-bone-shadow: rgba(12, 24, 20, 0.04);
 
-  /* Text */
-  --color-text: #e6ecf2;
-  --color-text-secondary: rgba(230, 236, 242, 0.72);
-  --color-text-muted: rgba(230, 236, 242, 0.48);
+  /* Ink — warm near-black with green undertone, never pure black */
+  --at-ink: #0c1814;
+  --at-ink-warm: #1a2722;
+  --at-ink-soft: #4a5852;
+  --at-ink-muted: #8b958f;
 
-  /* Brand peptide identity */
-  --color-tesamorelin: #5b8cff;
-  --color-tesamorelin-soft: rgba(91, 140, 255, 0.16);
-  --color-motsc: #34d399;
-  --color-motsc-soft: rgba(52, 211, 153, 0.16);
-  --color-accent: #34d399;
+  /* Hairline rule lines */
+  --at-rule: rgba(12, 24, 20, 0.14);
+  --at-rule-faint: rgba(12, 24, 20, 0.06);
 
-  /* Severity badges */
-  --color-badge-green: #34d399;
-  --color-badge-green-soft: rgba(52, 211, 153, 0.18);
-  --color-badge-yellow: #fbbf24;
-  --color-badge-yellow-soft: rgba(251, 191, 36, 0.18);
-  --color-badge-red: #f87171;
-  --color-badge-red-soft: rgba(248, 113, 113, 0.20);
-  --color-badge-teal: #2dd4bf;
-  --color-badge-teal-soft: rgba(45, 212, 191, 0.18);
+  /* Single warm-gold accent — reserved for FDA badges and italic accents */
+  --at-gold: #b8865b;
+  --at-gold-soft: rgba(184, 134, 91, 0.10);
 
-  /* Spacing scale (matches reference) */
+  /* Per-class mineral pigments (Werner-style). Selected per peptide_class
+     by lib/peptide-motif.tsx via deterministic class lookup. */
+  --at-pigment-sage: #5c7459;       /* healing peptides */
+  --at-pigment-rust: #a2553b;       /* GLP-1 family */
+  --at-pigment-teal: #1f4f4f;       /* GH-axis / GHRH */
+  --at-pigment-ochre: #a37f3d;      /* mitochondrial */
+  --at-pigment-plum: #4f3d5c;       /* melanocortin */
+  --at-pigment-smoke: #3d5c5c;      /* Russian bioregulators */
+  --at-pigment-fern: #3d4f24;       /* lipolytic / metabolic */
+  --at-pigment-clay: #8c5e3c;       /* nootropic / cognitive */
+  --at-pigment-stone: #5a5a52;      /* generic / unclassified */
+
+  /* Severity (for adverse-events tables) */
+  --at-good: #3f6212;
+  --at-warn: #a16207;
+  --at-bad: #7f1d1d;
+
+  /* Legacy color-token aliases — many existing components reference
+     --color-text, --color-surface, --color-border etc. We map these
+     to Atlas equivalents so those components inherit the Atlas palette
+     without per-file rewrites. */
+  --color-background: var(--at-bone);
+  --color-surface: var(--at-bone);
+  --color-surface-offset: var(--at-bone-deep);
+  --color-border: var(--at-rule);
+  --color-border-strong: var(--at-ink-soft);
+
+  --color-text: var(--at-ink);
+  --color-text-secondary: var(--at-ink-warm);
+  --color-text-muted: var(--at-ink-soft);
+
+  /* Brand peptide identity (kept for components that reference these) */
+  --color-tesamorelin: var(--at-pigment-teal);
+  --color-tesamorelin-soft: var(--at-gold-soft);
+  --color-motsc: var(--at-pigment-ochre);
+  --color-motsc-soft: var(--at-gold-soft);
+  --color-accent: var(--at-pigment-rust);
+
+  /* Severity badges (legacy compatibility) */
+  --color-badge-green: var(--at-good);
+  --color-badge-green-soft: rgba(63, 98, 18, 0.10);
+  --color-badge-yellow: var(--at-warn);
+  --color-badge-yellow-soft: rgba(161, 98, 7, 0.10);
+  --color-badge-red: var(--at-bad);
+  --color-badge-red-soft: rgba(127, 29, 29, 0.10);
+  --color-badge-teal: var(--at-pigment-teal);
+  --color-badge-teal-soft: rgba(31, 79, 79, 0.10);
+
+  /* Spacing scale */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -49,43 +87,14 @@
   --space-9: 72px;
 
   /* Radii */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-glow-tes: 0 0 0 1px rgba(91, 140, 255, 0.32), 0 4px 24px rgba(91, 140, 255, 0.20);
-  --shadow-glow-mot: 0 0 0 1px rgba(52, 211, 153, 0.32), 0 4px 24px rgba(52, 211, 153, 0.20);
-}
-
-[data-theme="light"] {
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-surface-offset: #eef2f7;
-  --color-border: rgba(15, 23, 42, 0.10);
-  --color-border-strong: rgba(15, 23, 42, 0.18);
-
-  --color-text: #0f172a;
-  --color-text-secondary: rgba(15, 23, 42, 0.68);
-  --color-text-muted: rgba(15, 23, 42, 0.45);
-
-  --color-tesamorelin: #2563eb;
-  --color-tesamorelin-soft: rgba(37, 99, 235, 0.10);
-  --color-motsc: #059669;
-  --color-motsc-soft: rgba(5, 150, 105, 0.10);
-  --color-accent: #059669;
-
-  --color-badge-green: #047857;
-  --color-badge-green-soft: rgba(4, 120, 87, 0.10);
-  --color-badge-yellow: #b45309;
-  --color-badge-yellow-soft: rgba(180, 83, 9, 0.10);
-  --color-badge-red: #b91c1c;
-  --color-badge-red-soft: rgba(185, 28, 28, 0.10);
-  --color-badge-teal: #0d9488;
-  --color-badge-teal-soft: rgba(13, 148, 136, 0.10);
+  --shadow-sm: 0 1px 0 rgba(12, 24, 20, 0.04);
+  --shadow-md: 0 1px 2px rgba(12, 24, 20, 0.06);
 }
 
 @theme inline {
@@ -100,7 +109,8 @@
   --color-tesamorelin: var(--color-tesamorelin);
   --color-motsc: var(--color-motsc);
   --color-accent: var(--color-accent);
-  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
@@ -112,13 +122,23 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-sans);
-  font-feature-settings: "ss01", "cv11";
+  background-color: var(--at-bone);
+  color: var(--at-ink);
+  font-family: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01", "tnum", "calt";
+  font-synthesis: none;
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Subtle paper grain — applied to body so it covers all routes */
+body {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><filter id='paper'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' seed='7'/><feColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.04 0 0 0 0 0.02 0 0 0 0.045 0'/></filter><rect width='400' height='400' filter='url(%23paper)'/></svg>");
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 a {
@@ -126,39 +146,122 @@ a {
   text-decoration: none;
 }
 
-.font-mono {
-  font-family: var(--font-mono);
+/* ---------------------------------------------------------
+   Atlas typography helpers — used across pages
+   --------------------------------------------------------- */
+
+.at-display {
+  font-family: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-feature-settings: "ss01", "lnum";
 }
 
-/* Smooth theme transition */
-:root,
-[data-theme] {
+.at-display-italic {
+  font-family: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.at-mono {
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-feature-settings: "tnum", "ss01", "ss02";
+  letter-spacing: 0;
+}
+
+.at-folio {
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--at-ink-soft);
+}
+
+.at-link {
+  color: inherit;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 95%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  transition: background-size 200ms ease, color 200ms ease;
+}
+.at-link:hover {
+  background-size: 100% 2px;
+  color: var(--at-gold);
+}
+
+::selection {
+  background: var(--at-gold-soft);
+  color: var(--at-ink);
+}
+
+/* Specimen card — hairline border + subtle hover deepen.
+   No transform on hover (keeps the layer compositor stable). */
+.at-card {
+  background: var(--at-bone);
+  border: 1px solid var(--at-rule-faint);
+  transition: border-color 280ms ease, background-color 280ms ease;
+}
+.at-card:hover {
+  border-color: var(--at-ink-soft);
+  background-color: var(--at-bone-deep);
+}
+
+/* Plate fade-in motion — long ease-out, no bounce */
+.at-plate {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: at-plate-in 1100ms cubic-bezier(0.18, 0.7, 0.2, 1) forwards;
+}
+.at-plate.at-d1 { animation-delay: 80ms; }
+.at-plate.at-d2 { animation-delay: 240ms; }
+.at-plate.at-d3 { animation-delay: 420ms; }
+.at-plate.at-d4 { animation-delay: 620ms; }
+.at-plate.at-d5 { animation-delay: 840ms; }
+@keyframes at-plate-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tufte sparkline */
+.at-spark {
+  display: inline-block;
+  height: 14px;
+  vertical-align: middle;
+}
+
+/* Class-pigment swatch stripe */
+.at-swatch {
+  height: 4px;
+  width: 100%;
+  display: block;
+}
+
+/* Smooth theme-token transitions so Tailwind utility hover states
+   that toggle backgrounds feel paper-quality, not snappy. */
+:root {
   transition:
-    background-color 240ms ease,
-    color 200ms ease,
-    border-color 200ms ease;
+    background-color 200ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
 }
 
-/* Print: force light theme + hide chrome */
+/* Print: keep it bone-white + ink, hide chrome */
 @media print {
-  [data-theme] {
-    --color-background: #ffffff !important;
-    --color-text: #0f172a !important;
-    --color-surface: #f8fafc !important;
-    --color-border: rgba(15, 23, 42, 0.12) !important;
+  :root {
+    --at-bone: #ffffff !important;
+    --at-ink: #0c1814 !important;
+    --at-rule: rgba(12, 24, 20, 0.18) !important;
+  }
+  body {
+    background-image: none !important;
   }
   .no-print {
     display: none !important;
   }
 }
 
-/* Animated evidence-bar fill — applied via inline width style */
-.ev-fill {
-  transition: width 1200ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: width;
-}
-
-/* Reduce motion users opt out */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -166,4 +269,15 @@ a {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+/* Animated evidence-bar fill (used by EvidenceBar component) */
+.ev-fill {
+  transition: width 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: width;
+}
+
+/* Generic mono helper — preserved for components that reference it */
+.font-mono {
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
 }

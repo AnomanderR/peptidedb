@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronRight, ArrowLeftRight } from "lucide-react";
 import { getPeptide, loadAllPeptides } from "@/lib/content";
 import { computePeptideStats } from "@/lib/peptide-stats";
+import { SITE_URL } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ComparisonHeroCards } from "@/components/compare/ComparisonHeroCards";
@@ -97,7 +98,7 @@ export default async function ComparisonPage({
     description: peptides
       .map((p) => `${p.name}: ${p.summary.value.slice(0, 100)}...`)
       .join(" "),
-    url: `https://peptidedb.org/compare/${combined}`,
+    url: `${SITE_URL}/compare/${combined}`,
   };
 
   const stats = peptides.map((p) => computePeptideStats(p));

@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { loadAllPeptides } from "@/lib/content";
-
-const SITE = "https://peptidedb.org";
+import { SITE_URL as SITE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const peptides = loadAllPeptides();

@@ -4,7 +4,7 @@
     {
       "name": "peptidedb",
       "runtimeExecutable": "bun",
-      "runtimeArgs": ["run", "start"],
+      "runtimeArgs": ["dev"],
       "port": 3000
     }
   ]
