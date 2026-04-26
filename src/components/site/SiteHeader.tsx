@@ -5,8 +5,8 @@ import { ThemeToggle } from "./ThemeToggle";
 const NAV_ITEMS = [
   { href: "/", label: "Catalog" },
   { href: "/compare", label: "Compare" },
-  { href: "/stacks", label: "Stacks" },
-  { href: "/about", label: "About" },
+  { href: "/stack", label: "Stack designer" },
+  { href: "/ask", label: "Ask" },
 ];
 
 export function SiteHeader() {
