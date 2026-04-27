@@ -240,23 +240,6 @@ administration:
         Not established — peptide synthesis methods for research use only. No pharmaceutical-grade
         formulation available.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: fluoxetine
-      partner_label: Fluoxetine (SSRI)
-      synergy: moderate
-      rationale: >-
-        PE 22-28 (TREK-1 blocker) and fluoxetine (serotonin reuptake inhibitor) act on distinct
-        antidepressant pathways. TREK-1 blockade enhances neuronal excitability and plasticity
-        independently of monoaminergic signaling, potentially complementing SSRI mechanisms. In
-        decompression sickness model, spadin enhanced fluoxetine protection, suggesting additive
-        neuroprotective effects. No direct synergy trials with PE 22-28 + fluoxetine reported, but
-        parent peptide (spadin) showed combinatorial benefits.
-      protocol:
-        PE 22-28: 3 µg/kg IP · once daily (animal)
-        Fluoxetine: 10 mg/kg · standard SSRI dose (animal)
-      primary_benefit: Multi-pathway antidepressant action; enhanced neuroprotection post-ischemia
-      cite: []
 description_md: >-
   ## Research Context
 

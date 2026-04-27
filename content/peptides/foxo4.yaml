@@ -218,37 +218,6 @@ administration:
         Would require cardiovascular assessment, pulmonary function, immune panel, tumour
         surveillance if human trials proceed.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: metformin
-      partner_label: Metformin
-      synergy: multi-pathway
-      rationale: >-
-        Metformin suppresses senescence-associated secretory phenotype (SASP) and reduces senescent
-        cell burden via AMPK activation, complementing FOXO4-DRI's direct senolytic action. Combined
-        approach targets both senescent cell clearance (FOXO4-DRI) and inflammatory milieu reduction
-        (metformin). Theoretical synergy — no experimental validation.
-      protocol:
-        FOXO4-DRI: Hypothetical intermittent dosing
-        Metformin: 500–1500 mg daily (standard anti-aging protocol)
-        Frequency: Metformin daily; FOXO4-DRI episodic (if clinically available)
-      primary_benefit: Senescent cell clearance + SASP suppression
-      cite: []
-    - partner_slug: quercetin
-      partner_label: Quercetin + Dasatinib
-      synergy: moderate
-      rationale: >-
-        Quercetin + dasatinib (D+Q) is the most-studied senolytic cocktail, targeting senescent
-        cells via BCL-2 family inhibition and tyrosine kinase pathways. FOXO4-DRI targets a distinct
-        molecular axis (FOXO4-p53). Multi-target senolysis may clear broader senescent cell
-        populations. Speculative — no combination data published.
-      protocol:
-        FOXO4-DRI: Hypothetical regimen (not defined)
-        Dasatinib: 100 mg (intermittent)
-        Quercetin: 1000 mg (intermittent)
-        Frequency: 'D+Q: 2 consecutive days per month (standard protocol)'
-      primary_benefit: Broader senescent cell elimination across pathways
-      cite: []
 description_md: >-
   ## Overview
 

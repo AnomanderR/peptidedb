@@ -280,39 +280,6 @@ administration:
         reproduction, metabolism, and health must be systematically evaluated before human
         translation.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: activin-a-inhibition
-      partner_label: Activin A Inhibition
-      synergy: multi-pathway
-      rationale: >-
-        Combined inhibition of myostatin and activin A targets two TGF-β superfamily ligands that
-        converge on ActRII signaling to suppress muscle growth. Dual blockade produces synergistic
-        muscle anabolism and improved skeletal muscle performance beyond single-target inhibition.
-        Active immunization against both ligands in growth hormone-deficient mice enhanced muscle
-        outcomes more effectively than MSTN inhibition alone.
-      protocol:
-        MSTN inhibition: Active immunization (VLP-based) or mAb
-        Activin A inhibition: Concurrent immunization or soluble ActRII decoy
-        Outcome: Enhanced muscle mass, strength, metabolic function
-      primary_benefit: Synergistic muscle anabolism, improved performance in sarcopenia models
-      cite: []
-    - partner_slug: testosterone
-      partner_label: Testosterone
-      synergy: moderate
-      rationale: >-
-        Testosterone enhances skeletal muscle protein synthesis via androgen receptor signaling,
-        while MSTN inhibition removes a major brake on muscle hypertrophy. Testosterone replacement
-        therapy (TRT) in hypogonadal athletes supports muscle recovery and reduces proteolysis;
-        combining TRT with MSTN blockade could theoretically maximize anabolic drive while
-        minimizing catabolic signaling. No direct human studies exist, but mechanistic pathways
-        suggest complementary effects on muscle remodeling and strength.
-      protocol:
-        Testosterone: Replacement dose (physiological range)
-        MSTN inhibition: mAb or active immunization
-        Rationale: Dual anabolic + anti-catabolic axis
-      primary_benefit: Maximal muscle anabolism in hypogonadal or sarcopenic populations
-      cite: []
 description_md: >-
   **GDF-8 (myostatin)** is a transforming growth factor-β (TGF-β) superfamily myokine that functions
   as a potent negative regulator of skeletal muscle mass. Genetic loss-of-function variants in

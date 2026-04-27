@@ -184,22 +184,6 @@ administration:
         models of neurodegeneration, olfactory injury, and CDKL5 deficiency disorder. In vitro
         studies used primary cell cultures.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: gdnf
-      partner_label: GDNF
-      synergy: strong
-      rationale: >-
-        CNTF and glial cell line-derived neurotrophic factor (GDNF) act on distinct receptor systems
-        (CNTFR/gp130 vs GFRα1/RET) and produce synergistic effects on directed neurite growth in
-        dorsal root ganglia. Combined application enhanced chemotactic neurite outgrowth beyond
-        additive effects, suggesting complementary signaling pathways in neuroregeneration.
-      protocol:
-        P21: Dose not established (animal data only)
-        GDNF: Co-applied in neurite guidance assays
-        Context: In vitro dorsal root ganglion cultures
-      primary_benefit: Enhanced neurite outgrowth, directed neural regeneration
-      cite: []
 description_md: >-
   ## Background
 

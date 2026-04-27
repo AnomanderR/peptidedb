@@ -285,22 +285,6 @@ synergy:
         Frequency: Once daily, same or separate injections
       primary_benefit: Nerve regeneration, pain reduction, tissue healing
       cite: []
-    - partner_slug: alpha-lipoic-acid
-      partner_label: Alpha-Lipoic Acid
-      synergy: multi-pathway
-      rationale: >-
-        Alpha-lipoic acid (ALA) is an antioxidant with demonstrated efficacy in diabetic neuropathy
-        (reduces oxidative stress, improves nerve conduction). ARA 290 addresses neuroinflammation
-        and nerve fiber regeneration via innate repair receptor signaling. Multi-pathway approach
-        targeting oxidative damage (ALA) and repair signaling (ARA 290) may produce additive
-        benefits in small fiber neuropathy. ALA mentioned in neuropathy treatment reviews alongside
-        ARA 290.
-      protocol:
-        ARA 290: 4 mg SQ · daily
-        ALA: 600 mg oral · daily or divided BID
-        Frequency: ARA 290 once daily SQ; ALA oral with meals
-      primary_benefit: Neuropathic pain reduction, nerve function improvement
-      cite: []
 description_md: >-
   ## Clinical Development
 

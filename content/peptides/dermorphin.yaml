@@ -241,24 +241,6 @@ administration:
         of brain death.
       cite:
         - tran-2025
-synergy:
-  stacks:
-    - partner_slug: deltorphin
-      partner_label: Deltorphin
-      synergy: multi-pathway
-      rationale: >-
-        Dermorphin (μ-selective) and deltorphin (δ-selective) are co-expressed in Phyllomedusa skin
-        and represent complementary opioid receptor pathways. Both contain D-amino acids at position
-        2 and share structural homology in the N-terminal 'message' domain (Tyr-D-Xaa-Phe). Dual μ/δ
-        receptor engagement may produce synergistic analgesia with distinct pharmacological
-        profiles, as observed in mixed-receptor ligand designs.
-      protocol:
-        Context: Animal research only
-        Dermorphin: Low nanomolar ICV
-        Deltorphin: Equimolar ICV co-administration
-        Note: Research use only — not approved for humans
-      primary_benefit: Complementary opioid receptor engagement (μ + δ pathways)
-      cite: []
 description_md: >-
   ## Dermorphin: Frog-Derived μ-Opioid Heptapeptide
 

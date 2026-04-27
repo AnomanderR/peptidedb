@@ -235,21 +235,6 @@ synergy:
         Frequency: Once daily, morning or pre-cognitive task
       primary_benefit: Enhanced BDNF upregulation, cognitive performance, neuroprotection
       cite: []
-    - partner_slug: na-semax-amidate
-      partner_label: N-Acetyl Semax Amidate
-      synergy: weak
-      rationale: >-
-        N-Acetyl Semax Amidate is a longer-acting Semax derivative with enhanced BBB penetration.
-        Pairing with Adamax (shorter-acting, distinct modification) could provide dual-phase
-        nootropic coverage — immediate and sustained. However, both target overlapping pathways
-        (BDNF/trkB, melanocortin receptors), limiting additive synergy. More likely redundant than
-        synergistic.
-      protocol:
-        Adamax: Research dose intranasal · morning
-        NA-Semax-Amidate: 300 mcg intranasal · afternoon
-        Frequency: Once daily each, staggered timing
-      primary_benefit: Extended nootropic window, circadian rhythm support
-      cite: []
 description_md: >-
   **Adamax** is a synthetic peptide analogue of ACTH(4-10), structurally related to the Russian
   nootropic **Semax**, but distinguished by amino acid modifications at positions 8, 9, and 10. The

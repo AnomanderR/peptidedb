@@ -195,23 +195,6 @@ administration:
         Not disclosed in available literature. Peptide stability and storage conditions not
         published.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: valproic-acid
-      partner_label: Valproic Acid
-      synergy: strong
-      rationale: >-
-        Valproic acid (GSK-3β inhibitor) synergizes with PTD-DBM by blocking downstream Wnt pathway
-        inhibition. PTD-DBM releases Dishevelled from CXXC5 suppression, while VPA prevents
-        GSK-3β-mediated β-catenin degradation. Combined, they maximize Wnt/β-catenin activation for
-        regenerative wound healing and scar reduction.
-      protocol:
-        PTD-DBM: Hydrogel patch delivery
-        Valproic Acid: Co-loaded in same HA-PG patch
-        Duration: Multi-day sustained release
-      primary_benefit: Regenerative wound healing with minimal scar formation
-      cite:
-        - lee-2023
 description_md: >-
   **PTD-DBM** is a rationally designed fusion peptide engineered to activate the Wnt/β-catenin
   pathway by disrupting the inhibitory interaction between CXXC5 and Dishevelled. The protein

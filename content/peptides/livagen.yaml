@@ -190,23 +190,6 @@ administration:
         cohorts, based on rat age-stratified findings.
       cite:
         - timofeeva-2005
-synergy:
-  stacks:
-    - partner_slug: epithalon
-      partner_label: Epithalon
-      synergy: moderate
-      rationale: >-
-        Both are Khavinson-school bioregulators with tissue-specific effects. Epithalon
-        (Ala-Glu-Asp-Gly) targets pineal gland and telomerase modulation, while Livagen targets
-        liver. In hepatocyte cultures, epithalon did not alter protein synthesis, confirming
-        orthogonal tissue specificity. Multi-tissue bioregulation protocol feasible without
-        competitive binding.
-      protocol:
-        Livagen: Oral or SQ · daily
-        Epithalon: SQ · separate injection site
-        Duration: 2–4 weeks
-      primary_benefit: 'Multi-tissue bioregulation: hepatoprotection + pineal/telomere support'
-      cite: []
 description_md: >-
   ## Overview
 

@@ -207,22 +207,6 @@ administration:
         Lyophilized: store at 2–8 °C, light-protected. Reconstituted: refrigerate, use within 24–48
         hours per protocol.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: gnrh
-      partner_label: GnRH
-      synergy: multi-pathway
-      rationale: >-
-        Kisspeptin-10 acts upstream of GnRH, stimulating endogenous GnRH neuron firing.
-        Co-administration with exogenous GnRH could amplify pituitary gonadotropin release in cases
-        of partial hypothalamic dysfunction, though this bypasses physiological pulsatility control.
-        Clinical utility explored in IVF protocols and hypogonadotropic hypogonadism.
-      protocol:
-        Kisspeptin-10: Pulsatile IV or SQ per protocol
-        GnRH: Pulsatile IV (10–20 mcg every 90 min)
-        Monitoring: Serial LH/FSH, ovarian ultrasound
-      primary_benefit: Enhanced gonadotropin secretion in hypothalamic amenorrhea or GnRH-deficient states
-      cite: []
 description_md: >-
   ## Context
 

@@ -260,26 +260,6 @@ administration:
         or twice-daily intranasal administration. Safety profile in chronic use still under
         investigation.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: vasopressin
-      partner_label: Vasopressin (AVP)
-      synergy: multi-pathway
-      rationale: >-
-        Oxytocin and vasopressin are structurally homologous 9-amino-acid neuropeptides with
-        overlapping but distinct receptor systems (OXTR vs V1aR, V1bR, V2R). Both modulate social
-        cognition, stress response, and pair-bonding behaviors through complementary
-        hypothalamic-pituitary pathways. Vasopressin primarily drives territorial and defensive
-        social behaviors, while oxytocin promotes affiliative and prosocial responses. The OXTR/V1aR
-        receptor crosstalk in amygdala and hippocampus creates context-dependent modulation of
-        social salience and stress reactivity. This dual-neuropeptide system is particularly
-        relevant in autism research, where both peptides show dysregulation.
-      protocol:
-        Oxytocin: 24 IU intranasal
-        Vasopressin: 20–40 IU intranasal (research dosing)
-        Timing: Staggered or concurrent, context-dependent
-      primary_benefit: Complementary social cognition modulation, stress-response tuning, pair-bonding enhancement
-      cite: []
 description_md: >-
   ## Autism Spectrum Disorder Research
 

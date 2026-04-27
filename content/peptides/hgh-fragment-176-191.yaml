@@ -286,23 +286,6 @@ administration:
         metabolite CRSVEGSCG.
       cite:
         - cox-2015
-synergy:
-  stacks:
-    - partner_slug: yohimbine
-      partner_label: Yohimbine
-      synergy: moderate
-      rationale: >-
-        HGH Fragment 176-191 upregulates beta-3 adrenergic receptors and enhances lipolytic
-        sensitivity, while yohimbine acts as an alpha-2 adrenergic antagonist, blocking the
-        anti-lipolytic alpha-2 receptors that inhibit fat breakdown. This dual approach — enhancing
-        pro-lipolytic signaling (β3-AR) while blocking anti-lipolytic signaling (α2-AR) — creates
-        complementary adrenergic pathway modulation for fat mobilization.
-      protocol:
-        HGH Fragment: Animal-derived dose equivalent (not established in humans)
-        Yohimbine: 5–10 mg oral, fasted state
-        Timing: Once daily, morning fasted cardio window
-      primary_benefit: Enhanced fat mobilization via dual adrenergic modulation
-      cite: []
 description_md: >-
   HGH Fragment 176-191 represents the C-terminal lipolytic domain of human growth hormone, spanning
   amino acids 176-191. The AOD9604 variant includes an N-terminal tyrosine residue (177-191

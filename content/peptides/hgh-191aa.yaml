@@ -332,20 +332,6 @@ synergy:
         Note: Combination not recommended — choose one GH modality
       primary_benefit: None — redundant mechanisms
       cite: []
-    - partner_slug: thyroid-hormone
-      partner_label: Levothyroxine (if hypothyroid)
-      synergy: strong
-      rationale: >-
-        GH therapy may unmask central hypothyroidism by increasing peripheral conversion of T4 to
-        T3, or by revealing pre-existing thyroid axis dysfunction. Untreated hypothyroidism blunts
-        GH efficacy and increases side effects. Thyroid replacement is often necessary co-therapy,
-        especially in hypopituitarism. Monitor TSH and free T4 at baseline and periodically.
-      protocol:
-        HGH 191AA: Standard dose per indication
-        Levothyroxine: Per thyroid function testing (typically 1.6 mcg/kg/day in adults)
-        Monitoring: TSH, free T4 every 6–12 weeks until stable
-      primary_benefit: Optimizes GH efficacy, prevents hypothyroid complications
-      cite: []
 description_md: >-
   ## Overview
 

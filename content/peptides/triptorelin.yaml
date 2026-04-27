@@ -309,23 +309,6 @@ administration:
         Some protocols use on-treatment periods (9–12 months) alternating with off-treatment
         intervals until PSA rises. Cardiovascular risk appears similar to continuous ADT.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: bicalutamide
-      partner_label: Bicalutamide
-      synergy: strong
-      rationale: >-
-        Triptorelin produces an initial testosterone flare (1–3 weeks) that can transiently worsen
-        metastatic prostate cancer symptoms, including bone pain and spinal cord compression.
-        Bicalutamide, a non-steroidal antiandrogen, blocks androgen receptors peripherally,
-        preventing flare-related tumor stimulation. This combination is standard-of-care in advanced
-        prostate cancer to safely transition into sustained castration.
-      protocol:
-        Triptorelin: 3.75 mg IM (or long-acting depot)
-        Bicalutamide: 50 mg oral daily, start 1 week pre-triptorelin
-        Duration: Continue bicalutamide 2–4 weeks post-injection
-      primary_benefit: Prevents tumor flare, safer ADT initiation in metastatic disease
-      cite: []
 maturity: human-reviewed
 contributors:
   - peptidesdb-ai

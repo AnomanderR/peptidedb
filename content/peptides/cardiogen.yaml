@@ -203,21 +203,6 @@ synergy:
         Frequency: 2–4 courses per year
       primary_benefit: Multi-system aging mitigation, cardiovascular and immune homeostasis
       cite: []
-    - partner_slug: epithalamin
-      partner_label: Epithalamin
-      synergy: moderate
-      rationale: >-
-        Epithalamin (pineal peptide) modulates circadian and neuroendocrine aging; cardiogen
-        addresses cardiac tissue directly. Khavinson protocols combined thymic and pineal peptides
-        with reported geroprotective effects including reduced cardiovascular disease incidence and
-        improved hemostasis. Cardiogen as cardiac-specific adjunct follows the same multi-organ
-        bioregulator logic.
-      protocol:
-        Cardiogen: 10–20 mg SQ · 10–20 day course
-        Epithalamin: 10 mg IM · concurrent course
-        Frequency: 2–4 courses per year
-      primary_benefit: Cardiovascular and neuroendocrine aging mitigation
-      cite: []
 description_md: >-
   ## Overview
 

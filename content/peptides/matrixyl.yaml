@@ -186,21 +186,6 @@ synergy:
         Frequency: Twice daily
       primary_benefit: Enhanced collagen synthesis + ECM remodeling, improved skin density and elasticity
       cite: []
-    - partner_slug: i-prf
-      partner_label: Injectable PRF
-      synergy: strong
-      rationale: >-
-        Injectable platelet-rich fibrin (i-PRF) delivers autologous growth factors that synergize
-        with Matrixyl's collagen-stimulating activity. In vitro data demonstrate enhanced fibroblast
-        viability and ECM gene expression when i-PRF is combined with palmitoyl pentapeptide-4,
-        suggesting multi-factorial stimulation of dermal regeneration pathways.
-      protocol:
-        Matrixyl: Topical 0.5–5% · twice daily
-        i-PRF: Intradermal injection · 4–6 week intervals
-        Duration: 12+ weeks
-      primary_benefit: Synergistic fibroblast activation, accelerated collagen deposition
-      cite:
-        - paccola-2025
 description_md: >-
   ## Overview
 

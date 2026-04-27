@@ -299,53 +299,6 @@ administration:
         Use supplied needle or compatible insulin syringe (if reconstituting). Pinch skin, inject at
         90° angle. Hold 5–10 seconds before withdrawing needle to prevent leakage.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: metformin
-      partner_label: Metformin
-      synergy: moderate
-      rationale: >-
-        Metformin (1500–2000 mg/day) complements mazdutide via AMPK activation, insulin
-        sensitization, and hepatic glucose suppression. Both agents reduce weight and improve
-        glycemic control through distinct mechanisms — metformin targets hepatic gluconeogenesis and
-        peripheral insulin sensitivity, while mazdutide acts on incretin and glucagon pathways.
-        Combination may enhance metabolic outcomes in T2D with obesity.
-      protocol:
-        Mazdutide: 9 mg SQ weekly
-        Metformin: 1500–2000 mg PO daily (divided doses)
-        Monitoring: HbA1c, renal function (metformin), GI tolerability
-      primary_benefit: Additive weight loss and glycemic control in T2D
-      cite: []
-    - partner_slug: sglt2-inhibitor
-      partner_label: SGLT2 Inhibitor (e.g., empagliflozin)
-      synergy: multi-pathway
-      rationale: >-
-        SGLT2 inhibitors promote renal glucose excretion and modest weight loss (~2–3 kg) while
-        reducing cardiovascular and renal risk. Mazdutide's dual GLP-1/glucagon mechanism targets
-        appetite and energy expenditure. Multi-pathway synergy addresses obesity, hyperglycemia, and
-        cardiometabolic risk via complementary renal, gut, and hepatic effects. No pharmacokinetic
-        interaction expected.
-      protocol:
-        Mazdutide: 9 mg SQ weekly
-        Empagliflozin: 10–25 mg PO daily
-        Precautions: Monitor for euglycemic DKA, volume depletion
-      primary_benefit: Enhanced weight loss, glycemic control, cardiorenal protection
-      cite: []
-    - partner_slug: phentermine
-      partner_label: Phentermine (short-term adjunct)
-      synergy: weak
-      rationale: >-
-        Phentermine (sympathomimetic appetite suppressant, 15–37.5 mg/day) may provide additional
-        short-term appetite suppression (≤12 weeks) in patients with suboptimal GLP-1-mediated
-        satiety response. However, mazdutide already delivers robust appetite reduction via incretin
-        axis; phentermine adds cardiovascular risk (tachycardia, hypertension). Use cautiously,
-        monitor heart rate and blood pressure. Not recommended as standard combination.
-      protocol:
-        Mazdutide: 9 mg SQ weekly
-        Phentermine: 15–37.5 mg PO AM (≤12 weeks)
-        Monitoring: Heart rate, BP, mood/anxiety symptoms
-      primary_benefit: Potential short-term appetite augmentation (limited evidence)
-      cite: []
 description_md: >-
   ## Overview
 

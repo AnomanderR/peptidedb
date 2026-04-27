@@ -229,51 +229,6 @@ administration:
         Consistent use for 20–60 days required for visible wrinkle reduction. Effects are temporary
         and reverse upon discontinuation.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: acetyl-hexapeptide-3
-      partner_label: Argireline (Acetyl Hexapeptide-3)
-      synergy: moderate
-      rationale: >-
-        Both SNAP-8 (8-AA) and argireline (6-AA) target the SNARE complex via SNAP-25 mimicry,
-        producing overlapping mechanisms. Combination may yield additive muscle relaxation and
-        wrinkle reduction, though no direct synergy studies exist. Argireline has broader clinical
-        validation and may enhance SNAP-8 efficacy in multi-peptide formulations.
-      protocol:
-        SNAP-8: 5–10% concentration, topical
-        Argireline: 2–5% concentration, topical
-        Application: Twice daily, same formulation or layered
-      primary_benefit: Enhanced wrinkle depth reduction, broader SNARE inhibition coverage
-      cite: []
-    - partner_slug: tripeptide-10-citrulline
-      partner_label: Tripeptide-10 Citrulline
-      synergy: strong
-      rationale: >-
-        Tripeptide-10 citrulline stimulates collagen synthesis and extracellular matrix assembly,
-        complementing SNAP-8's muscle-relaxation mechanism. RCT demonstrated synergistic improvement
-        in skin microtopography parameters (cR2, cR3) when combined, with statistically significant
-        differences vs monotherapy at 20 days.
-      protocol:
-        SNAP-8: 5–10% concentration, topical
-        Tripeptide-10 citrulline: 2–5% concentration, topical
-        Application: Twice daily, combined formulation preferred
-      primary_benefit: 'Dual-mechanism anti-aging: muscle relaxation + collagen stimulation'
-      cite: []
-    - partner_slug: botulinum-toxin-a
-      partner_label: Botulinum Toxin Type A (Botox)
-      synergy: moderate
-      rationale: >-
-        SNAP-8 may extend or enhance results from botulinum toxin injections by providing ongoing
-        topical SNARE inhibition between treatment sessions. Real-world clinical experience suggests
-        improved radiance, fine line reduction, and patient satisfaction when TNP-serum (containing
-        acetyl hexapeptide-8, a SNAP-8 analogue) is used adjunctively with BTX-A. No interference
-        with injection efficacy observed.
-      protocol:
-        SNAP-8: 5–10% topical serum, twice daily
-        BTX-A: Per standard injection protocol (forehead, glabellar, crow's feet)
-        Timing: Begin SNAP-8 immediately post-injection, continue daily
-      primary_benefit: Prolonged muscle relaxation, enhanced cosmetic outcome, reduced re-injection frequency
-      cite: []
 description_md: >-
   SNAP-8 (acetyl octapeptide-3) is a biomimetic peptide engineered to replicate a fragment of
   SNAP-25, a core component of the SNARE (soluble N-ethylmaleimide-sensitive factor attachment

@@ -237,22 +237,6 @@ administration:
         weekly), liraglutide (once daily), dulaglutide (once weekly), or exenatide (twice daily or
         once weekly).
       cite: []
-synergy:
-  stacks:
-    - partner_slug: dpp4-inhibitors
-      partner_label: DPP-4 Inhibitors
-      synergy: moderate
-      rationale: >-
-        DPP-4 inhibitors (sitagliptin, linagliptin) block enzymatic cleavage of native GLP-1,
-        extending its half-life from ~2 minutes to 4–6 minutes. This increases endogenous GLP-1
-        availability and enhances postprandial insulin secretion. Used clinically to amplify
-        physiological GLP-1 signaling without exogenous peptide administration.
-      protocol:
-        Context: Clinical diabetes management
-        DPP-4 inhibitor: Sitagliptin 100 mg PO once daily
-        Effect: 2–3× increase in active GLP-1 levels
-      primary_benefit: Prolonged endogenous GLP-1 activity, improved glycemic control
-      cite: []
 description_md: >-
   Native GLP-1(7-37) is the bioactive incretin hormone secreted by intestinal L cells following
   nutrient ingestion. It binds the GLP-1 receptor on pancreatic β-cells, stimulating

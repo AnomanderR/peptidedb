@@ -190,21 +190,6 @@ synergy:
       primary_benefit: Broader thymic-immune coverage (T-cell + B-cell)
       cite:
         - hervyakova-2014
-    - partner_slug: timogen
-      partner_label: Timogen
-      synergy: moderate
-      rationale: >-
-        Both Timogen and Crystagen activate B-cells, but via different mechanisms — Timogen enhances
-        proliferation and reduces apoptosis, while Crystagen reduces apoptosis without proliferative
-        enhancement. Overlapping B-cell targets may reduce additive benefit compared to T/B
-        combinations.
-      protocol:
-        Crystagen: Dose unknown · SQ
-        Timogen: Dose unknown · SQ
-        Frequency: Protocol variable
-      primary_benefit: Dual B-cell modulation pathways
-      cite:
-        - hervyakova-2014
 description_md: >-
   ## Overview
 

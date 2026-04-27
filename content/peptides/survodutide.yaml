@@ -274,41 +274,6 @@ administration:
         Subcutaneous injection with appropriate gauge needle (typically 27–31G). Use sterile
         technique.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: resmetirom
-      partner_label: Resmetirom
-      synergy: multi-pathway
-      rationale: >-
-        Survodutide (GLP-1/glucagon dual agonist) and resmetirom (thyroid hormone receptor-β
-        agonist) target complementary metabolic pathways in MASH treatment. Survodutide addresses
-        weight loss and glucose metabolism via incretin and glucagon pathways, while resmetirom
-        directly targets hepatic lipid metabolism via THR-β, reducing hepatic fat and improving
-        fibrosis markers. Network meta-analysis demonstrates both agents reduce ALT/AST and MRI-PDFF
-        through distinct mechanisms, suggesting potential for additive benefit in MASLD/MASH
-        management.
-      protocol:
-        Survodutide: Once weekly SQ (dose TBD)
-        Resmetirom: 80–100 mg PO daily
-        Monitoring: LFTs, lipid panel, thyroid function q4-8 weeks
-      primary_benefit: Multi-pathway MASH resolution, hepatic fat reduction, metabolic improvement
-      cite: []
-    - partner_slug: metformin
-      partner_label: Metformin
-      synergy: moderate
-      rationale: >-
-        Survodutide improves glucose homeostasis via GLP-1 receptor agonism and increases energy
-        expenditure via glucagon receptor activation. Metformin complements this through AMP-kinase
-        activation, reducing hepatic gluconeogenesis and improving insulin sensitivity. The
-        combination may address both weight loss and glycemic control in patients with type 2
-        diabetes and obesity, targeting overlapping metabolic dysfunction through distinct molecular
-        pathways.
-      protocol:
-        Survodutide: Once weekly SQ
-        Metformin: 500–2000 mg daily (titrated)
-        Timing: Metformin with meals to reduce GI effects
-      primary_benefit: Enhanced glycemic control, weight loss, reduced hepatic glucose output
-      cite: []
 description_md: >-
   Survodutide represents a next-generation approach to obesity and metabolic disease management
   through dual GLP-1 and glucagon receptor agonism. Unlike single-target GLP-1 agonists, survodutide

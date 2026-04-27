@@ -260,41 +260,6 @@ administration:
     - title: Needle selection
       body: 'IM: 21–23G, 1–1.5 inch. SQ: 25–27G, 5/8 inch. Inject slowly (30–60 seconds for IM).'
       cite: []
-synergy:
-  stacks:
-    - partner_slug: fsh
-      partner_label: FSH (Follicle-Stimulating Hormone)
-      synergy: strong
-      rationale: >-
-        hCG restores intratesticular testosterone via LH receptor stimulation, while FSH acts on
-        Sertoli cells to directly support spermatogenesis. Combined therapy achieves 70–90% sperm
-        induction vs 50–70% with hCG monotherapy in hypogonadotropic hypogonadism. FSH addition
-        accelerates seminiferous tubule maturation and increases sperm concentration/motility,
-        particularly in congenital HH with prior azoospermia.
-      protocol:
-        hCG: 2,000 IU IM/SQ 2×/week
-        rFSH: 75 IU SQ 3×/week
-        Duration: 12–24 months minimum
-      primary_benefit: >-
-        Maximal spermatogenesis restoration, shortened time to sperm appearance, higher pregnancy
-        rates
-      cite: []
-    - partner_slug: testosterone
-      partner_label: Testosterone (exogenous)
-      synergy: moderate
-      rationale: >-
-        Experimental triple therapy (hCG + FSH + testosterone) in congenital HH accelerates
-        virilization and psychosocial outcomes while reducing cumulative hCG requirements by ~30%.
-        Exogenous testosterone provides immediate symptom relief during the 12–18 month window
-        before endogenous production normalizes. However, supraphysiological testosterone may
-        suppress endogenous HPG axis and complicate long-term fertility goals. Reserved for cases
-        prioritizing rapid virilization.
-      protocol:
-        hCG: 2,000 IU IM 2×/week
-        Testosterone: 100 mg IM every 2 weeks
-        rFSH: 75 IU SQ 3×/week (if fertility desired)
-      primary_benefit: Rapid virilization, reduced hCG dose, improved psychosocial outcomes in delayed puberty
-      cite: []
 description_md: >-
   ## Clinical Context
 

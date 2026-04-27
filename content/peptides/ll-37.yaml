@@ -187,37 +187,6 @@ administration:
         retain this stability while reducing toxicity.
       cite:
         - lu-2026
-synergy:
-  stacks:
-    - partner_slug: alpha-defensins
-      partner_label: Alpha-Defensins
-      synergy: strong
-      rationale: >-
-        LL-37 (cathelicidin) and alpha-defensins co-express during septic shock and severe COVID-19,
-        acting synergistically in innate immune responses. Both are antimicrobial peptides with
-        complementary membrane-disruption mechanisms. Network analysis demonstrates coordinated
-        upregulation, suggesting additive antimicrobial and immunomodulatory effects in systemic
-        inflammation.
-      protocol:
-        Context: Endogenous co-expression during infection
-        Mechanism: Synergistic innate immune activation
-      primary_benefit: Enhanced antimicrobial defense and immune modulation in sepsis/COVID-19
-      cite:
-        - pinheiro-2026
-    - partner_slug: s100a8-s100a9
-      partner_label: S100A8/S100A9
-      synergy: moderate
-      rationale: >-
-        In acute pancreatitis, LL-37 (CAMP) co-expresses with S100A8 and S100A9, while
-        alpha-defensins are downregulated. S100 proteins function via distinct pathways
-        (mitochondrial metabolism, ubiquitin ligase binding), but coordinate with LL-37 in
-        context-dependent inflammation. The interaction is condition-specific rather than universal.
-      protocol:
-        Context: Acute pancreatitis inflammation networks
-        Mechanism: Parallel immunomodulatory pathways
-      primary_benefit: Context-dependent inflammatory response modulation
-      cite:
-        - pinheiro-2026
 description_md: >-
   LL-37 is the sole human cathelicidin antimicrobial peptide, cleaved from the hCAP-18 precursor
   protein by proteinase-3. It serves as a first-line defense molecule in innate immunity, exhibiting

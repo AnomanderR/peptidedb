@@ -300,21 +300,6 @@ synergy:
         Duration: 12–24 weeks for spermatogenesis induction
       primary_benefit: Fertility restoration in hypothalamic hypogonadism with maintained testicular function
       cite: []
-    - partner_slug: hmg
-      partner_label: hMG (Human Menopausal Gonadotropin)
-      synergy: multi-pathway
-      rationale: >-
-        For ovulation induction in hypothalamic amenorrhea, gonadorelin provides pulsatile GnRH
-        stimulation while hMG supplies exogenous FSH/LH to directly drive folliculogenesis. This
-        combination is reserved for refractory cases or when pump therapy is impractical. hMG
-        bypasses the need for endogenous pituitary response, ensuring follicular recruitment even
-        with suboptimal gonadotrope function.
-      protocol:
-        Gonadorelin: 5–20 mcg IV every 90 min (pulsatile pump) OR
-        hMG: 75–150 IU SQ daily (if pump unavailable)
-        Monitoring: Ultrasound + estradiol every 2–3 days
-      primary_benefit: Controlled ovulation induction with lower OHSS risk vs hMG monotherapy
-      cite: []
 maturity: human-reviewed
 contributors:
   - peptidesdb-core

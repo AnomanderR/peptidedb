@@ -202,37 +202,6 @@ administration:
         N-acetylcysteine (NAC) 600–1200 mg/day PO. Provides cysteine substrate for endogenous GSH
         synthesis. Bypasses gastric degradation, preferred for chronic supplementation.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: n-acetylcysteine
-      partner_label: N-Acetylcysteine (NAC)
-      synergy: strong
-      rationale: >-
-        NAC provides bioavailable cysteine substrate to overcome the rate-limiting step in
-        glutathione synthesis (glutamate-cysteine ligase). Direct GSH supplementation suffers from
-        poor oral bioavailability due to gastric hydrolysis; NAC bypasses this barrier and sustains
-        intracellular GSH pools. Combined, NAC precursor loading + direct GSH may optimize tissue
-        antioxidant capacity.
-      protocol:
-        NAC: 600–1200 mg/day PO
-        GSH: 250–500 mg/day PO or IV 600 mg (clinical setting)
-        Timing: NAC morning, GSH evening (if oral)
-      primary_benefit: Sustained cellular GSH synthesis, enhanced antioxidant defense
-      cite: []
-    - partner_slug: glycine
-      partner_label: Glycine
-      synergy: moderate
-      rationale: >-
-        Glycine is the third amino acid in glutathione tripeptide synthesis (γ-Glu-Cys-Gly). While
-        glycine is rarely limiting under normal conditions, supplementation (3–5 g/day) may support
-        maximal GSH production during high oxidative demand states (e.g., exercise, illness).
-        Combines well with cysteine precursors.
-      protocol:
-        Glycine: 3–5 g/day PO
-        GSH: 250–500 mg/day PO or NAC 600 mg/day
-        Timing: Glycine pre-sleep (NMDA modulation co-benefit)
-      primary_benefit: Substrate saturation for GSH synthesis, sleep quality co-benefit
-      cite: []
 description_md: >-
   ## Background
 

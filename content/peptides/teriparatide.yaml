@@ -286,54 +286,6 @@ administration:
         Ensure adequate calcium (1000-1200 mg/day) and vitamin D (800-1000 IU/day) intake unless
         contraindicated by hypercalcemia or hypercalciuria.
       cite: []
-synergy:
-  stacks:
-    - partner_slug: denosumab
-      partner_label: Denosumab
-      synergy: strong
-      rationale: >-
-        Sequential therapy — teriparatide (anabolic phase) followed by denosumab (anti-resorptive
-        phase) — maximizes bone mineral density gains and prevents post-teriparatide bone loss.
-        Teriparatide builds bone for 12-18 months; denosumab locks in gains by inhibiting
-        osteoclast-mediated resorption. Concurrent use not recommended due to denosumab blunting
-        teriparatide's anabolic effect.
-      protocol:
-        Teriparatide: 20 mcg SQ daily × 18-24 months
-        Denosumab: 60 mg SQ every 6 months (start after teriparatide completion)
-        Sequence: Anabolic → Anti-resorptive transition
-      primary_benefit: Maximal BMD gain with sustained anti-fracture protection
-      cite: []
-    - partner_slug: pyrroloquinoline-quinone
-      partner_label: Pyrroloquinoline Quinone (PQQ)
-      synergy: moderate
-      rationale: >-
-        PQQ activates Nrf2 signaling, which upregulates PTH1R (parathyroid hormone 1 receptor)
-        expression on osteoblasts. In preclinical models, PQQ supplementation during teriparatide
-        therapy enhances peak bone mass acquisition and potentiates anabolic response by increasing
-        receptor density. Nrf2-Pth1r axis represents a nutritional augmentation strategy.
-      protocol:
-        Teriparatide: 20 mcg SQ daily
-        PQQ: 10-20 mg oral daily
-        Timing: PQQ taken with morning meal; teriparatide any time
-      primary_benefit: Enhanced osteoblast response to PTH signaling; improved peak bone mass
-      cite:
-        - xue-2026
-    - partner_slug: physical-activity
-      partner_label: Resistance Exercise
-      synergy: moderate
-      rationale: >-
-        Mechanical loading via resistance exercise provides anabolic stimulus that complements
-        teriparatide's osteoblast activation. In-silico modeling and clinical data suggest exercise
-        augments drug efficacy by activating mechanotransduction pathways and reducing bone
-        remodeling surface depletion. Weight-bearing activity during teriparatide therapy optimizes
-        bone quality and microarchitecture.
-      protocol:
-        Teriparatide: 20 mcg SQ daily
-        Exercise: Resistance training 3×/week; weight-bearing aerobic activity
-        Timing: Exercise any time of day; no temporal interaction with injection
-      primary_benefit: Synergistic bone formation; improved bone quality and strength
-      cite:
-        - ruizlozano-2026
 description_md: >-
   Teriparatide is the recombinant N-terminal 34-amino-acid fragment of human parathyroid hormone
   (PTH 1-34), FDA-approved in 2002 for the treatment of severe osteoporosis in postmenopausal women

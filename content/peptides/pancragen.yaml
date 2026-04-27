@@ -210,23 +210,6 @@ administration:
         weeks post-discontinuation.
       cite:
         - goncharova-2014
-synergy:
-  stacks:
-    - partner_slug: epithalon
-      partner_label: Epithalon
-      synergy: moderate
-      rationale: >-
-        Both are Khavinson-school bioregulatory peptides with complementary tissue targets.
-        Epithalon acts on the pineal gland and circadian regulation, while Pancragen targets
-        pancreatic tissue. Combined protocol may address multi-system age-related dysfunction via
-        parallel bioregulator pathways. Common in Russian gerontology protocols for systemic
-        rejuvenation.
-      protocol:
-        Pancragen: 50 μg IM daily × 10 days
-        Epithalon: 10 mg SQ daily × 10 days
-        Timing: Sequential or concurrent 10-day cycles
-      primary_benefit: Multi-tissue bioregulation, systemic anti-aging effects
-      cite: []
 description_md: >-
   ## Overview
 
