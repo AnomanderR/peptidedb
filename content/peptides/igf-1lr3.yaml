@@ -1,0 +1,342 @@
+schema_version: 1
+slug: igf-1lr3
+name: IGF-1 LR3
+peptide_class: IGF-1 Analogue
+classification: IGF-1 Analogue · Research
+categories:
+  - igf-axis
+  - anabolic
+  - anti-apoptotic
+  - research
+aliases:
+  - Long R3 IGF-1
+  - LR3-IGF-I
+  - Long Arg3 IGF-1
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic IGF-1 analogue with arginine substitution at position 3 and a 13-amino-acid N-terminal
+    extension. Exhibits markedly reduced binding to IGF-binding proteins (IGFBPs), producing
+    prolonged half-life and enhanced bioavailability compared to native IGF-1. Primarily studied in
+    research contexts for anabolic, anti-apoptotic, and cell proliferation effects.
+  cite: []
+hero_stats:
+  - value: 3–10×
+    label: Potency vs IGF-I
+    cite: []
+  - value: Low IGFBP
+    label: Binding affinity
+    cite: []
+  - value: Research
+    label: Status
+    cite: []
+hero_route:
+  value: Research only · SQ typical in animal models
+  cite: []
+mechanism:
+  primary_target:
+    value: IGF-1 receptor (IGF-1R)
+    cite:
+      - mctavish-2009
+  pathway:
+    value: IGF-1R → IRS-1 → PI3K/Akt → Cell proliferation, protein synthesis, anti-apoptosis
+    cite:
+      - muhlbradt-2009
+  downstream_effect:
+    value: >-
+      Enhanced cell proliferation, muscle anabolism, inhibition of apoptosis, increased telomerase
+      activity
+    cite: []
+  origin:
+    value: 'Synthetic 83-AA analogue: 13-AA N-terminal extension + Arg substitution at position 3'
+    cite: []
+  feedback_intact:
+    value: No — exogenous IGF analogue bypasses GH-mediated regulation
+    cite: []
+    badge: red
+  receptor_class:
+    value: Type 1 IGF receptor (tyrosine kinase)
+    cite: []
+  half_life_basis:
+    value: Reduced IGFBP binding → prolonged circulation vs native IGF-1
+    cite: []
+  extra_rows:
+    - key: IGFBP binding
+      value:
+        value: 3.3-fold lower affinity for IGFBPs vs wild-type IGF-1
+        cite:
+          - mctavish-2009
+    - key: Bioavailability advantage
+      value:
+        value: Enhanced tissue availability due to reduced sequestration by IGFBPs
+        cite:
+          - thomas-2007
+  diagram:
+    - kind: node
+      text:
+        value: IGF-1 LR3 (exogenous)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds IGF-1R (bypasses IGFBPs)
+        cite: []
+    - kind: node
+      text:
+        value: IRS-1 / PI3K / Akt pathway
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Protein synthesis, anti-apoptosis
+        cite: []
+    - kind: outcome
+      text:
+        value: Cell proliferation, muscle growth, telomerase ↑
+        cite: []
+dosage:
+  rows:
+    - parameter: Research dose (animal models)
+      value:
+        value: Variable by protocol and species
+        cite: []
+      notes:
+        value: In vivo murine atherosclerosis studies used sustained delivery.
+        cite: []
+    - parameter: In vitro typical concentration
+      value:
+        value: 10–1000 ng/mL
+        cite:
+          - thomas-2007
+      notes:
+        value: Dose-dependent effects on follicle growth and estradiol production.
+        cite: []
+    - parameter: Half-maximal stimulation
+      value:
+        value: 0.6 nM LR3 vs 1.5 nM native IGF-1
+        cite:
+          - price-2004
+      notes:
+        value: 2.5-fold greater potency in lung fibroblast proliferation.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal / in vitro only
+        cite: []
+    - parameter: Human use
+      value:
+        value: Not FDA-approved; no published human trials
+        cite: []
+fat_loss:
+  evidence_strength: 35
+  evidence_level: animal-mechanistic
+  evidence_meta:
+    value: Animal models only · No controlled human trials
+    cite: []
+  rows:
+    - parameter: Mechanism
+      value:
+        value: IGF-1R activation → lipolytic signaling; secondary to anabolic effects
+        cite: []
+    - parameter: Direct lipolytic evidence
+      value:
+        value: Minimal — primarily anabolic/anti-apoptotic in literature
+        cite: []
+    - parameter: Atherosclerotic plaque effects
+      value:
+        value: Reduced stenosis and core size in ApoE-KO mice
+        cite:
+          - von-2011
+      notes:
+        value: Plaque stabilization via vSMC phenotype modulation, not direct fat loss.
+        cite: []
+    - parameter: Human data
+      value:
+        value: None published
+        cite: []
+side_effects:
+  rows:
+    - parameter: Hypoglycemia risk
+      value:
+        value: Theoretical — IGF-1 analogues can lower blood glucose
+        cite: []
+      severity: moderate
+    - parameter: Excessive cell proliferation
+      value:
+        value: Mitogenic signaling; theoretical tumor promotion risk
+        cite: []
+      severity: severe
+    - parameter: Telomerase activation
+      value:
+        value: 2–10-fold increase in prostate cancer cells (PC-3, DU-145, LAPC-4)
+        cite:
+          - wetterau-2003
+      notes:
+        value: Critically involved in cancer cell immortalization.
+        cite: []
+      severity: severe
+    - parameter: Oocyte degeneration
+      value:
+        value: Increased oocyte degeneration at high doses (≥1000 ng/mL) in bovine follicles
+        cite:
+          - thomas-2007
+      severity: moderate
+    - parameter: Unregulated anabolism
+      value:
+        value: Bypasses physiological GH/IGF-1 feedback; no pulsatility control
+        cite: []
+      severity: moderate
+    - parameter: Unknown human safety profile
+      value:
+        value: No published human trials; safety data absent
+        cite: []
+      severity: severe
+  contraindications_absolute:
+    - value: Active malignancy or history of cancer
+      cite: []
+    - value: Not approved for human use
+      cite: []
+  contraindications_relative:
+    - value: Diabetes or glucose intolerance
+      cite: []
+    - value: Family history of cancer
+      cite: []
+administration:
+  steps:
+    - title: Research use only
+      body: >-
+        IGF-1 LR3 is not FDA-approved for human use. All administration data derives from animal or
+        in vitro studies.
+      cite: []
+    - title: Typical research route
+      body: >-
+        Subcutaneous or intraperitoneal injection in animal models. In vitro: added directly to
+        culture medium at concentrations of 10–1000 ng/mL.
+      cite:
+        - thomas-2007
+    - title: Reconstitution (research)
+      body: >-
+        Lyophilised powder reconstituted in sterile water or buffered saline per manufacturer
+        protocol. Store at 2–8 °C after reconstitution.
+      cite: []
+    - title: Stability
+      body: >-
+        Enhanced stability vs native IGF-1 due to reduced IGFBP binding; exact half-life in vivo not
+        fully characterized in humans.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: ghrp-6
+      partner_label: GHRP-6
+      synergy: multi-pathway
+      rationale: >-
+        GHRP-6 stimulates endogenous GH release, which drives hepatic IGF-1 synthesis. IGF-1 LR3
+        provides exogenous, IGFBP-resistant IGF signaling. Combining upstream GH stimulation with
+        downstream IGF receptor activation creates a dual-pathway anabolic effect. However, this
+        bypasses natural feedback and carries compounded mitogenic risk.
+      protocol:
+        GHRP-6: 100–200 mcg SQ · 2–3× daily
+        IGF-1 LR3: Research doses variable · post-workout typical in animal models
+        Note: Research context only — no human protocols exist
+      primary_benefit: Theoretical maximal anabolic signaling (GH + IGF axes)
+      cite: []
+    - partner_slug: ipamorelin
+      partner_label: Ipamorelin
+      synergy: multi-pathway
+      rationale: >-
+        Ipamorelin (selective GHRP) stimulates pulsatile GH release without cortisol/prolactin
+        elevation. IGF-1 LR3 directly activates IGF-1R independent of GH. This stack targets both
+        upstream (GH secretion) and downstream (IGF receptor) nodes but eliminates physiological
+        feedback, raising safety concerns around unchecked proliferation.
+      protocol:
+        Ipamorelin: 200–300 mcg SQ · evening
+        IGF-1 LR3: Research doses only · timing variable
+        Caution: No human data; animal/in vitro only
+      primary_benefit: Dual-axis anabolic signaling (theoretical)
+      cite: []
+description_md: >-
+  ## Research Context
+
+
+  IGF-1 LR3 is a laboratory-engineered variant of insulin-like growth factor 1, designed to overcome
+  the bioavailability limitations of native IGF-1 by minimizing IGFBP sequestration. The
+  13-amino-acid N-terminal extension and arginine-3 substitution reduce binding affinity for IGFBPs
+  by approximately 3.3-fold, yielding prolonged circulation and enhanced tissue delivery.
+
+
+  ## Key Structural Modifications
+
+
+  - **N-terminal extension**: 13 additional amino acids at the N-terminus
+
+  - **Position 3 substitution**: Arginine replaces glutamic acid
+
+  - **Total length**: 83 amino acids (vs 70 for native IGF-1)
+
+  - **IGFBP affinity**: Reduced 3.3-fold vs wild-type
+
+
+  ## Primary Research Applications
+
+
+  1. **Cell proliferation studies**: Myoblasts, fibroblasts, follicular cells
+
+  2. **Anti-apoptotic mechanisms**: Cancer cell survival pathways
+
+  3. **Angiogenesis inhibition**: IGFBP-3-independent effects
+
+  4. **Atherosclerotic plaque stabilization**: Vascular smooth muscle phenotype
+
+  5. **Telomerase activity**: Cancer immortalization research
+
+
+  ## Critical Safety Considerations
+
+
+  IGF-1 LR3 has demonstrated potent mitogenic activity in cancer cell lines, including 2–10-fold
+  increases in telomerase activity in prostate cancer models. Its ability to bypass IGFBP regulation
+  raises concerns about uncontrolled proliferative signaling. No human safety or efficacy trials
+  have been published.
+
+
+  ## Comparison to Native IGF-1
+
+
+  | Parameter | Native IGF-1 | IGF-1 LR3 |
+
+  |-----------|--------------|----------|
+
+  | IGFBP binding | High | Low (3.3× reduced) |
+
+  | Half-life | Minutes | Prolonged (exact duration unclear) |
+
+  | Potency (in vitro) | Baseline | 2.5–3× higher |
+
+  | Feedback regulation | GH-dependent | Bypassed |
+
+  | FDA status | Approved forms exist | Not approved |
+
+
+  ## Notable Findings
+
+
+  - **Bovine follicle study**: LR3 stimulated follicle growth but caused oocyte degeneration at
+  ≥1000 ng/mL
+
+  - **Prostate cancer**: Stimulated telomerase activity via Akt pathway (wortmannin-sensitive)
+
+  - **Atherosclerosis**: Reduced plaque core size and stenosis in ApoE-KO mice
+
+  - **Myogenic cells**: Enhanced proliferation via both IGF-dependent and IGF-independent mechanisms
+  when endogenously expressed
+
+
+  ## Regulatory Status
+
+
+  IGF-1 LR3 is not approved for human therapeutic use by the FDA or any major regulatory body. It
+  remains a research reagent used in laboratory and veterinary contexts.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

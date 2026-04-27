@@ -1186,3 +1186,286 @@ canal-2026:
   pmid: '41841062'
   authors:
     - Canal de Velasco LM
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+friedman-2024:
+  id: friedman-2024
+  type: journal
+  title: >-
+    The discovery and development of GLP-1 based drugs that have revolutionized the treatment of
+    obesity.
+  year: 2024
+  pmid: '39297680'
+  authors:
+    - Friedman JM
+
+alavi-2021:
+  id: alavi-2021
+  type: journal
+  title: >-
+    Developing GLP-1 Conjugated Self-Assembling Nanofibers Using Copper-Catalyzed Alkyne-Azide
+    Cycloaddition and Evaluation of Their Biological Activity.
+  year: 2021
+  pmid: '33843208'
+  authors:
+    - Alavi SE
+
+ding-2017:
+  id: ding-2017
+  type: journal
+  title: BPI-3016, a novel long-acting hGLP-1 analogue for the treatment of Type 2 diabetes mellitus.
+  year: 2017
+  pmid: '28619366'
+  authors:
+    - Ding L
+
+koole-2015:
+  id: koole-2015
+  type: journal
+  title: >-
+    Differential impact of amino acid substitutions on critical residues of the human glucagon-like
+    peptide-1 receptor involved in peptide activity and small-molecule allostery.
+  year: 2015
+  pmid: '25630467'
+  authors:
+    - Koole C
+
+lu-2025:
+  id: lu-2025
+  type: journal
+  title: >-
+    Effects of tryptophan-selective lipidated glucagon-like peptide 1 (GLP-1) peptides on the GLP-1
+    receptor.
+  year: 2025
+  pmid: '39807656'
+  authors:
+    - Lu X
+
+cai-2018:
+  id: cai-2018
+  type: journal
+  title: >-
+    Novel fatty acid chain modified GLP-1 derivatives with prolonged in vivo glucose-lowering
+    ability and balanced glucoregulatory activity.
+  year: 2018
+  pmid: '29673717'
+  authors:
+    - Cai X
+
+wang-2025:
+  id: wang-2025
+  type: journal
+  title: >-
+    Design, synthesis, and biological evaluation of long-acting glucagon-like peptide-1 (GLP-1)
+    conjugates modified with dual fatty acids and a proline-alanine-serine (PAS) polypeptide.
+  year: 2025
+  pmid: '40499315'
+  authors:
+    - Wang C
+
+skurikhin-2017:
+  id: skurikhin-2017
+  type: journal
+  title: >-
+    Effects of Pegylated Glucagon-Like Peptide-1 Analogue in C57Bl/6 Mice under Optimal Conditions
+    and During Streptozotocin-Induced Diabetes.
+  year: 2017
+  pmid: '28948559'
+  authors:
+    - Skurikhin EG
+
+pujadas-2016:
+  id: pujadas-2016
+  type: journal
+  title: >-
+    The pivotal role of high glucose-induced overexpression of PKCβ in the appearance of
+    glucagon-like peptide-1 resistance in endothelial cells.
+  year: 2016
+  pmid: '26585565'
+  authors:
+    - Pujadas G
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+thomas-2007:
+  id: thomas-2007
+  type: journal
+  title: Effects of IGF-I bioavailability on bovine preantral follicular development in vitro.
+  year: 2007
+  pmid: '17636166'
+  authors:
+    - Thomas FH
+
+xi-2004:
+  id: xi-2004
+  type: journal
+  title: >-
+    Effect of recombinant porcine IGFBP-3 on IGF-I and long-R3-IGF-I-stimulated proliferation and
+    differentiation of L6 myogenic cells.
+  year: 2004
+  pmid: '15254966'
+  authors:
+    - Xi G
+
+mctavish-2009:
+  id: mctavish-2009
+  type: journal
+  title: >-
+    Novel insulin-like growth factor-methotrexate covalent conjugate inhibits tumor growth in vivo
+    at lower dosage than methotrexate alone.
+  year: 2009
+  pmid: '19446281'
+  authors:
+    - McTavish H
+
+muhlbradt-2009:
+  id: muhlbradt-2009
+  type: journal
+  title: >-
+    NKX3.1 activates expression of insulin-like growth factor binding protein-3 to mediate
+    insulin-like growth factor-I signaling and cell proliferation.
+  year: 2009
+  pmid: '19258508'
+  authors:
+    - Muhlbradt E
+
+wetterau-2003:
+  id: wetterau-2003
+  type: journal
+  title: Insulin-like growth factor I stimulates telomerase activity in prostate cancer cells.
+  year: 2003
+  pmid: '12843187'
+  authors:
+    - Wetterau LA
+
+von-2011:
+  id: von-2011
+  type: journal
+  title: >-
+    IGF-1 has plaque-stabilizing effects in atherosclerosis by altering vascular smooth muscle cell
+    phenotype.
+  year: 2011
+  pmid: '21281823'
+  authors:
+    - von der Thüsen JH
+
+price-2004:
+  id: price-2004
+  type: journal
+  title: >-
+    Regulation of insulin-like growth factor (IGF)-binding protein expression by growth factors and
+    cytokines alters IGF-mediated proliferation of postnatal lung fibroblasts.
+  year: 2004
+  pmid: '15204833'
+  authors:
+    - Price WA
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+armakolas-2016:
+  id: armakolas-2016
+  type: journal
+  title: The role of the IGF-1 Ec in myoskeletal system and osteosarcoma pathophysiology.
+  year: 2016
+  pmid: '27931832'
+  authors:
+    - Armakolas N
+
+papageorgiou-2016:
+  id: papageorgiou-2016
+  type: journal
+  title: >-
+    The human Ec peptide: the active core of a progression growth factor with species-specific mode
+    of action.
+  year: 2016
+  pmid: '27838607'
+  authors:
+    - Papageorgiou E
+
+vassilakos-2017:
+  id: vassilakos-2017
+  type: journal
+  title: >-
+    Identification of the IGF-1 processing product human Ec/rodent Eb peptide in various tissues:
+    Evidence for its differential regulation after exercise-induced muscle damage in humans.
+  year: 2017
+  pmid: '27836414'
+  authors:
+    - Vassilakos G
+
+moore-2018:
+  id: moore-2018
+  type: journal
+  title: >-
+    Blunted satellite cell response is associated with dysregulated IGF-1 expression after exercise
+    with age.
+  year: 2018
+  pmid: '30062517'
+  authors:
+    - Moore DR
+
+taghibeikzadehbadr-2020:
+  id: taghibeikzadehbadr-2020
+  type: journal
+  title: >-
+    Effect of different muscle contraction mode on the expression of Myostatin, IGF-1, and PGC-1
+    alpha family members in human Vastus Lateralis muscle.
+  year: 2020
+  pmid: '33222041'
+  authors:
+    - Taghibeikzadehbadr P
+
+pea-2015:
+  id: pea-2015
+  type: journal
+  title: >-
+    Localized delivery of mechano-growth factor E-domain peptide via polymeric microstructures
+    improves cardiac function following myocardial infarction.
+  year: 2015
+  pmid: '25678113'
+  authors:
+    - Peña JR
+
+shioura-2014:
+  id: shioura-2014
+  type: journal
+  title: >-
+    Administration of a Synthetic Peptide Derived from the E-domain Region of Mechano-Growth Factor
+    Delays Decompensation Following Myocardial Infarction.
+  year: 2014
+  pmid: '25606570'
+  authors:
+    - Shioura K
+
+thevis-2014:
+  id: thevis-2014
+  type: journal
+  title: >-
+    Mass spectrometric characterization of a biotechnologically produced full-length mechano growth
+    factor (MGF) relevant for doping controls.
+  year: 2014
+  pmid: '25466910'
+  authors:
+    - Thevis M
+
+alagaratnam-2020:
+  id: alagaratnam-2020
+  type: journal
+  title: Increased expression of IGF-1Ec with increasing colonic polyp dysplasia and colorectal cancer.
+  year: 2020
+  pmid: '32772171'
+  authors:
+    - Alagaratnam S
+
+kotsifaki-2024:
+  id: kotsifaki-2024
+  type: journal
+  title: Decoding the Role of Insulin-like Growth Factor 1 and Its Isoforms in Breast Cancer.
+  year: 2024
+  pmid: '39273251'
+  authors:
+    - Kotsifaki A

@@ -1,0 +1,342 @@
+schema_version: 1
+slug: mgf
+name: MGF
+peptide_class: IGF-1 Splice Variant
+classification: IGF-1Ec Splice Variant · Muscle-Specific
+categories:
+  - igf-axis
+  - muscle-repair
+  - splice-variant
+  - experimental
+aliases:
+  - Mechano Growth Factor
+  - IGF-1Ec
+  - MGF peptide
+  - E-domain peptide
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Mechano Growth Factor (MGF) is the IGF-1Ec splice variant produced locally in skeletal muscle in
+    response to mechanical loading or damage. Distinguished from systemic IGF-1 by a unique
+    49-amino-acid E-domain that activates satellite cells and drives muscle repair independently of
+    mature IGF-1. The synthetic 24-amino-acid E-domain peptide recapitulates MGF bioactivity in
+    vitro and in rodent models but lacks human clinical validation.
+  cite: []
+hero_stats:
+  - value: IGF-1Ec
+    label: Splice variant
+    cite:
+      - armakolas-2016
+  - value: 24-AA
+    label: Synthetic E-domain
+    cite: []
+  - value: Animal only
+    label: Human evidence
+    cite: []
+hero_route:
+  value: SQ · Research context only
+  cite: []
+mechanism:
+  primary_target:
+    value: Satellite cells (Pax7+) in skeletal muscle
+    cite:
+      - moore-2018
+  pathway:
+    value: >-
+      Mechanical stress → IGF-1Ec mRNA upregulation → Local E-domain peptide release → Satellite
+      cell activation
+    cite: []
+  downstream_effect:
+    value: Satellite cell proliferation, myoblast differentiation, muscle fiber repair
+    cite: []
+  origin:
+    value: >-
+      Alternative splicing of IGF-1 gene (exons 4-6) produces IGF-1Ec precursor; E-domain cleaved
+      post-translationally
+    cite:
+      - armakolas-2016
+      - vassilakos-2017
+  receptor_class:
+    value: E-domain acts via distinct receptor from mature IGF-1; identity under investigation
+    cite:
+      - papageorgiou-2016
+  half_life_basis:
+    value: E-domain half-life unknown; rapid local clearance presumed
+    cite: []
+  extra_rows:
+    - key: Species specificity
+      value:
+        value: >-
+          Human IGF-1Ec (hEc) ≠ rodent IGF-1Eb; distinct E-domain sequences, non-interchangeable
+          bioactivity
+        cite:
+          - papageorgiou-2016
+          - vassilakos-2017
+    - key: Expression trigger
+      value:
+        value: Eccentric contraction > concentric; mechanical damage > metabolic stress
+        cite:
+          - taghibeikzadehbadr-2020
+    - key: Detection in tissue
+      value:
+        value: E-domain peptide identified via Western blot in human skeletal muscle post-exercise
+        cite:
+          - vassilakos-2017
+  diagram:
+    - kind: node
+      text:
+        value: Mechanical Loading / Muscle Damage
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ IGF-1Ec mRNA splice variant upregulated
+        cite:
+          - taghibeikzadehbadr-2020
+    - kind: node
+      text:
+        value: Local E-domain Peptide Release
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Satellite cell (Pax7+) activation
+        cite:
+          - moore-2018
+    - kind: outcome
+      text:
+        value: Myoblast Proliferation → Muscle Repair
+        cite: []
+dosage:
+  rows:
+    - parameter: Synthetic peptide
+      value:
+        value: 24-amino-acid E-domain sequence
+        cite: []
+      notes:
+        value: Corresponds to human IGF-1Ec exons 4-6 region.
+        cite: []
+    - parameter: Rodent cardiac model
+      value:
+        value: 200 μg/kg via peptide-eluting microstructures
+        cite: []
+      notes:
+        value: Post-MI injection; improved ejection fraction by 8 weeks.
+        cite: []
+    - parameter: Acute delivery (mouse MI)
+      value:
+        value: Single bolus within 12 hrs post-infarction
+        cite:
+          - shioura-2014
+      notes:
+        value: Delayed decompensation; no human protocol established.
+        cite: []
+    - parameter: Human evidence
+      value:
+        value: None — no published clinical trials
+        cite: []
+      notes:
+        value: All dosing extrapolated from animal models.
+        cite: []
+      severity: severe
+    - parameter: Detection in doping
+      value:
+        value: Full-length MGF detected via LC-MS in illicit products
+        cite:
+          - thevis-2014
+      notes:
+        value: WADA-prohibited since 2005; no therapeutic indication.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal models + in vitro only
+        cite: []
+      severity: severe
+side_effects:
+  rows:
+    - parameter: Human safety data
+      value:
+        value: None — no clinical trials published
+        cite: []
+      severity: severe
+    - parameter: Theoretical IGF-1 axis risk
+      value:
+        value: Chronic IGF-1Ec overexpression linked to cancer progression (prostate, colorectal, breast)
+        cite: []
+      severity: severe
+    - parameter: Tumor promotion
+      value:
+        value: >-
+          IGF-1Ec overexpressed in osteosarcoma, colorectal polyps with dysplasia, endometrial
+          cancer
+        cite: []
+      severity: severe
+    - parameter: Antibody development
+      value:
+        value: Unknown — no longitudinal human exposure data
+        cite: []
+      severity: moderate
+    - parameter: Local injection reaction
+      value:
+        value: Presumed similar to other peptides (erythema, induration) — no direct evidence
+        cite: []
+      severity: mild
+    - parameter: Dysregulated expression with age
+      value:
+        value: Older adults (70+ yrs) show blunted IGF-1Ec response post-exercise vs young
+        cite:
+          - moore-2018
+      severity: moderate
+  contraindications_absolute:
+    - value: >-
+        Active malignancy or history of IGF-1-sensitive cancers (prostate, colorectal, breast,
+        osteosarcoma)
+      cite: []
+    - value: No established therapeutic use — investigational only
+      cite: []
+  contraindications_relative:
+    - value: Family history of IGF-1-axis malignancies
+      cite: []
+    - value: Use outside research setting
+      cite: []
+administration:
+  steps:
+    - title: No validated protocol
+      body: >-
+        MGF (E-domain peptide) has no approved clinical protocol. All published data derive from
+        animal models or in vitro experiments.
+      cite: []
+    - title: Synthetic peptide form
+      body: >-
+        Commercially available MGF corresponds to the 24-amino-acid human E-domain (hEc). Rodent
+        E-domain (Eb) is structurally distinct and not interchangeable.
+      cite: []
+    - title: Animal delivery models
+      body: >-
+        Rodent studies used peptide-eluting polymeric microstructures (cardiac) or direct
+        intramuscular injection. Routes and doses non-translatable to humans.
+      cite:
+        - pea-2015
+        - shioura-2014
+    - title: WADA prohibition
+      body: >-
+        MGF peptides prohibited in sport since 2005. Detection via LC-MS established for full-length
+        MGF products.
+      cite:
+        - thevis-2014
+    - title: Research context only
+      body: >-
+        Any human use falls outside approved medical practice and regulatory frameworks. No safety
+        or efficacy data exist.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: bpc-157
+      partner_label: BPC-157
+      synergy: multi-pathway
+      rationale: >-
+        MGF activates satellite cells for muscle fiber repair; BPC-157 promotes angiogenesis,
+        collagen synthesis, and tendon healing via distinct pathways (VEGF, FAK, integrin
+        signaling). Theoretical synergy in post-injury contexts combines myogenic (MGF) and stromal
+        (BPC-157) repair mechanisms. Both lack human validation.
+      protocol:
+        MGF: No established dose
+        BPC-157: 250–500 mcg SQ near injury site
+        Context: Animal models only
+      primary_benefit: Theoretical multi-tissue repair (muscle + tendon/ligament)
+      cite: []
+    - partner_slug: tb-500
+      partner_label: TB-500
+      synergy: moderate
+      rationale: >-
+        TB-500 (thymosin beta-4 fragment) enhances actin polymerization, cell migration, and
+        angiogenesis—complementary to MGF satellite cell activation. Both upregulated post-injury;
+        combined use presumed additive for muscle regeneration in preclinical models.
+      protocol:
+        MGF: No established dose
+        TB-500: 2–5 mg SQ weekly
+        Context: Animal models only
+      primary_benefit: Satellite cell activation + enhanced migration/angiogenesis
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Mechano Growth Factor (MGF) is the IGF-1Ec splice variant expressed locally in skeletal and
+  cardiac muscle following mechanical stress or tissue damage. Unlike systemic IGF-1 (primarily
+  liver-derived), MGF arises from alternative splicing of the IGF-1 gene and encodes a unique
+  49-amino-acid carboxyl-terminal E-domain. This E-domain, when cleaved post-translationally, acts
+  as an independent signaling peptide that activates muscle satellite cells (Pax7+ progenitors) and
+  drives myoblast proliferation.
+
+
+  **Key distinctions from mature IGF-1:**
+
+  - **Local expression:** MGF mRNA upregulated at the site of muscle damage, not systemically.
+
+  - **Satellite cell specificity:** E-domain preferentially activates quiescent satellite cells;
+  mature IGF-1 acts on differentiated fibers.
+
+  - **Mechanical trigger:** Eccentric contractions and mechanical loading induce MGF > concentric or
+  metabolic stress.
+
+  - **Species specificity:** Human IGF-1Ec (hEc) and rodent IGF-1Eb E-domains are structurally
+  distinct; data are not directly translatable.
+
+
+  The synthetic 24-amino-acid MGF peptide (hEc fragment) replicates E-domain bioactivity in cell
+  culture and rodent injury models—improving cardiac function post-myocardial infarction and
+  enhancing muscle repair in murine studies. However, **zero human clinical trials exist**. All
+  dosing, safety, and efficacy claims derive from animal or in vitro work.
+
+
+  ## Cancer & Safety Concerns
+
+
+  Chronic IGF-1Ec overexpression associates with progression of multiple malignancies:
+
+  - **Colorectal cancer:** IGF-1Ec expression increases with polyp dysplasia grade and correlates
+  with recurrent disease.
+
+  - **Prostate cancer:** Preferential IGF-1Ec expression in PC-3 cells; E-domain acts as a
+  progression factor.
+
+  - **Breast cancer:** IGF-1Ec linked to EMT, metastasis, and survival pathway activation.
+
+  - **Osteosarcoma:** Elevated IGF-1Ec in tumor tissue vs. normal bone.
+
+
+  These findings raise significant safety flags for exogenous MGF administration, particularly in
+  individuals with occult or familial cancer risk.
+
+
+  ## Regulatory Status
+
+
+  MGF peptides have been prohibited by the World Anti-Doping Agency (WADA) since 2005 under the
+  category of growth factors. Full-length MGF products, marketed illicitly to athletes, have been
+  characterized via mass spectrometry in doping control contexts. No therapeutic indication exists;
+  all human use falls outside regulatory approval.
+
+
+  ## Evidence Gaps
+
+
+  - **No human pharmacokinetics:** Half-life, bioavailability, and clearance unknown.
+
+  - **No dose-response data:** Animal doses non-translatable; no maximum tolerated dose established.
+
+  - **No safety monitoring:** Long-term effects, antibody formation, and off-target signaling
+  uncharacterized.
+
+  - **Age-related blunting:** Older adults (70+ yrs) exhibit dysregulated IGF-1Ec expression
+  post-exercise, suggesting efficacy may vary with age.
+
+
+  MGF remains a mechanistically intriguing but clinically unvalidated peptide. Its role in muscle
+  repair is well-established at the molecular level, but therapeutic translation requires Phase 1/2
+  human trials that do not yet exist.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

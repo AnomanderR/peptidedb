@@ -1,0 +1,274 @@
+schema_version: 1
+slug: glp-1-7-37
+name: GLP-1 (7-37)
+peptide_class: Incretin Hormone
+classification: Incretin Hormone · Native Peptide
+categories:
+  - incretin
+  - glp-1
+  - glucose-regulation
+  - native-hormone
+aliases:
+  - Glucagon-like peptide-1
+  - GLP-1(7-37)
+  - Native GLP-1
+color: green
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Native 31-amino-acid incretin hormone secreted by intestinal L cells in response to nutrient
+    ingestion. Stimulates glucose-dependent insulin secretion, suppresses glucagon, and delays
+    gastric emptying. Rapidly degraded by dipeptidyl peptidase-4 (DPP-4) with plasma half-life of ~2
+    minutes. Parent molecule from which all clinical GLP-1 receptor agonists (semaglutide,
+    liraglutide, dulaglutide, exenatide) were engineered. Direct administration rarely used
+    clinically; studied primarily as reference standard for analogue development.
+  cite: []
+hero_stats:
+  - value: ~2 min
+    label: Half-life
+    cite:
+      - alavi-2021
+      - ding-2017
+  - value: 3297.7 Da
+    label: Molecular weight
+    cite:
+      - alavi-2021
+  - value: '1922'
+    label: Discovery year
+    cite: []
+hero_route:
+  value: Research use only · IV/SC in experimental settings
+  cite: []
+mechanism:
+  primary_target:
+    value: GLP-1 receptor (class B GPCR)
+    cite:
+      - koole-2015
+  pathway:
+    value: GLP-1R activation → cAMP production → PKA signaling → insulin secretion (pancreatic β-cells)
+    cite:
+      - lu-2025
+      - koole-2015
+  downstream_effect:
+    value: >-
+      Glucose-dependent insulin release, glucagon suppression, delayed gastric emptying, reduced
+      food intake
+    cite:
+      - lu-2025
+      - ding-2017
+  origin:
+    value: Endogenous peptide cleaved from proglucagon in intestinal L cells; secreted postprandially
+    cite: []
+  feedback_intact:
+    value: Yes — physiological secretion and degradation preserved
+    cite: []
+    badge: green
+  receptor_class:
+    value: Class B G protein-coupled receptor
+    cite:
+      - koole-2015
+  half_life_basis:
+    value: Rapid DPP-4 cleavage at N-terminus and renal clearance due to low molecular weight
+    cite:
+      - alavi-2021
+      - ding-2017
+  extra_rows:
+    - key: DPP-4 degradation
+      value:
+        value: Cleaves His7-Ala8 bond, inactivating peptide within 1–2 minutes
+        cite:
+          - ding-2017
+          - cai-2018
+    - key: Clinical analogue modifications
+      value:
+        value: >-
+          DPP-4 resistance (Ala8Gly), fatty acid acylation (albumin binding), PEGylation for
+          half-life extension
+        cite:
+          - wang-2025
+          - lu-2025
+          - cai-2018
+          - skurikhin-2017
+  diagram:
+    - kind: node
+      text:
+        value: Intestinal L Cells
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ GLP-1(7-37) secretion (postprandial)
+        cite: []
+    - kind: node
+      text:
+        value: Plasma (DPP-4 cleavage)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ t½ ~2 min → rapid inactivation
+        cite:
+          - alavi-2021
+    - kind: node
+      text:
+        value: Pancreatic β-cells
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ GLP-1R → cAMP → PKA
+        cite:
+          - lu-2025
+    - kind: outcome
+      text:
+        value: Glucose-dependent insulin secretion
+        cite: []
+dosage:
+  rows:
+    - parameter: Clinical use
+      value:
+        value: None — native GLP-1 not used therapeutically
+        cite: []
+        badge: red
+      notes:
+        value: Engineered analogues (semaglutide, liraglutide) used clinically.
+        cite:
+          - friedman-2024
+    - parameter: Research dosing
+      value:
+        value: Variable — 0.1–10 nmol/kg in animal models
+        cite: []
+      notes:
+        value: Used as reference standard for analogue comparison.
+        cite: []
+    - parameter: Half-life
+      value:
+        value: ~2 minutes (plasma)
+        cite:
+          - alavi-2021
+          - ding-2017
+      notes:
+        value: Requires continuous infusion for sustained effect.
+        cite: []
+    - parameter: Modified analogues
+      value:
+        value: t½ extended to 13 h (liraglutide), 165 h (semaglutide)
+        cite: []
+      notes:
+        value: Via DPP-4 resistance + fatty acid acylation.
+        cite: []
+fat_loss:
+  evidence_strength: 30
+  evidence_level: animal-mechanistic
+  evidence_meta:
+    value: >-
+      Native GLP-1 not used for fat loss — short half-life precludes sustained effect. Engineered
+      analogues (semaglutide, liraglutide) demonstrate robust fat loss via prolonged GLP-1R
+      activation.
+    cite: []
+  rows:
+    - parameter: Mechanism
+      value:
+        value: GLP-1R activation in hypothalamic satiety centers (arcuate nucleus) reduces food intake
+        cite:
+          - lu-2025
+      notes:
+        value: Effect demonstrated with long-acting analogues (liraglutide).
+        cite:
+          - lu-2025
+    - parameter: Native GLP-1 efficacy
+      value:
+        value: Minimal — rapid degradation prevents sustained appetite suppression
+        cite: []
+        badge: red
+    - parameter: Gastric emptying
+      value:
+        value: Delayed in animal models, contributing to satiety
+        cite: []
+    - parameter: Body weight impact
+      value:
+        value: Not observed with native GLP-1 — requires analogue formulations
+        cite: []
+side_effects:
+  rows:
+    - parameter: Native GLP-1
+      value:
+        value: Well-tolerated in research settings; no prolonged exposure data
+        cite: []
+      severity: mild
+    - parameter: Hypoglycemia risk
+      value:
+        value: Low — insulin secretion is glucose-dependent
+        cite: []
+      severity: mild
+    - parameter: Analogue side effects
+      value:
+        value: Nausea, vomiting, diarrhea (GLP-1R agonists)
+        cite: []
+      notes:
+        value: Not applicable to native GLP-1 due to non-therapeutic use.
+        cite: []
+      severity: moderate
+    - parameter: GLP-1 resistance
+      value:
+        value: >-
+          High glucose-induced PKCβ overexpression may reduce GLP-1 responsiveness in endothelial
+          cells
+        cite:
+          - pujadas-2016
+      severity: moderate
+  contraindications_absolute: []
+  contraindications_relative: []
+administration:
+  steps:
+    - title: Research use only
+      body: >-
+        Native GLP-1(7-37) is not formulated for therapeutic use. Administered IV or SC in
+        experimental protocols to study GLP-1R pharmacology and as reference standard for analogue
+        development.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised peptide stored at -20°C or below. Reconstituted solutions should be prepared
+        fresh and used immediately due to rapid degradation.
+      cite: []
+    - title: Clinical alternatives
+      body: >-
+        For therapeutic GLP-1R activation, use FDA-approved long-acting analogues: semaglutide (once
+        weekly), liraglutide (once daily), dulaglutide (once weekly), or exenatide (twice daily or
+        once weekly).
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: dpp4-inhibitors
+      partner_label: DPP-4 Inhibitors
+      synergy: moderate
+      rationale: >-
+        DPP-4 inhibitors (sitagliptin, linagliptin) block enzymatic cleavage of native GLP-1,
+        extending its half-life from ~2 minutes to 4–6 minutes. This increases endogenous GLP-1
+        availability and enhances postprandial insulin secretion. Used clinically to amplify
+        physiological GLP-1 signaling without exogenous peptide administration.
+      protocol:
+        Context: Clinical diabetes management
+        DPP-4 inhibitor: Sitagliptin 100 mg PO once daily
+        Effect: 2–3× increase in active GLP-1 levels
+      primary_benefit: Prolonged endogenous GLP-1 activity, improved glycemic control
+      cite: []
+description_md: >-
+  Native GLP-1(7-37) is the bioactive incretin hormone secreted by intestinal L cells following
+  nutrient ingestion. It binds the GLP-1 receptor on pancreatic β-cells, stimulating
+  glucose-dependent insulin secretion while suppressing glucagon release. Despite potent
+  insulinotropic effects, its extremely short plasma half-life (~2 minutes) due to DPP-4 cleavage
+  and renal clearance renders it unsuitable for therapeutic use.
+
+
+  All clinical GLP-1 receptor agonists derive from this parent molecule through structural
+  modifications that confer DPP-4 resistance and prolonged circulation. The 2024 Lasker Award
+  recognized the discovery of GLP-1(7-37) by Joel Habener and Svetlana Mojsov, and its translation
+  into obesity medicines by Lotte Knudsen.
+
+
+  Native GLP-1 remains essential as a research standard for evaluating receptor binding, signaling
+  kinetics, and analogue efficacy in preclinical studies.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
