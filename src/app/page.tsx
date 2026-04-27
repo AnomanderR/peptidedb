@@ -98,7 +98,7 @@ export default function HomePage() {
               of research peptides.
             </em>
           </h1>
-          <p className="mt-10 text-[18px] leading-[1.55] max-w-2xl text-[var(--at-ink-warm)]">
+          <p className="mt-10 text-[18px] leading-[1.55] max-w-2xl text-[color:var(--at-ink-warm)]">
             <em>{peptides.length} plates</em> of the molecules most often
             discussed in contemporary peptide therapeutics — each drawn
             from the public literature, foot-noted, and rendered with a{" "}
@@ -108,13 +108,13 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/catalog"
-              className="inline-flex items-center bg-[var(--at-ink)] text-[var(--at-bone)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-pigment-rust)] transition-colors"
+              className="inline-flex items-center bg-[var(--at-ink)] text-[color:var(--at-bone)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-pigment-rust)] transition-colors"
             >
               Open the atlas →
             </Link>
             <Link
               href="/p/tesamorelin"
-              className="inline-flex items-center border border-[var(--at-ink)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-ink)] hover:text-[var(--at-bone)] transition-colors"
+              className="inline-flex items-center border border-[var(--at-ink)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-ink)] hover:text-[color:var(--at-bone)] transition-colors"
             >
               Read the cover plate
             </Link>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 <div className="at-display text-[40px] leading-[1] mt-3">
                   Tesamorelin
                 </div>
-                <div className="at-display-italic text-[14px] text-[var(--at-ink-soft)] mt-1">
+                <div className="at-display-italic text-[14px] text-[color:var(--at-ink-soft)] mt-1">
                   GHRH analogue · Egrifta®
                 </div>
                 <div className="my-6 flex items-center justify-center">
@@ -154,7 +154,7 @@ export default function HomePage() {
                     size={200}
                   />
                 </div>
-                <p className="text-[13px] leading-[1.55] text-[var(--at-ink-warm)]">
+                <p className="text-[13px] leading-[1.55] text-[color:var(--at-ink-warm)]">
                   Synthetic 44-amino-acid GHRH analogue. Stimulates
                   pulsatile growth hormone release; reduces visceral
                   adipose tissue 15–20% over 26 weeks.
@@ -233,7 +233,7 @@ export default function HomePage() {
               <div className="at-display text-[56px] leading-none mt-3">
                 {m.num}
               </div>
-              <div className="mt-3 text-[var(--at-ink-soft)]">
+              <div className="mt-3 text-[color:var(--at-ink-soft)]">
                 <CitationSpark pct={m.spark} width={72} />
               </div>
             </div>
@@ -250,7 +250,7 @@ export default function HomePage() {
               A beginner&apos;s tour,{" "}
               <em className="at-display-italic">twelve plates.</em>
             </h2>
-            <p className="at-display-italic text-[15px] mt-2 text-[var(--at-ink-soft)] max-w-2xl">
+            <p className="at-display-italic text-[15px] mt-2 text-[color:var(--at-ink-soft)] max-w-2xl">
               Twelve molecules to start with — three approved drugs, three
               healing-class specimens, two GH-axis, two mitochondrial-or-
               bioregulator, and a pair of modulatory short peptides.
@@ -307,7 +307,7 @@ export default function HomePage() {
                     <div className="at-display text-[32px] leading-[1.05] mt-3">
                       {p.name}
                     </div>
-                    <div className="at-display-italic text-[13px] text-[var(--at-ink-soft)] mt-1">
+                    <div className="at-display-italic text-[13px] text-[color:var(--at-ink-soft)] mt-1">
                       {p.peptide_class}
                     </div>
 
@@ -319,7 +319,7 @@ export default function HomePage() {
                       />
                     </div>
 
-                    <p className="text-[12.5px] leading-[1.55] text-[var(--at-ink-warm)] line-clamp-3 min-h-[60px]">
+                    <p className="text-[12.5px] leading-[1.55] text-[color:var(--at-ink-warm)] line-clamp-3 min-h-[60px]">
                       {p.summary.value}
                     </p>
 
@@ -381,7 +381,7 @@ export default function HomePage() {
               R. Hwang, Editor — Letter to contributors, IV.MMXXVI
             </div>
           </div>
-          <aside className="col-span-12 lg:col-span-2 at-folio leading-[1.7] normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)]">
+          <aside className="col-span-12 lg:col-span-2 at-folio leading-[1.7] normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)]">
             ¶ 003 — A profile with no citations is a draft. A profile
             with broken citations is a bug. Both are blocking.
           </aside>
@@ -434,7 +434,7 @@ export default function HomePage() {
                 <div className="at-display text-[20px] leading-[1.2] mb-2">
                   {m.title}
                 </div>
-                <p className="text-[13.5px] leading-[1.6] text-[var(--at-ink-warm)]">
+                <p className="text-[13.5px] leading-[1.6] text-[color:var(--at-ink-warm)]">
                   {m.body}
                 </p>
               </div>
@@ -455,20 +455,20 @@ export default function HomePage() {
             a community manuscript.
           </em>
         </h2>
-        <p className="mt-8 text-[15px] leading-[1.6] text-[var(--at-ink-warm)] max-w-2xl mx-auto">
+        <p className="mt-8 text-[15px] leading-[1.6] text-[color:var(--at-ink-warm)] max-w-2xl mx-auto">
           MIT-licensed YAML, foot-noted to public literature, edited in
           the open. Open a pull request; correct an error; add a plate.
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
           <a
             href="https://github.com/peptidesdb/peptidesdb"
-            className="inline-flex items-center gap-2 bg-[var(--at-ink)] text-[var(--at-bone)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-pigment-rust)] transition-colors"
+            className="inline-flex items-center gap-2 bg-[var(--at-ink)] text-[color:var(--at-bone)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-pigment-rust)] transition-colors"
           >
             Open the repository →
           </a>
           <Link
             href="/catalog"
-            className="inline-flex items-center gap-2 border border-[var(--at-ink)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-ink)] hover:text-[var(--at-bone)] transition-colors"
+            className="inline-flex items-center gap-2 border border-[var(--at-ink)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-ink)] hover:text-[color:var(--at-bone)] transition-colors"
           >
             View all {peptides.length} plates
           </Link>

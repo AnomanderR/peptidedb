@@ -66,7 +66,7 @@ export function MobileNav({ links, externalLinks }: MobileNavProps) {
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
-        className="at-folio text-[var(--at-ink)] tracking-[0.22em] flex items-center gap-1 py-1 px-1 hover:text-[var(--at-gold)] transition-colors"
+        className="at-folio text-[color:var(--at-ink)] tracking-[0.22em] flex items-center gap-1 py-1 px-1 hover:text-[color:var(--at-gold)] transition-colors"
       >
         Menu {open ? "▴" : "▾"}
       </button>
@@ -100,7 +100,7 @@ export function MobileNav({ links, externalLinks }: MobileNavProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="at-folio block py-3 text-[12px] text-[var(--at-ink-soft)] hover:text-[var(--at-gold)]"
+                  className="at-folio block py-3 text-[12px] text-[color:var(--at-ink-soft)] hover:text-[color:var(--at-gold)]"
                 >
                   {link.label}
                 </a>

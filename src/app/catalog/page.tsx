@@ -43,7 +43,7 @@ export default function CatalogPage() {
             </em>{" "}
             plates.
           </h1>
-          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[var(--at-ink-soft)]">
+          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[color:var(--at-ink-soft)]">
             Grouped by class. Each plate carries a deterministic specimen
             motif, a class-pigment swatch, and a citation sparkline showing
             the percentage of claims with a resolved reference.

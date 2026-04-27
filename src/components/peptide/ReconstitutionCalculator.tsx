@@ -121,7 +121,7 @@ export function ReconstitutionCalculator({
           </div>
         </div>
 
-        <div className="border-t border-[var(--at-rule)] pt-4 at-folio leading-[1.6] normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)]">
+        <div className="border-t border-[var(--at-rule)] pt-4 at-folio leading-[1.6] normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)]">
           The calculator does pure mass-to-volume math. It does not
           recommend a dose. Refer to {peptideName}&apos;s cited
           literature for protocol specifics.
@@ -146,11 +146,11 @@ export function ReconstitutionCalculator({
                 >
                   {fmt(result.volumeMl, 3)}
                 </span>
-                <span className="at-display-italic text-[24px] text-[var(--at-ink-soft)]">
+                <span className="at-display-italic text-[24px] text-[color:var(--at-ink-soft)]">
                   mL
                 </span>
               </div>
-              <div className="at-folio mt-3 normal-case tracking-normal text-[13px] text-[var(--at-ink-warm)]">
+              <div className="at-folio mt-3 normal-case tracking-normal text-[13px] text-[color:var(--at-ink-warm)]">
                 ≈{" "}
                 <span
                   className="at-display text-[20px]"
@@ -170,7 +170,7 @@ export function ReconstitutionCalculator({
                 <div className="at-display text-[28px] leading-none">
                   {fmt(result.concMcgPerMl, 0)}
                 </div>
-                <div className="at-folio normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)] mt-1">
+                <div className="at-folio normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)] mt-1">
                   mcg per mL
                 </div>
               </div>
@@ -179,14 +179,14 @@ export function ReconstitutionCalculator({
                 <div className="at-display text-[28px] leading-none">
                   {fmt(result.dosesPerVial, 0)}
                 </div>
-                <div className="at-folio normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)] mt-1">
+                <div className="at-folio normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)] mt-1">
                   at this dose
                 </div>
               </div>
             </div>
           </>
         ) : (
-          <div className="text-[14px] text-[var(--at-ink-soft)]">
+          <div className="text-[14px] text-[color:var(--at-ink-soft)]">
             Enter positive values for all three inputs.
           </div>
         )}

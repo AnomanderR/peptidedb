@@ -25,7 +25,7 @@ export default function AskPage() {
               grounded in the catalogue.
             </em>
           </h1>
-          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[var(--at-ink-soft)]">
+          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[color:var(--at-ink-soft)]">
             Powered by Claude Sonnet, restricted to atlas content. Every
             cited claim links to its source paper. The assistant declines
             to speculate beyond what is in the catalogue.
@@ -71,7 +71,7 @@ export default function AskPage() {
             <div className="at-display text-[20px] leading-[1.2] mb-2">
               {m.title}
             </div>
-            <p className="text-[13.5px] leading-[1.6] text-[var(--at-ink-warm)]">
+            <p className="text-[13.5px] leading-[1.6] text-[color:var(--at-ink-warm)]">
               {m.body}
             </p>
           </div>

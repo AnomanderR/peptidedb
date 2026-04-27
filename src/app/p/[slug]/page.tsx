@@ -67,7 +67,7 @@ function CiteRefs({ refs }: { refs: string[] }) {
             target="_blank"
             rel="noopener noreferrer"
             title={`${citationLabel(c)} · ${c.title}`}
-            className="at-mono text-[10px] tracking-wider text-[var(--at-gold)] hover:text-[var(--at-ink)] transition-colors"
+            className="at-mono text-[10px] tracking-wider text-[color:var(--at-gold)] hover:text-[color:var(--at-ink)] transition-colors"
             style={{ verticalAlign: "super" }}
           >
             [{id}]
@@ -93,7 +93,7 @@ function Citable({ v, className }: { v: CitableLike; className?: string }) {
     <span className={className} style={c ? { color: c } : undefined}>
       {v.value}
       {v.note ? (
-        <em className="text-[var(--at-ink-soft)] ml-1">— {v.note}</em>
+        <em className="text-[color:var(--at-ink-soft)] ml-1">— {v.note}</em>
       ) : null}
       {v.cite?.length ? (
         <>
@@ -173,7 +173,7 @@ export default async function PeptidePage({
       <div className="flex items-baseline justify-between border-b border-[var(--at-rule)] pb-3 mb-12">
         <Link
           href="/catalog"
-          className="at-folio hover:text-[var(--at-gold)]"
+          className="at-folio hover:text-[color:var(--at-gold)]"
         >
           ← Catalogue
         </Link>
@@ -212,15 +212,15 @@ export default async function PeptidePage({
           <h1 className="at-display text-[clamp(64px,12vw,176px)] leading-[0.88]">
             {p.name}
           </h1>
-          <div className="at-display-italic text-[18px] mt-3 text-[var(--at-ink-soft)]">
+          <div className="at-display-italic text-[18px] mt-3 text-[color:var(--at-ink-soft)]">
             {p.peptide_class}
           </div>
           {p.aliases?.length ? (
-            <p className="mt-4 text-[13px] text-[var(--at-ink-soft)]">
+            <p className="mt-4 text-[13px] text-[color:var(--at-ink-soft)]">
               also known as <em className="at-display-italic">{p.aliases.join(", ")}</em>
             </p>
           ) : null}
-          <p className="mt-8 text-[17px] leading-[1.55] max-w-2xl text-[var(--at-ink-warm)]">
+          <p className="mt-8 text-[17px] leading-[1.55] max-w-2xl text-[color:var(--at-ink-warm)]">
             {p.summary.value}
           </p>
         </div>
@@ -240,7 +240,7 @@ export default async function PeptidePage({
                 variant="hero"
               />
             </div>
-            <p className="at-folio leading-[1.6] normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)]">
+            <p className="at-folio leading-[1.6] normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)]">
               Deterministic SVG fingerprint generated from the slug{" "}
               <em>{p.slug}</em>. Pigment: {p.peptide_class.toLowerCase()}.
               The motif is iconography, not crystallography — it is
@@ -335,7 +335,7 @@ export default async function PeptidePage({
                       <span className="font-medium">{step.text.value}</span>
                     )}
                     {step.kind === "arrow" && (
-                      <span className="text-[var(--at-ink-soft)] block pl-3 italic">
+                      <span className="text-[color:var(--at-ink-soft)] block pl-3 italic">
                         {step.text.value}
                       </span>
                     )}
@@ -391,7 +391,7 @@ export default async function PeptidePage({
                     <td className="py-4 align-top leading-[1.55]">
                       <Citable v={row.value} />
                       {row.notes ? (
-                        <em className="block at-folio mt-1 normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)]">
+                        <em className="block at-folio mt-1 normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)]">
                           {row.notes.value}
                           {row.notes.cite?.length ? (
                             <>
@@ -444,7 +444,7 @@ export default async function PeptidePage({
         >
           <div className="border-y border-[var(--at-rule)] py-5">
             <p
-              className="font-serif italic text-[17px] leading-[1.6] text-[var(--at-ink-soft)] max-w-[68ch]"
+              className="font-serif italic text-[17px] leading-[1.6] text-[color:var(--at-ink-soft)] max-w-[68ch]"
             >
               Evidence base: Russian-language clinical literature, primarily from the St. Petersburg Institute of Bioregulation and Gerontology (Khavinson school), 1985 onward. Not extensively peer-reviewed in Western journals.
             </p>
@@ -470,7 +470,7 @@ export default async function PeptidePage({
                 <div className="at-folio">Strength</div>
                 <div className="at-display text-[88px] leading-none mt-2">
                   {p.fat_loss.evidence_strength}
-                  <span className="text-[28px] text-[var(--at-ink-soft)]">
+                  <span className="text-[28px] text-[color:var(--at-ink-soft)]">
                     /100
                   </span>
                 </div>
@@ -513,7 +513,7 @@ export default async function PeptidePage({
                     <td className="py-4 align-top leading-[1.55]">
                       <Citable v={row.value} />
                       {row.notes ? (
-                        <em className="block at-folio mt-1 normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)]">
+                        <em className="block at-folio mt-1 normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)]">
                           {row.notes.value}
                         </em>
                       ) : null}
@@ -730,10 +730,10 @@ export default async function PeptidePage({
                       + {s.partner_label}
                     </span>
                   </div>
-                  <p className="mt-3 text-[13px] leading-[1.6] text-[var(--at-ink-warm)]">
+                  <p className="mt-3 text-[13px] leading-[1.6] text-[color:var(--at-ink-warm)]">
                     {s.rationale}
                   </p>
-                  <div className="at-folio mt-3 leading-[1.6] normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)]">
+                  <div className="at-folio mt-3 leading-[1.6] normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)]">
                     Primary benefit — {s.primary_benefit}
                   </div>
                 </Link>
@@ -758,7 +758,7 @@ export default async function PeptidePage({
             </span>
             <span className="at-folio">%</span>
           </div>
-          <p className="at-folio mt-2 normal-case tracking-normal text-[12px] leading-[1.6] text-[var(--at-ink-soft)]">
+          <p className="at-folio mt-2 normal-case tracking-normal text-[12px] leading-[1.6] text-[color:var(--at-ink-soft)]">
             of {stats.total_claims} rendered claims carry a resolvable
             citation.
           </p>
@@ -776,7 +776,7 @@ export default async function PeptidePage({
                 className="grid grid-cols-12 gap-4 border-b border-[var(--at-rule)] pb-4 items-baseline"
               >
                 <div className="col-span-12 md:col-span-2">
-                  <span className="at-mono text-[11px] text-[var(--at-gold)]">
+                  <span className="at-mono text-[11px] text-[color:var(--at-gold)]">
                     [{id}]
                   </span>
                 </div>
@@ -814,7 +814,7 @@ export default async function PeptidePage({
       </section>
 
       {/* COLOPHON / CONTRIBUTORS / EDIT ON GITHUB ————————— */}
-      <section className="border-t border-[var(--at-rule)] pt-8 mt-4 grid grid-cols-12 gap-6 items-baseline at-folio leading-[1.6] normal-case tracking-normal text-[12px] text-[var(--at-ink-soft)]">
+      <section className="border-t border-[var(--at-rule)] pt-8 mt-4 grid grid-cols-12 gap-6 items-baseline at-folio leading-[1.6] normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)]">
         <div className="col-span-12 lg:col-span-7">
           Plate composed {p.last_reviewed} · maturity{" "}
           <em>{p.maturity}</em> · schema v{p.schema_version}

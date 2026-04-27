@@ -37,7 +37,7 @@ export default function StackPage() {
               with structural guardrails.
             </em>
           </h1>
-          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[var(--at-ink-soft)]">
+          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[color:var(--at-ink-soft)]">
             Click plates from the atlas to add them. PeptidesDB runs a
             rule-based conflict check and surfaces recognised synergies
             from the documented literature. Every selection is encoded in
@@ -81,7 +81,7 @@ export default function StackPage() {
             <div className="at-display text-[20px] leading-[1.2] mb-2">
               {m.title}
             </div>
-            <p className="text-[13.5px] leading-[1.6] text-[var(--at-ink-warm)]">
+            <p className="text-[13.5px] leading-[1.6] text-[color:var(--at-ink-warm)]">
               {m.body}
             </p>
           </div>

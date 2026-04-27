@@ -48,7 +48,7 @@ export function AtlasHeader() {
             <span className="at-display text-[26px] leading-none">
               PeptidesDB
             </span>
-            <span className="at-display-italic text-[16px] text-[var(--at-ink-soft)]">
+            <span className="at-display-italic text-[16px] text-[color:var(--at-ink-soft)]">
               an atlas
             </span>
           </Link>
@@ -69,7 +69,7 @@ export function AtlasHeader() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="at-folio hover:text-[var(--at-gold)]"
+                className="at-folio hover:text-[color:var(--at-gold)]"
               >
                 {link.label}
               </a>

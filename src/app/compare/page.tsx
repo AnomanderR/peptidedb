@@ -36,7 +36,7 @@ export default function ComparePage() {
               parameter by parameter.
             </em>
           </h1>
-          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[var(--at-ink-soft)]">
+          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[color:var(--at-ink-soft)]">
             Pick any two — or three — plates and the atlas will line them
             up at the same parameter rows: mechanism, dosage, evidence,
             side effects, and stack synergies, with citations on every
