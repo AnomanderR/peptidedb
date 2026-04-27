@@ -50,27 +50,46 @@ export interface PubmedClientOptions {
 }
 
 /**
- * Sliding-window rate limiter. Tracks the timestamps of the last `limit`
- * requests; if the oldest is within the window, sleeps just long enough
- * to bring us back under the limit.
+ * Rate limiter enforcing both a sliding-window cap AND a minimum interval
+ * between consecutive calls. The minimum interval matters — NCBI's
+ * anti-burst layer rejects 3 requests in 10ms even if the trailing 1-second
+ * window stays under the limit. minInterval = windowMs / limit gives a
+ * uniform rhythm that NCBI tolerates.
  */
 class RateLimiter {
   private timestamps: number[] = [];
+  private lastCallMs = 0;
+  private readonly minIntervalMs: number;
+
   constructor(
     private readonly limit: number,
     private readonly windowMs: number = 1000,
-  ) {}
+  ) {
+    this.minIntervalMs = limit > 0 ? Math.ceil(windowMs / limit) : 0;
+  }
 
   async wait(): Promise<void> {
     if (this.limit <= 0) return;
     const now = Date.now();
-    this.timestamps = this.timestamps.filter((t) => now - t < this.windowMs);
+
+    // 1. Enforce minimum interval since the last call.
+    const sinceLast = now - this.lastCallMs;
+    if (this.lastCallMs > 0 && sinceLast < this.minIntervalMs) {
+      await new Promise((r) => setTimeout(r, this.minIntervalMs - sinceLast));
+    }
+
+    // 2. Enforce sliding-window cap (belt + suspenders for long bursts).
+    const checkpoint = Date.now();
+    this.timestamps = this.timestamps.filter((t) => checkpoint - t < this.windowMs);
     if (this.timestamps.length >= this.limit) {
       const oldest = this.timestamps[0];
-      const sleepMs = this.windowMs - (now - oldest) + 1;
+      const sleepMs = this.windowMs - (checkpoint - oldest) + 1;
       if (sleepMs > 0) await new Promise((r) => setTimeout(r, sleepMs));
     }
-    this.timestamps.push(Date.now());
+
+    const stamp = Date.now();
+    this.timestamps.push(stamp);
+    this.lastCallMs = stamp;
   }
 }
 
@@ -143,22 +162,39 @@ export class PubmedClient {
     return Array.isArray(ids) ? ids.filter((x) => typeof x === "string") : [];
   }
 
+  /**
+   * Fetch with up-to-2-retry on HTTP 429 (rate limit). NCBI's enforcement
+   * is sometimes stricter than their published 3/s limit, so we accept
+   * occasional 429s as transient and back off rather than treating them
+   * as fatal.
+   */
   private async fetchJson(url: string): Promise<unknown> {
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), this.timeoutMs);
-    try {
-      const res = await this.fetchFn(url, { signal: ctrl.signal });
-      if (!res.ok) {
-        this.log(`[pubmed] HTTP ${res.status} for ${url}`);
+    const maxAttempts = 3;
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), this.timeoutMs);
+      try {
+        const res = await this.fetchFn(url, { signal: ctrl.signal });
+        if (res.status === 429 && attempt < maxAttempts) {
+          const backoffMs = 1000 * attempt;
+          this.log(`[pubmed] HTTP 429 — backing off ${backoffMs}ms (attempt ${attempt}/${maxAttempts})`);
+          clearTimeout(timer);
+          await new Promise((r) => setTimeout(r, backoffMs));
+          continue;
+        }
+        if (!res.ok) {
+          this.log(`[pubmed] HTTP ${res.status} for ${url}`);
+          return null;
+        }
+        return await res.json();
+      } catch (e) {
+        this.log(`[pubmed] fetch failed: ${(e as Error).message}`);
         return null;
+      } finally {
+        clearTimeout(timer);
       }
-      return await res.json();
-    } catch (e) {
-      this.log(`[pubmed] fetch failed: ${(e as Error).message}`);
-      return null;
-    } finally {
-      clearTimeout(timer);
     }
+    return null;
   }
 }
 

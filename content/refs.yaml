@@ -21,7 +21,7 @@ falutz-2010:
   id: falutz-2010
   type: journal
   authors: [Falutz J, Mamputu JC, Potvin D, et al.]
-  title: "Effects of tesamorelin on visceral fat and serum lipids in HIV-infected patients with abdominal fat accumulation: a pooled analysis of two multicenter, double-blind placebo-controlled phase 3 trials"
+  title: "Effects of tesamorelin (TH9507), a growth hormone-releasing factor analog, in human immunodeficiency virus-infected patients with excess abdominal fat: a pooled analysis of two multicenter, double-blind placebo-controlled phase 3 trials with safety extension data"
   journal: "J Clin Endocrinol Metab"
   year: 2010
   citation_string: "95(9):4291-4304"
@@ -44,7 +44,6 @@ clarke-2018:
   title: "Effects of tesamorelin on insulin sensitivity and lipid metabolism in HIV-infected patients with abdominal fat accumulation"
   journal: "Metabolism"
   year: 2018
-  pmid: "29969601"
 
 lee-2015:
   id: lee-2015
@@ -97,7 +96,6 @@ clemmons-2002:
   title: "Roles of insulin-like growth factor-I and growth hormone in mediating insulin resistance in acromegaly"
   journal: "Pituitary"
   year: 2002
-  pmid: "12675491"
   note: "Background on GH/IGF-1 axis and glucose handling — relevant to tesamorelin glucose-tolerance signal."
 
 raun-1998:
@@ -118,7 +116,6 @@ sevigny-2018:
   title: "Long-term safety and effects of tesamorelin"
   journal: "AIDS"
   year: 2018
-  pmid: "29894389"
   note: "Long-term (52-week) safety extension data."
 
 sikiric-2018:
@@ -129,7 +126,6 @@ sikiric-2018:
   journal: "Curr Pharm Des"
   year: 2018
   citation_string: "24(18):1990-2001"
-  pmid: "29879882"
   note: "Comprehensive review of BPC-157 mechanism + tissue-healing data across 20+ animal models."
 
 chang-2014:
@@ -138,8 +134,8 @@ chang-2014:
   authors: [Chang CH, Tsai WC, Lin MS, Hsu YH, Pang JH]
   title: "The promoting effect of pentadecapeptide BPC 157 on tendon healing involves tendon outgrowth, cell survival, and cell migration"
   journal: "J Appl Physiol"
-  year: 2014
-  pmid: "24879839"
+  year: 2011
+  pmid: "21030672"
   note: "Demonstrates BPC-157 tendon-fibroblast outgrowth + migration via FAK-paxillin pathway."
 
 cerovecki-2010:
@@ -149,7 +145,7 @@ cerovecki-2010:
   title: "Pentadecapeptide BPC 157 (PL 14736) improves ligament healing in the rat"
   journal: "J Orthop Res"
   year: 2010
-  pmid: "19855566"
+  pmid: "20225319"
   note: "Rat ACL ligament healing model. PL 14736 = BPC-157 clinical-trial designation."
 
 hwang-2016:
@@ -169,14 +165,13 @@ bowers-1991:
   title: "GH releasing peptides — structure and kinetics"
   journal: "J Pediatr Endocrinol"
   year: 1991
-  pmid: "1841756"
   note: "Foundational characterisation of GHRP family from which ipamorelin descends."
 
 teichman-2006:
   id: teichman-2006
   type: journal
   authors: [Teichman SL, Neale A, Lawrence B, Gagnon C, Castaigne JP, Frohman LA]
-  title: "Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295"
+  title: "Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting analog of GH-releasing hormone, in healthy adults"
   journal: "J Clin Endocrinol Metab"
   year: 2006
   citation_string: "91(3):799-805"
@@ -191,7 +186,6 @@ ionescu-2006:
   title: "Pulsatile secretion of growth hormone induced by a new GH releasing factor analog (CJC-1295) in subjects with adult GH deficiency"
   journal: "J Clin Endocrinol Metab"
   year: 2006
-  pmid: "16873939"
   note: "CJC-1295 PK/PD in adults with GH deficiency."
 
 sigalos-2018:
@@ -201,7 +195,6 @@ sigalos-2018:
   title: "The safety and efficacy of growth hormone secretagogues"
   journal: "Sex Med Rev"
   year: 2018
-  pmid: "29097109"
   note: "Review of GHS safety data including ipamorelin, CJC-1295, GHRP-2/6."
 
 bowers-2002:
@@ -257,7 +250,7 @@ pickart-2018:
   id: pickart-2018
   type: journal
   authors: [Pickart L, Margolina A]
-  title: "Regenerative and Protective Actions of the GHK-Cu Peptide"
+  title: "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data"
   journal: "Int J Mol Sci"
   year: 2018
   citation_string: "19(7):1987"
@@ -269,20 +262,20 @@ goldstein-2012:
   id: goldstein-2012
   type: journal
   authors: [Goldstein AL, Hannappel E, Sosne G, Kleinman HK]
-  title: "Thymosin β4 — A Multi-Functional Regenerative Peptide"
+  title: "Thymosin β4: a multi-functional regenerative peptide. Basic properties and clinical applications"
   journal: "Expert Opin Biol Ther"
   year: 2012
-  pmid: "22150295"
+  pmid: "22074294"
   note: "Mechanism + clinical trial review for TB-500 / Thymosin β4."
 
 heffernan-2001:
   id: heffernan-2001
   type: journal
   authors: [Heffernan M, Summers RJ, Thorburn A, et al.]
-  title: "The effects of human GH and its lipolytic fragment (AOD9604) on lipid metabolism"
+  title: "The effects of human GH and its lipolytic fragment (AOD9604) on lipid metabolism following chronic treatment in obese mice and beta(3)-AR knock-out mice"
   journal: "Endocrinology"
   year: 2001
-  pmid: "11691711"
+  pmid: "11713213"
   note: "Demonstrates AOD-9604 lipolytic activity without IGF-1 elevation."
 
 ng-2008:
@@ -291,8 +284,8 @@ ng-2008:
   authors: [Ng FM, Sun J, Sharma L, Libinaka R, Jiang WJ, Gianello R]
   title: "Metabolic studies of a synthetic lipolytic domain (AOD9604) of human growth hormone"
   journal: "Horm Res"
-  year: 2008
-  pmid: "10574575"
+  year: 2000
+  pmid: "11146367"
   note: "AOD-9604 mechanism: β3-AR-mediated lipolysis."
 
 zink-2003:
@@ -311,14 +304,13 @@ malinda-1999:
   title: "Thymosin beta4 accelerates wound healing"
   journal: "J Invest Dermatol"
   year: 1999
-  pmid: "10417642"
   note: "Murine wound-healing model — TB-500 accelerates re-epithelialization."
 
 frias-2018:
   id: frias-2018
   type: journal
   authors: [Frias JP, Nauck MA, Van J, et al.]
-  title: "Efficacy and safety of LY3298176, a novel dual GIP and GLP-1 receptor agonist, in patients with type 2 diabetes"
+  title: "Efficacy and safety of LY3298176, a novel dual GIP and GLP-1 receptor agonist, in patients with type 2 diabetes: a randomised, placebo-controlled and active comparator-controlled phase 2 trial"
   journal: "Lancet"
   year: 2018
   pmid: "30293770"
@@ -332,7 +324,7 @@ jastreboff-2023-reta:
   journal: "N Engl J Med"
   year: 2023
   citation_string: "389(6):514-526"
-  pmid: "37314973"
+  pmid: "37888926"
   doi: "10.1056/NEJMoa2301972"
   note: "Phase 2 retatrutide trial. -24.2% body weight at 12 mg over 48 weeks."
 
@@ -375,10 +367,10 @@ szeto-2014:
   id: szeto-2014
   type: journal
   authors: [Szeto HH]
-  title: "First-in-class cardiolipin-protective compound as a therapeutic agent for restoring mitochondrial bioenergetics"
+  title: "First-in-class cardiolipin-protective compound as a therapeutic agent to restore mitochondrial bioenergetics"
   journal: "Br J Pharmacol"
   year: 2014
-  pmid: "24134698"
+  pmid: "24117165"
   note: "SS-31 cardiolipin-binding mechanism review."
 
 khavinson-2003:
@@ -398,7 +390,6 @@ clayton-2015:
   title: "Bremelanotide for female sexual dysfunctions in premenopausal women"
   journal: "J Sex Med"
   year: 2015
-  pmid: "26173683"
   note: "Bremelanotide Phase 2/3 efficacy + safety."
 
 molteno-2013:
@@ -417,7 +408,7 @@ murphy-2001-mk677:
   title: "MK-677, an orally active growth hormone secretagogue, reverses diet-induced catabolism"
   journal: "JCEM"
   year: 1998
-  pmid: "9626134"
+  pmid: "9467534"
   note: "Foundational MK-677 (ibutamoren) Phase 2 — diet-induced catabolism reversal in adults."
 
 nass-2008-mk677:
@@ -438,7 +429,6 @@ smith-1996-hexarelin:
   title: "A nonpeptidyl growth hormone secretagogue"
   journal: "Science"
   year: 1996
-  pmid: "8499262"
   note: "Foundational paper on the GHRP class; Hexarelin is a hexapeptide member."
 
 ghigo-1997-hexarelin:
@@ -448,7 +438,6 @@ ghigo-1997-hexarelin:
   title: "Growth hormone-releasing peptides"
   journal: "Eur J Endocrinol"
   year: 1997
-  pmid: "9302846"
   note: "Hexarelin pharmacology + cardio-tropic effects review."
 
 semenistaya-2010:
@@ -458,7 +447,6 @@ semenistaya-2010:
   title: "Determination of growth hormone-releasing peptides for sports doping control"
   journal: "Anal Bioanal Chem"
   year: 2010
-  pmid: "20725712"
   note: "Hexarelin / GHRP-2 / GHRP-6 PK + half-life data."
 
 zaderej-2014:
@@ -477,7 +465,6 @@ medvedev-2007:
   title: "Pharmacology of Selank — anti-anxiety + cognitive effects"
   journal: "Eksp Klin Farmakol"
   year: 2007
-  pmid: "17886532"
   note: "Foundational Selank pharmacology paper."
 
 dalle-pang-2024:
@@ -496,7 +483,6 @@ wegovy-pioglitazone-2010:
   title: "Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes"
   journal: "N Engl J Med"
   year: 2016
-  pmid: "27295427"
   note: "LEADER trial — liraglutide CV outcomes in T2D."
 
 fda-saxenda-label-2014:
@@ -514,7 +500,6 @@ bowers-1990-ghrp2:
   title: "Growth hormone (GH)-releasing peptide stimulates GH release in normal men"
   journal: "JCEM"
   year: 1990
-  pmid: "2104629"
   note: "Foundational GHRP-2 / GHRP-6 GH-stimulation study."
 
 malagon-1999:
@@ -530,20 +515,20 @@ dorr-1996-mt2:
   id: dorr-1996-mt2
   type: journal
   authors: [Dorr RT, Lines R, Levine N, et al.]
-  title: "Evaluation of melanotan-II, a superpotent cyclic melanotropic peptide"
+  title: "Evaluation of melanotan-II, a superpotent cyclic melanotropic peptide in a pilot phase-I clinical study"
   journal: "Life Sci"
   year: 1996
-  pmid: "8847761"
+  pmid: "8637402"
   note: "Original Melanotan-II human studies — tanning + sexual response."
 
 astrup-2008-tesofensine:
   id: astrup-2008-tesofensine
   type: journal
   authors: [Astrup A, Madsbad S, Breum L, et al.]
-  title: "Effect of tesofensine on bodyweight loss, body composition, and quality of life in obese patients"
+  title: "Effect of tesofensine on bodyweight loss, body composition, and quality of life in obese patients: a randomised, double-blind, placebo-controlled trial"
   journal: "Lancet"
   year: 2008
-  pmid: "18957104"
+  pmid: "18950853"
   note: "Phase 2b tesofensine — 9.2 kg weight loss over 24 weeks at 0.5 mg/day oral."
 
 neelakantan-2018-namq:
@@ -553,7 +538,6 @@ neelakantan-2018-namq:
   title: "Selective and membrane-permeable small molecule inhibitors of nicotinamide N-methyltransferase reverse high fat diet-induced obesity in mice"
   journal: "Biochem Pharmacol"
   year: 2018
-  pmid: "30343113"
   note: "5-Amino-1MQ (NNMT inhibitor) reverses HFD obesity in mice."
 
 khavinson-2014-pinealon:
@@ -572,7 +556,6 @@ khavinson-2002-thymalin:
   title: "Peptides and Ageing"
   journal: "Neuroendocrinol Lett"
   year: 2002
-  pmid: "12490620"
   note: "Thymalin foundational immune-modulator review by Khavinson group."
 
 camerini-2001-talpha1:

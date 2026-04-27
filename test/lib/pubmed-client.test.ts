@@ -105,6 +105,33 @@ describe("PubmedClient.verifyPmid", () => {
     expect(await client.verifyPmid("18057338")).toBeNull();
   });
 
+  test("retries on HTTP 429 and succeeds on second attempt", async () => {
+    let calls = 0;
+    const fetchFn: FetchFn = async () => {
+      calls += 1;
+      if (calls === 1) return new Response("Too Many Requests", { status: 429 });
+      return new Response(JSON.stringify(FALUTZ_2007_ESUMMARY), {
+        status: 200,
+        headers: { "content-type": "application/json" },
+      });
+    };
+    const client = new PubmedClient({ fetchFn });
+    const record = await client.verifyPmid("18057338");
+    expect(record).not.toBeNull();
+    expect(calls).toBe(2);
+  });
+
+  test("gives up on HTTP 429 after 3 attempts", async () => {
+    let calls = 0;
+    const fetchFn: FetchFn = async () => {
+      calls += 1;
+      return new Response("Too Many Requests", { status: 429 });
+    };
+    const client = new PubmedClient({ fetchFn });
+    expect(await client.verifyPmid("18057338")).toBeNull();
+    expect(calls).toBe(3);
+  });
+
   test("includes api_key when provided", async () => {
     const { fetchFn, calls } = makeFetch(() => FALUTZ_2007_ESUMMARY);
     const client = new PubmedClient({ fetchFn, apiKey: "test-key-abc" });
