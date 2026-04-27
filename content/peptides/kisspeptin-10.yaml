@@ -1,0 +1,268 @@
+schema_version: 1
+slug: kisspeptin-10
+name: Kisspeptin-10
+peptide_class: Neuropeptide
+classification: Neuropeptide · GPR54 Agonist
+categories:
+  - hypothalamic
+  - gnrh-axis
+  - fertility
+  - phase-1-2
+aliases:
+  - KP-10
+  - metastin 45-54
+  - KISS1 C-terminal fragment
+color: purple
+evidence_level: phase-2
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    10-amino-acid C-terminal fragment of kisspeptin (KISS1 gene product). Activates GPR54/Kiss1R on
+    hypothalamic GnRH neurons, triggering LH surge. Phase 1/2 trials in fertility research and
+    hypothalamic amenorrhea. Core regulator of the hypothalamic-pituitary-gonadal axis, integrating
+    metabolic and reproductive signals through direct GnRH neuron excitation.
+  cite: []
+hero_stats:
+  - value: GnRH pulse generator
+    label: Primary role
+    cite:
+      - silva-2026
+  - value: Phase 1/2
+    label: Clinical stage
+    cite: []
+  - value: GPR54/Kiss1R
+    label: Target receptor
+    cite:
+      - rnnekleiv-2026
+hero_route:
+  value: IV / SQ · Investigational
+  cite: []
+mechanism:
+  primary_target:
+    value: GPR54/Kiss1R on hypothalamic GnRH neurons
+    cite:
+      - rnnekleiv-2026
+      - colladosole-2026
+  pathway:
+    value: >-
+      Kisspeptin → GPR54 activation → GnRH neuronal depolarization → Pulsatile GnRH release →
+      Pituitary LH/FSH secretion
+    cite:
+      - lages-2026
+      - rnnekleiv-2026
+  downstream_effect:
+    value: Pulsatile LH surge, FSH elevation, gonadal steroidogenesis, gametogenesis initiation
+    cite:
+      - lages-2026
+  origin:
+    value: >-
+      C-terminal decapeptide of KISS1 gene product; retains full biological activity of longer
+      kisspeptin isoforms
+    cite: []
+  feedback_intact:
+    value: Yes — integrates estradiol, leptin, and IGF-1 signals to modulate HPG axis
+    cite:
+      - silva-2026
+      - rnnekleiv-2026
+    badge: green
+  receptor_class:
+    value: GPR54 (Kiss1R) — G-protein coupled receptor, Gq/11 signaling
+    cite: []
+  extra_rows:
+    - key: Metabolic integration
+      value:
+        value: >-
+          KNDy neurons (kisspeptin/neurokinin B/dynorphin) act as metabolic sensors, linking energy
+          status to reproductive function
+        cite:
+          - silva-2026
+          - rnnekleiv-2026
+    - key: Photoperiodic regulation
+      value:
+        value: >-
+          Melatonin modulates KNDy neuron activity, mediating seasonal reproductive control in
+          breeding mammals
+        cite:
+          - akhtar-2025
+  diagram:
+    - kind: node
+      text:
+        value: Hypothalamus (KNDy neurons)
+        cite:
+          - silva-2026
+    - kind: arrow
+      text:
+        value: ↓ Kisspeptin-10 → GPR54
+        cite: []
+    - kind: node
+      text:
+        value: GnRH neurons
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Pulsatile GnRH secretion
+        cite: []
+    - kind: node
+      text:
+        value: Anterior Pituitary
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ LH / FSH release
+        cite: []
+    - kind: outcome
+      text:
+        value: Gonadal steroidogenesis & gametogenesis
+        cite:
+          - lages-2026
+dosage:
+  rows:
+    - parameter: Clinical trial dose
+      value:
+        value: Phase 1/2 investigational
+        cite: []
+      notes:
+        value: Dosing protocols vary by indication (hypothalamic amenorrhea, IVF trigger).
+        cite: []
+    - parameter: Route
+      value:
+        value: IV or SQ administration
+        cite: []
+      notes:
+        value: IV preferred in controlled trials for precise pulsatile delivery.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Phase 1/2 trials
+        cite: []
+    - parameter: Half-life
+      value:
+        value: Short (minutes)
+        cite: []
+      notes:
+        value: Rapid clearance; pulsatile dosing mimics physiological GnRH pulse frequency.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Ovarian hyperstimulation
+      value:
+        value: Theoretical risk with supraphysiological dosing in fertility protocols
+        cite: []
+      severity: moderate
+    - parameter: Headache
+      value:
+        value: Mild, reported in early-phase trials
+        cite: []
+      severity: mild
+    - parameter: Nausea
+      value:
+        value: Transient GI symptoms with IV bolus
+        cite: []
+      severity: mild
+    - parameter: Hot flashes
+      value:
+        value: Vasomotor symptoms from LH surge
+        cite: []
+      severity: mild
+    - parameter: Injection site reaction
+      value:
+        value: Erythema, mild discomfort (SQ route)
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Active pregnancy
+      cite: []
+    - value: Hormone-sensitive malignancy (breast, ovarian, endometrial)
+      cite: []
+  contraindications_relative:
+    - value: Polycystic ovary syndrome (PCOS) without monitoring
+      cite: []
+    - value: Uncontrolled thyroid dysfunction
+      cite: []
+administration:
+  steps:
+    - title: Reconstitution (if lyophilized)
+      body: >-
+        Reconstitute with sterile water or saline per protocol. Gently swirl — do not shake.
+        Solution should be clear and colorless.
+      cite: []
+    - title: Route selection
+      body: >-
+        IV infusion for pulsatile delivery in clinical trials; SQ for outpatient protocols. IV
+        allows precise temporal control of GnRH pulse frequency.
+      cite: []
+    - title: Timing
+      body: >-
+        Pulsatile dosing (e.g., every 60–90 min) mimics physiological GnRH pulse generator.
+        Single-bolus protocols used for LH surge induction in fertility research.
+      cite: []
+    - title: Monitoring
+      body: >-
+        Serial LH, FSH, estradiol measurements to confirm HPG axis activation. Ultrasound monitoring
+        for ovarian response in fertility applications.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilized: store at 2–8 °C, light-protected. Reconstituted: refrigerate, use within 24–48
+        hours per protocol.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: gnrh
+      partner_label: GnRH
+      synergy: multi-pathway
+      rationale: >-
+        Kisspeptin-10 acts upstream of GnRH, stimulating endogenous GnRH neuron firing.
+        Co-administration with exogenous GnRH could amplify pituitary gonadotropin release in cases
+        of partial hypothalamic dysfunction, though this bypasses physiological pulsatility control.
+        Clinical utility explored in IVF protocols and hypogonadotropic hypogonadism.
+      protocol:
+        Kisspeptin-10: Pulsatile IV or SQ per protocol
+        GnRH: Pulsatile IV (10–20 mcg every 90 min)
+        Monitoring: Serial LH/FSH, ovarian ultrasound
+      primary_benefit: Enhanced gonadotropin secretion in hypothalamic amenorrhea or GnRH-deficient states
+      cite: []
+description_md: >-
+  ## Context
+
+
+  Kisspeptin-10 represents the minimal active fragment of the KISS1 gene product, a master regulator
+  of mammalian reproduction. Discovery of kisspeptin revolutionized reproductive neuroendocrinology
+  by identifying the critical link between metabolic status and fertility. KNDy neurons
+  (co-expressing kisspeptin, neurokinin B, and dynorphin) in the arcuate nucleus function as the
+  GnRH pulse generator, integrating signals from leptin, insulin, IGF-1, and sex steroids to gate
+  reproductive competence.
+
+
+  ## Reproductive Physiology
+
+
+  Kisspeptin neurons project directly to GnRH neurons and drive their pulsatile firing.
+  Loss-of-function mutations in GPR54 cause hypogonadotropic hypogonadism in humans. Kisspeptin also
+  mediates the estradiol-positive feedback mechanism triggering the preovulatory LH surge. Beyond
+  fertility, kisspeptin pathways are implicated in metabolic regulation, with reciprocal
+  interactions between reproductive and energy homeostasis circuits.
+
+
+  ## Clinical Development
+
+
+  Phase 1/2 trials have explored kisspeptin-10 in hypothalamic amenorrhea, IVF optimization
+  (ovulation triggering), and as a diagnostic tool for GnRH neuron competence. Advantages over
+  traditional GnRH agonists include preserved physiological pulsatility and potential for targeted
+  neuroendocrine rescue without pituitary desensitization. Challenges include short half-life and
+  need for pulsatile delivery systems.
+
+
+  ## Metabolic Integration
+
+
+  Kisspeptin neurons are nutrient sensors, linking energy availability to reproductive axis
+  activation. Undernutrition suppresses kisspeptin expression, contributing to hypothalamic
+  amenorrhea in anorexia nervosa and female athlete triad. Conversely, obesity-related
+  hyperleptinemia can disrupt kisspeptin signaling. This positions kisspeptin pathways as
+  therapeutic targets for both metabolic and reproductive dysfunction.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

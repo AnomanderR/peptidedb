@@ -1,0 +1,301 @@
+schema_version: 1
+slug: p21
+name: P21
+peptide_class: CNTF-Derived Neuropeptide
+classification: CNTF-Derived Neuropeptide · Animal Model Evidence
+categories:
+  - neuropeptide
+  - neurogenesis
+  - neurotrophic
+  - cntf-derived
+aliases:
+  - P21 (Adamantane)
+  - CNTF peptide mimetic
+color: purple
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic ~21-amino-acid peptide derived from ciliary neurotrophic factor (CNTF). Activates
+    CNTFR/LIFR/gp130 heterotrimeric receptor complex on neural stem cells to promote neurogenesis,
+    stem cell self-renewal, and neuroregeneration. Animal models demonstrate effects in olfactory
+    epithelium regeneration, CDKL5 deficiency disorder, and hippocampal neurogenesis. No clinical
+    trial data in humans.
+  cite: []
+hero_stats:
+  - value: CNTFR/gp130
+    label: Primary receptor
+    cite:
+      - guo-2022
+  - value: Animal only
+    label: Evidence level
+    cite: []
+  - value: Neurogenesis
+    label: Primary effect
+    cite:
+      - jia-2020
+      - mottolese-2024
+hero_route:
+  value: SQ · Site unspecified · Frequency unknown
+  cite: []
+mechanism:
+  primary_target:
+    value: CNTF receptor alpha (CNTFRα) / LIF receptor (LIFR) / gp130 complex on neural stem cells
+    cite: []
+  pathway:
+    value: >-
+      CNTF mimetic → CNTFRα/LIFR/gp130 heterotrimer → JAK/STAT3 signaling → neurogenesis, stem cell
+      proliferation, neuroprotection
+    cite: []
+  downstream_effect:
+    value: >-
+      Increased neural stem cell self-renewal, globose basal cell activation (Mash1+ cells),
+      olfactory sensory neuron regeneration, hippocampal neurogenesis, neuroprotection in
+      developmental disorders
+    cite: []
+  origin:
+    value: >-
+      Small-molecule peptide mimetic derived from full-length ciliary neurotrophic factor (CNTF),
+      designed to retain receptor activation with improved pharmacokinetics
+    cite:
+      - mottolese-2024
+  receptor_class:
+    value: Type I cytokine receptor family (gp130 signaling)
+    cite:
+      - guo-2022
+  extra_rows:
+    - key: Cell types responsive
+      value:
+        value: >-
+          Horizontal basal cells (HBCs), globose basal cells (GBCs), olfactory ensheathing cells
+          (OECs), hippocampal neural stem cells
+        cite:
+          - jia-2020
+          - cox-2026
+    - key: Native CNTF source
+      value:
+        value: Astrocytes, horizontal basal cells in olfactory epithelium, OECs
+        cite:
+          - jia-2020
+  diagram:
+    - kind: node
+      text:
+        value: P21 (CNTF mimetic)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds CNTFRα/LIFR/gp130
+        cite: []
+    - kind: node
+      text:
+        value: Neural Stem Cells (HBCs, GBCs)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ JAK/STAT3 activation
+        cite: []
+    - kind: node
+      text:
+        value: Mash1+ progenitor proliferation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Neurogenesis & differentiation
+        cite: []
+    - kind: outcome
+      text:
+        value: Olfactory neuron regeneration, hippocampal neurogenesis, neuroprotection
+        cite: []
+dosage:
+  rows:
+    - parameter: Human dosing
+      value:
+        value: No established protocol
+        cite: []
+      notes:
+        value: No clinical trial data available.
+        cite: []
+    - parameter: Animal models (mice)
+      value:
+        value: Dose and route not specified in abstracts
+        cite:
+          - mottolese-2024
+          - jia-2020
+      notes:
+        value: In vitro and in vivo studies demonstrate efficacy; precise dosing protocols not disclosed.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal models only
+        cite: []
+      notes:
+        value: CDKL5 KO mice, methimazole-induced olfactory injury, CNTF-/- knockout models.
+        cite:
+          - mottolese-2024
+          - cox-2026
+          - jia-2020
+    - parameter: Duration
+      value:
+        value: Not specified
+        cite: []
+    - parameter: Route
+      value:
+        value: Presumed subcutaneous or intraperitoneal (animal studies)
+        cite: []
+side_effects:
+  rows:
+    - parameter: Human safety data
+      value:
+        value: None available
+        cite: []
+      notes:
+        value: No clinical trials in humans.
+        cite: []
+      severity: mild
+    - parameter: Animal tolerability
+      value:
+        value: Well-tolerated in mouse models; no toxicity reported in available abstracts
+        cite: []
+      severity: mild
+    - parameter: Theoretical risks
+      value:
+        value: >-
+          Uncontrolled stem cell proliferation, immune response to peptide, unknown long-term CNS
+          effects
+        cite: []
+      severity: moderate
+  contraindications_absolute:
+    - value: Use in humans not validated
+      cite: []
+  contraindications_relative:
+    - value: Active malignancy (theoretical — neurotrophic signaling may affect tumour growth)
+      cite: []
+    - value: Pregnancy or lactation (no safety data)
+      cite: []
+administration:
+  steps:
+    - title: Human protocol
+      body: Not established. No FDA approval, no clinical trial data.
+      cite: []
+    - title: Animal research context
+      body: >-
+        In vivo studies used systemic administration (route not specified in abstracts) in mouse
+        models of neurodegeneration, olfactory injury, and CDKL5 deficiency disorder. In vitro
+        studies used primary cell cultures.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: gdnf
+      partner_label: GDNF
+      synergy: strong
+      rationale: >-
+        CNTF and glial cell line-derived neurotrophic factor (GDNF) act on distinct receptor systems
+        (CNTFR/gp130 vs GFRα1/RET) and produce synergistic effects on directed neurite growth in
+        dorsal root ganglia. Combined application enhanced chemotactic neurite outgrowth beyond
+        additive effects, suggesting complementary signaling pathways in neuroregeneration.
+      protocol:
+        P21: Dose not established (animal data only)
+        GDNF: Co-applied in neurite guidance assays
+        Context: In vitro dorsal root ganglion cultures
+      primary_benefit: Enhanced neurite outgrowth, directed neural regeneration
+      cite: []
+description_md: >-
+  ## Background
+
+
+  P21 is a synthetic peptide mimetic derived from ciliary neurotrophic factor (CNTF), a pluripotent
+  neurotrophic cytokine originally isolated from chicken embryo ciliary neurons. Full-length CNTF
+  plays critical roles in neuronal development, survival, and regeneration across multiple systems
+  including the optic nervous system, dorsal root ganglia, sensory neurons, and motor neurons. CNTF
+  signals through a heterotrimeric receptor complex comprising CNTFRα (ciliary neurotrophic factor
+  receptor alpha), LIFR (leukemia inhibitory factor receptor), and gp130, activating the JAK/STAT3
+  pathway to promote neurogenesis and neuroprotection.
+
+
+  ## Mechanism and Neurogenesis
+
+
+  P21 retains the receptor-binding and signaling capacity of full-length CNTF while offering
+  potential advantages in stability and delivery. In the olfactory epithelium, CNTF is expressed by
+  horizontal basal cells (quiescent stem cells) and olfactory ensheathing cells, with its receptor
+  CNTFRα expressed on Mash1-positive globose basal cells (GBCs) — the transit-amplifying progenitors
+  that regenerate olfactory sensory neurons throughout life. P21 acts in a paracrine manner to
+  stimulate GBC proliferation, neuronal differentiation, and functional recovery following olfactory
+  injury.
+
+
+  In models of methimazole-induced acute olfactory epithelium injury, inhibition of focal adhesion
+  kinase (FAK) upregulates endogenous CNTF expression in horizontal basal cells, which in turn
+  enhances neuroregeneration and olfactory function recovery. Exogenous P21 administration
+  replicates this effect, promoting stem cell self-renewal and accelerating the replacement of lost
+  olfactory sensory neurons.
+
+
+  ## Disease Models
+
+
+  ### CDKL5 Deficiency Disorder
+
+
+  In a mouse model of CDKL5 deficiency disorder (CDD) — a severe epileptic encephalopathy
+  characterized by intellectual disability, motor impairment, and autistic features — P21 treatment
+  ameliorated disrupted neuronal proliferation, survival, and maturation. Absence of Cdkl5
+  negatively impacts neurogenesis in both in vitro and in vivo models, resulting in behavioral
+  deficits. P21 administration rescued these phenotypes, suggesting potential therapeutic relevance
+  for neurodevelopmental disorders with impaired neuroplasticity.
+
+
+  ### Hippocampal Neurogenesis
+
+
+  Animal studies demonstrate that continuous exposure to neurotrophic peptide mimetics from
+  gestation can ameliorate disrupted hippocampal neurogenesis induced by gestational valproic acid
+  exposure, a model of autism spectrum disorder. While these studies did not specifically test P21,
+  they establish proof-of-concept for CNTF-related peptides in rescuing developmental neurogenesis
+  deficits.
+
+
+  ### Glaucoma and Neuroprotection
+
+
+  CNTF's neuroprotective role extends to retinal ganglion cells and optic nerve integrity. In
+  patients with glaucoma who recovered from coronavirus infection, therapeutic strategies aimed at
+  stimulating endogenous neurotrophic factor production (including CNTF) through mitochondrial
+  energy potentiation and oxidative stress reduction were explored. P21, as a CNTF mimetic, may
+  theoretically offer similar reparative neurogenesis support, though clinical data are absent.
+
+
+  ## Evidence Limitations
+
+
+  All supporting evidence for P21 derives from animal models (primarily mice) and in vitro studies.
+  No human clinical trials, pharmacokinetic data, or safety profiles exist. Dosing protocols,
+  bioavailability, blood-brain barrier penetration, and long-term effects remain uncharacterized.
+  The peptide's stability, half-life, and optimal administration route are not disclosed in
+  available literature.
+
+
+  ## Broader CNTF Biology
+
+
+  Full-length CNTF has been extensively studied for its dual roles in neuronutrition and energy
+  metabolism. Beyond its neurotrophic effects, CNTF regulates energy balance, inducing body weight
+  loss through central leptin-like signaling. It also participates in cardiomyocyte proliferation,
+  inflammation suppression, and mental health pathways. However, P21 as a truncated mimetic may not
+  replicate these systemic metabolic effects, focusing instead on localized receptor activation in
+  neural tissues.
+
+
+  ## Research Context
+
+
+  P21 represents an investigational tool for probing CNTF-mediated neurogenesis in preclinical
+  models. Its utility lies in dissecting the paracrine signaling between quiescent stem cells
+  (horizontal basal cells) and transit-amplifying progenitors (globose basal cells) in regenerative
+  niches like the olfactory epithelium. Whether these findings translate to human neuroregeneration,
+  Alzheimer's disease, depression, or other neurodegenerative conditions remains speculative absent
+  clinical validation.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

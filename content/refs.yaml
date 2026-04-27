@@ -2492,3 +2492,220 @@ davitt-2014:
   pmid: '25117093'
   authors:
     - Davitt K
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+rnnekleiv-2026:
+  id: rnnekleiv-2026
+  type: journal
+  title: The role of hypothalamic kisspeptin neurons in coordinating reproduction and metabolism.
+  year: 2026
+  pmid: '41407546'
+  authors:
+    - Rønnekleiv OK
+
+colladosole-2026:
+  id: colladosole-2026
+  type: journal
+  title: >-
+    Microglia Rank signaling regulates GnRH neuronal function and the hypothalamic-pituitary-gonadal
+    axis.
+  year: 2026
+  pmid: '41818388'
+  authors:
+    - Collado-Sole A
+
+silva-2026:
+  id: silva-2026
+  type: journal
+  title: KNDy neurons as an indirect target of insulin-like growth factor-1.
+  year: 2026
+  pmid: '41423875'
+  authors:
+    - Silva JDN
+
+lages-2026:
+  id: lages-2026
+  type: journal
+  title: GH and GnRH-gonadotropin secretion.
+  year: 2026
+  pmid: '41912296'
+  authors:
+    - Lages AS
+
+akhtar-2025:
+  id: akhtar-2025
+  type: journal
+  title: >-
+    Molecular pathways affecting reproductive efficiency in seasonal breeders: prospects and
+    implications for improving fertility in donkeys.
+  year: 2025
+  pmid: '41169682'
+  authors:
+    - Akhtar MF
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+mottolese-2024:
+  id: mottolese-2024
+  type: journal
+  title: >-
+    Effects of a ciliary neurotrophic factor (CNTF) small-molecule peptide mimetic in an in vitro
+    and in vivo model of CDKL5 deficiency disorder.
+  year: 2024
+  pmid: '39592934'
+  authors:
+    - Mottolese N
+
+cox-2026:
+  id: cox-2026
+  type: journal
+  title: >-
+    FAK inhibition following acute olfactory epithelial inflammation promotes neurogenesis and
+    functional recovery through stem cell CNTF.
+  year: 2026
+  pmid: '41795839'
+  authors:
+    - Cox D
+
+jia-2020:
+  id: jia-2020
+  type: journal
+  title: >-
+    Inhibition of focal adhesion kinase increases adult olfactory stem cell self-renewal and
+    neuroregeneration through ciliary neurotrophic factor.
+  year: 2020
+  pmid: '33130470'
+  authors:
+    - Jia C
+
+guo-2022:
+  id: guo-2022
+  type: journal
+  title: The Roles of Ciliary Neurotrophic Factor - from Neuronutrition to Energy Metabolism.
+  year: 2022
+  pmid: '36065930'
+  authors:
+    - Guo H
+
+mashanov-2020:
+  id: mashanov-2020
+  type: journal
+  title: >-
+    Synergistic effect of CNTF and GDNF on directed neurite growth in chick embryo dorsal root
+    ganglia.
+  year: 2020
+  pmid: '33017447'
+  authors:
+    - Mashanov V
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+djillani-2017:
+  id: djillani-2017
+  type: journal
+  title: >-
+    Shortened Spadin Analogs Display Better TREK-1 Inhibition, In Vivo Stability and Antidepressant
+    Activity.
+  year: 2017
+  pmid: '28955242'
+  authors:
+    - Djillani A
+
+mazella-2018:
+  id: mazella-2018
+  type: journal
+  title: >-
+    The Involvement of Sortilin/NTSR3 in Depression as the Progenitor of Spadin and Its Role in the
+    Membrane Expression of TREK-1.
+  year: 2018
+  pmid: '30670975'
+  authors:
+    - Mazella J
+
+pietri-2019:
+  id: pietri-2019
+  type: journal
+  title: >-
+    First evidence of protective effects on stroke recovery and post-stroke depression induced by
+    sortilin-derived peptides.
+  year: 2019
+  pmid: '31325429'
+  authors:
+    - Pietri M
+
+ma-2020:
+  id: ma-2020
+  type: journal
+  title: Spadin Selectively Antagonizes Arachidonic Acid Activation of TREK-1 Channels.
+  year: 2020
+  pmid: '32317978'
+  authors:
+    - Ma R
+
+wu-2021:
+  id: wu-2021
+  type: journal
+  title: >-
+    Genetic and pharmacological inhibition of two-pore domain potassium channel TREK-1 alters
+    depression-related behaviors and neuronal plasticity in the hippocampus in mice.
+  year: 2021
+  pmid: '32864894'
+  authors:
+    - Wu F
+
+djillani-2019:
+  id: djillani-2019
+  type: journal
+  title: 'Fighting against depression with TREK-1 blockers: Past and future. A focus on spadin.'
+  year: 2019
+  pmid: '30291907'
+  authors:
+    - Djillani A
+
+cong-2023:
+  id: cong-2023
+  type: journal
+  title: >-
+    Blocking Two-Pore Domain Potassium Channel TREK-1 Inhibits the Activation of A1-Like Reactive
+    Astrocyte Through the NF-κB Signaling Pathway in a Rat Model of Major Depressive Disorder.
+  year: 2023
+  pmid: '36670238'
+  authors:
+    - Cong T
+
+nasr-2018:
+  id: nasr-2018
+  type: journal
+  title: >-
+    Identification and characterization of two zebrafish Twik related potassium channels, Kcnk2a and
+    Kcnk2b.
+  year: 2018
+  pmid: '30333618'
+  authors:
+    - Nasr N
+
+qi-2018:
+  id: qi-2018
+  type: journal
+  title: >-
+    Comparison of Therapeutic Effects of TREK1 Blockers and Fluoxetine on Chronic Unpredicted Mild
+    Stress Sensitive Rats.
+  year: 2018
+  pmid: '29952548'
+  authors:
+    - Qi X
+
+valle-2016:
+  id: valle-2016
+  type: journal
+  title: >-
+    Fluoxetine Protection in Decompression Sickness in Mice is Enhanced by Blocking TREK-1 Potassium
+    Channel with the "spadin" Antidepressant.
+  year: 2016
+  pmid: '26909044'
+  authors:
+    - Vallée N

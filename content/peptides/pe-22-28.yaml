@@ -1,0 +1,379 @@
+schema_version: 1
+slug: pe-22-28
+name: PE 22-28
+peptide_class: TREK-1 Antagonist
+classification: TREK-1 Antagonist · Pre-Clinical
+categories:
+  - antidepressant
+  - neuroprotective
+  - trek-1-blocker
+aliases:
+  - mini-spadin
+  - shortened spadin
+  - spadin fragment
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Seven-amino-acid fragment of spadin (PE 12-28), a sortilin-derived peptide that selectively
+    blocks TREK-1 potassium channels. Demonstrates potent antidepressant-like activity in rodent
+    models at sub-nanomolar concentrations (IC50 0.12 nM vs 40-60 nM for full spadin). Shorter
+    sequence confers enhanced in vivo stability, blood-brain barrier penetration, and improved
+    therapeutic window. Pre-clinical only — no human trials reported.
+  cite:
+    - djillani-2017
+    - mazella-2018
+hero_stats:
+  - value: 0.12 nM
+    label: TREK-1 IC50
+    cite:
+      - djillani-2017
+  - value: 7 AA
+    label: Peptide length
+    cite:
+      - djillani-2017
+  - value: Animal
+    label: Evidence stage
+    cite: []
+hero_route:
+  value: IP · SQ · Once Daily (animal models)
+  cite:
+    - djillani-2017
+    - pietri-2019
+mechanism:
+  primary_target:
+    value: TREK-1 two-pore-domain potassium channel
+    cite:
+      - djillani-2017
+      - ma-2020
+  pathway:
+    value: >-
+      TREK-1 channel blockade → Neuronal membrane depolarisation → Enhanced hippocampal excitability
+      → Increased neuroplasticity
+    cite: []
+  downstream_effect:
+    value: >-
+      Antidepressant-like activity in forced swim test and tail suspension test; reduced A1-like
+      reactive astrocyte activation; neuroprotection via NF-κB pathway modulation
+    cite:
+      - djillani-2017
+      - cong-2023
+      - wu-2021
+  origin:
+    value: >-
+      Synthetic truncation of spadin (PE 12-28), itself derived from the sortilin propeptide
+      C-terminus. Residues 22-28: Val-Val-Arg-Gly-Trp-Leu-Arg.
+    cite:
+      - djillani-2017
+      - mazella-2018
+  feedback_intact:
+    value: N/A — direct ion channel blockade; not receptor-mediated endocrine axis
+    cite: []
+  antibody_development:
+    value: Not reported in animal studies
+    cite: []
+  receptor_class:
+    value: Two-pore-domain K+ channel (K2P family; KCNK2 gene)
+    cite:
+      - nasr-2018
+  half_life_basis:
+    value: Shorter peptide length improves plasma stability vs full spadin; exact t½ not quantified
+    cite:
+      - djillani-2017
+  extra_rows:
+    - key: Selectivity vs TREK-2
+      value:
+        value: Highly selective for TREK-1; no significant TREK-2 inhibition at equivalent concentrations
+        cite:
+          - djillani-2017
+    - key: Arachidonic acid interaction
+      value:
+        value: >-
+          Selectively antagonises AA-induced TREK-1 activation; no effect on basal or
+          BL-1249/CDC-activated currents
+        cite:
+          - ma-2020
+    - key: Biphasic TREK-1 action
+      value:
+        value: >-
+          Low dose (0.03 µg/kg) activates TREK-1 (neuroprotection); high dose (3 µg/kg) blocks
+          TREK-1 (antidepressant effect)
+        cite:
+          - pietri-2019
+  diagram:
+    - kind: node
+      text:
+        value: Sortilin Propeptide (PE)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Furin cleavage → Spadin (PE 12-28) → PE 22-28 truncation
+        cite: []
+    - kind: node
+      text:
+        value: TREK-1 K+ Channel
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Channel blockade (IC50 0.12 nM)
+        cite: []
+    - kind: node
+      text:
+        value: Hippocampal Neurons
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Membrane depolarisation · Neuroplasticity · BDNF upregulation
+        cite: []
+    - kind: outcome
+      text:
+        value: Antidepressant-like Activity · Neuroprotection
+        cite: []
+dosage:
+  rows:
+    - parameter: Animal dose (antidepressant)
+      value:
+        value: 0.3–3 µg/kg IP
+        cite: []
+      notes:
+        value: Effective in forced swim test, tail suspension test, CUMS models.
+        cite: []
+    - parameter: Animal dose (neuroprotection)
+      value:
+        value: 0.03 µg/kg IP
+        cite:
+          - pietri-2019
+      notes:
+        value: Low-dose TREK-1 activation post-stroke for 7 days, then high-dose blockade.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Once daily
+        cite: []
+      notes:
+        value: Sustained antidepressant effect over 7+ days.
+        cite: []
+    - parameter: Onset (animal)
+      value:
+        value: Within hours (acute); full effect 4–7 days
+        cite: []
+    - parameter: Duration (animal)
+      value:
+        value: 7–28 days tested
+        cite:
+          - qi-2018
+          - pietri-2019
+    - parameter: Comparison to fluoxetine
+      value:
+        value: PE 22-28 outperforms fluoxetine in CUMS-sensitive rats by day 7
+        cite: []
+      notes:
+        value: Chronic administration shows superior long-term efficacy.
+        cite: []
+    - parameter: Human equivalent (extrapolated)
+      value:
+        value: Not established — no clinical trials
+        cite: []
+      notes:
+        value: Allometric scaling from rodent data unavailable.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Multiple rodent RCTs; behavioral + electrophysiology endpoints
+        cite:
+          - djillani-2017
+          - qi-2018
+          - wu-2021
+side_effects:
+  rows:
+    - parameter: Toxicity (animal)
+      value:
+        value: No adverse effects reported at therapeutic doses
+        cite: []
+      severity: mild
+    - parameter: Cardiovascular (theoretical)
+      value:
+        value: TREK-1 expressed in cardiac tissue; arrhythmia risk unclear
+        cite: []
+      severity: moderate
+    - parameter: Weight change
+      value:
+        value: Not reported in animal studies
+        cite: []
+    - parameter: Neurological
+      value:
+        value: No seizures or behavioral abnormalities noted
+        cite: []
+      severity: mild
+    - parameter: Long-term safety
+      value:
+        value: Unknown — longest animal study 28 days
+        cite: []
+  contraindications_absolute:
+    - value: Human use — no clinical safety data available
+      cite: []
+  contraindications_relative:
+    - value: Cardiac arrhythmia or channelopathy (theoretical TREK-1 cardiac role)
+      cite: []
+administration:
+  steps:
+    - title: Animal protocol (IP)
+      body: >-
+        Dissolved in sterile saline or vehicle. Intraperitoneal injection, 0.3–3 µg/kg body weight.
+        Once daily administration in rodent behavioral studies.
+      cite: []
+    - title: Stability
+      body: >-
+        Shorter peptide length (7 AA) confers improved plasma stability vs 17-AA spadin. Exact
+        storage conditions not detailed in published protocols.
+      cite:
+        - djillani-2017
+    - title: BBB penetration
+      body: >-
+        Enhanced CNS bioavailability vs full spadin, likely due to smaller size. Mechanism (passive
+        diffusion vs active transport) not fully characterized.
+      cite: []
+    - title: Human formulation
+      body: >-
+        Not established — peptide synthesis methods for research use only. No pharmaceutical-grade
+        formulation available.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: fluoxetine
+      partner_label: Fluoxetine (SSRI)
+      synergy: moderate
+      rationale: >-
+        PE 22-28 (TREK-1 blocker) and fluoxetine (serotonin reuptake inhibitor) act on distinct
+        antidepressant pathways. TREK-1 blockade enhances neuronal excitability and plasticity
+        independently of monoaminergic signaling, potentially complementing SSRI mechanisms. In
+        decompression sickness model, spadin enhanced fluoxetine protection, suggesting additive
+        neuroprotective effects. No direct synergy trials with PE 22-28 + fluoxetine reported, but
+        parent peptide (spadin) showed combinatorial benefits.
+      protocol:
+        PE 22-28: 3 µg/kg IP · once daily (animal)
+        Fluoxetine: 10 mg/kg · standard SSRI dose (animal)
+      primary_benefit: Multi-pathway antidepressant action; enhanced neuroprotection post-ischemia
+      cite: []
+description_md: >-
+  ## Research Context
+
+
+  PE 22-28 represents a rationally designed truncation of spadin (PE 12-28), itself a naturally
+  occurring fragment of the sortilin propeptide. Sortilin undergoes furin-mediated cleavage in the
+  Golgi, releasing a 44-amino-acid propeptide whose C-terminal region (residues 12-28) was
+  identified as a TREK-1 antagonist with antidepressant properties in 2010.
+
+
+  Structure-activity optimization led to PE 22-28 (Val-Val-Arg-Gly-Trp-Leu-Arg), which retains full
+  TREK-1 blocking activity with 300-fold improved potency (IC50 0.12 nM vs 40-60 nM for spadin). The
+  shorter sequence exhibits enhanced proteolytic resistance, improved CNS penetration, and reduced
+  immunogenic potential compared to the parent peptide.
+
+
+  ## Mechanism Specificity
+
+
+  PE 22-28 selectively antagonizes TREK-1 (KCNK2) without affecting TREK-2 (KCNK10) or other K2P
+  family members. Critically, it acts as a **state-dependent blocker**: it inhibits arachidonic
+  acid-induced TREK-1 activation but does not block basal channel activity or activation by
+  synthetic agonists like BL-1249. This suggests PE 22-28 stabilizes a closed channel conformation
+  or prevents AA-mediated gating transitions.
+
+
+  At low concentrations (0.03 µg/kg in mice), PE 22-28 paradoxically **activates** TREK-1, producing
+  neuroprotection in stroke models via membrane hyperpolarization. This biphasic action provides a
+  therapeutic window: low-dose neuroprotection (acute ischemia) transitions to high-dose TREK-1
+  blockade (antidepressant effect) in sequential post-stroke depression protocols.
+
+
+  ## Behavioral Endpoints
+
+
+  In chronic unpredictable mild stress (CUMS) models—the gold-standard rodent depression paradigm—PE
+  22-28 reverses:
+
+  - Anhedonia (sucrose preference deficit)
+
+  - Immobility in forced swim test
+
+  - Behavioral despair in tail suspension test
+
+  - Hippocampal BDNF downregulation
+
+  - Astrocyte A1 polarization (pro-inflammatory phenotype)
+
+
+  Onset is faster than fluoxetine (4 vs 14 days), and efficacy is sustained through 28 days of
+  administration. Genetic TREK-1 knockout mice display a depression-resistant phenotype, confirming
+  the channel as the primary mediator of PE 22-28's effects.
+
+
+  ## Translation Barriers
+
+
+  1. **No human pharmacokinetics**: Plasma half-life, volume of distribution, and clearance pathways
+  unknown.
+
+  2. **Cardiac safety**: TREK-1 is expressed in sinoatrial node and ventricular myocytes; chronic
+  blockade effects on cardiac repolarization not assessed.
+
+  3. **Dose translation**: Rodent IP dosing (0.3-3 µg/kg) does not map cleanly to human subcutaneous
+  or oral routes. Allometric scaling requires PK data.
+
+  4. **Patent landscape**: Spadin analogs (including PE 22-28) are subject to academic and
+  commercial IP claims, complicating independent development.
+
+
+  ## Comparative Advantage
+
+
+  Versus spadin (PE 12-28):
+
+  - 300× higher TREK-1 affinity
+
+  - Improved plasma stability
+
+  - Shorter synthesis cost
+
+
+  Versus SSRIs (fluoxetine):
+
+  - Faster onset (days vs weeks in animals)
+
+  - Non-monoaminergic mechanism
+
+  - No serotonin syndrome risk
+
+
+  Versus ketamine (rapid-acting antidepressant):
+
+  - Oral/SQ potential (vs IV ketamine)
+
+  - No dissociative side effects
+
+  - Sustained efficacy without repeated dosing
+
+
+  ## Open Questions
+
+
+  - Does chronic TREK-1 blockade impair physiological neuroprotection (e.g., during hypoxia,
+  seizures)?
+
+  - Can oral bioavailability be achieved via peptidomimetic scaffolds?
+
+  - What is the therapeutic index in primates?
+
+  - Does antibody development occur with repeated dosing (spadin showed ~50% antibody formation in
+  unrelated context)?
+
+
+  PE 22-28 remains a compelling pre-clinical tool for dissecting TREK-1 biology and a potential lead
+  for next-generation antidepressant development, contingent on safety de-risking and human PK
+  studies.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
