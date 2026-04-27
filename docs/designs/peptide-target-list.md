@@ -62,9 +62,11 @@ Target: peptides with substantial peer-reviewed literature (RCTs / human clinica
 | 13 | PEG MGF 2mg | `peg-mgf` | Growth Factors |  |
 | 14 | Survodutide 10mg | `survodutide` | GLP-1 and Incretin Research Peptides |  |
 
-## Wave 2 — Medium-evidenced (30 plates)
+## Wave 2 — Medium-evidenced (25 plates)
 
 Target: cyclic neuropeptides, melanocortins, copper/mitochondrial, gonadotropic, thymic. Mixed evidence quality — some have RCTs (HCG, Triptorelin), others are mechanistic only.
+
+> **Scope refinement 2026-04-27**: The original Wave 2 list contained 5 non-peptide entries that didn't fit the locked "peptides only" identity rule (resolved decisions #5 + #6, applied to MK-677, AICAR, Orforglipron, SLU-PP-332). Same pattern applied here: Enclomiphene (SERM), Hyaluronic Acid (polysaccharide), Melatonin (indoleamine), Methylene Blue (phenothiazine dye), NAD+ (nucleotide) all moved to Skipped. Wave 2 final count: **25 plates**, all shipped human-reviewed in this iteration.
 
 | # | Store name | Proposed slug | Category | Notes |
 |---|---|---|---|---|
@@ -72,32 +74,27 @@ Target: cyclic neuropeptides, melanocortins, copper/mitochondrial, gonadotropic,
 | 2 | AHK-Cu 100mg | `ahk-cu` | Melanocortin and Pigment Research Peptides |  |
 | 3 | Cerebrolysin 60mg | `cerebrolysin` | Cyclic and Neuropeptide Research Compounds |  |
 | 4 | Dihexa 20mg | `dihexa` | Cyclic and Neuropeptide Research Compounds |  |
-| 5 | Enclomiphene | `enclomiphene` | Gonadotropic Research Peptides |  |
-| 6 | FOXO4 10mg | `foxo4` | Copper and Mitochondrial Research Peptides |  |
-| 7 | Glutathione 1500mg | `glutathione` | Copper and Mitochondrial Research Peptides |  |
-| 8 | Gonadorelin Acetate 2mg | `gonadorelin` | Gonadotropic Research Peptides |  |
-| 9 | HCG | `hcg` | Hormones | miscategorized in store as Hormones; is a peptide |
-| 10 | HGH 191AA | `hgh-191aa` | Hormones | miscategorized in store as Hormones; is a peptide |
-| 11 | HGH Fragment 176-191 | `hgh-fragment-176-191` | Hormones | miscategorized in store as Hormones; is a peptide |
-| 12 | Humanin 10mg | `humanin` | Copper and Mitochondrial Research Peptides |  |
-| 13 | Hyaluronic Acid 5mg | `hyaluronic-acid` | Melanocortin and Pigment Research Peptides |  |
-| 14 | KissPeptin-10 | `kisspeptin-10` | Gonadotropic Research Peptides |  |
-| 15 | LL-37 5mg | `ll-37` | Thymic Research Peptides |  |
-| 16 | Matrixyl 10mg | `matrixyl` | Melanocortin and Pigment Research Peptides |  |
-| 17 | Melatonin 10mg | `melatonin` | Copper and Mitochondrial Research Peptides |  |
-| 18 | Methylene Blue 20mg | `methylene-blue` | Cyclic and Neuropeptide Research Compounds |  |
-| 19 | MT-1 10mg | `mt-1` | Melanocortin and Pigment Research Peptides |  |
-| 20 | N-Acetyl Epitalon Amidate 5mg | `n-acetyl-epitalon-amidate` | Copper and Mitochondrial Research Peptides |  |
-| 21 | NAD+ | `nad` | Copper and Mitochondrial Research Peptides |  |
-| 22 | Oxytocin Acetate | `oxytocin` | Gonadotropic Research Peptides |  |
-| 23 | P21 10mg + P21 (Adamantane) 10mg | `p21` | Cyclic and Neuropeptide Research Compounds | one canonical plate covers both store SKUs (parent peptide + adamantane-conjugated delivery variant). Adamantane variant noted in Administration section per design decision 2026-04-26. |
-| 24 | PE 22-28 10mg | `pe-22-28` | Cyclic and Neuropeptide Research Compounds |  |
-| 25 | PNC-27 | `pnc-27` | Copper and Mitochondrial Research Peptides |  |
-| 26 | PTD-DBM 5mg | `ptd-dbm` | Cyclic and Neuropeptide Research Compounds |  |
-| 27 | SNAP-8 10mg | `snap-8` | Melanocortin and Pigment Research Peptides |  |
-| 28 | Teriparatide 10mg | `teriparatide` | Copper and Mitochondrial Research Peptides |  |
-| 29 | Triptorelin Acetate 2mg | `triptorelin` | Gonadotropic Research Peptides |  |
-| 30 | VIP | `vip` | Thymic Research Peptides |  |
+| 5 | FOXO4 10mg | `foxo4` | Copper and Mitochondrial Research Peptides |  |
+| 6 | Glutathione 1500mg | `glutathione` | Copper and Mitochondrial Research Peptides |  |
+| 7 | Gonadorelin Acetate 2mg | `gonadorelin` | Gonadotropic Research Peptides |  |
+| 8 | HCG | `hcg` | Hormones | miscategorized in store as Hormones; is a peptide |
+| 9 | HGH 191AA | `hgh-191aa` | Hormones | miscategorized in store as Hormones; is a peptide |
+| 10 | HGH Fragment 176-191 | `hgh-fragment-176-191` | Hormones | miscategorized in store as Hormones; is a peptide |
+| 11 | Humanin 10mg | `humanin` | Copper and Mitochondrial Research Peptides |  |
+| 12 | KissPeptin-10 | `kisspeptin-10` | Gonadotropic Research Peptides |  |
+| 13 | LL-37 5mg | `ll-37` | Thymic Research Peptides |  |
+| 14 | Matrixyl 10mg | `matrixyl` | Melanocortin and Pigment Research Peptides |  |
+| 15 | MT-1 10mg | `mt-1` | Melanocortin and Pigment Research Peptides |  |
+| 16 | N-Acetyl Epitalon Amidate 5mg | `n-acetyl-epitalon-amidate` | Copper and Mitochondrial Research Peptides | first Khavinson-tradition plate authored; russian_journal_ref tagging deferred to author-time follow-up per § 14 framing requirements |
+| 17 | Oxytocin Acetate | `oxytocin` | Gonadotropic Research Peptides |  |
+| 18 | P21 10mg + P21 (Adamantane) 10mg | `p21` | Cyclic and Neuropeptide Research Compounds | one canonical plate covers both store SKUs (parent peptide + adamantane-conjugated delivery variant). Adamantane variant noted in Administration section per design decision 2026-04-26. |
+| 19 | PE 22-28 10mg | `pe-22-28` | Cyclic and Neuropeptide Research Compounds |  |
+| 20 | PNC-27 | `pnc-27` | Copper and Mitochondrial Research Peptides |  |
+| 21 | PTD-DBM 5mg | `ptd-dbm` | Cyclic and Neuropeptide Research Compounds |  |
+| 22 | SNAP-8 10mg | `snap-8` | Melanocortin and Pigment Research Peptides |  |
+| 23 | Teriparatide 10mg | `teriparatide` | Copper and Mitochondrial Research Peptides |  |
+| 24 | Triptorelin Acetate 2mg | `triptorelin` | Gonadotropic Research Peptides |  |
+| 25 | VIP | `vip` | Thymic Research Peptides |  |
 
 ## Wave 3 — Bioregulators (13 plates)
 
@@ -119,7 +116,7 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 | 12 | Vesugen 20mg | `vesugen` | Bioregulators |
 | 13 | Vilon 20mg | `vilon` | Bioregulators |
 
-## Skipped (43 entries)
+## Skipped (48 entries)
 
 | Store name | Category | Reason |
 |---|---|---|
@@ -127,6 +124,7 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 | Acetic Acid Water 10ml | Laboratory Consumables | lab consumable |
 | AICAR | GLP-1 and Incretin Research Peptides | non-peptide nucleoside (5-aminoimidazole-4-carboxamide ribonucleoside) — locked "peptides only" rule (2026-04-27 consistency pass) |
 | Andarine S4 25mg | SARMs | SARM (not a peptide) |
+| Enclomiphene | Gonadotropic Research Peptides | non-peptide selective estrogen receptor modulator (SERM, trans-isomer of clomiphene) — locked "peptides only" rule (Wave 2 close, 2026-04-27) |
 | BAM15 Capsule 50mg | GLP-1 and Incretin Research Peptides | capsule variant; primary plate is `bam15` |
 | BPC-157 + TB-500 Blend | Growth Factors | blend (multi-peptide) |
 | Bacteriostatic Water | Laboratory Consumables | lab consumable |
@@ -139,12 +137,16 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 | Growth Hormone Research Stack | Bundles | bundle/kit |
 | Injection Pen | Laboratory Consumables | lab consumable |
 | Injection Pen (10-Pack) | Laboratory Consumables | lab consumable |
+| Hyaluronic Acid 5mg | Melanocortin and Pigment Research Peptides | non-peptide glycosaminoglycan (long-chain polysaccharide of disaccharide units) — locked "peptides only" rule (Wave 2 close, 2026-04-27) |
 | Insulin Syringes 10-Pack | Laboratory Consumables | lab consumable |
 | KPV Oral Capsules 500mcg | GLP-1 and Incretin Research Peptides | oral variant of existing kpv |
 | Klow Blend (BPC-157 + GHK-Cu + TB-500 + KPV) 80mg | Peptide Blends | blend (multi-peptide) |
 | LGD-4033/Ligandrol 10mg | SARMs | SARM (not a peptide) |
 | MK-677/Ibutamoren 10mg | SARMs | SARM (not a peptide) |
+| Melatonin 10mg | Copper and Mitochondrial Research Peptides | non-peptide indoleamine (N-acetyl-5-methoxytryptamine, tryptophan derivative) — locked "peptides only" rule (Wave 2 close, 2026-04-27) |
 | Metabolic Research Stack | Bundles | bundle/kit |
+| Methylene Blue 20mg | Cyclic and Neuropeptide Research Compounds | non-peptide phenothiazine dye / monoamine oxidase inhibitor — locked "peptides only" rule (Wave 2 close, 2026-04-27) |
+| NAD+ | Copper and Mitochondrial Research Peptides | non-peptide nucleotide (nicotinamide adenine dinucleotide) — locked "peptides only" rule (Wave 2 close, 2026-04-27) |
 | Oral BPC-157 + TB-500 Blend 1000mcg | Growth Factors | blend (multi-peptide) |
 | Oral BPC-157 Capsules 500mcg (60 capsules) | Growth Factors | oral variant of existing bpc-157 |
 | Oral TB-500 500mcg | Growth Factors | oral variant of existing tb-500 |
@@ -173,16 +175,17 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 |---|---|
 | Already in DB | 30 |
 | **Wave 1 (well-evidenced)** | **14** ✅ shipped 2026-04-27 |
-| **Wave 2 (medium-evidenced)** | **30** |
+| **Wave 2 (medium-evidenced)** | **25** ✅ shipped 2026-04-27 |
 | **Wave 3 (bioregulators)** | **13** |
-| Skipped (bundles/blends/SARMs/consumables/oral-variants/non-peptides) | 43 |
-| **TOTAL net-new plates to author** | **57** |
-| Store SKUs covered by net-new plates | 58 |
+| Skipped (bundles/blends/SARMs/consumables/oral-variants/non-peptides) | 48 |
+| **TOTAL net-new plates to author** | **52** |
+| Store SKUs covered by net-new plates | 53 |
 | Total store products audited | 131 |
 
 > **Notes**:
-> - 57 plates cover 58 store SKUs because the canonical `p21` plate aliases to two store products (P21 + P21 Adamantane).
+> - 52 plates cover 53 store SKUs because the canonical `p21` plate aliases to two store products (P21 + P21 Adamantane).
 > - Wave 1 final count is **14** (was 17). The 3-plate reduction reflects the 2026-04-27 consistency pass: AICAR + Orforglipron + SLU-PP-332 are non-peptide small molecules and excluded under the locked "peptides only" rule.
+> - Wave 2 final count is **25** (was 30). Same consistency pass moved Enclomiphene + Hyaluronic Acid + Melatonin + Methylene Blue + NAD+ to Skipped. Total non-peptide exclusions across both waves: 9 (counting MK-677 from before). All documented in resolved decisions #5-7 below.
 
 ## Resolved decisions (2026-04-26)
 
@@ -200,3 +203,22 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
    - **SLU-PP-332** — estrogen-related receptor (ERR) agonist. Small molecule, not a peptide.
 
    All three moved to the Skipped section with consistent rationale matching the MK-677 precedent. Wave 1 reduced from 17 → 14 plates. peptidesdb retains its identity boundary; functionally-adjacent small molecules are documented as deliberately excluded rather than silently omitted.
+
+## Resolved decisions (2026-04-27 — Wave 2 close pass)
+
+7. **Wave 2 non-peptide consistency** — RESOLVED. Same pattern as decision #6 applied to the original Wave 2 list, which contained 5 non-peptide entries:
+   - **Enclomiphene** — selective estrogen receptor modulator (SERM, trans-isomer of clomiphene). Small molecule.
+   - **Hyaluronic Acid** — long-chain glycosaminoglycan polysaccharide. Not a peptide.
+   - **Melatonin** — N-acetyl-5-methoxytryptamine (tryptophan-derived indoleamine). Not a peptide.
+   - **Methylene Blue** — phenothiazine dye / monoamine oxidase inhibitor. Small molecule.
+   - **NAD+** — nicotinamide adenine dinucleotide. Nucleotide cofactor, not a peptide.
+
+   All five moved to Skipped with consistent rationale. Wave 2 reduced from 30 → 25 plates. Total store SKUs deliberately excluded across the project: 9 (MK-677 + 3 from Wave 1 + 5 from Wave 2). The "peptides only" identity has now been applied uniformly across waves — Wave 3 (bioregulators) is already all peptides.
+
+## Wave status (2026-04-27)
+
+- **Wave 1**: ✅ COMPLETE (14/14 human-reviewed)
+- **Wave 2**: ✅ COMPLETE (25/25 human-reviewed)
+- **Wave 3**: pending (13 Khavinson-school bioregulators)
+
+Atlas total: 68 plates (29 pre-coverage + 14 Wave 1 + 25 Wave 2). Wave 3 will land 13 more for a final total of 81 plates covering 53 store SKUs (post-skip).

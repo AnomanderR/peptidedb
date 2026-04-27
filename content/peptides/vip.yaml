@@ -1,0 +1,241 @@
+schema_version: 1
+slug: vip
+name: VIP
+peptide_class: Neuropeptide
+classification: Neuropeptide · VPAC1/VPAC2 Agonist · Emergency Use Authorization (COVID-19 ARDS)
+categories:
+  - neuropeptide
+  - vasodilator
+  - anti-inflammatory
+  - respiratory
+aliases:
+  - Vasoactive Intestinal Peptide
+  - Aviptadil
+  - RLF-100
+color: purple
+evidence_level: phase-3
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    28-amino-acid endogenous neuropeptide and VPAC1/VPAC2 GPCR agonist. Mediates vasodilation,
+    smooth muscle relaxation, and potent anti-inflammatory effects in pulmonary tissue. Aviptadil
+    (synthetic VIP analogue) received Emergency Use Authorization for COVID-19 ARDS and is under
+    investigation for congenital diaphragmatic hernia, transfusion-related acute lung injury, and
+    post-COVID pulmonary fibrosis.
+  cite: []
+hero_stats:
+  - value: Intravenous
+    label: Primary route
+    cite:
+      - brown-2023
+  - value: ARDS
+    label: Lead indication
+    cite:
+      - udupa-2025
+  - value: Phase 3
+    label: Development stage
+    cite: []
+hero_route:
+  value: IV infusion · Inhaled (investigational)
+  cite:
+    - brown-2023
+    - boesing-2022
+mechanism:
+  primary_target:
+    value: VPAC1 and VPAC2 G-protein-coupled receptors
+    cite:
+      - udupa-2025
+  pathway:
+    value: VIP → VPAC1/VPAC2 activation → cAMP elevation → Pulmonary vasodilation + epithelial protection
+    cite: []
+  downstream_effect:
+    value: >-
+      Anti-inflammatory cytokine modulation, alveolar-capillary membrane stabilization, pulmonary
+      smooth muscle relaxation, reduced neutrophil infiltration
+    cite: []
+  origin:
+    value: Endogenous 28-amino-acid neuropeptide; synthetic analogue (aviptadil) identical to natural VIP
+    cite: []
+  feedback_intact:
+    value: Yes — exogenous VIP acts as physiological agonist
+    cite: []
+  receptor_class:
+    value: Class B GPCR family (VPAC1/VPAC2)
+    cite: []
+  extra_rows:
+    - key: Tissue distribution
+      value:
+        value: Lungs (alveolar type II cells), CNS, GI tract, heart, smooth muscle
+        cite:
+          - chen-2025
+    - key: Cytoprotective mechanism
+      value:
+        value: Prevents alveolar epithelial apoptosis, maintains surfactant production
+        cite:
+          - udupa-2025
+  diagram:
+    - kind: node
+      text:
+        value: Alveolar Epithelium
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ VIP binds VPAC1/VPAC2
+        cite: []
+    - kind: node
+      text:
+        value: cAMP Elevation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Anti-inflammatory cascade
+        cite: []
+    - kind: outcome
+      text:
+        value: Reduced ARDS severity · Vasodilation · Epithelial protection
+        cite: []
+dosage:
+  rows:
+    - parameter: Intravenous (ARDS protocol)
+      value:
+        value: 60–90 mcg/kg/day via continuous infusion
+        cite: []
+      notes:
+        value: TESICO trial protocol for COVID-19 ARDS.
+        cite: []
+    - parameter: Infusion duration
+      value:
+        value: 12-hour continuous IV infusion daily
+        cite:
+          - brown-2023
+    - parameter: Inhaled (investigational)
+      value:
+        value: Variable dosing under clinical trial protocols
+        cite:
+          - boesing-2022
+      notes:
+        value: Delivered via nebulizer for direct pulmonary deposition.
+        cite: []
+    - parameter: Treatment duration
+      value:
+        value: 3–14 days (acute ARDS)
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Phase 3 RCT (TESICO)
+        cite:
+          - brown-2023
+      notes:
+        value: 816-patient randomized controlled trial in COVID-19 ARDS.
+        cite: []
+    - parameter: Reconstitution
+      value:
+        value: Lyophilized powder reconstituted with sterile diluent per protocol
+        cite: []
+    - parameter: Half-life
+      value:
+        value: ~2 minutes (plasma)
+        cite: []
+      notes:
+        value: Rapid clearance necessitates continuous infusion.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Hypotension
+      value:
+        value: Transient vasodilation-related blood pressure drop
+        cite: []
+      severity: moderate
+    - parameter: Tachycardia
+      value:
+        value: Reflex tachycardia secondary to vasodilation
+        cite: []
+      severity: mild
+    - parameter: Infusion site reactions
+      value:
+        value: Erythema, phlebitis (IV administration)
+        cite: []
+      severity: mild
+    - parameter: GI symptoms
+      value:
+        value: Nausea, diarrhea (VIP is endogenous GI peptide)
+        cite: []
+      severity: mild
+    - parameter: Overall tolerability
+      value:
+        value: Well-tolerated in Phase 3 trials; adverse event profile comparable to placebo
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Known hypersensitivity to aviptadil or formulation components
+      cite: []
+  contraindications_relative:
+    - value: Severe hypotension or shock states (monitor blood pressure)
+      cite: []
+    - value: Pregnancy — insufficient safety data
+      cite: []
+administration:
+  steps:
+    - title: Preparation (IV)
+      body: >-
+        Reconstitute lyophilized aviptadil powder with sterile diluent per manufacturer protocol.
+        Inspect solution for particulates — should be clear and colorless.
+      cite: []
+    - title: IV infusion
+      body: >-
+        Administer as continuous 12-hour intravenous infusion via central or peripheral line. Use
+        infusion pump for precise dosing (60–90 mcg/kg/day divided over infusion duration).
+      cite: []
+    - title: Monitoring
+      body: >-
+        Monitor blood pressure, heart rate, and oxygenation continuously during first infusion.
+        Assess for hypotension and adjust infusion rate if needed.
+      cite: []
+    - title: Inhaled protocol (investigational)
+      body: >-
+        Deliver via jet or mesh nebulizer per clinical trial protocol. Patient seated upright,
+        normal tidal breathing for 10–15 minutes.
+      cite: []
+    - title: Storage
+      body: >-
+        Store lyophilized powder at 2–8 °C, light-protected. Reconstituted solution: use immediately
+        or within 24 hours if refrigerated.
+      cite: []
+description_md: >-
+  ## Clinical Development Context
+
+
+  VIP gained prominence during the COVID-19 pandemic when aviptadil (synthetic VIP) received
+  Emergency Use Authorization for acute respiratory distress syndrome. The TESICO Phase 3 trial
+  enrolled 816 patients with COVID-19-associated hypoxemic respiratory failure, evaluating
+  intravenous aviptadil combined with remdesivir versus placebo.
+
+
+  ## Pulmonary-Specific Actions
+
+
+  VIP demonstrates preferential concentration in pulmonary alveolar type II cells, which express
+  high densities of VPAC1 receptors. This anatomical specificity underlies its therapeutic potential
+  in ARDS, where alveolar epithelial injury is the primary pathology. The peptide inhibits
+  pro-inflammatory cytokines (TNF-α, IL-6), reduces neutrophil recruitment, and stabilizes the
+  alveolar-capillary barrier.
+
+
+  ## Beyond COVID-19
+
+
+  Investigational applications extend to congenital diaphragmatic hernia (CDH-associated pulmonary
+  hypoplasia), transfusion-related acute lung injury (TRALI), and post-COVID interstitial lung
+  disease. Animal models demonstrate reduced pulmonary vascular remodeling and preserved lung
+  architecture with VIP analogue therapy.
+
+
+  ## Synthesis Challenges
+
+
+  Chemo-enzymatic synthesis using peptiligase has emerged as an efficient production method for
+  aviptadil, addressing the complexity of manufacturing a 28-residue peptide at clinical scale.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-ai

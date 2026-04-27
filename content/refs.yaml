@@ -3094,3 +3094,59 @@ ruizlozano-2026:
   pmid: '41435934'
   authors:
     - Ruiz-Lozano R
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+brown-2023:
+  id: brown-2023
+  type: journal
+  title: >-
+    Intravenous aviptadil and remdesivir for treatment of COVID-19-associated hypoxaemic respiratory
+    failure in the USA (TESICO): a randomised, placebo-controlled trial.
+  year: 2023
+  pmid: '37348524'
+  authors:
+    - Brown SM
+
+udupa-2025:
+  id: udupa-2025
+  type: journal
+  title: >-
+    Aviptadil Therapy in Acute Respiratory Distress Syndrome Patients: A Systematic Review and
+    Meta-analysis.
+  year: 2025
+  pmid: '41368449'
+  authors:
+    - Udupa AA
+
+boesing-2022:
+  id: boesing-2022
+  type: journal
+  title: >-
+    Inhaled aviptadil for the possible treatment of COVID-19 in patients at high risk for ARDS:
+    study protocol for a randomized, placebo-controlled, and multicenter trial.
+  year: 2022
+  pmid: '36127739'
+  authors:
+    - Boesing M
+
+mahmoudzadeh-2023:
+  id: mahmoudzadeh-2023
+  type: journal
+  title: Peptiligase, an enzyme for efficient chemo-enzymatic synthesis of aviptadil.
+  year: 2023
+  pmid: '37774815'
+  authors:
+    - Mahmoudzadeh K
+
+chen-2025:
+  id: chen-2025
+  type: journal
+  title: >-
+    Investigation of vasoactive intestinal peptide expression and significance in a congenital
+    diaphragmatic hernia animal model.
+  year: 2025
+  pmid: '41342973'
+  authors:
+    - Chen J
