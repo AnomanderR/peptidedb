@@ -352,7 +352,7 @@ export class ClaimLinker {
     try {
       const res = await this.anthropic.messages.create({
         model: this.model,
-        max_tokens: 200,
+        max_tokens: 500,
         system: SYSTEM_PROMPT,
         messages: [{ role: "user", content: userMessage }],
       });

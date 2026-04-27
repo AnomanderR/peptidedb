@@ -593,3 +593,89 @@ kaplan-2017-semax:
   journal: "Neurosci Behav Physiol"
   year: 2017
   note: "Semax Russian nootropic peptide review (heptapeptide ACTH-derived)."
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+yamauchi-2026:
+  id: yamauchi-2026
+  type: journal
+  title: >-
+    Efficacy and safety of co-administered cagrilintide and semaglutide versus semaglutide alone in
+    adults with overweight or obesity with or without type 2 diabetes in Japan and Taiwan (REDEFINE
+    5): a multicentre, randomised, active-controlled, phase 3a trial.
+  year: 2026
+  pmid: '42009015'
+  authors:
+    - Yamauchi T
+
+ahmed-2026:
+  id: ahmed-2026
+  type: journal
+  title: >-
+    Efficacy and Safety of Cagrilintide and Cagrisema Versus Semaglutide as Anti-Obesity
+    Medications: A Systematic Review, Meta-Analysis and Meta-Regression.
+  year: 2026
+  pmid: '41834765'
+  authors:
+    - Ahmed M
+
+bailey-2026:
+  id: bailey-2026
+  type: journal
+  title: Long-acting amylin-related peptides as therapies for obesity and type 2 diabetes.
+  year: 2026
+  pmid: '41747885'
+  authors:
+    - Bailey CJ
+
+lempesis-2026:
+  id: lempesis-2026
+  type: journal
+  title: >-
+    Obesity pharmacotherapy reimagined: The era of multi-receptor agonists and next-generation
+    metabolic modulators, perspectives and controversies.
+  year: 2026
+  pmid: '41948476'
+  authors:
+    - Lempesis IG
+
+old-2026:
+  id: old-2026
+  type: journal
+  title: "Mitochondrial Adaptations in Skeletal Muscle Following Incretin-Based Therapies: In\_Vitro."
+  year: 2026
+  pmid: '41852165'
+  authors:
+    - Old V
+
+pardali-2026:
+  id: pardali-2026
+  type: journal
+  title: >-
+    New Drugs on the Block: Dietary Management and Nutritional Considerations During the Use of
+    Anti-Obesity Medication.
+  year: 2026
+  pmid: '41901137'
+  authors:
+    - Pardali EC
+
+gadelmawla-2026:
+  id: gadelmawla-2026
+  type: journal
+  title: >-
+    CagriSema Versus Semaglutide Monotherapy or Placebo for Obesity: A Systematic Review and
+    Meta-Analysis of Randomized Controlled Trials with GRADE Assessment.
+  year: 2026
+  pmid: '41759565'
+  authors:
+    - Gadelmawla AF
+
+muhundan-2026:
+  id: muhundan-2026
+  type: journal
+  title: 'Bariatric Surgery in the Era of GLP1RA: A Narrative Review.'
+  year: 2026
+  pmid: '41627368'
+  authors:
+    - Muhundan M

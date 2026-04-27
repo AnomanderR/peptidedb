@@ -29,6 +29,7 @@
  *   PUBMED_API_KEY     optional — bumps NCBI rate limit 3 → 10 req/s
  */
 
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -165,6 +166,19 @@ async function main(): Promise<void> {
   }
   const skipped = result.newCitations.length - newRefs.length;
   if (skipped > 0) console.log(`[gen:plate]   ${skipped} citation(s) already in refs.yaml (kept existing).`);
+
+  // Regenerate src/generated/citations.ts so audit:trust sees the new IDs.
+  // Without this, the next audit run fails with "unresolved ref" for every
+  // newly appended citation — caught during the cagrilintide calibration
+  // (2026-04-27). execFileSync is used to avoid shell-injection vectors;
+  // the literal command + arg array is interpreted by Node directly.
+  if (newRefs.length > 0) {
+    const projectRoot = join(__dirname, "..");
+    execFileSync("node", ["scripts/generate-citations.mjs"], {
+      cwd: projectRoot,
+      stdio: "inherit",
+    });
+  }
 
   // Warnings.
   for (const w of result.warnings) console.log(`[gen:plate] WARN: ${w}`);

@@ -1,0 +1,336 @@
+schema_version: 1
+slug: cagrilintide
+name: Cagrilintide
+peptide_class: Amylin Analogue
+classification: Long-Acting Amylin Analogue · Phase 3
+categories:
+  - amylin-analog
+  - weight-loss
+  - metabolic
+  - phase-3
+aliases:
+  - AM833
+  - CagriSema (combination form)
+color: purple
+evidence_level: phase-3
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Long-acting amylin receptor agonist studied in combination with semaglutide (CagriSema) for
+    obesity and type 2 diabetes. Acts centrally to induce satiety, suppress prandial glucagon, and
+    reduce food intake. Phase 3 trials show 7.5% greater weight loss versus semaglutide monotherapy.
+    Demonstrates dual AMYR/calcitonin-receptor agonism with extended half-life enabling once-weekly
+    subcutaneous dosing.
+  cite:
+    - yamauchi-2026
+    - ahmed-2026
+    - bailey-2026
+hero_stats:
+  - value: 7.5%
+    label: Additional weight loss vs semaglutide
+    cite:
+      - ahmed-2026
+  - value: Once weekly
+    label: Dosing frequency
+    cite:
+      - bailey-2026
+  - value: Dual AMYR/CTR
+    label: Receptor agonism
+    cite:
+      - bailey-2026
+hero_route:
+  value: SQ · Once Weekly
+  cite:
+    - bailey-2026
+mechanism:
+  primary_target:
+    value: Amylin receptor (AMYR) and calcitonin receptor (CTR) heterodimeric complexes
+    cite:
+      - bailey-2026
+  pathway:
+    value: >-
+      AMYR/CTR agonism → Central satiety signaling → Reduced food intake, delayed gastric emptying,
+      suppressed glucagon
+    cite:
+      - bailey-2026
+  downstream_effect:
+    value: >-
+      Central satiety induction, prandial glucagon suppression, reduced caloric intake, weight loss,
+      improved glycemic control
+    cite:
+      - bailey-2026
+      - yamauchi-2026
+  origin:
+    value: Second-generation non-aggregating long-acting amylin analogue designed for once-weekly dosing
+    cite:
+      - bailey-2026
+  feedback_intact:
+    value: Yes — acts via physiological amylin pathways
+    cite: []
+    badge: green
+  receptor_class:
+    value: Dual AMYR/CTR agonist — heterodimeric calcitonin receptor complex
+    cite:
+      - bailey-2026
+  half_life_basis:
+    value: Extended half-life design enabling once-weekly subcutaneous administration
+    cite:
+      - bailey-2026
+  diagram:
+    - kind: node
+      text:
+        value: Cagrilintide (SQ injection)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ AMYR/CTR agonism
+        cite: []
+    - kind: node
+      text:
+        value: Central Nervous System
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Satiety signaling, delayed gastric emptying
+        cite: []
+    - kind: node
+      text:
+        value: Pancreatic Alpha Cells
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Glucagon suppression
+        cite: []
+    - kind: outcome
+      text:
+        value: Reduced caloric intake, weight loss, glycemic control
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard dose (combination)
+      value:
+        value: Cagrilintide 2.4 mg + Semaglutide 2.4 mg (CagriSema)
+        cite:
+          - yamauchi-2026
+      notes:
+        value: Phase 3 REDEFINE 5 trial dosing.
+        cite: []
+    - parameter: Monotherapy dosing
+      value:
+        value: Dose-dependent, under investigation
+        cite:
+          - ahmed-2026
+      notes:
+        value: Monotherapy trials reported in meta-analysis.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Once weekly (subcutaneous)
+        cite:
+          - bailey-2026
+      notes:
+        value: Long-acting formulation.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Phase 3 RCT (REDEFINE 5), meta-analysis of 3 RCTs (n=3545)
+        cite:
+          - yamauchi-2026
+          - ahmed-2026
+    - parameter: Duration
+      value:
+        value: 26–52 weeks in trials
+        cite:
+          - yamauchi-2026
+    - parameter: Route
+      value:
+        value: Subcutaneous injection
+        cite:
+          - bailey-2026
+fat_loss:
+  evidence_strength: 85
+  evidence_level: phase-3
+  evidence_meta:
+    value: Phase 3 RCT (REDEFINE 5) · Meta-analysis of 3 RCTs (n=3545) · 26–52 weeks
+    cite:
+      - yamauchi-2026
+      - ahmed-2026
+  rows:
+    - parameter: Weight loss vs semaglutide
+      value:
+        value: 7.47% greater percentage weight loss
+        cite:
+          - ahmed-2026
+      notes:
+        value: CagriSema combination vs semaglutide monotherapy (meta-analysis).
+        cite: []
+    - parameter: Absolute weight change
+      value:
+        value: Significantly greater absolute weight reduction
+        cite:
+          - ahmed-2026
+      notes:
+        value: Mean difference favoring combination therapy.
+        cite: []
+    - parameter: Mechanism
+      value:
+        value: Central satiety, reduced caloric intake, delayed gastric emptying
+        cite:
+          - bailey-2026
+    - parameter: BMI reduction
+      value:
+        value: Significant BMI reduction vs comparator
+        cite:
+          - ahmed-2026
+    - parameter: Glycemic benefit
+      value:
+        value: Reduced fasting glucose and HbA1c
+        cite:
+          - ahmed-2026
+      notes:
+        value: Synergistic effect with semaglutide in combination.
+        cite: []
+    - parameter: Lipid effects
+      value:
+        value: Improvements in total cholesterol, LDL-C, HDL-C, VLDL-C, triglycerides
+        cite:
+          - ahmed-2026
+    - parameter: Body composition
+      value:
+        value: Predominant fat loss with weight reduction
+        cite:
+          - lempesis-2026
+    - parameter: Mitochondrial function
+      value:
+        value: In vitro effects on skeletal muscle mitochondria under metabolic stress conditions
+        cite:
+          - old-2026
+      notes:
+        value: C2C12 myotube study; clinical relevance under investigation.
+        cite: []
+    - parameter: Combination rationale
+      value:
+        value: 'Multi-pathway approach: amylin (satiety) + GLP-1 (incretin)'
+        cite:
+          - lempesis-2026
+    - parameter: Key publications
+      value:
+        value: REDEFINE 5 (Yamauchi 2026) · Ahmed meta-analysis 2026 · Bailey review 2026
+        cite:
+          - yamauchi-2026
+          - ahmed-2026
+          - bailey-2026
+side_effects:
+  rows:
+    - parameter: Gastrointestinal
+      value:
+        value: Nausea, diarrhea (common with incretin-based therapies)
+        cite:
+          - pardali-2026
+      notes:
+        value: Dietary management and nutritional monitoring recommended.
+        cite: []
+      severity: mild
+    - parameter: Injection site reactions
+      value:
+        value: Local reactions possible with subcutaneous administration
+        cite: []
+      severity: mild
+    - parameter: Safety profile
+      value:
+        value: Generally consistent with incretin-based therapies
+        cite:
+          - yamauchi-2026
+          - gadelmawla-2026
+      notes:
+        value: Phase 3 and meta-analysis safety data.
+        cite: []
+    - parameter: Tolerability
+      value:
+        value: Tolerability considerations similar to GLP-1RAs
+        cite:
+          - muhundan-2026
+      severity: moderate
+    - parameter: Muscle preservation
+      value:
+        value: Lean mass considerations during weight loss
+        cite:
+          - old-2026
+      notes:
+        value: In vitro mitochondrial effects observed; clinical impact under investigation.
+        cite: []
+  contraindications_absolute:
+    - value: Hypersensitivity to cagrilintide or formulation components
+      cite: []
+  contraindications_relative:
+    - value: Severe gastrointestinal disease
+      cite: []
+    - value: History of pancreatitis (incretin-based therapy consideration)
+      cite: []
+administration:
+  steps:
+    - title: Dosing frequency
+      body: >-
+        Once-weekly subcutaneous injection. Long-acting formulation designed for weekly
+        administration schedule.
+      cite:
+        - bailey-2026
+    - title: Combination form
+      body: >-
+        Co-formulated with semaglutide as CagriSema for single weekly injection combining amylin and
+        GLP-1 receptor agonism.
+      cite:
+        - yamauchi-2026
+        - bailey-2026
+    - title: Injection site
+      body: >-
+        Subcutaneous — typically abdomen, thigh, or upper arm. Rotate injection sites weekly to
+        minimize local reactions.
+      cite: []
+    - title: Storage
+      body: >-
+        Refrigerate 2–8°C. Follow product-specific storage instructions for pre-filled pens or
+        vials. Protect from light.
+      cite: []
+    - title: Dietary considerations
+      body: >-
+        Nutritional monitoring recommended during treatment. Dietary management strategies important
+        for tolerability and outcomes.
+      cite:
+        - pardali-2026
+synergy:
+  stacks:
+    - partner_slug: semaglutide
+      partner_label: Semaglutide
+      synergy: strong
+      rationale: >-
+        Cagrilintide (amylin receptor agonist) and semaglutide (GLP-1 receptor agonist) act on
+        distinct receptor systems to produce synergistic weight loss through complementary
+        mechanisms — central satiety via amylin pathways plus incretin-mediated glucose control and
+        appetite suppression via GLP-1. Co-formulated as CagriSema, this combination demonstrates
+        7.5% greater weight loss versus semaglutide monotherapy in Phase 3 trials with additional
+        benefits on glycemic control and lipid parameters.
+      protocol:
+        CagriSema: Cagrilintide 2.4 mg + Semaglutide 2.4 mg
+        Frequency: Once weekly subcutaneous
+        Duration: 26–52 weeks (trial data)
+      primary_benefit: Enhanced weight loss, improved glycemic control, multi-pathway metabolic modulation
+      cite:
+        - yamauchi-2026
+        - ahmed-2026
+        - bailey-2026
+description_md: >-
+  Cagrilintide represents second-generation amylin analogue design, engineered for non-aggregating,
+  long-acting pharmacokinetics enabling once-weekly dosing. As a dual AMYR/calcitonin-receptor
+  agonist, it mimics physiological amylin signaling while achieving extended duration through
+  structural modifications. The combination with semaglutide (CagriSema) leverages multi-pathway
+  metabolic modulation, addressing weight loss plateaus and inter-individual variability observed
+  with single-pathway therapies. Phase 3 evidence demonstrates superiority over semaglutide
+  monotherapy, with ongoing investigation into optimal dosing strategies and long-term outcomes.
+  Metabolic profiling studies have characterized its in vitro effects on skeletal muscle
+  mitochondrial function under lipotoxic conditions, though clinical implications require further
+  study.
+maturity: auto-drafted
+contributors:
+  - peptidesdb-core
