@@ -2245,3 +2245,250 @@ grosicki-2014:
   pmid: '24644551'
   authors:
     - Grosicki M
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+bourgeois-2025:
+  id: bourgeois-2025
+  type: journal
+  title: >-
+    The disordered p53 transactivation domain is the target of FOXO4 and the senolytic compound
+    FOXO4-DRI.
+  year: 2025
+  pmid: '40593617'
+  authors:
+    - Bourgeois B
+
+alameen-2026:
+  id: alameen-2026
+  type: journal
+  title: >-
+    Targeting the FOXO4-p53 axis by retro-inverso peptide senolytic agents: a pharmacological
+    strategy to mitigate brain aging and cognitive decline.
+  year: 2026
+  pmid: '42024235'
+  authors:
+    - Alameen AAM
+
+zhang-2020:
+  id: zhang-2020
+  type: journal
+  title: >-
+    FOXO4-DRI alleviates age-related testosterone secretion insufficiency by targeting senescent
+    Leydig cells in aged mice.
+  year: 2020
+  pmid: '31959736'
+  authors:
+    - Zhang C
+
+tripathi-2021:
+  id: tripathi-2021
+  type: journal
+  title: Development of a novel senolytic by precise disruption of FOXO4-p53 complex.
+  year: 2021
+  pmid: '34768086'
+  authors:
+    - Tripathi U
+
+kong-2025:
+  id: kong-2025
+  type: journal
+  title: >-
+    FOXO4-DRI induces keloid senescent fibroblast apoptosis by promoting nuclear exclusion of
+    upregulated p53-serine 15 phosphorylation.
+  year: 2025
+  pmid: '39994346'
+  authors:
+    - Kong YX
+
+pawge-2021:
+  id: pawge-2021
+  type: journal
+  title: p53 regulated senescence mechanism and role of its modulators in age-related disorders.
+  year: 2021
+  pmid: '34118220'
+  authors:
+    - Pawge G
+
+kohoutova-2025:
+  id: kohoutova-2025
+  type: journal
+  title: Structural plasticity of the FOXO-DBD:p53-TAD interaction.
+  year: 2025
+  pmid: '40425537'
+  authors:
+    - Kohoutova K
+
+born-2023:
+  id: born-2023
+  type: journal
+  title: Eliminating Senescent Cells Can Promote Pulmonary Hypertension Development and Progression.
+  year: 2023
+  pmid: '36515093'
+  authors:
+    - Born E
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+zhu-2022:
+  id: zhu-2022
+  type: journal
+  title: >-
+    The Molecular Structure and Role of Humanin in Neural and Skeletal Diseases, and in Tissue
+    Regeneration.
+  year: 2022
+  pmid: '35372353'
+  authors:
+    - Zhu S
+
+lue-2021:
+  id: lue-2021
+  type: journal
+  title: The emerging role of mitochondrial derived peptide humanin in the testis.
+  year: 2021
+  pmid: '34534645'
+  authors:
+    - Lue Y
+
+morris-2021:
+  id: morris-2021
+  type: journal
+  title: Inducible fold-switching as a mechanism to fibrillate pro-apoptotic BCL-2 proteins.
+  year: 2021
+  pmid: '33764501'
+  authors:
+    - Morris DL
+
+shahzaib-2026:
+  id: shahzaib-2026
+  type: journal
+  title: >-
+    Humanin as an evolutionarily tuned mitochondrial peptide: Insights from mammalian oxidative
+    stress diversity.
+  year: 2026
+  pmid: '41864362'
+  authors:
+    - Shahzaib M
+
+velentza-2024:
+  id: velentza-2024
+  type: journal
+  title: >-
+    Humanin Treatment Protects Against Venetoclax-Induced Bone Growth Retardation in Ex Vivo
+    Cultured Rat Bones.
+  year: 2024
+  pmid: '38328478'
+  authors:
+    - Velentza L
+
+huang-2025:
+  id: huang-2025
+  type: journal
+  title: >-
+    Ameliorative effects of Gly[14]-humanin on cyclophosphamide-induced premature ovarian
+    insufficiency and underlying mechanisms.
+  year: 2025
+  pmid: '40639309'
+  authors:
+    - Huang J
+
+el-2022:
+  id: el-2022
+  type: journal
+  title: Humanin Ameliorates Late-onset Hypogonadism in Aged Male Rats.
+  year: 2022
+  pmid: '35086467'
+  authors:
+    - El Kattawy HA
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+pincus-2024:
+  id: pincus-2024
+  type: journal
+  title: >-
+    Poptosis or Peptide-Induced Transmembrane Pore Formation: A Novel Way to Kill Cancer Cells
+    without Affecting Normal Cells.
+  year: 2024
+  pmid: '38927351'
+  authors:
+    - Pincus MR
+
+sarafrazyazdi-2022:
+  id: sarafrazyazdi-2022
+  type: journal
+  title: >-
+    PNC-27, a Chimeric p53-Penetratin Peptide Binds to HDM-2 in a p53 Peptide-like Structure,
+    Induces Selective Membrane-Pore Formation and Leads to Cancer Cell Lysis.
+  year: 2022
+  pmid: '35625682'
+  authors:
+    - Sarafraz-Yazdi E
+
+krzesaj-2024:
+  id: krzesaj-2024
+  type: journal
+  title: >-
+    Anti-Cancer Peptide PNC-27 Kills Cancer Cells by Unique Interactions with Plasma Membrane-Bound
+    hdm-2 and with Mitochondrial Membranes Causing Mitochondrial Disruption.
+  year: 2024
+  pmid: '38802154'
+  authors:
+    - Krzesaj P
+
+sarafrazyazdi-2010:
+  id: sarafrazyazdi-2010
+  type: journal
+  title: >-
+    Anticancer peptide PNC-27 adopts an HDM-2-binding conformation and kills cancer cells by binding
+    to HDM-2 in their membranes.
+  year: 2010
+  pmid: '20080680'
+  authors:
+    - Sarafraz-Yazdi E
+
+thadi-2020:
+  id: thadi-2020
+  type: journal
+  title: >-
+    Targeting Membrane HDM-2 by PNC-27 Induces Necrosis in Leukemia Cells But Not in Normal
+    Hematopoietic Cells.
+  year: 2020
+  pmid: '32878773'
+  authors:
+    - Thadi A
+
+sookraj-2010:
+  id: sookraj-2010
+  type: journal
+  title: The anti-cancer peptide, PNC-27, induces tumor cell lysis as the intact peptide.
+  year: 2010
+  pmid: '20182728'
+  authors:
+    - Sookraj KA
+
+thadi-2021:
+  id: thadi-2021
+  type: journal
+  title: >-
+    Molecular Targeting of H/MDM-2 Oncoprotein in Human Colon Cancer Cells and Stem-like Colonic
+    Epithelial-derived Progenitor Cells.
+  year: 2021
+  pmid: '33419797'
+  authors:
+    - Thadi A
+
+davitt-2014:
+  id: davitt-2014
+  type: journal
+  title: >-
+    The anti-cancer peptide, PNC-27, induces tumor cell necrosis of a poorly differentiated
+    non-solid tissue human leukemia cell line that depends on expression of HDM-2 in the plasma
+    membrane of these cells.
+  year: 2014
+  pmid: '25117093'
+  authors:
+    - Davitt K

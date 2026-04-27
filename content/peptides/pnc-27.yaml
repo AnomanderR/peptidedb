@@ -1,0 +1,318 @@
+schema_version: 1
+slug: pnc-27
+name: PNC-27
+peptide_class: Anticancer Peptide
+classification: p53-HDM-2 Peptide · Membrane-Targeting
+categories:
+  - anticancer
+  - p53-derived
+  - membrane-disrupting
+  - preclinical
+aliases:
+  - p53-penetratin chimeric peptide
+  - PNC-28
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic 32-amino-acid anticancer peptide combining the HDM-2-binding domain of p53 (residues
+    12-26) with a cell-penetrating peptide sequence. Selectively induces necrosis in cancer cells
+    via transmembrane pore formation after binding to membrane-associated HDM-2, sparing normal
+    cells which express minimal membrane HDM-2. Pre-clinical studies demonstrate efficacy across
+    solid tumors and hematologic malignancies.
+  cite:
+    - pincus-2024
+    - sarafrazyazdi-2022
+hero_stats:
+  - value: 32 AA
+    label: Peptide length
+    cite:
+      - sarafrazyazdi-2022
+  - value: 12-26
+    label: p53 domain
+    cite: []
+  - value: Pre-clinical
+    label: Development stage
+    cite: []
+hero_route:
+  value: In vitro / Pre-clinical only
+  cite: []
+mechanism:
+  primary_target:
+    value: Membrane-bound HDM-2 protein on cancer cell surface
+    cite:
+      - sarafrazyazdi-2022
+      - krzesaj-2024
+  pathway:
+    value: >-
+      PNC-27 binds to membrane HDM-2 1-109 domain → transmembrane pore formation → rapid necrosis
+      (poptosis)
+    cite:
+      - pincus-2024
+      - krzesaj-2024
+  downstream_effect:
+    value: >-
+      Immediate cell lysis and extrusion of intracellular contents; secondary mitochondrial membrane
+      disruption
+    cite:
+      - pincus-2024
+      - krzesaj-2024
+  origin:
+    value: 'Chimeric design: p53 transactivating domain (12-26) fused to penetratin CPP sequence'
+    cite:
+      - sarafrazyazdi-2022
+  feedback_intact:
+    value: N/A — cytotoxic mechanism, not signaling modulation
+    cite: []
+  receptor_class:
+    value: HDM-2 (Human Double Minute 2) — p53 regulatory protein
+    cite:
+      - sarafrazyazdi-2022
+  extra_rows:
+    - key: Selectivity basis
+      value:
+        value: Cancer cells express 10–100× higher membrane HDM-2 vs normal cells
+        cite:
+          - sarafrazyazdi-2010
+          - thadi-2020
+    - key: Peptide integrity
+      value:
+        value: Dual-label studies confirm intact peptide at membrane during pore formation
+        cite:
+          - sookraj-2010
+    - key: Binding site
+      value:
+        value: p53 binding pocket of HDM-2 (residues 1-109)
+        cite:
+          - krzesaj-2024
+  diagram:
+    - kind: node
+      text:
+        value: Cancer Cell Membrane
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ PNC-27 binds membrane HDM-2
+        cite:
+          - sarafrazyazdi-2022
+    - kind: node
+      text:
+        value: Transmembrane Pore Formation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Rapid lysis & content extrusion
+        cite:
+          - pincus-2024
+    - kind: outcome
+      text:
+        value: Tumor Cell Necrosis (Poptosis)
+        cite:
+          - pincus-2024
+    - kind: node
+      text:
+        value: 'Secondary: Mitochondrial Disruption'
+        cite:
+          - krzesaj-2024
+dosage:
+  rows:
+    - parameter: Clinical status
+      value:
+        value: Pre-clinical only — no human trials
+        cite: []
+        badge: red
+      notes:
+        value: In vitro and animal model data only.
+        cite: []
+    - parameter: In vitro concentrations
+      value:
+        value: 10–100 μM range
+        cite: []
+      notes:
+        value: Effective concentrations in cell culture studies.
+        cite: []
+    - parameter: Shorter analogue
+      value:
+        value: PNC-28 (28 AA variant)
+        cite: []
+      notes:
+        value: Retains HDM-2 binding and cytotoxic activity.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Pre-clinical / In vitro
+        cite: []
+        badge: yellow
+fat_loss:
+  evidence_strength: 0
+  evidence_level: theoretical
+  evidence_meta:
+    value: Not applicable — anticancer peptide, not metabolic
+    cite: []
+  rows:
+    - parameter: Fat loss mechanism
+      value:
+        value: None — cytotoxic anticancer agent
+        cite: []
+side_effects:
+  rows:
+    - parameter: Human safety data
+      value:
+        value: None available — no human trials conducted
+        cite: []
+        badge: red
+      severity: severe
+    - parameter: Normal cell selectivity
+      value:
+        value: 'In vitro: no cytotoxicity to normal cells (MCF-10-2A, peripheral blood mononuclear cells)'
+        cite:
+          - sarafrazyazdi-2010
+          - thadi-2020
+        badge: green
+      notes:
+        value: Normal cells express minimal membrane HDM-2.
+        cite: []
+    - parameter: Cancer cell specificity
+      value:
+        value: Depends on membrane HDM-2 expression levels
+        cite: []
+      notes:
+        value: Ovarian cancer lines with low membrane HDM-2 showed <30% necrosis.
+        cite: []
+    - parameter: Cell death mechanism
+      value:
+        value: Necrosis (not apoptosis) — rapid membrane lysis
+        cite:
+          - pincus-2024
+    - parameter: Mitochondrial effects
+      value:
+        value: Secondary mitochondrial membrane disruption in cancer cells
+        cite: []
+  contraindications_absolute:
+    - value: Human use — no clinical trials or safety data
+      cite: []
+  contraindications_relative: []
+administration:
+  steps:
+    - title: Pre-clinical status
+      body: >-
+        PNC-27 has not been tested in human subjects. All data derive from in vitro cancer cell line
+        studies and limited animal models. No approved clinical formulation, dosing protocol, or
+        safety profile exists.
+      cite:
+        - pincus-2024
+    - title: Cell culture protocols
+      body: >-
+        In vitro studies used 10–100 μM PNC-27 dissolved in cell culture medium. Peptide was added
+        directly to cancer cell cultures (pancreatic, breast, colon, ovarian, leukemia lines) and
+        incubated for 24–72 hours.
+      cite: []
+    - title: Fluorescent labeling studies
+      body: >-
+        Dual-labeled PNC-27 (green on N-terminus, red on C-terminus) demonstrated intact peptide
+        binding to cancer cell membranes with combined yellow fluorescence at 30 minutes, persisting
+        during cell lysis.
+      cite:
+        - sookraj-2010
+    - title: Membrane HDM-2 requirement
+      body: >-
+        Cytotoxicity correlates directly with membrane HDM-2 expression levels. Blocking HDM-2's
+        p53-binding domain (1-109) with monoclonal antibodies prevents PNC-27-induced necrosis.
+      cite: []
+synergy:
+  stacks: []
+description_md: >-
+  ## Cancer Cell Selectivity
+
+
+  PNC-27 demonstrates selective cytotoxicity based on a fundamental difference between cancer and
+  normal cells: membrane HDM-2 expression. Cancer cells express HDM-2 (also called MDM-2) on their
+  plasma membranes at levels 10–100-fold higher than normal cells, which primarily localize HDM-2 to
+  the cytoplasm and nucleus.
+
+
+  ## Tested Cancer Types
+
+
+  Pre-clinical studies have demonstrated PNC-27 efficacy across multiple cancer cell lines:
+
+
+  - **Pancreatic**: MIA-PaCa-2 cells
+
+  - **Breast**: MCF-7 cells (normal MCF-10-2A unaffected)
+
+  - **Colon**: Including CD44+ cancer stem cells
+
+  - **Ovarian**: Multiple epithelial ovarian cancer lines (response correlated with membrane HDM-2
+  levels)
+
+  - **Leukemia**: HL-60 and other poorly differentiated hematopoietic lines (normal hematopoietic
+  cells unaffected)
+
+
+  ## Mechanism Validation
+
+
+  Multiple experimental approaches confirm the HDM-2-dependent mechanism:
+
+
+  1. **Antibody blocking**: Monoclonal antibodies against HDM-2's p53-binding site (residues 1-109)
+  block PNC-27 cytotoxicity
+
+  2. **Transfection studies**: MCF-10-2A cells (normally resistant) become susceptible when
+  transfected with membrane-localized HDM-2
+
+  3. **Intact peptide requirement**: Dual-fluorescent labeling confirms the entire 32-amino-acid
+  sequence remains intact during membrane binding and pore formation
+
+  4. **Structural modeling**: The p53 domain of PNC-27 adopts a conformation directly superimposable
+  on p53 bound to HDM-2
+
+
+  ## Poptosis vs Apoptosis
+
+
+  The authors coined the term "poptosis" (peptide-induced transmembrane pore formation) to
+  distinguish PNC-27's mechanism from classical apoptosis. Cancer cell death occurs within hours
+  via:
+
+
+  - Transmembrane pore formation
+
+  - Rapid extrusion of intracellular contents
+
+  - Cell membrane disruption
+
+  - Secondary mitochondrial membrane damage
+
+
+  This necrotic mechanism may bypass apoptosis-resistant cancer phenotypes.
+
+
+  ## PNC-28 Variant
+
+
+  A shorter 28-amino-acid analogue (PNC-28) retains the HDM-2-binding domain and demonstrates
+  similar selective cytotoxicity, suggesting potential for further optimization.
+
+
+  ## Clinical Translation Gap
+
+
+  Despite promising pre-clinical data spanning over a decade (2010–2024), no human clinical trials
+  have been initiated. Key translational questions remain:
+
+
+  - Optimal delivery route and pharmacokinetics
+
+  - Human-relevant dosing
+
+  - Potential immunogenicity
+
+  - Safety in patients with varying membrane HDM-2 expression profiles
+
+  - Efficacy in solid tumor microenvironments vs cell culture
+maturity: human-reviewed
+contributors: []

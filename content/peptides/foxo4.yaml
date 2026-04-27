@@ -1,0 +1,298 @@
+schema_version: 1
+slug: foxo4
+name: FOXO4-DRI
+peptide_class: Senolytic Peptide
+classification: Senolytic Peptide · D-Retro-Inverso
+categories:
+  - senolytic
+  - anti-aging
+  - experimental
+aliases:
+  - FOXO4-DRI
+  - FOXO4 D-retro-inverso
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    D-retro-inverso peptide derived from the FOXO4 transcription factor's p53-binding domain.
+    Disrupts FOXO4-p53 interaction selectively in senescent cells, triggering apoptosis while
+    sparing healthy tissue. Cleared senescent cells in aged mice, restored cerebral blood flow, and
+    improved physical function. Pre-clinical only — no human trials completed.
+  cite:
+    - bourgeois-2025
+    - alameen-2026
+hero_stats:
+  - value: p53-TAD
+    label: Molecular target
+    cite:
+      - bourgeois-2025
+  - value: Pre-clinical
+    label: Development stage
+    cite: []
+  - value: SQ
+    label: Route (animal)
+    cite: []
+hero_route:
+  value: SQ · Animal models only
+  cite: []
+mechanism:
+  primary_target:
+    value: FOXO4-p53 protein complex in senescent cells
+    cite:
+      - bourgeois-2025
+      - tripathi-2021
+  pathway:
+    value: >-
+      FOXO4-DRI binds disordered p53 transactivation domain → displaces FOXO4 → nuclear p53
+      exclusion → p53-mediated apoptosis in senescent cells
+    cite: []
+  downstream_effect:
+    value: Selective apoptosis of senescent cells; clearance restores tissue homeostasis
+    cite:
+      - tripathi-2021
+      - alameen-2026
+  origin:
+    value: >-
+      D-retro-inverso modification — inverted amino acid sequence, D-amino acids for protease
+      resistance
+    cite: []
+  receptor_class:
+    value: Protein-protein interaction disruptor (non-receptor)
+    cite: []
+  extra_rows:
+    - key: Selectivity mechanism
+      value:
+        value: >-
+          FOXO4-p53 complex stabilises senescent cell viability; disruption restores apoptotic
+          competence
+        cite:
+          - pawge-2021
+          - kong-2025
+    - key: Structural basis
+      value:
+        value: >-
+          Binds disordered p53-TAD with high affinity; structural plasticity allows competitive
+          displacement
+        cite:
+          - bourgeois-2025
+          - kohoutova-2025
+    - key: p53 phosphorylation
+      value:
+        value: Upregulates p53-Ser15 phosphorylation and promotes nuclear exclusion in senescent cells
+        cite:
+          - kong-2025
+  diagram:
+    - kind: node
+      text:
+        value: Senescent Cell
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ FOXO4-DRI binds p53-TAD
+        cite:
+          - bourgeois-2025
+    - kind: node
+      text:
+        value: FOXO4-p53 Complex Disruption
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ p53 nuclear exclusion
+        cite:
+          - kong-2025
+    - kind: node
+      text:
+        value: Apoptotic Pathway Activation
+        cite: []
+    - kind: outcome
+      text:
+        value: Senescent Cell Clearance
+        cite: []
+dosage:
+  rows:
+    - parameter: Animal dose (mouse)
+      value:
+        value: 5 mg/kg
+        cite: []
+      notes:
+        value: SQ injection, aged mouse model (testosterone restoration).
+        cite: []
+    - parameter: Frequency (animal)
+      value:
+        value: Variable — single or intermittent dosing
+        cite: []
+      notes:
+        value: Protocol-dependent; no standardised regimen.
+        cite: []
+    - parameter: Human equivalent (theoretical)
+      value:
+        value: ~0.4 mg/kg (28 mg / 70 kg adult)
+        cite: []
+      notes:
+        value: Extrapolated using allometric scaling; no clinical validation.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal / mechanistic
+        cite: []
+    - parameter: Route
+      value:
+        value: SQ (animal)
+        cite: []
+      notes:
+        value: No human route established.
+        cite: []
+    - parameter: Duration
+      value:
+        value: Weeks to months (animal studies)
+        cite: []
+      notes:
+        value: Senescent cell clearance observed within weeks.
+        cite: []
+    - parameter: Clinical status
+      value:
+        value: No human trials completed
+        cite: []
+side_effects:
+  rows:
+    - parameter: Pulmonary hypertension risk
+      value:
+        value: Senescent cell elimination promoted PH development/progression in rodent models
+        cite:
+          - born-2023
+      severity: severe
+    - parameter: Context-dependent toxicity
+      value:
+        value: Beneficial effects may be tissue/context-specific; elimination not universally protective
+        cite:
+          - born-2023
+      severity: moderate
+    - parameter: Off-target apoptosis
+      value:
+        value: Theoretical risk of non-senescent cell apoptosis (selectivity not absolute)
+        cite: []
+      severity: moderate
+    - parameter: Immune perturbation
+      value:
+        value: Senescent cells contribute to immune surveillance; clearance effects unknown
+        cite: []
+      severity: moderate
+    - parameter: Human safety unknown
+      value:
+        value: No clinical trials — toxicity profile in humans not established
+        cite: []
+      severity: severe
+  contraindications_absolute:
+    - value: Pulmonary hypertension or vascular disease (preclinical evidence of harm)
+      cite:
+        - born-2023
+    - value: Pregnancy / lactation (no safety data)
+      cite: []
+  contraindications_relative:
+    - value: Active malignancy (senescence as tumour suppressor mechanism)
+      cite: []
+    - value: Wound healing / tissue repair (senescent cells involved in fibrosis resolution)
+      cite: []
+administration:
+  steps:
+    - title: Pre-clinical route
+      body: Subcutaneous injection used in rodent models. No human administration protocol exists.
+      cite: []
+    - title: Reconstitution (animal)
+      body: >-
+        Typically reconstituted in sterile saline or PBS for animal experiments. Stability data
+        limited.
+      cite: []
+    - title: Dosing schedule
+      body: Variable — single bolus or intermittent dosing over weeks. No standardised human protocol.
+      cite: []
+    - title: Clinical development status
+      body: >-
+        No registered human trials. Commercialisation by Cleara Biotech (Netherlands) in development
+        phase.
+      cite: []
+    - title: Safety monitoring (proposed)
+      body: >-
+        Would require cardiovascular assessment, pulmonary function, immune panel, tumour
+        surveillance if human trials proceed.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: metformin
+      partner_label: Metformin
+      synergy: multi-pathway
+      rationale: >-
+        Metformin suppresses senescence-associated secretory phenotype (SASP) and reduces senescent
+        cell burden via AMPK activation, complementing FOXO4-DRI's direct senolytic action. Combined
+        approach targets both senescent cell clearance (FOXO4-DRI) and inflammatory milieu reduction
+        (metformin). Theoretical synergy — no experimental validation.
+      protocol:
+        FOXO4-DRI: Hypothetical intermittent dosing
+        Metformin: 500–1500 mg daily (standard anti-aging protocol)
+        Frequency: Metformin daily; FOXO4-DRI episodic (if clinically available)
+      primary_benefit: Senescent cell clearance + SASP suppression
+      cite: []
+    - partner_slug: quercetin
+      partner_label: Quercetin + Dasatinib
+      synergy: moderate
+      rationale: >-
+        Quercetin + dasatinib (D+Q) is the most-studied senolytic cocktail, targeting senescent
+        cells via BCL-2 family inhibition and tyrosine kinase pathways. FOXO4-DRI targets a distinct
+        molecular axis (FOXO4-p53). Multi-target senolysis may clear broader senescent cell
+        populations. Speculative — no combination data published.
+      protocol:
+        FOXO4-DRI: Hypothetical regimen (not defined)
+        Dasatinib: 100 mg (intermittent)
+        Quercetin: 1000 mg (intermittent)
+        Frequency: 'D+Q: 2 consecutive days per month (standard protocol)'
+      primary_benefit: Broader senescent cell elimination across pathways
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  FOXO4-DRI is a D-retro-inverso peptide designed to selectively eliminate senescent cells by
+  disrupting the FOXO4-p53 protein complex. Senescent cells accumulate with age and disease,
+  contributing to inflammation, tissue dysfunction, and age-related pathologies. FOXO4-DRI binds the
+  disordered p53 transactivation domain, displacing FOXO4 and triggering apoptosis selectively in
+  senescent cells while preserving healthy tissue.
+
+
+  ## Structural Design
+
+
+  The D-retro-inverso modification — inverted amino acid sequence with D-amino acids — confers
+  protease resistance and extended plasma stability compared to natural L-amino acid peptides. This
+  modification enables systemic delivery and tissue penetration in animal models.
+
+
+  ## Pre-Clinical Evidence
+
+
+  In aged mice, FOXO4-DRI administration cleared senescent cells, restored physical function,
+  improved fur density, and reversed age-related testosterone insufficiency by targeting senescent
+  Leydig cells. Cerebral blood flow and blood-brain barrier integrity improved in aged mammalian
+  models. Studies in keloid fibroblasts demonstrated selective apoptosis induction via upregulated
+  p53-Ser15 phosphorylation and nuclear exclusion.
+
+
+  ## Critical Caveat: Pulmonary Hypertension
+
+
+  A 2023 *Circulation* study reported that senescent cell elimination with senolytics (including
+  FOXO4-DRI) promoted pulmonary hypertension development and progression in rodent models,
+  contradicting the assumption that senolysis is universally beneficial. This context-dependent
+  toxicity raises significant safety concerns for clinical translation.
+
+
+  ## Current Status
+
+
+  No human trials have been completed or registered. Cleara Biotech (Netherlands) holds commercial
+  rights and is pursuing development. The peptide remains an experimental tool for senescence
+  research with unknown human safety, efficacy, and dosing parameters.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

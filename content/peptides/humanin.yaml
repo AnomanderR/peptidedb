@@ -1,0 +1,276 @@
+schema_version: 1
+slug: humanin
+name: Humanin
+peptide_class: Mitochondrial-Derived Peptide
+classification: Mitochondrial-Derived Peptide · Cytoprotective
+categories:
+  - mitochondrial
+  - cytoprotective
+  - neuroprotective
+  - anti-apoptotic
+aliases:
+  - HN
+  - HNG
+  - Gly[14]-humanin
+  - MTRNR2
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    24-amino-acid mitochondrial-derived peptide encoded in the 16S rRNA region of mtDNA.
+    Cytoprotective via direct binding to Bax, Bim, and tBid, preventing mitochondrial outer membrane
+    permeabilization and caspase-dependent apoptosis. Studied in models of Alzheimer's disease,
+    premature ovarian insufficiency, testicular aging, and bone growth retardation. Acts
+    intracellularly and as a secreted factor via FPRL1/2 receptors.
+  cite:
+    - zhu-2022
+    - lue-2021
+    - morris-2021
+hero_stats:
+  - value: 24-AA
+    label: Peptide length
+    cite:
+      - zhu-2022
+  - value: mtDNA
+    label: Encoded origin
+    cite:
+      - zhu-2022
+      - shahzaib-2026
+  - value: Bax/Bim
+    label: Primary target
+    cite:
+      - zhu-2022
+      - morris-2021
+hero_route:
+  value: SQ · Experimental
+  cite: []
+mechanism:
+  primary_target:
+    value: >-
+      Intracellular: Bax, Bim, tBid (pro-apoptotic Bcl-2 family). Extracellular: FPRL1/2
+      G-protein-coupled receptors
+    cite:
+      - zhu-2022
+      - lue-2021
+  pathway:
+    value: >-
+      Humanin binds Bax/Bim → inhibits mitochondrial outer membrane permeabilization (MOMP) → blocks
+      cytochrome c release → prevents caspase activation → cell survival
+    cite: []
+  downstream_effect:
+    value: >-
+      Suppression of apoptosis, mitochondrial stabilization, reduced oxidative stress, preservation
+      of germ cells and neurons under stress
+    cite:
+      - zhu-2022
+      - lue-2021
+      - velentza-2024
+  origin:
+    value: >-
+      Encoded by short open reading frame in mitochondrial 16S rRNA gene (MTRNR2). 24-28 amino
+      acids. 13 homologous variants (MTRNR2L1-L13) identified.
+    cite:
+      - zhu-2022
+      - shahzaib-2026
+  feedback_intact:
+    value: Not applicable — peptide acts as anti-apoptotic signal, not hormonal axis
+    cite: []
+  antibody_development:
+    value: Not reported in animal models
+    cite: []
+  receptor_class:
+    value: Intracellular (Bcl-2 family) + Extracellular (FPRL1/2 GPCR)
+    cite:
+      - zhu-2022
+  half_life_basis:
+    value: Not characterized in literature
+    cite: []
+  extra_rows:
+    - key: Fibrillation mechanism
+      value:
+        value: >-
+          Humanin induces amyloid-like fibrillation of Bax and BID, sequestering them into
+          non-functional aggregates — novel anti-apoptotic mechanism
+        cite:
+          - morris-2021
+    - key: IGFBP-3 interaction
+      value:
+        value: Humanin binds IGFBP-3, preventing its pro-apoptotic effects
+        cite:
+          - lue-2021
+  diagram:
+    - kind: node
+      text:
+        value: Mitochondrial stress
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Humanin binds Bax/Bim/tBid
+        cite:
+          - zhu-2022
+    - kind: node
+      text:
+        value: Block MOMP
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Prevent cytochrome c release
+        cite:
+          - zhu-2022
+    - kind: node
+      text:
+        value: Inhibit caspase cascade
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Block ASK/JNK signalling (via FPRL1/2)
+        cite: []
+    - kind: outcome
+      text:
+        value: Cell survival
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard experimental dose (HNG)
+      value:
+        value: 4 mg/kg IP (rat)
+        cite: []
+      notes:
+        value: Most common dose in rodent models.
+        cite: []
+    - parameter: Ex vivo bone culture
+      value:
+        value: 1 µg/mL
+        cite: []
+      notes:
+        value: Protective against venetoclax-induced bone growth retardation.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Daily (IP)
+        cite: []
+    - parameter: Duration
+      value:
+        value: 8–12 weeks in animal studies
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal models (rat, mouse)
+        cite:
+          - huang-2025
+          - el-2022
+          - velentza-2024
+    - parameter: Human data
+      value:
+        value: None — no clinical trials reported
+        cite: []
+    - parameter: Analog (HNG)
+      value:
+        value: Gly[14]-humanin — more potent variant
+        cite: []
+      notes:
+        value: Substitution at position 14 enhances cytoprotective activity.
+        cite: []
+fat_loss:
+  evidence_strength: 0
+  evidence_level: theoretical
+  evidence_meta:
+    value: No direct lipolysis or fat loss studies. Humanin is cytoprotective, not lipolytic.
+    cite: []
+  rows:
+    - parameter: Direct fat loss evidence
+      value:
+        value: None
+        cite: []
+    - parameter: Mechanism overlap
+      value:
+        value: >-
+          Mitochondrial health may indirectly influence metabolic efficiency, but no quantified
+          effect
+        cite: []
+side_effects:
+  rows:
+    - parameter: Animal model safety
+      value:
+        value: Well-tolerated in rat and mouse studies at 4 mg/kg for 8–12 weeks
+        cite: []
+      severity: mild
+    - parameter: Human safety data
+      value:
+        value: None — no clinical trials
+        cite: []
+    - parameter: Theoretical fibrillation risk
+      value:
+        value: Induces amyloid-like fibrillation of Bax/BID. Long-term sequelae unknown.
+        cite: []
+      severity: moderate
+    - parameter: Injection site reaction
+      value:
+        value: Not reported in animal studies (IP route)
+        cite: []
+    - parameter: Reproductive safety
+      value:
+        value: Protective in POI model (cyclophosphamide-induced), no adverse effects on fertility noted
+        cite:
+          - huang-2025
+  contraindications_absolute:
+    - value: Unknown — no human data
+      cite: []
+  contraindications_relative:
+    - value: Active malignancy (theoretical risk of anti-apoptotic effect on tumour cells)
+      cite: []
+administration:
+  steps:
+    - title: Route (experimental)
+      body: >-
+        Intraperitoneal (IP) in animal models. Subcutaneous route untested. No human protocols
+        exist.
+      cite: []
+    - title: Reconstitution
+      body: >-
+        Synthetic peptide reconstituted in sterile saline or PBS. No commercial formulation
+        available.
+      cite: []
+    - title: Timing
+      body: Daily administration in animal studies. Optimal timing not characterized.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised powder: -20 °C. Reconstituted: 4 °C, use within 7 days. Avoid freeze-thaw
+        cycles.
+      cite: []
+    - title: Human use
+      body: No FDA approval, no IND, no clinical trials. Experimental research tool only.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: mots-c
+      partner_label: MOTS-c
+      synergy: multi-pathway
+      rationale: >-
+        Both are mitochondrial-derived peptides. MOTS-c enhances metabolic efficiency and insulin
+        sensitivity via AMPK activation, while humanin prevents mitochondrial apoptosis. Combined,
+        they address mitochondrial function (MOTS-c) and survival signaling (humanin), supporting
+        cellular resilience under metabolic and oxidative stress.
+      protocol:
+        Humanin: 4 mg/kg IP · daily (animal model)
+        MOTS-c: 5 mg/kg IP · daily (animal model)
+        Frequency: Once daily
+      primary_benefit: Mitochondrial health, metabolic efficiency, anti-apoptotic signaling
+      cite: []
+description_md: >-
+  Humanin is the founding member of the mitochondrial-derived peptide (MDP) family, encoded by a
+  short open reading frame in the 16S rRNA region of mitochondrial DNA. It exerts cytoprotective
+  effects by binding pro-apoptotic Bcl-2 family proteins (Bax, Bim, tBid) intracellularly and by
+  activating extracellular FPRL1/2 receptors to modulate ASK/JNK signaling. Animal studies
+  demonstrate protection against cyclophosphamide-induced ovarian failure, testicular aging,
+  venetoclax-induced bone growth retardation, and hypoxic neuronal injury. A novel mechanism
+  involves inducing amyloid-like fibrillation of Bax and BID, sequestering them into non-functional
+  aggregates. Humanin and its 13 homologs (MTRNR2L1-L13) represent a mitochondrial signaling axis
+  linking organellar stress to cell survival. No human clinical trials exist; all data derive from
+  rodent models and ex vivo systems.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
