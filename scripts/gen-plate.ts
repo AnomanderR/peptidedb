@@ -38,6 +38,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { CitationRegistry, type Citation } from "../src/lib/schemas/citation";
 import { Peptide } from "../src/lib/schemas/peptide";
 import { PubmedClient } from "./lib/pubmed-client";
+import type { AnthropicLike } from "./lib/claim-linker";
 import {
   PlateDrafter,
   recordToCandidate,
@@ -173,7 +174,7 @@ async function main(): Promise<void> {
     brief: args.brief,
     candidates,
     styleExample,
-    anthropic: anthropic as unknown as ConstructorParameters<typeof PlateDrafter>[0],
+    anthropic: anthropic as unknown as AnthropicLike,
     model: args.model,
     log: (m) => console.error(m),
   });
