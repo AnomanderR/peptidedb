@@ -2,7 +2,9 @@
 
 Generated 2026-04-26. Source: CertaPeptides WooCommerce store, **131 published products** (page 1 + page 2). Cross-referenced against peptidesdb's 30 existing plates.
 
-> ⚠️ **Scope correction**: Original CEO plan estimated ~36 net-new plates. Actual gap is **60 net-new plates** covering 61 store SKUs after full audit + slug-collision resolution (2026-04-26: P21 collapsed to one canonical plate). Update [peptide-coverage-pipeline.md](./peptide-coverage-pipeline.md) effort estimates accordingly: literature review for 60 plates ≈ 15-20 working days at 4 hr/day reviewer pace (per [peptide-editorial-workflow.md](./peptide-editorial-workflow.md)).
+> ⚠️ **Scope correction**: Original CEO plan estimated ~36 net-new plates. Actual gap is **57 net-new plates** covering 58 store SKUs after full audit + slug-collision resolution (P21 collapsed) + non-peptide consistency pass (AICAR/Orforglipron/SLU-PP-332 skipped). Update [peptide-coverage-pipeline.md](./peptide-coverage-pipeline.md) effort estimates accordingly: literature review for 57 plates ≈ 14-19 working days at 4 hr/day reviewer pace (per [peptide-editorial-workflow.md](./peptide-editorial-workflow.md)).
+>
+> **Wave 1 status (2026-04-27)**: ✅ COMPLETE. All 14 plates shipped human-reviewed in this iteration. See pipeline observations and per-plate audit reports in `docs/audits/`.
 
 ## Already in DB (30 confirmed via slug or alias)
 
@@ -37,29 +39,28 @@ Generated 2026-04-26. Source: CertaPeptides WooCommerce store, **131 published p
 - `thymosin-alpha-1` — Thymosin Alpha-1 (Thymic Research Peptides)
 - `tirzepatide` — Tirzepatide (GLP-1 and Incretin Research Peptides)
 
-## Wave 1 — Well-evidenced GLP-1s + Growth Factors (17 plates)
+## Wave 1 — Well-evidenced GLP-1s + Growth Factors (14 plates)
 
 Target: peptides with substantial peer-reviewed literature (RCTs / human clinical / strong animal). Pipeline first wave — builds confidence in the drafting + verification chain.
+
+> **Scope refinement 2026-04-27**: The original Wave 1 list contained 3 non-peptide small molecules (AICAR, Orforglipron, SLU-PP-332). Per the locked "peptides only" identity rule (resolved decision #5, 2026-04-26 — applied to MK-677), these are now in the Skipped section with rationale. Wave 1 final count: **14 plates**, all shipped human-reviewed in this iteration.
 
 | # | Store name | Proposed slug | Category | Notes |
 |---|---|---|---|---|
 | 1 | ACE-031 1mg | `ace-031` | Growth Factors |  |
 | 2 | Adipotide | `adipotide` | GLP-1 and Incretin Research Peptides |  |
-| 3 | AICAR | `aicar` | GLP-1 and Incretin Research Peptides |  |
-| 4 | Ara-290 10mg | `ara-290` | GLP-1 and Incretin Research Peptides |  |
-| 5 | Cagrilintide | `cagrilintide` | GLP-1 and Incretin Research Peptides |  |
-| 6 | Dermorphin | `dermorphin` | GLP-1 and Incretin Research Peptides |  |
-| 7 | Follistatin 344 1mg | `follistatin-344` | Growth Factors |  |
-| 8 | GDF-8 1mg | `gdf-8` | Growth Factors |  |
-| 9 | GLP-1 5mg | `glp-1-7-37` | GLP-1 and Incretin Research Peptides | slug specifies the bioactive C-terminal fragment (most common research form). Verify isoform from supplier COA before authoring; fall back to `glp-1-native` if isoform is unconfirmed. |
-| 10 | IGF-1LR3 | `igf-1lr3` | Growth Factors |  |
-| 11 | IGF-DES 2mg | `igf-des` | Growth Factors |  |
-| 12 | Mazdutide | `mazdutide` | GLP-1 and Incretin Research Peptides |  |
-| 13 | MGF 2mg | `mgf` | Growth Factors |  |
-| 14 | Orforglipron | `orforglipron` | GLP-1 and Incretin Research Peptides |  |
-| 15 | PEG MGF 2mg | `peg-mgf` | Growth Factors |  |
-| 16 | SLU-PP-332 | `slu-pp-332` | GLP-1 and Incretin Research Peptides |  |
-| 17 | Survodutide 10mg | `survodutide` | GLP-1 and Incretin Research Peptides |  |
+| 3 | Ara-290 10mg | `ara-290` | GLP-1 and Incretin Research Peptides |  |
+| 4 | Cagrilintide | `cagrilintide` | GLP-1 and Incretin Research Peptides |  |
+| 5 | Dermorphin | `dermorphin` | GLP-1 and Incretin Research Peptides |  |
+| 6 | Follistatin 344 1mg | `follistatin-344` | Growth Factors |  |
+| 7 | GDF-8 1mg | `gdf-8` | Growth Factors |  |
+| 8 | GLP-1 5mg | `glp-1-7-37` | GLP-1 and Incretin Research Peptides | slug specifies the bioactive C-terminal fragment (most common research form). Verify isoform from supplier COA before authoring; fall back to `glp-1-native` if isoform is unconfirmed. |
+| 9 | IGF-1LR3 | `igf-1lr3` | Growth Factors |  |
+| 10 | IGF-DES 2mg | `igf-des` | Growth Factors |  |
+| 11 | Mazdutide | `mazdutide` | GLP-1 and Incretin Research Peptides |  |
+| 12 | MGF 2mg | `mgf` | Growth Factors |  |
+| 13 | PEG MGF 2mg | `peg-mgf` | Growth Factors |  |
+| 14 | Survodutide 10mg | `survodutide` | GLP-1 and Incretin Research Peptides |  |
 
 ## Wave 2 — Medium-evidenced (30 plates)
 
@@ -118,12 +119,13 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 | 12 | Vesugen 20mg | `vesugen` | Bioregulators |
 | 13 | Vilon 20mg | `vilon` | Bioregulators |
 
-## Skipped (40 entries)
+## Skipped (43 entries)
 
 | Store name | Category | Reason |
 |---|---|---|
 | 3ml Syringes 10-Pack | Laboratory Consumables | lab consumable |
 | Acetic Acid Water 10ml | Laboratory Consumables | lab consumable |
+| AICAR | GLP-1 and Incretin Research Peptides | non-peptide nucleoside (5-aminoimidazole-4-carboxamide ribonucleoside) — locked "peptides only" rule (2026-04-27 consistency pass) |
 | Andarine S4 25mg | SARMs | SARM (not a peptide) |
 | BAM15 Capsule 50mg | GLP-1 and Incretin Research Peptides | capsule variant; primary plate is `bam15` |
 | BPC-157 + TB-500 Blend | Growth Factors | blend (multi-peptide) |
@@ -146,13 +148,15 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 | Oral BPC-157 + TB-500 Blend 1000mcg | Growth Factors | blend (multi-peptide) |
 | Oral BPC-157 Capsules 500mcg (60 capsules) | Growth Factors | oral variant of existing bpc-157 |
 | Oral TB-500 500mcg | Growth Factors | oral variant of existing tb-500 |
+| Orforglipron | GLP-1 and Incretin Research Peptides | non-peptide oral GLP-1 receptor agonist (peptidomimetic small molecule) — locked "peptides only" rule (2026-04-27 consistency pass) |
 | Ostarine/MK-2866 25mg | SARMs | SARM (not a peptide) |
 | Peptide Mixing Kit | Laboratory Consumables | lab consumable |
 | RAD140 10mg | SARMs | SARM (not a peptide) |
 | Retatrutide + Cagrilintide Blend 10mg | Peptide Blends | blend (multi-peptide) |
 | Retatrutide Research Starter Kit | Bundles+GLP-1 | bundle/kit |
+| SLU-PP-332 | GLP-1 and Incretin Research Peptides | non-peptide ERR (estrogen-related receptor) agonist small molecule — locked "peptides only" rule (2026-04-27 consistency pass) |
 | SLU-PP-332 + BAM15 Blend 300mcg | GLP-1 and Incretin Research Peptides | blend (multi-peptide) |
-| SLU-PP-332 Capsule 100mg | GLP-1 and Incretin Research Peptides | capsule variant; primary plate is `slu-pp-332` |
+| SLU-PP-332 Capsule 100mg | GLP-1 and Incretin Research Peptides | capsule variant; primary plate `slu-pp-332` itself skipped (non-peptide, see above) |
 | SR9009 10mg | SARMs | SARM (not a peptide) |
 | Semaglutide Oral Capsules | GLP-1 and Incretin Research Peptides | oral variant of existing semaglutide |
 | Semaglutide Research Starter Kit | Bundles+GLP-1 | bundle/kit |
@@ -168,15 +172,17 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 | Bucket | Count |
 |---|---|
 | Already in DB | 30 |
-| **Wave 1 (well-evidenced)** | **17** |
+| **Wave 1 (well-evidenced)** | **14** ✅ shipped 2026-04-27 |
 | **Wave 2 (medium-evidenced)** | **30** |
 | **Wave 3 (bioregulators)** | **13** |
-| Skipped (bundles/blends/SARMs/consumables/oral-variants) | 40 |
-| **TOTAL net-new plates to author** | **60** |
-| Store SKUs covered by net-new plates | 61 |
+| Skipped (bundles/blends/SARMs/consumables/oral-variants/non-peptides) | 43 |
+| **TOTAL net-new plates to author** | **57** |
+| Store SKUs covered by net-new plates | 58 |
 | Total store products audited | 131 |
 
-> **Note**: 60 plates cover 61 store SKUs because the canonical `p21` plate aliases to two store products (P21 + P21 Adamantane).
+> **Notes**:
+> - 57 plates cover 58 store SKUs because the canonical `p21` plate aliases to two store products (P21 + P21 Adamantane).
+> - Wave 1 final count is **14** (was 17). The 3-plate reduction reflects the 2026-04-27 consistency pass: AICAR + Orforglipron + SLU-PP-332 are non-peptide small molecules and excluded under the locked "peptides only" rule.
 
 ## Resolved decisions (2026-04-26)
 
@@ -185,3 +191,12 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 3. **CJC-1295 SKUs vs single peptidesdb plate** — RESOLVED (no change). Existing single `cjc-1295` plate stays as-is and continues to cover both DAC and non-DAC store SKUs. Both alias to `/p/cjc-1295`. This matches the existing pattern and avoids unnecessary plate duplication.
 4. **MOTS-c not in store but in DB** — RESOLVED (no change). Plate stays. peptidesdb is a research reference, not a SKU mirror — research-relevant peptides can exist without active store SKUs. Optional follow-up: if traffic warrants it, surface a "not currently stocked" note on plates with no store SKU. Defer until post-launch.
 5. **MK-677 categorized as SARM in store** — RESOLVED. **Skip permanently.** MK-677/Ibutamoren is a non-peptide small molecule (oral growth-hormone secretagogue mimicking ghrelin at GHSR-1a). Including it would open scope to all GH secretagogues, then to other adjuncts — slippery slope that dilutes peptidesdb's "peptides only" identity. Stays in the Skipped table. peptidesdb already covers the peptide-based GH secretagogues (GHRP-2, GHRP-6, hexarelin, ipamorelin, sermorelin, tesamorelin) — that's the correct lane.
+
+## Resolved decisions (2026-04-27 — Wave 1 close pass)
+
+6. **Wave 1 non-peptide consistency** — RESOLVED. The original Wave 1 list contained 3 non-peptide entries that didn't fit the locked "peptides only" rule applied to MK-677:
+   - **AICAR** — 5-aminoimidazole-4-carboxamide ribonucleoside, a nucleoside / AMPK activator. Not a peptide.
+   - **Orforglipron** — oral GLP-1 receptor agonist peptidomimetic. Small molecule, not a peptide.
+   - **SLU-PP-332** — estrogen-related receptor (ERR) agonist. Small molecule, not a peptide.
+
+   All three moved to the Skipped section with consistent rationale matching the MK-677 precedent. Wave 1 reduced from 17 → 14 plates. peptidesdb retains its identity boundary; functionally-adjacent small molecules are documented as deliberately excluded rather than silently omitted.

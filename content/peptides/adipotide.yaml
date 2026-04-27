@@ -1,0 +1,315 @@
+schema_version: 1
+slug: adipotide
+name: Adipotide
+peptide_class: Pro-apoptotic Vascular-Targeting Peptide
+classification: Pro-apoptotic Vascular-Targeting Peptide · Preclinical Only
+categories:
+  - anti-obesity
+  - vascular-targeting
+  - apoptosis-inducer
+  - preclinical
+aliases:
+  - CKGGRAKDC-GG-D(KLAKLAK)2
+  - Prohibitin-targeted peptide
+color: rose
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Chimeric pro-apoptotic peptide targeting prohibitin-1 (PHB1) on adipose-tissue vasculature
+    endothelium. Composed of a CKGGRAKDC homing domain coupled to a D(KLAKLAK)₂
+    mitochondrial-disrupting sequence. Induces selective apoptosis of adipose blood vessels,
+    triggering adipocyte involution and weight loss in obese rhesus monkeys and rodent models. No
+    human trials initiated.
+  cite: []
+hero_stats:
+  - value: Preclinical
+    label: Status
+    cite: []
+  - value: PHB1
+    label: Target
+    cite:
+      - hossen-2013
+  - value: Apoptosis
+    label: Mechanism
+    cite:
+      - hossen-2013
+hero_route:
+  value: IV · Systemic · Preclinical Protocols Only
+  cite:
+    - hossen-2013
+mechanism:
+  primary_target:
+    value: Prohibitin-1 (PHB1) on adipose vasculature endothelium
+    cite:
+      - hossen-2013
+  pathway:
+    value: >-
+      CKGGRAKDC domain binds PHB1 → Peptide internalisation → D(KLAKLAK)₂ mitochondrial membrane
+      disruption
+    cite: []
+  downstream_effect:
+    value: Endothelial apoptosis → Adipose vascular collapse → Adipocyte involution → Weight loss
+    cite: []
+  origin:
+    value: 'Synthetic bioconjugate: PHB1-targeting homing peptide + pro-apoptotic KLA sequence'
+    cite: []
+  feedback_intact:
+    value: N/A — Direct apoptotic mechanism, non-hormonal
+    cite: []
+  receptor_class:
+    value: PHB1 (mitochondrial chaperone protein, surface-expressed on adipose endothelium)
+    cite:
+      - hossen-2013
+  extra_rows:
+    - key: Selectivity basis
+      value:
+        value: PHB1 enrichment on adipose-tissue vasculature vs. lean-tissue vessels
+        cite:
+          - hossen-2013
+    - key: KLA sequence
+      value:
+        value: D(KLAKLAK)₂ — cationic, membrane-lytic peptide; inactive outside cells
+        cite:
+          - hossen-2013
+  diagram:
+    - kind: node
+      text:
+        value: Adipose Vasculature Endothelium
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ CKGGRAKDC binds PHB1
+        cite: []
+    - kind: node
+      text:
+        value: Endothelial Cell Internalisation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ D(KLAKLAK)₂ disrupts mitochondria
+        cite: []
+    - kind: node
+      text:
+        value: Apoptosis
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Vascular collapse
+        cite: []
+    - kind: outcome
+      text:
+        value: Adipocyte Involution → Fat Mass Loss
+        cite: []
+dosage:
+  rows:
+    - parameter: Animal dose (mouse)
+      value:
+        value: Low dose (not specified in abstract)
+        cite:
+          - hossen-2013
+      notes:
+        value: Systemic injection in diet-induced obesity (DIO) models.
+        cite:
+          - hossen-2013
+    - parameter: Route
+      value:
+        value: Intravenous (systemic injection)
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Not specified in available data
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Preclinical animal models only
+        cite: []
+    - parameter: Human data
+      value:
+        value: None — no clinical trials reported
+        cite: []
+fat_loss:
+  evidence_strength: 65
+  evidence_level: animal-strong
+  evidence_meta:
+    value: Diet-induced obesity mouse models, rhesus monkey preclinical studies
+    cite: []
+  rows:
+    - parameter: Primary fat target
+      value:
+        value: White adipose tissue (all depots)
+        cite: []
+    - parameter: Mechanism
+      value:
+        value: Vascular apoptosis → adipose blood supply collapse → adipocyte death
+        cite:
+          - hossen-2013
+    - parameter: Body weight reduction
+      value:
+        value: Significant reduction in DIO mice
+        cite:
+          - hossen-2013
+      notes:
+        value: Absolute values not provided in abstract.
+        cite: []
+    - parameter: Leptin levels
+      value:
+        value: Significant decrease
+        cite: []
+      notes:
+        value: Parallel to adipose mass reduction.
+        cite: []
+    - parameter: Effect on adipocytes
+      value:
+        value: Antiobesity effect on dysfunctional adipose cells (adipocytes + macrophages)
+        cite:
+          - hossen-2013
+    - parameter: Ectopic fat
+      value:
+        value: Reduction in ectopic fat deposition
+        cite:
+          - hossen-2013
+      notes:
+        value: Marker of dysfunctional adipose tissue / metabolic syndrome.
+        cite: []
+    - parameter: Species tested
+      value:
+        value: Obese rhesus monkeys, DIO mice
+        cite: []
+    - parameter: Human translation
+      value:
+        value: Unknown — no clinical trials
+        cite: []
+side_effects:
+  rows:
+    - parameter: Safety profile
+      value:
+        value: Unknown — preclinical data only
+        cite: []
+      severity: severe
+    - parameter: Vascular selectivity
+      value:
+        value: Targets adipose vasculature; off-target vascular effects unknown
+        cite: []
+      severity: moderate
+    - parameter: Apoptotic mechanism risk
+      value:
+        value: Pro-apoptotic payload may affect unintended tissues if selectivity incomplete
+        cite: []
+      severity: severe
+    - parameter: Kidney / liver toxicity
+      value:
+        value: Not reported in available data
+        cite: []
+      severity: moderate
+    - parameter: Immunogenicity
+      value:
+        value: Not assessed in available data
+        cite: []
+      severity: moderate
+  contraindications_absolute:
+    - value: Human use — not approved, no clinical safety data
+      cite: []
+  contraindications_relative:
+    - value: Any condition requiring intact adipose-tissue vascularisation
+      cite: []
+administration:
+  steps:
+    - title: Route
+      body: Intravenous injection (systemic) in preclinical models. No human protocols exist.
+      cite: []
+    - title: Formulation
+      body: >-
+        Bioconjugate peptide. May also be encapsulated in nanoparticles (prohibitin-targeted
+        nanoparticle formulation, KLA-PTNP, showed superior efficacy vs. free bioconjugate in mice).
+      cite:
+        - hossen-2013
+    - title: Preclinical dosing
+      body: >-
+        Low-dose systemic injection (exact dosing not specified in available abstract). Frequency
+        and duration not detailed.
+      cite:
+        - hossen-2013
+    - title: Storage
+      body: Not specified — likely requires peptide-grade lyophilised storage and reconstitution.
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  AdipoTide is a synthetic pro-apoptotic peptide bioconjugate designed to selectively destroy
+  adipose tissue vasculature by targeting prohibitin-1 (PHB1), a mitochondrial chaperone protein
+  enriched on the endothelium of fat-feeding blood vessels. The molecule consists of a CKGGRAKDC
+  homing domain that binds PHB1, fused via a short linker to a D(KLAKLAK)₂ membrane-lytic sequence.
+  Upon internalisation into adipose endothelial cells, the KLA payload disrupts mitochondrial
+  membranes, triggering apoptosis, vascular collapse, and subsequent adipocyte involution.
+
+
+  ## Preclinical Evidence
+
+
+  AdipoTide demonstrated significant weight loss and metabolic improvement in diet-induced obese
+  (DIO) mice and obese rhesus monkeys. Hossen et al. (2013) compared a free Adipotide bioconjugate
+  to a nanoparticle-encapsulated formulation (KLA-PTNP) in DIO mice, finding that systemic low-dose
+  injection reduced body weight, lowered serum leptin, and decreased ectopic fat deposition—a
+  hallmark of dysfunctional adipose tissue and metabolic syndrome. The nanoparticle formulation
+  outperformed the bioconjugate alone, likely due to improved pharmacokinetics and targeting
+  efficiency. Effects extended to macrophages within adipose depots, suggesting broader
+  anti-inflammatory or remodeling activity.
+
+
+  ## Mechanism and Selectivity
+
+
+  The CKGGRAKDC peptide was originally identified via phage display as a ligand for PHB1 expressed
+  on adipose vasculature. PHB1 is a mitochondrial protein abnormally presented on the cell surface
+  of certain endothelia, particularly in metabolic disease states. The D(KLAKLAK)₂ domain is a
+  cationic, amphipathic peptide that becomes membrane-active only upon internalisation; it is inert
+  in circulation, minimising systemic toxicity. This dual-domain design confers tissue selectivity:
+  the peptide homes to adipose endothelium, triggers internalisation, and then executes apoptosis
+  locally.
+
+
+  ## Clinical Translation Status
+
+
+  No human trials have been reported. Preclinical work, primarily from Kolonin, Arap, and
+  colleagues, generated proof-of-concept data in non-human primates, but translation has stalled.
+  Concerns likely include off-target vascular effects, long-term safety of apoptotic peptides, and
+  regulatory challenges inherent to a mechanism that deliberately destroys vasculature. The peptide
+  remains a research tool and is not approved for human use.
+
+
+  ## Comparison to Nanoparticle Formulations
+
+
+  Hossen et al. demonstrated that encapsulating the KLA payload in prohibitin-targeted nanoparticles
+  (rather than free bioconjugate) improved efficacy at lower doses, reduced systemic exposure, and
+  enhanced adipose-specific accumulation. This suggests that delivery vehicle engineering may be
+  critical to advancing vascular-targeted obesity therapeutics, potentially mitigating toxicity
+  risks inherent to pro-apoptotic peptides.
+
+
+  ## Safety and Risk Profile
+
+
+  The pro-apoptotic mechanism is irreversible and tissue-destructive. While preclinical models
+  showed weight loss, the peptide's safety margin, potential for off-target endothelial damage,
+  renal/hepatic toxicity, and immunogenicity remain unknown. No peer-reviewed human
+  pharmacokinetics, toxicology, or Phase 1 data are available. Use in humans is contraindicated
+  absent clinical trials.
+
+
+  ## Current Research Context
+
+
+  AdipoTide represents a proof-of-concept for vascular-targeted obesity therapy—an alternative to
+  metabolic hormone mimetics or appetite suppressants. Its development underscores the feasibility
+  of homing-peptide–effector conjugates for metabolic disease but also highlights translational
+  barriers: organ-level tissue destruction, regulatory pathway ambiguity, and long-term safety
+  unknowns. It is referenced primarily in academic literature on angiogenesis inhibition and
+  peptide-mediated drug delivery, not in active pharmaceutical pipelines.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

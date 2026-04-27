@@ -1669,3 +1669,17 @@ bird-2016:
   pmid: '27272042'
   authors:
     - Bird MF
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+hossen-2013:
+  id: hossen-2013
+  type: journal
+  title: >-
+    A comparative study between nanoparticle-targeted therapeutics and bioconjugates as obesity
+    medication.
+  year: 2013
+  pmid: '23871959'
+  authors:
+    - Hossen N
