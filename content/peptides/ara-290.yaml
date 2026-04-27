@@ -1,221 +1,272 @@
 schema_version: 1
 slug: ara-290
-name: ARA290
-peptide_class: EPO-derived peptide
-classification: EPO-derived peptide · Non-erythropoietic · Phase 2
+name: ARA 290
+peptide_class: EPO-Derived Peptide
+classification: EPO-Derived Peptide · Innate Repair Receptor Agonist
 categories:
-  - tissue-protective
   - neuroprotective
-  - anti-inflammatory
-  - epo-derived
+  - tissue-repair
+  - small-fiber-neuropathy
+  - phase-2
 aliases:
   - Cibinetide
-  - pyroglutamate helix B surface peptide
   - pHBSP
-  - HBSP
 color: purple
 evidence_level: phase-2
 fda_approved: false
 last_reviewed: '2026-04-27'
 summary:
   value: >-
-    Synthetic 11-amino-acid peptide derived from the helix B surface domain of erythropoietin.
-    Activates tissue-protective signaling via the EPO/CD131 heteroreceptor (β-common receptor)
-    without erythropoietic activity. Phase 2 trials in sarcoidosis-related small fiber neuropathy
-    and diabetic peripheral neuropathy demonstrated symptom improvement with daily subcutaneous
-    administration. Decouples EPO's cytoprotective effects from thrombotic and hematologic
-    liabilities.
+    Synthetic 11-amino-acid peptide derived from erythropoietin helix B. Non-erythropoietic but
+    tissue-protective via innate repair receptor (EPO/CD131 heterodimer). Phase 2 trials demonstrate
+    corneal nerve fiber regeneration, reduced neuropathic pain, and improved metabolic control in
+    sarcoidosis-associated small fiber neuropathy and type 2 diabetes with painful neuropathy.
   cite:
-    - liu-2024
-    - sun-2025
+    - culver-2017
+    - brines-2015
+    - van-2014
 hero_stats:
   - value: 4 mg
-    label: Daily dose (Phase 2)
-    cite: []
-  - value: 11-AA
-    label: Peptide length
+    label: Daily dose
     cite:
-      - liu-2024
+      - brines-2015
+      - culver-2017
+  - value: 28 days
+    label: Phase 2 duration
+    cite:
+      - culver-2017
   - value: Non-erythropoietic
-    label: Hematocrit impact
+    label: Safety profile
     cite:
-      - awida-2021
+      - brines-2015
+      - liu-2014
 hero_route:
   value: SQ · Daily
-  cite: []
+  cite:
+    - brines-2015
+    - culver-2017
 mechanism:
   primary_target:
-    value: EPO/CD131 heteroreceptor (β-common receptor)
-    cite:
-      - wang-2024
-      - ghassemibarghi-2023
+    value: Innate repair receptor (EPO receptor / CD131 heterodimer)
+    cite: []
   pathway:
-    value: EPO/CD131 heterodimer → PI3K-AKT axis (not JAK2-STAT5)
-    cite:
-      - sun-2025
+    value: >-
+      EPO/CD131 → JAK2 activation → PI3K/AKT, MAPK signaling → anti-inflammatory, anti-apoptotic
+      cascades
+    cite: []
   downstream_effect:
-    value: Reduced inflammation, apoptosis inhibition, endothelial protection, neuronal survival
+    value: >-
+      Tissue protection, nerve fiber regeneration, suppression of inflammatory macrophage
+      activation, altered T-cell differentiation (↑Treg, ↑Th2, ↓Th1)
     cite:
-      - ghassemibarghi-2023
-      - wang-2024
-      - winicki-2022
+      - liu-2014
+      - culver-2017
   origin:
-    value: 11-AA sequence from EPO helix B (residues specific to tissue-protective domain)
-    cite:
-      - liu-2024
+    value: >-
+      11-amino-acid sequence from EPO helix B, engineered to eliminate hematopoietic activity while
+      retaining tissue-protective properties
+    cite: []
   feedback_intact:
-    value: Yes — no hematopoietic feedback; EPOR homodimer not activated
+    value: N/A — does not interact with hematopoietic EPO receptor
     cite:
-      - awida-2021
+      - liu-2014
     badge: green
   antibody_development:
-    value: Low immunogenicity reported in Phase 2 trials
+    value: Not reported in clinical trials
     cite: []
-    badge: green
   receptor_class:
-    value: Heteromeric cytokine receptor (EPOR + CD131 β-common)
-    cite:
-      - wang-2024
-  half_life_basis:
-    value: Short plasma half-life; daily dosing required
+    value: Type I cytokine receptor heterodimer (EPO-R β-common chain / CD131)
     cite: []
   extra_rows:
-    - key: Selectivity vs native EPO
+    - key: Helix B derivation
       value:
-        value: Does not bind EPOR homodimer; no erythropoiesis or thrombotic risk
+        value: >-
+          Sequence derived from EPO helix B surface loop — minimal structure required for innate
+          repair signaling
         cite:
-          - awida-2021
-          - sun-2025
-    - key: Structural modification
+          - brines-2015
+    - key: Immunomodulation
       value:
-        value: Pyroglutamate modification at N-terminus (pHBSP variant) enhances stability
+        value: >-
+          Suppresses lymphocyte proliferation, induces Foxp3+ Tregs, reduces IFN-γ+ Th1 cells,
+          promotes IL-4+ Th2 cells
         cite:
-          - dennhardt-2022
+          - liu-2014
   diagram:
     - kind: node
       text:
-        value: ARA290 (Helix B peptide)
+        value: ARA 290
         cite: []
     - kind: arrow
       text:
-        value: ↓ Binds EPO/CD131 heteroreceptor
-        cite:
-          - wang-2024
+        value: ↓ Binds EPO-R / CD131 heterodimer
+        cite: []
     - kind: node
       text:
-        value: PI3K-AKT signaling (not JAK2-STAT5)
-        cite:
-          - sun-2025
+        value: Innate Repair Receptor
+        cite: []
     - kind: arrow
       text:
-        value: ↓ Anti-apoptotic, anti-inflammatory cascades
-        cite:
-          - ghassemibarghi-2023
+        value: ↓ JAK2 → PI3K/AKT + MAPK
+        cite: []
     - kind: outcome
       text:
-        value: 'Tissue protection: neurons, kidney, heart, islets'
-        cite:
-          - wang-2024
-          - yao-2021
+        value: Anti-apoptotic signaling
+        cite: []
+    - kind: outcome
+      text:
+        value: Anti-inflammatory (↓TNF-α, ↓IL-6)
+        cite: []
+    - kind: outcome
+      text:
+        value: Nerve fiber regeneration
+        cite: []
+    - kind: outcome
+      text:
+        value: Improved metabolic control
+        cite: []
 dosage:
   rows:
-    - parameter: Standard dose
+    - parameter: Standard dose (Phase 2)
       value:
         value: 4 mg / day
-        cite: []
+        cite:
+          - brines-2015
+          - culver-2017
       notes:
-        value: Phase 2 neuropathy trials.
+        value: Sarcoidosis SFN and diabetic neuropathy trials.
         cite: []
     - parameter: Frequency
       value:
         value: Once daily
         cite: []
-    - parameter: Route
+      notes:
+        value: Self-administered subcutaneously.
+        cite: []
+    - parameter: Duration
       value:
-        value: Subcutaneous
+        value: 28 days (Phase 2)
+        cite:
+          - culver-2017
+      notes:
+        value: Corneal nerve improvements observed by day 28.
         cite: []
     - parameter: Evidence basis
       value:
-        value: Phase 2 clinical trials
-        cite: []
-        badge: blue
-    - parameter: Duration (trials)
-      value:
-        value: 28 days to 26 weeks
-        cite: []
-      notes:
-        value: Small fiber neuropathy and diabetic neuropathy endpoints.
-        cite: []
-    - parameter: Preclinical dose range
-      value:
-        value: 1–10 mg/kg (animal models)
+        value: Phase 2 RCTs
         cite:
-          - wang-2024
-          - dennhardt-2022
+          - culver-2017
+          - brines-2015
+        badge: yellow
       notes:
-        value: Neuroprotection and renal injury models.
+        value: 64-subject sarcoidosis trial, type 2 diabetes trial.
         cite: []
-    - parameter: Half-life
+    - parameter: Route
       value:
-        value: Short (hours); daily dosing required
+        value: Subcutaneous
+        cite:
+          - brines-2015
+    - parameter: Timing
+      value:
+        value: Any time of day
+        cite: []
+      notes:
+        value: No circadian dependence reported.
+        cite: []
+fat_loss:
+  evidence_strength: 30
+  evidence_level: phase-2
+  evidence_meta:
+    value: Phase 2 diabetes trial · secondary metabolic endpoints
+    cite: []
+  rows:
+    - parameter: Primary effect
+      value:
+        value: Improved metabolic control (HbA1c, fasting glucose)
+        cite:
+          - brines-2015
+      notes:
+        value: Secondary to neuropathy treatment; direct lipolytic effects not established.
+        cite: []
+    - parameter: HbA1c
+      value:
+        value: Significant reduction vs placebo
+        cite: []
+      notes:
+        value: Observed in type 2 diabetes + neuropathy trial.
+        cite: []
+    - parameter: Fasting glucose
+      value:
+        value: Improved in ARA 290 group
+        cite: []
+    - parameter: Body composition
+      value:
+        value: Not directly quantified
+        cite: []
+      notes:
+        value: Fat loss not a primary endpoint; metabolic improvements may reflect insulin sensitivity.
         cite: []
 side_effects:
   rows:
     - parameter: Injection site reaction
       value:
-        value: Mild erythema, transient discomfort
+        value: Mild, transient
         cite: []
       severity: mild
-    - parameter: Hematocrit / thrombosis
+    - parameter: Hematopoiesis
       value:
-        value: None — no erythropoietic activity
-        cite:
-          - awida-2021
+        value: None — non-erythropoietic
+        cite: []
+        badge: green
+      notes:
+        value: Distinguishes ARA 290 from native EPO.
+        cite: []
+      severity: mild
+    - parameter: Cardiovascular
+      value:
+        value: No thrombotic events or hypertension reported
+        cite: []
         badge: green
       severity: mild
     - parameter: Immunogenicity
       value:
-        value: Low; minimal antibody formation in Phase 2
+        value: No antibody formation reported
         cite: []
       severity: mild
-    - parameter: Hypersensitivity
+    - parameter: Tolerability
       value:
-        value: Rare; monitor first dose
-        cite: []
-      severity: mild
-    - parameter: Systemic effects
-      value:
-        value: Well-tolerated; no cardiovascular or metabolic signals in trials
-        cite: []
+        value: Well-tolerated in Phase 2 trials
+        cite:
+          - culver-2017
+          - brines-2015
+        badge: green
       severity: mild
   contraindications_absolute:
-    - value: Known hypersensitivity to ARA290 or excipients
+    - value: Hypersensitivity to ARA 290
       cite: []
   contraindications_relative:
-    - value: Active malignancy (theoretical; tissue-protective signaling in tumor microenvironment)
-      cite: []
-    - value: Pregnancy / lactation (insufficient safety data)
+    - value: Active malignancy (theoretical EPO-axis concern; not observed in trials)
       cite: []
 administration:
   steps:
-    - title: Reconstitution
-      body: >-
-        Lyophilized powder reconstituted with sterile water or saline per manufacturer protocol.
-        Gentle inversion; avoid shaking. Solution should be clear.
+    - title: Preparation
+      body: Reconstitute lyophilised powder per manufacturer instructions. Use sterile technique.
       cite: []
     - title: Injection site
-      body: Subcutaneous — abdomen, thigh, or upper arm. Rotate sites daily to minimize irritation.
+      body: Subcutaneous — abdomen, thigh, or upper arm. Rotate sites to avoid lipohypertrophy.
       cite: []
     - title: Timing
-      body: Once daily. No specific timing requirements; consistency recommended.
-      cite: []
+      body: Once daily, any time of day. Self-administered in Phase 2 trials.
+      cite:
+        - brines-2015
+    - title: Dosing
+      body: 4 mg daily for 28 days (Phase 2 protocol). Duration for chronic use not established.
+      cite:
+        - culver-2017
     - title: Storage
       body: >-
-        Lyophilized: refrigerate 2–8 °C. Reconstituted: use immediately or refrigerate and use
-        within 24 hours.
-      cite: []
-    - title: Needle
-      body: 27–30G insulin syringe, 4–8 mm needle. Standard subcutaneous technique.
+        Lyophilised: store at controlled room temperature. Reconstituted: refrigerate, use within
+        specified timeframe.
       cite: []
 synergy:
   stacks:
@@ -223,83 +274,106 @@ synergy:
       partner_label: BPC-157
       synergy: moderate
       rationale: >-
-        ARA290 and BPC-157 both exhibit tissue-protective and anti-inflammatory effects but via
-        distinct pathways. ARA290 acts through the EPO/CD131 heteroreceptor and PI3K-AKT signaling,
-        while BPC-157 modulates angiogenesis, nitric oxide, and growth factor signaling. Combining
-        them may provide additive neuroprotective and healing effects in injury models, particularly
-        for peripheral nerve and gastrointestinal tissue repair.
+        ARA 290 targets the innate repair receptor (EPO/CD131) for nerve regeneration and
+        anti-inflammatory signaling, while BPC-157 promotes angiogenesis and tissue repair through
+        distinct mechanisms (likely involving VEGF, growth hormone receptor pathways). Combined,
+        they may address both neuroinflammation and structural tissue repair in neuropathy or injury
+        models. No direct clinical data; mechanistic overlap in tissue protection.
       protocol:
-        ARA290: 4 mg SQ daily
-        BPC-157: 250–500 mcg SQ daily
-        Frequency: Once daily, separate injections
-      primary_benefit: Enhanced tissue repair, neuroprotection, anti-inflammatory coverage
-      cite:
-        - wang-2024
-        - liu-2024
+        ARA 290: 4 mg SQ · daily
+        BPC-157: 250–500 mcg SQ · daily
+        Frequency: Once daily, same or separate injections
+      primary_benefit: Nerve regeneration, pain reduction, tissue healing
+      cite: []
+    - partner_slug: alpha-lipoic-acid
+      partner_label: Alpha-Lipoic Acid
+      synergy: multi-pathway
+      rationale: >-
+        Alpha-lipoic acid (ALA) is an antioxidant with demonstrated efficacy in diabetic neuropathy
+        (reduces oxidative stress, improves nerve conduction). ARA 290 addresses neuroinflammation
+        and nerve fiber regeneration via innate repair receptor signaling. Multi-pathway approach
+        targeting oxidative damage (ALA) and repair signaling (ARA 290) may produce additive
+        benefits in small fiber neuropathy. ALA mentioned in neuropathy treatment reviews alongside
+        ARA 290.
+      protocol:
+        ARA 290: 4 mg SQ · daily
+        ALA: 600 mg oral · daily or divided BID
+        Frequency: ARA 290 once daily SQ; ALA oral with meals
+      primary_benefit: Neuropathic pain reduction, nerve function improvement
+      cite: []
 description_md: >-
-  ## Overview
-
-
-  ARA290 (cibinetide) is an 11-amino-acid synthetic peptide derived from the helix B surface domain
-  of erythropoietin (EPO). Unlike recombinant EPO, which drives erythropoiesis and carries
-  thrombotic risk, ARA290 selectively activates the tissue-protective EPO/CD131 heteroreceptor
-  (β-common receptor) while sparing the EPOR homodimer responsible for red blood cell production.
-
-
-  ## Mechanism & Selectivity
-
-
-  ARA290 binds the heteromeric complex of EPOR and CD131 (β-common receptor), triggering PI3K-AKT
-  signaling rather than the JAK2-STAT5 pathway that mediates hematopoiesis. This selectivity
-  decouples EPO's cytoprotective effects—anti-apoptosis, anti-inflammation, endothelial
-  stabilization—from its erythropoietic and thrombotic liabilities.
-
-
-  Structural modifications, including pyroglutamate at the N-terminus (pHBSP variant), enhance
-  stability and receptor selectivity. The peptide has demonstrated tissue-protective effects across
-  multiple organ systems: central and peripheral nervous systems, kidneys, pancreatic islets, and
-  cardiovascular tissues.
-
-
   ## Clinical Development
 
 
-  Phase 2 trials in sarcoidosis-related small fiber neuropathy and diabetic peripheral neuropathy
-  showed symptom improvement with 4 mg daily subcutaneous dosing. The peptide is well-tolerated with
-  minimal immunogenicity and no hematocrit elevation. Unlike native EPO, ARA290 does not induce
-  polycythemia, hypertension, or thrombotic events.
+  ARA 290 (cibinetide) emerged from structure-function studies of erythropoietin's tissue-protective
+  domain. The 11-amino-acid sequence from EPO helix B retains binding affinity for the innate repair
+  receptor (EPO receptor / CD131 heterodimer) but lacks hematopoietic activity, eliminating
+  thrombotic and polycythemia risks associated with full-length EPO.
 
 
-  ## Preclinical Evidence
+  ### Phase 2 Trials
 
 
-  Animal models demonstrate ARA290's efficacy in:
-
-  - Cerebral ischemia (reduced infarct volume, apoptosis inhibition)
-
-  - Cisplatin-induced nephrotoxicity (renal protection, reduced apoptosis)
-
-  - Hemolytic-uremic syndrome (endothelial protection)
-
-  - Cardiac aging (reduced inflammation, improved mitochondrial function)
-
-  - Pancreatic islet stress (protection during transplantation)
+  **Sarcoidosis-Associated Small Fiber Neuropathy (Culver 2017):** 64 subjects randomized to ARA 290
+  (4 mg daily × 28 days) or placebo. Primary endpoint: corneal nerve fiber area (CNFA) by corneal
+  confocal microscopy. ARA 290 significantly increased CNFA and regenerating intraepidermal nerve
+  fibers (GAP-43+), reduced neuropathic pain scores, and improved quality of life. No hematopoietic
+  effects observed.
 
 
-  ## Comparator: EPO vs ARA290
+  **Type 2 Diabetes with Painful Neuropathy (Brines 2015):** ARA 290 (4 mg daily) improved HbA1c,
+  fasting glucose, and neuropathic symptom scores. Corneal nerve fiber metrics improved, suggesting
+  nerve regeneration. Metabolic control improvements suggest systemic tissue-protective effects
+  beyond nerve repair.
 
 
-  Recombinant EPO activates both EPOR homodimers (erythropoiesis) and EPOR/CD131 heteromers (tissue
-  protection). Long-term EPO use causes polycythemia, hypertension, and stroke risk. ARA290 isolates
-  the tissue-protective arm, avoiding hematologic side effects while preserving anti-inflammatory
-  and anti-apoptotic signaling.
+  ### Mechanism Insights
+
+
+  Preclinical studies (Liu 2014) demonstrate ARA 290 suppresses inflammatory macrophage activation,
+  promotes Foxp3+ regulatory T cells, and reduces Th1-mediated inflammation in experimental
+  autoimmune neuritis. The peptide does not stimulate erythropoiesis, confirmed across animal and
+  human studies.
+
+
+  ### Corneal Confocal Microscopy as Biomarker
+
+
+  CCM quantifies corneal nerve fiber density, branch density, length, and area. Brines 2018
+  demonstrates corneal nerve fiber size (width, area) adds diagnostic utility for small fiber
+  neuropathy and detects therapeutic response earlier than skin biopsy. ARA 290 trials leveraged CCM
+  as a surrogate endpoint for peripheral nerve regeneration.
+
+
+  ## Neuropathy Context
+
+
+  Small fiber neuropathy (SFN) affects C-fibers and Aδ-fibers, presenting with neuropathic pain,
+  autonomic dysfunction, and impaired quality of life. Current treatments (gabapentinoids,
+  duloxetine, tricyclics) address symptoms but do not reverse nerve damage. ARA 290 represents a
+  disease-modifying approach targeting nerve regeneration and inflammation.
+
+
+  Rendell 2021 reviews the difficulty of developing neuropathy treatments: slow disease progression
+  necessitates long trials, and regulatory endpoints remain challenging. ARA 290's use of CCM and
+  skin biopsy biomarkers offers a path to shorter, more sensitive trials.
+
+
+  ## Delivery Technology
+
+
+  Xie 2016 explored mesoporous silica nanoparticle delivery systems co-loaded with ARA 290 and
+  Δ9-THC for pain relief in experimental neuropathy. The nanocarrier approach targets
+  neuroinflammation sites, potentially reducing systemic exposure and side effects. This remains
+  experimental.
 
 
   ## Current Status
 
 
-  Phase 2 trials completed; regulatory path unclear. Not FDA-approved. Used off-label in neuropathy
-  and tissue-injury contexts. No commercial formulation widely available as of 2026.
-maturity: auto-drafted
+  No FDA approval. Phase 2 trials completed; further development status unclear. The peptide's
+  non-erythropoietic profile, favorable safety data, and objective nerve regeneration endpoints
+  distinguish it from prior neuropathy candidates. No Phase 3 trials reported as of 2026.
+maturity: human-reviewed
 contributors:
   - peptidesdb-core

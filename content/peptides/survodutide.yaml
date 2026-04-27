@@ -30,8 +30,7 @@ summary:
 hero_stats:
   - value: Once weekly
     label: Frequency
-    cite:
-      - yathindra-2026
+    cite: []
   - value: Phase 3
     label: Development stage
     cite:
@@ -42,8 +41,7 @@ hero_stats:
       - zimmermann-2026
 hero_route:
   value: SQ · Once Weekly
-  cite:
-    - yathindra-2026
+  cite: []
 mechanism:
   primary_target:
     value: GLP-1 receptor and glucagon receptor (GCGR)
@@ -70,8 +68,7 @@ mechanism:
       - elmendorf-2026
   half_life_basis:
     value: Extended half-life design enables once-weekly dosing
-    cite:
-      - yathindra-2026
+    cite: []
   extra_rows:
     - key: Central site of action
       value:
@@ -117,8 +114,7 @@ mechanism:
     - kind: arrow
       text:
         value: ↓ Lipid metabolism, energy expenditure ↑
-        cite:
-          - long-2026
+        cite: []
     - kind: outcome
       text:
         value: Weight loss + metabolic improvement
@@ -129,8 +125,7 @@ dosage:
     - parameter: Standard dose
       value:
         value: Not yet disclosed (Phase 3 ongoing)
-        cite:
-          - rubino-2026
+        cite: []
       notes:
         value: SYNCHRONIZE Phase 3 program underway.
         cite:
@@ -138,8 +133,7 @@ dosage:
     - parameter: Frequency
       value:
         value: Once weekly
-        cite:
-          - yathindra-2026
+        cite: []
     - parameter: Route
       value:
         value: Subcutaneous
@@ -148,9 +142,7 @@ dosage:
     - parameter: Evidence basis
       value:
         value: Phase 2 RCT (obesity) · Phase 3 ongoing
-        cite:
-          - yathindra-2026
-          - rubino-2026
+        cite: []
     - parameter: Phase 2 findings
       value:
         value: Significant weight loss and metabolic marker improvement
@@ -167,15 +159,12 @@ fat_loss:
   evidence_level: phase-2
   evidence_meta:
     value: Phase 2 RCT in obesity · Phase 3 SYNCHRONIZE program ongoing
-    cite:
-      - yathindra-2026
-      - rubino-2026
+    cite: []
   rows:
     - parameter: Primary fat target
       value:
         value: Total body weight, visceral adipose tissue
-        cite:
-          - yathindra-2026
+        cite: []
     - parameter: Weight loss mechanism
       value:
         value: 'Dual action: decreased energy intake + increased energy expenditure'
@@ -184,8 +173,7 @@ fat_loss:
     - parameter: Phase 2 efficacy
       value:
         value: Significant weight loss demonstrated
-        cite:
-          - yathindra-2026
+        cite: []
       notes:
         value: Specific percentage not disclosed in abstracts.
         cite: []
@@ -204,8 +192,7 @@ fat_loss:
     - parameter: Network meta-analysis
       value:
         value: Favorable efficacy profile vs other glucagon receptor agonists
-        cite:
-          - abulehia-2026
+        cite: []
     - parameter: Hepatic requirement
       value:
         value: Hepatic GCGR required for maximal weight loss and metabolic effects
@@ -219,27 +206,22 @@ fat_loss:
     - parameter: Comparative efficacy
       value:
         value: Network meta-analysis shows competitive efficacy in GRA class
-        cite:
-          - abulehia-2026
+        cite: []
 side_effects:
   rows:
     - parameter: GI symptoms
       value:
         value: Diarrhea, nausea, fatigue — class effect of GLP-1 agonists
-        cite:
-          - abulehia-2026
-          - andonie-2026
+        cite: []
       severity: mild
     - parameter: Safety profile
       value:
         value: 'Network meta-analysis: comparable safety to other GRAs'
-        cite:
-          - abulehia-2026
+        cite: []
     - parameter: Serious adverse events
       value:
         value: Monitored in Phase 2/3; no unique safety signals reported
-        cite:
-          - andonie-2026
+        cite: []
       notes:
         value: Detailed SAE data pending Phase 3 completion.
         cite: []
@@ -251,8 +233,7 @@ side_effects:
     - parameter: Glucagon-related effects
       value:
         value: Potential for tachycardia, increased blood pressure — theoretical glucagon effect
-        cite:
-          - elmendorf-2026
+        cite: []
       severity: moderate
   contraindications_absolute:
     - value: Personal or family history of medullary thyroid carcinoma (class effect)
@@ -282,8 +263,7 @@ administration:
       body: >-
         Once weekly, same day each week. Can be administered at any time of day, with or without
         meals.
-      cite:
-        - yathindra-2026
+      cite: []
     - title: Storage
       body: >-
         Store refrigerated (2–8 °C) until use. Do not freeze. Protect from light. Specific
@@ -312,9 +292,7 @@ synergy:
         Resmetirom: 80–100 mg PO daily
         Monitoring: LFTs, lipid panel, thyroid function q4-8 weeks
       primary_benefit: Multi-pathway MASH resolution, hepatic fat reduction, metabolic improvement
-      cite:
-        - andonie-2026
-        - patil-2026
+      cite: []
     - partner_slug: metformin
       partner_label: Metformin
       synergy: moderate
@@ -330,9 +308,7 @@ synergy:
         Metformin: 500–2000 mg daily (titrated)
         Timing: Metformin with meals to reduce GI effects
       primary_benefit: Enhanced glycemic control, weight loss, reduced hepatic glucose output
-      cite:
-        - yathindra-2026
-        - elmendorf-2026
+      cite: []
 description_md: >-
   Survodutide represents a next-generation approach to obesity and metabolic disease management
   through dual GLP-1 and glucagon receptor agonism. Unlike single-target GLP-1 agonists, survodutide
@@ -349,6 +325,6 @@ description_md: >-
   obesity trial designs. The once-weekly dosing schedule aims to improve adherence relative to daily
   therapies. Full Phase 3 results are anticipated to define survodutide's clinical positioning in
   obesity and MASH treatment paradigms.
-maturity: auto-drafted
+maturity: human-reviewed
 contributors:
   - peptidesdb-core

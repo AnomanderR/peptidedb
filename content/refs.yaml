@@ -938,3 +938,80 @@ yao-2021:
   pmid: '34498509'
   authors:
     - Yao M
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+pan-2026:
+  id: pan-2026
+  type: journal
+  title: 'Obesity in China: current progress and future prospects.'
+  year: 2026
+  pmid: '41389801'
+  authors:
+    - Pan XF
+
+luo-2026:
+  id: luo-2026
+  type: journal
+  title: >-
+    Mazdutide versus Semaglutide for the treatment of type 2 diabetes and obesity: Rationale, design
+    and baseline data of DREAMS-3 phase 3 trial.
+  year: 2026
+  pmid: '41260459'
+  authors:
+    - Luo Y
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+culver-2017:
+  id: culver-2017
+  type: journal
+  title: >-
+    Cibinetide Improves Corneal Nerve Fiber Abundance in Patients With Sarcoidosis-Associated Small
+    Nerve Fiber Loss and Neuropathic Pain.
+  year: 2017
+  pmid: '28475703'
+  authors:
+    - Culver DA
+
+brines-2015:
+  id: brines-2015
+  type: journal
+  title: >-
+    ARA 290, a nonerythropoietic peptide engineered from erythropoietin, improves metabolic control
+    and neuropathic symptoms in patients with type 2 diabetes.
+  year: 2015
+  pmid: '25387363'
+  authors:
+    - Brines M
+
+van-2014:
+  id: van-2014
+  type: journal
+  title: ARA 290 for treatment of small fiber neuropathy in sarcoidosis.
+  year: 2014
+  pmid: '24555851'
+  authors:
+    - van Velzen M
+
+liu-2014:
+  id: liu-2014
+  type: journal
+  title: >-
+    Erythropoietin-derived nonerythropoietic peptide ameliorates experimental autoimmune neuritis by
+    inflammation suppression and tissue protection.
+  year: 2014
+  pmid: '24603865'
+  authors:
+    - Liu Y
+
+rendell-2021:
+  id: rendell-2021
+  type: journal
+  title: The time to develop treatments for diabetic neuropathy.
+  year: 2021
+  pmid: '33423557'
+  authors:
+    - Rendell MS

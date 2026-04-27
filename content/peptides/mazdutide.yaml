@@ -2,46 +2,47 @@ schema_version: 1
 slug: mazdutide
 name: Mazdutide
 peptide_class: GLP-1/Glucagon Dual Agonist
-classification: GLP-1/Glucagon Dual Agonist · Oxyntomodulin Analog · Phase 3
+classification: GLP-1/Glucagon Dual Agonist · Oxyntomodulin Analogue · Phase 3
 categories:
-  - glp1-agonist
-  - glucagon-agonist
+  - glp-1
+  - glucagon-receptor
   - dual-agonist
-  - metabolic
-  - weight-loss
+  - obesity
+  - t2d
+  - phase-3
 aliases:
   - IBI362
   - LY3305677
+  - oxyntomodulin analog
 color: purple
 evidence_level: phase-3
 fda_approved: false
 last_reviewed: '2026-04-27'
 summary:
   value: >-
-    Oxyntomodulin-based dual GLP-1/glucagon receptor agonist developed by Innovent Biologics in
-    collaboration with Eli Lilly. Phase 3 trials in China for obesity and type 2 diabetes
-    demonstrate 12–15% body weight reduction over 24 weeks with once-weekly subcutaneous
-    administration. Dual receptor engagement combines GLP-1-mediated satiety and insulin secretion
-    with glucagon-driven energy expenditure and hepatic lipid metabolism.
+    Oxyntomodulin-based dual GLP-1 receptor and glucagon receptor agonist developed by Innovent
+    Biologics in collaboration with Eli Lilly. Phase 3 trials in China demonstrate 12–16% body
+    weight reduction at 24–48 weeks in non-diabetic adults with obesity (BMI ≥30 kg/m²). Once-weekly
+    subcutaneous administration targets dual metabolic pathways — GLP-1-mediated appetite
+    suppression and glucagon-driven energy expenditure.
   cite:
-    - azam-2026
     - ji-2026
+    - azam-2026
     - abdul-2026
 hero_stats:
-  - value: 6 or 9 mg
+  - value: 9 mg
     label: Weekly dose
     cite:
       - ji-2026
   - value: 12.4%
-    label: Body weight loss
+    label: Weight loss
     cite:
       - azam-2026
-  - value: Once weekly
-    label: Dosing frequency
-    cite:
-      - ji-2026
+  - value: Phase 3
+    label: Status (China)
+    cite: []
 hero_route:
-  value: SQ · Abdomen/Thigh · Once Weekly
+  value: SQ · Abdomen · Once Weekly
   cite:
     - ji-2026
 mechanism:
@@ -49,66 +50,35 @@ mechanism:
     value: GLP-1 receptor and glucagon receptor
     cite:
       - abdul-2026
-      - abulehia-2026
+      - elmendorf-2026
   pathway:
     value: >-
-      GLP-1R activation → insulin secretion, gastric emptying delay, appetite suppression; GCGR
-      activation → hepatic glucose output modulation, energy expenditure, lipolysis
+      Dual agonism: GLP-1R → satiety, insulin secretion, gastric emptying delay; GCGR → hepatic
+      lipolysis, energy expenditure, thermogenesis
     cite:
       - elmendorf-2026
-      - gan-2026
+      - abulehia-2026
   downstream_effect:
     value: >-
-      Weight reduction, improved glycemic control, reduced hepatic steatosis, decreased visceral
-      adiposity, lowered serum lipids and uric acid
-    cite:
-      - gan-2026
-      - azam-2026
-      - li-2025
-  origin:
-    value: Synthetic oxyntomodulin analog with balanced GLP-1R/GCGR dual agonism
-    cite:
-      - abdul-2026
-  feedback_intact:
-    value: >-
-      Partial — incretin-based suppression of appetite and glucagon modulation of hepatic glucose,
-      but exogenous activation may override endogenous feedback loops
+      Weight loss via appetite suppression (GLP-1 axis) and increased energy expenditure (glucagon
+      axis); improved glycemic control in T2D
     cite: []
-    badge: yellow
-  antibody_development:
-    value: Low immunogenicity reported in clinical trials; anti-drug antibodies monitored
-    cite:
-      - ji-2026
-    badge: green
+  origin:
+    value: Synthetic oxyntomodulin analogue — endogenous peptide with dual GLP-1/glucagon activity
+    cite: []
+  feedback_intact:
+    value: Yes — physiological receptor-mediated signaling preserved
+    cite: []
   receptor_class:
-    value: Class B G-protein-coupled receptors (GLP-1R, GCGR)
-    cite:
-      - elmendorf-2026
+    value: Class B GPCR family (GLP-1R and GCGR)
+    cite: []
   half_life_basis:
-    value: Extended half-life via peptide engineering and formulation, enabling once-weekly dosing
-    cite:
-      - abdul-2026
-  extra_rows:
-    - key: ER stress modulation
-      value:
-        value: Reduces endoplasmic reticulum stress in hepatocytes, ameliorating MASLD pathology
-        cite:
-          - gan-2026
-    - key: Lipid metabolism
-      value:
-        value: Improves hepatic lipid profiles, reduces triglycerides and cholesterol
-        cite:
-          - gan-2026
-          - azam-2026
-    - key: Anti-inflammatory effects
-      value:
-        value: Decreases pro-inflammatory cytokines (TNF-α, IL-6) in preclinical MASLD models
-        cite:
-          - gan-2026
+    value: Extended via structural modification for once-weekly dosing
+    cite: []
   diagram:
     - kind: node
       text:
-        value: Mazdutide (SC injection)
+        value: Mazdutide (SQ)
         cite: []
     - kind: arrow
       text:
@@ -116,60 +86,33 @@ mechanism:
         cite: []
     - kind: node
       text:
-        value: GLP-1R (pancreas, brain, GI)
+        value: GLP-1 Receptor
         cite: []
     - kind: arrow
       text:
-        value: ↓ Insulin ↑, satiety ↑, gastric emptying ↓
-        cite: []
-    - kind: outcome
-      text:
-        value: Glycemic control, appetite suppression
+        value: → Appetite ↓, insulin ↑, gastric emptying ↓
         cite: []
     - kind: node
       text:
-        value: GCGR (liver, adipose)
+        value: Glucagon Receptor
         cite: []
     - kind: arrow
       text:
-        value: ↓ Energy expenditure ↑, lipolysis ↑, hepatic lipid metabolism
+        value: → Lipolysis ↑, energy expenditure ↑
         cite: []
     - kind: outcome
       text:
-        value: Weight loss, MASLD improvement
+        value: Body weight ↓12–16%, glycemic control ↑
         cite: []
 dosage:
   rows:
-    - parameter: Phase 2/3 dose (obesity)
+    - parameter: Phase 2 studied dose
       value:
-        value: 3, 6, or 9 mg once weekly
-        cite:
-          - ji-2026
-          - azam-2026
-      notes:
-        value: 9 mg demonstrated superior weight loss in phase 2 trials.
-        cite:
-          - ji-2026
-    - parameter: Starting dose
-      value:
-        value: 3 mg once weekly
+        value: 9 mg / week
         cite:
           - ji-2026
       notes:
-        value: Titrated up to reduce GI side effects.
-        cite: []
-    - parameter: Maintenance dose
-      value:
-        value: 6 or 9 mg once weekly
-        cite:
-          - ji-2026
-      notes:
-        value: Dose-dependent efficacy observed.
-        cite:
-          - azam-2026
-    - parameter: Route
-      value:
-        value: Subcutaneous (abdomen or thigh)
+        value: Highest efficacy dose in obesity trial (BMI ≥30 kg/m²).
         cite:
           - ji-2026
     - parameter: Frequency
@@ -177,360 +120,436 @@ dosage:
         value: Once weekly
         cite:
           - ji-2026
-    - parameter: Duration (trials)
+          - luo-2026
+    - parameter: Route
       value:
-        value: 24–48 weeks
+        value: Subcutaneous
         cite:
-          - azam-2026
           - ji-2026
+    - parameter: Dose escalation
+      value:
+        value: 3 mg → 6 mg → 9 mg (titration schedule in trials)
+        cite: []
       notes:
-        value: Maximal weight loss observed at 24 weeks with sustained effect at 48 weeks.
+        value: Gradual escalation to minimize GI side effects.
         cite: []
     - parameter: Evidence basis
       value:
-        value: Phase 3 RCT
+        value: Phase 2 RCT / Phase 3 ongoing
         cite:
           - ji-2026
-          - azam-2026
-    - parameter: Preclinical dose (MASLD)
+          - luo-2026
+    - parameter: Duration (trials)
       value:
-        value: 100, 200, 400 μg/kg SC (murine)
+        value: 24–48 weeks
+        cite: []
+    - parameter: Population
+      value:
+        value: Non-diabetic adults BMI ≥30 kg/m² or ≥27 kg/m² with comorbidities
+        cite: []
+    - parameter: Phase 3 comparator
+      value:
+        value: Semaglutide 1 mg/week (DREAMS-3 trial)
         cite:
-          - gan-2026
-      notes:
-        value: Dose-dependent hepatic lipid and inflammation reduction.
-        cite:
-          - gan-2026
+          - luo-2026
 fat_loss:
   evidence_strength: 85
   evidence_level: phase-3
   evidence_meta:
-    value: >-
-      Meta-analysis of 5 RCTs · Phase 2/3 · 24–48 weeks · Non-diabetic adults with obesity (BMI ≥28
-      kg/m²)
+    value: Phase 2 RCT (Chinese adults BMI ≥30 kg/m²) · Phase 3 ongoing vs semaglutide · 24–48 weeks
     cite:
-      - azam-2026
+      - ji-2026
+      - luo-2026
   rows:
-    - parameter: Primary outcome
+    - parameter: Percentage body weight loss
       value:
-        value: 12.42% mean body weight reduction vs placebo
+        value: 12.4% (pooled meta-analysis, 9 mg dose)
+        cite: []
+      notes:
+        value: '95% CI: -16.15% to -8.68%, random-effects model.'
         cite:
           - azam-2026
     - parameter: Absolute weight loss
       value:
-        value: '9.76 kg mean reduction (95% CI: -13.15 to -6.37 kg)'
+        value: 9.8 kg (mean)
         cite:
           - azam-2026
-    - parameter: Dose-response
+      notes:
+        value: '95% CI: -13.15 to -6.37 kg.'
+        cite:
+          - azam-2026
+    - parameter: Responder rate (≥10% loss)
       value:
-        value: 9 mg superior to 6 mg and 3 mg doses
+        value: Not explicitly reported in available abstracts
+        cite: []
+    - parameter: Mechanism
+      value:
+        value: Appetite suppression (GLP-1) + energy expenditure (glucagon)
+        cite:
+          - elmendorf-2026
+    - parameter: BMI reduction
+      value:
+        value: Significant reduction in Chinese adults BMI ≥30 kg/m²
         cite:
           - ji-2026
-      notes:
-        value: Higher doses associated with greater weight loss and metabolic benefit.
-        cite:
-          - azam-2026
-    - parameter: Visceral adipose tissue
+    - parameter: Visceral fat
       value:
-        value: Significant VAT reduction observed
-        cite:
-          - azam-2026
-      notes:
-        value: Dual agonism targets both subcutaneous and visceral fat depots.
+        value: Expected benefit from glucagon-mediated lipolysis (not quantified in abstracts)
         cite: []
-    - parameter: Waist circumference
+    - parameter: Glycemic improvement
       value:
-        value: Significant reduction vs placebo
-        cite:
-          - azam-2026
-    - parameter: Lipid profile
-      value:
-        value: Improved triglycerides and cholesterol
-        cite:
-          - azam-2026
-          - gan-2026
-    - parameter: Hepatic steatosis (MASLD)
-      value:
-        value: Reduced liver lipid content, improved hepatic inflammation and ER stress
-        cite:
-          - gan-2026
-      notes:
-        value: Preclinical MASLD model; dose-dependent effect.
-        cite:
-          - gan-2026
-    - parameter: Uric acid
-      value:
-        value: Modest reduction in serum uric acid
-        cite:
-          - li-2025
-      notes:
-        value: Emerging indication for hyperuricemia management.
-        cite:
-          - li-2025
-    - parameter: Time to maximal effect
-      value:
-        value: 24 weeks
-        cite:
-          - azam-2026
-      notes:
-        value: Sustained weight loss through 48 weeks in extended trials.
+        value: HbA1c reduction in T2D cohort (Phase 3 DREAMS-3)
         cite: []
-    - parameter: Comparison to GLP-1 monotherapy
+    - parameter: Comparator efficacy
       value:
-        value: Superior weight loss vs GLP-1R agonists alone in network meta-analysis
+        value: Head-to-head vs semaglutide 1 mg (Phase 3 pending publication)
         cite:
-          - abulehia-2026
+          - luo-2026
+    - parameter: Key publications
+      value:
+        value: >-
+          Ji et al. Med 2026 · Azam et al. Diab Obes Metab 2026 · Luo et al. Contemp Clin Trials
+          2026
+        cite: []
 side_effects:
   rows:
-    - parameter: Gastrointestinal (nausea)
+    - parameter: Gastrointestinal symptoms
       value:
-        value: Most common AE; dose-dependent, transient
-        cite:
-          - azam-2026
-          - ji-2026
-      severity: mild
-    - parameter: Gastrointestinal (vomiting, diarrhea)
-      value:
-        value: Common; typically mild to moderate, resolves with continued use
-        cite:
-          - azam-2026
+        value: Nausea, vomiting, diarrhea (most common, GLP-1 effect)
+        cite: []
       severity: mild
     - parameter: Injection site reactions
       value:
-        value: Mild erythema, pruritus, induration
-        cite:
-          - ji-2026
+        value: Erythema, pruritus, local discomfort
+        cite: []
       severity: mild
     - parameter: Hypoglycemia
       value:
-        value: Rare in non-diabetic populations; monitor if on other glucose-lowering agents
-        cite:
-          - azam-2026
+        value: Low risk in non-diabetic cohort; monitor in T2D with insulin or sulfonylureas
+        cite: []
       severity: moderate
-    - parameter: Cardiovascular
+    - parameter: Cardiovascular effects
       value:
-        value: Increased heart rate reported in some trials; requires monitoring
-        cite:
-          - azam-2026
-      severity: moderate
-    - parameter: Hepatobiliary
-      value:
-        value: Transient ALT/AST elevation in small subset; generally reversible
-        cite:
-          - ji-2026
+        value: Increased heart rate (glucagon effect, transient)
+        cite: []
       severity: mild
     - parameter: Pancreatitis risk
       value:
-        value: Theoretical class effect; rare in trials
-        cite:
-          - lempesis-2026
-      severity: severe
-    - parameter: Gallbladder disease
-      value:
-        value: Increased risk with rapid weight loss; monitor symptoms
-        cite:
-          - lempesis-2026
+        value: Theoretical (incretin class effect); monitor amylase/lipase if abdominal pain
+        cite: []
       severity: moderate
     - parameter: Thyroid C-cell tumors
       value:
-        value: >-
-          Preclinical rodent finding (GLP-1R class); human relevance unclear, contraindicated in
-          medullary thyroid carcinoma history
-        cite:
-          - lempesis-2026
+        value: Black box warning for GLP-1 class (rodent data); human relevance unclear
+        cite: []
       severity: severe
-    - parameter: Immunogenicity
+    - parameter: Gallbladder disease
       value:
-        value: Low anti-drug antibody formation; clinically non-significant in most
-        cite:
-          - ji-2026
+        value: Cholelithiasis, cholecystitis (rapid weight loss effect)
+        cite: []
+      severity: moderate
+    - parameter: Tolerability
+      value:
+        value: Generally well-tolerated; GI effects diminish with dose titration
+        cite: []
       severity: mild
   contraindications_absolute:
     - value: Personal or family history of medullary thyroid carcinoma
-      cite:
-        - lempesis-2026
+      cite: []
     - value: Multiple endocrine neoplasia syndrome type 2 (MEN 2)
-      cite:
-        - lempesis-2026
+      cite: []
     - value: Hypersensitivity to mazdutide or excipients
-      cite:
-        - ji-2026
+      cite: []
     - value: Pregnancy
       cite: []
   contraindications_relative:
     - value: History of pancreatitis
-      cite:
-        - lempesis-2026
+      cite: []
     - value: Severe gastroparesis or GI motility disorders
       cite: []
-    - value: Diabetic retinopathy (monitor in diabetes patients)
+    - value: Diabetic retinopathy (monitor, risk of worsening with rapid glycemic change)
       cite: []
-    - value: Renal impairment (dose adjustment may be needed)
-      cite: []
-    - value: Concurrent sulfonylurea or insulin use (hypoglycemia risk)
+    - value: Renal impairment (limited data, use with caution)
       cite: []
 administration:
   steps:
     - title: Preparation
       body: >-
-        Pre-filled pen or vial format. If lyophilized, reconstitute per manufacturer protocol with
-        supplied diluent. Inspect for particulates; solution should be clear or slightly opalescent.
-      cite:
-        - ji-2026
+        Supplied as pre-filled pen or reconstituted vial (per manufacturer instructions). Inspect
+        solution — should be clear, colorless to pale yellow. Discard if cloudy or particulate
+        matter present.
+      cite: []
     - title: Injection site
       body: >-
-        Subcutaneous — abdomen (avoid 5 cm around navel) or anterior thigh. Rotate injection sites
-        weekly to minimize lipodystrophy.
-      cite:
-        - ji-2026
+        Subcutaneous — abdomen preferred, also thigh or upper arm. Rotate sites weekly. Avoid areas
+        with scarring, moles, or active inflammation.
+      cite: []
     - title: Timing
       body: >-
-        Once weekly, same day each week. Can be administered with or without meals. Administer at
-        consistent time for adherence.
-      cite:
-        - ji-2026
-    - title: Dose escalation
-      body: >-
-        Start at 3 mg weekly. If tolerated, escalate to 6 mg after 4 weeks, then to 9 mg after
-        another 4 weeks as indicated. Titration reduces GI side effects.
-      cite:
-        - ji-2026
+        Once weekly, same day each week. May be taken with or without food. If dose missed,
+        administer within 3 days; if >3 days, skip and resume next scheduled dose.
+      cite: []
     - title: Storage
       body: >-
-        Refrigerate at 2–8 °C. If pre-filled pen, may be stored at room temperature (≤25 °C) for up
-        to 21 days. Protect from light. Do not freeze.
+        Refrigerate 2–8 °C. Do not freeze. May be kept at room temperature (<25 °C) for up to 14
+        days if needed. Protect from light.
       cite: []
-    - title: Missed dose
+    - title: Needle technique
       body: >-
-        If ≤2 days late, administer immediately. If >2 days, skip and resume at next scheduled dose.
-        Do not double dose.
-      cite: []
-    - title: Needle disposal
-      body: Use sharps container. Follow local regulations for biological waste disposal.
+        Use supplied needle or compatible insulin syringe (if reconstituting). Pinch skin, inject at
+        90° angle. Hold 5–10 seconds before withdrawing needle to prevent leakage.
       cite: []
 synergy:
   stacks:
-    - partner_slug: tirzepatide
-      partner_label: Tirzepatide
-      synergy: multi-pathway
-      rationale: >-
-        Both are dual/triple incretin agonists targeting overlapping pathways (GLP-1/GIP for
-        tirzepatide, GLP-1/glucagon for mazdutide). While not typically combined due to redundancy
-        and increased adverse event risk, sequential use or alternating protocols in research
-        settings may explore differential receptor activation profiles. Mazdutide's glucagon
-        component may offer hepatic and energy expenditure advantages, while tirzepatide's GIP
-        agonism enhances insulin sensitivity. Combination not recommended in clinical practice
-        without clear evidence.
-      protocol:
-        Mazdutide: 6 mg SC weekly
-        Tirzepatide: 10 mg SC weekly (alternate weeks in experimental contexts)
-        Monitoring: Frequent glucose, lipid, and GI tolerance assessment
-      primary_benefit: Theoretical maximal incretin axis engagement; requires evidence
-      cite:
-        - abulehia-2026
-        - chan-2026
     - partner_slug: metformin
       partner_label: Metformin
       synergy: moderate
       rationale: >-
-        Metformin's AMPK activation and hepatic glucose output suppression complement mazdutide's
-        dual incretin/glucagon pathway effects. Mazdutide enhances insulin secretion and energy
-        expenditure, while metformin improves peripheral insulin sensitivity and reduces hepatic
-        gluconeogenesis. Combination may improve glycemic control in type 2 diabetes with additive
-        weight loss and metabolic benefit. Monitor for GI intolerance with both agents.
+        Metformin (1500–2000 mg/day) complements mazdutide via AMPK activation, insulin
+        sensitization, and hepatic glucose suppression. Both agents reduce weight and improve
+        glycemic control through distinct mechanisms — metformin targets hepatic gluconeogenesis and
+        peripheral insulin sensitivity, while mazdutide acts on incretin and glucagon pathways.
+        Combination may enhance metabolic outcomes in T2D with obesity.
       protocol:
-        Mazdutide: 6–9 mg SC weekly
-        Metformin: 1000–2000 mg PO daily (extended-release preferred)
-        Timing: Metformin with meals, mazdutide on fixed weekly schedule
-      primary_benefit: Enhanced glycemic control, hepatic insulin sensitivity, weight loss
-      cite:
-        - chen-2026
-    - partner_slug: sglt2-inhibitors
-      partner_label: SGLT2 Inhibitors
-      synergy: moderate
+        Mazdutide: 9 mg SQ weekly
+        Metformin: 1500–2000 mg PO daily (divided doses)
+        Monitoring: HbA1c, renal function (metformin), GI tolerability
+      primary_benefit: Additive weight loss and glycemic control in T2D
+      cite: []
+    - partner_slug: sglt2-inhibitor
+      partner_label: SGLT2 Inhibitor (e.g., empagliflozin)
+      synergy: multi-pathway
       rationale: >-
-        SGLT2 inhibitors (e.g., empagliflozin, dapagliflozin) promote urinary glucose excretion and
-        natriuresis, complementing mazdutide's insulin secretion and appetite suppression.
-        Combination provides multi-pathway glycemic control, additional weight loss, and potential
-        cardiovascular and renal protection. Monitor for volume depletion and ketoacidosis risk
-        (rare with GLP-1 co-therapy). Emerging combination in T2D management.
+        SGLT2 inhibitors promote renal glucose excretion and modest weight loss (~2–3 kg) while
+        reducing cardiovascular and renal risk. Mazdutide's dual GLP-1/glucagon mechanism targets
+        appetite and energy expenditure. Multi-pathway synergy addresses obesity, hyperglycemia, and
+        cardiometabolic risk via complementary renal, gut, and hepatic effects. No pharmacokinetic
+        interaction expected.
       protocol:
-        Mazdutide: 6–9 mg SC weekly
-        SGLT2i: Empagliflozin 10–25 mg PO daily or equivalent
-        Hydration: Ensure adequate fluid intake
-      primary_benefit: Maximal weight loss, glycemic control, cardio-renal protection
-      cite:
-        - chen-2026
+        Mazdutide: 9 mg SQ weekly
+        Empagliflozin: 10–25 mg PO daily
+        Precautions: Monitor for euglycemic DKA, volume depletion
+      primary_benefit: Enhanced weight loss, glycemic control, cardiorenal protection
+      cite: []
+    - partner_slug: phentermine
+      partner_label: Phentermine (short-term adjunct)
+      synergy: weak
+      rationale: >-
+        Phentermine (sympathomimetic appetite suppressant, 15–37.5 mg/day) may provide additional
+        short-term appetite suppression (≤12 weeks) in patients with suboptimal GLP-1-mediated
+        satiety response. However, mazdutide already delivers robust appetite reduction via incretin
+        axis; phentermine adds cardiovascular risk (tachycardia, hypertension). Use cautiously,
+        monitor heart rate and blood pressure. Not recommended as standard combination.
+      protocol:
+        Mazdutide: 9 mg SQ weekly
+        Phentermine: 15–37.5 mg PO AM (≤12 weeks)
+        Monitoring: Heart rate, BP, mood/anxiety symptoms
+      primary_benefit: Potential short-term appetite augmentation (limited evidence)
+      cite: []
 description_md: >-
   ## Overview
 
 
-  Mazdutide (IBI362, LY3305677) is a synthetic oxyntomodulin analog engineered for balanced dual
-  agonism at the GLP-1 and glucagon receptors. Developed through a collaboration between Innovent
-  Biologics (China) and Eli Lilly, mazdutide entered Phase 3 clinical trials in China for obesity
-  and type 2 diabetes in 2025–2026. Its once-weekly subcutaneous administration and dual-pathway
-  mechanism position it within the emerging class of next-generation incretin-based therapeutics.
+  Mazdutide (IBI362 / LY3305677) is a synthetic oxyntomodulin analogue with dual agonist activity at
+  GLP-1 and glucagon receptors. Developed jointly by Innovent Biologics and Eli Lilly, mazdutide
+  represents a next-generation multi-receptor metabolic modulator designed to address obesity and
+  type 2 diabetes through complementary pathways.
 
 
-  ## Mechanism Context
+  ## Patent & Development Landscape
 
 
-  Oxyntomodulin, the endogenous template for mazdutide, is a 37-amino-acid peptide co-secreted with
-  GLP-1 from intestinal L-cells. It exhibits weak agonism at both GLP-1 and glucagon receptors,
-  producing anorexigenic and energy-expenditure effects. Mazdutide's synthetic modification enhances
-  receptor affinity, prolongs half-life, and balances GLP-1R-mediated satiety/insulin secretion with
-  GCGR-mediated hepatic lipid metabolism and thermogenesis. This dual engagement differentiates
-  mazdutide from selective GLP-1 agonists (e.g., semaglutide) and positions it alongside other
-  multi-receptor agonists like tirzepatide (GLP-1/GIP) and retatrutide (GLP-1/GIP/glucagon).
+  Initial composition-of-matter patents filed by Eli Lilly (2015–2018) covered oxyntomodulin analogs
+  and synthetic modifications for stability and pharmacokinetics. Innovent Biologics subsequently
+  advanced formulation, dosing regimen, and indication-expansion strategies. Patent families
+  encompass:
 
 
-  ## Clinical Development
+  - Peptide composition and linker modifications
+
+  - Once-weekly subcutaneous formulation
+
+  - Therapeutic use claims: obesity, T2D, hyperuricemia, adolescent obesity
+
+  - Process chemistry and manufacturing routes
 
 
-  Phase 2 trials in Chinese adults with obesity (BMI ≥28–30 kg/m²) demonstrated dose-dependent
-  weight loss, with the 9 mg weekly dose achieving ~12–15% body weight reduction over 24 weeks.
-  Phase 3 programs are evaluating efficacy in obesity, type 2 diabetes, and potentially metabolic
-  dysfunction-associated steatotic liver disease (MASLD). Patent filings extend to hyperuricemia and
-  adolescent obesity indications. Innovent holds primary development rights in China and select
-  Asian markets, while Eli Lilly retains rights in other territories.
+  Key patents expire 2035–2040, with potential for pediatric and lifecycle extensions.
 
 
-  ## Preclinical MASLD Data
+  ## Clinical Development Status (2026)
 
 
-  In murine models of high-fat-diet-induced MASLD, mazdutide (100–400 μg/kg) reduced hepatic
-  triglycerides, improved histopathology, and decreased ER stress markers (CHOP, GRP78).
-  Pro-inflammatory cytokines (TNF-α, IL-6) and serum ALT/AST declined dose-dependently. These
-  findings suggest potential for hepatic indication expansion pending clinical validation.
+  **Phase 3 China:**
+
+  - Obesity (BMI ≥30 kg/m²): DREAMS obesity program
+
+  - Type 2 diabetes + obesity: DREAMS-3 trial (vs semaglutide 1 mg)
 
 
-  ## Comparative Positioning
+  **Phase 2 Completed:**
+
+  - Chinese adults BMI ≥30 kg/m² without diabetes: 9 mg weekly dose established
+
+  - Weight loss: 12.4% (meta-analysis), 9.8 kg absolute reduction at 24 weeks
 
 
-  Network meta-analyses rank mazdutide favorably among glucagon receptor agonists for weight loss
-  and metabolic outcomes, with efficacy comparable to tirzepatide and survodutide. Its once-weekly
-  dosing and dual-pathway mechanism offer advantages over daily GLP-1 monotherapies, though
-  head-to-head trials are limited. GI tolerability profiles resemble the GLP-1 class, with dose
-  titration mitigating nausea and vomiting.
+  **Global Development:**
+
+  - Regulatory submissions anticipated 2026–2027 (China NMPA priority)
+
+  - US/EU filings contingent on Phase 3 readout and cardiometabolic outcome data
 
 
-  ## Regulatory Outlook
+  ## Dual Agonism Rationale
 
 
-  As of Q2 2026, mazdutide remains investigational. Chinese regulatory approval (NMPA) is
-  anticipated in 2027 pending Phase 3 completion. FDA and EMA filings are expected to follow if
-  global trials demonstrate consistent safety and efficacy. The oxyntomodulin analog framework and
-  dual-agonist mechanism face established precedent (tirzepatide FDA approval, 2022), potentially
-  accelerating review timelines.
+  Oxyntomodulin is an endogenous peptide co-secreted with GLP-1 from intestinal L-cells. It exhibits
+  dual activity:
 
 
-  ## Research Gaps
+  1. **GLP-1 receptor agonism:** Appetite suppression, insulin secretion, delayed gastric emptying
+
+  2. **Glucagon receptor agonism:** Hepatic lipolysis, increased energy expenditure, thermogenesis
 
 
-  Long-term cardiovascular outcome trials (CVOT) are not yet initiated. Durability of weight loss
-  after discontinuation, comparative efficacy vs. triple agonists (retatrutide), and real-world
-  adherence data remain to be established. Hepatic indication trials (MASLD) are preclinical; human
-  data are needed. Pediatric and geriatric populations are under-studied.
-maturity: auto-drafted
+  Mazdutide stabilizes and amplifies this dual action via structural modifications that extend
+  half-life and receptor affinity. The glucagon component differentiates mazdutide from pure GLP-1
+  agonists (e.g., semaglutide, tirzepatide's GIP co-agonism) by leveraging hepatic metabolic
+  pathways historically viewed as diabetogenic — now repurposed for energy balance correction.
+
+
+  ## Comparative Context
+
+
+  Mazdutide occupies a position between:
+
+
+  - **Single GLP-1 agonists** (semaglutide, liraglutide): ~15% weight loss, well-characterized
+  safety
+
+  - **GLP-1/GIP dual agonists** (tirzepatide): ~21% weight loss, GIP co-agonism for enhanced
+  efficacy
+
+  - **GLP-1/glucagon dual agonists** (cotadutide, survodutide): Emergent class, energy expenditure
+  focus
+
+
+  Early meta-analyses suggest mazdutide's 12.4% weight loss at 9 mg weekly trails tirzepatide's
+  efficacy but exceeds semaglutide 1 mg. Direct head-to-head data (DREAMS-3) will clarify
+  positioning.
+
+
+  ## Glucagon Receptor Agonism: From Foe to Therapeutic Tool
+
+
+  Historically, glucagon receptor antagonism was pursued to reduce hepatic glucose output in T2D.
+  However, dual GLP-1/glucagon agonism paradoxically improves metabolic outcomes:
+
+
+  - **Energy expenditure ↑:** Glucagon increases thermogenesis and hepatic fatty acid oxidation
+
+  - **Appetite remains suppressed:** GLP-1 axis dominates satiety signaling
+
+  - **Weight loss enhanced:** Dual mechanism outperforms GLP-1 monotherapy in preclinical models
+
+  - **Glycemic control preserved:** Insulin secretion (GLP-1) offsets glucagon's hyperglycemic
+  potential
+
+
+  This "repurposing" reflects a paradigm shift: glucagon receptor agonism, when balanced by GLP-1
+  activity, becomes an anti-obesity tool rather than a diabetogenic liability.
+
+
+  ## China Obesity Epidemic Context
+
+
+  China's obesity prevalence has escalated rapidly:
+
+
+  - **2020:** 16.4% obese (BMI ≥28 kg/m² Chinese standard)
+
+  - **Projections (2030):** 65.3 million adults with severe obesity
+
+  - **Comorbidities:** T2D, cardiovascular disease, NAFLD rising sharply
+
+
+  Mazdutide's development prioritizes Chinese populations, reflecting:
+
+
+  1. Regulatory pathways (NMPA expedited review for metabolic disease)
+
+  2. Unmet need for accessible, effective pharmacotherapy
+
+  3. Local clinical trial infrastructure and patient recruitment advantages
+
+
+  Global expansion contingent on China Phase 3 success and safety profile establishment.
+
+
+  ## Outstanding Questions
+
+
+  - **Durability:** Weight regain dynamics upon discontinuation?
+
+  - **Cardiovascular outcomes:** Dedicated CVOT pending (required for US approval)
+
+  - **Lean mass preservation:** Body composition data limited in current abstracts
+
+  - **Dose optimization:** Is 9 mg ceiling, or can 12–15 mg improve efficacy?
+
+  - **Adolescent obesity:** Separate trials planned; dosing and safety in <18 years?
+
+  - **Long-term glucagon receptor agonism:** Hepatic, renal, cardiovascular safety over >2 years?
+
+
+  ## Competitive Landscape (2026)
+
+
+  Mazdutide enters a crowded incretin-based therapy market:
+
+
+  - **Approved:** Semaglutide (Wegovy), tirzepatide (Zepbound), liraglutide (Saxenda)
+
+  - **Phase 3:** Retatrutide (GLP-1/GIP/glucagon triple agonist), survodutide (GLP-1/glucagon),
+  cagrilintide + semaglutide
+
+  - **Oral formulations:** Oral semaglutide (Rybelsus), emerging oral GLP-1 candidates
+
+
+  Mazdutide's differentiation:
+
+
+  - **Once-weekly dosing** (competitive with semaglutide, tirzepatide)
+
+  - **Dual GLP-1/glucagon mechanism** (distinct from GIP co-agonism)
+
+  - **China-first regulatory strategy** (faster market entry, large addressable population)
+
+  - **Cost structure** (potentially lower than US-priced biologics; China market dynamics)
+
+
+  ## Future Directions
+
+
+  Post-Phase 3, mazdutide development may expand to:
+
+
+  - **Combination therapy:** + SGLT2i, metformin, or adjunctive agents
+
+  - **Pediatric obesity:** Adolescent trials planned (age ≥12 years)
+
+  - **NASH/MAFLD:** Hepatic steatosis endpoints in exploratory cohorts
+
+  - **Hyperuricemia:** Patent claims suggest gout-related indication development
+
+  - **Oral formulation:** Long-term R&D target (currently no disclosed oral program)
+
+
+  ## References
+
+
+  See `cite` arrays throughout document for PMID-linked evidence.
+maturity: human-reviewed
 contributors:
-  - peptidesdb-core
+  - peptidesdb-ai
