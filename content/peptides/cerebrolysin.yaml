@@ -1,0 +1,363 @@
+schema_version: 1
+slug: cerebrolysin
+name: Cerebrolysin
+peptide_class: Neurotrophic Peptide Preparation
+classification: Porcine Brain-Derived Peptide Mix · Phase 3
+categories:
+  - neuroprotection
+  - stroke
+  - traumatic-brain-injury
+  - dementia
+  - neurotrophic
+aliases:
+  - FPF 1070
+  - porcine brain peptides
+color: purple
+evidence_level: phase-3
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Porcine brain-derived peptide preparation containing low-molecular-weight neurotrophic peptides
+    and free amino acids. Approved in 30+ countries for acute ischemic stroke, traumatic brain
+    injury, and dementia. Phase 3 data in mechanical thrombectomy show improved 12-month functional
+    independence (mRS 0-2) from 35% to 49%. Mimics endogenous neurotrophic factors (BDNF, NGF, CNTF)
+    with multimodal neuroprotection: anti-apoptotic, anti-inflammatory, pro-neuroplastic effects.
+  cite: []
+hero_stats:
+  - value: 30 mL/day
+    label: Standard dose
+    cite:
+      - afridi-2026
+      - staszewski-2026
+  - value: 14–21 days
+    label: Treatment course
+    cite: []
+  - value: 49% vs 35%
+    label: mRS 0-2 at 12 mo
+    cite:
+      - staszewski-2026
+hero_route:
+  value: IV infusion · 100-250 mL saline · Daily
+  cite: []
+mechanism:
+  primary_target:
+    value: Multiple neurotrophic pathways — mimics BDNF, NGF, CNTF receptor activation
+    cite: []
+  pathway:
+    value: >-
+      Cerebrolysin peptides → BDNF/NGF/CNTF receptor binding → TrkB/TrkA/LIFR signaling →
+      neuroprotection, neuroplasticity, synaptogenesis
+    cite: []
+  downstream_effect:
+    value: >-
+      Reduced apoptosis (Bax ↓, Bcl-2 ↑), suppressed TNF-α inflammation, elevated endogenous BDNF,
+      enhanced synaptic plasticity and motor recovery
+    cite: []
+  origin:
+    value: >-
+      Enzymatic breakdown of lipid-free porcine brain proteins → standardized low-MW peptide
+      fraction (<10 kDa) + free amino acids
+    cite: []
+  feedback_intact:
+    value: Yes — exogenous peptides do not suppress endogenous neurotrophic factor synthesis
+    cite: []
+    badge: green
+  antibody_development:
+    value: >-
+      Not reported in human trials; porcine origin theoretically immunogenic but no clinically
+      significant allergic reactions documented
+    cite: []
+    badge: green
+  half_life_basis:
+    value: >-
+      Peptide mixture — individual components have variable clearance; effects persist 24+ hrs
+      post-infusion
+    cite: []
+  extra_rows:
+    - key: BDNF elevation
+      value:
+        value: Significant increase vs control (Western blot, 24 hrs post-MCA occlusion)
+        cite:
+          - shchulkin-2026
+    - key: Hemorrhagic transformation risk
+      value:
+        value: >-
+          52% reduction in HT incidence (high-risk cohort); accelerated hazard stabilization permits
+          earlier anticoagulation
+        cite:
+          - kalinin-2025
+  diagram:
+    - kind: node
+      text:
+        value: Ischemic insult / TBI
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Cerebrolysin peptides cross BBB
+        cite: []
+    - kind: node
+      text:
+        value: Neurotrophic receptors (TrkB, TrkA, LIFR)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ PI3K/Akt, MAPK/ERK pathways
+        cite: []
+    - kind: outcome
+      text:
+        value: Anti-apoptotic (Bcl-2 ↑, Bax ↓)
+        cite:
+          - shchulkin-2026
+    - kind: outcome
+      text:
+        value: Anti-inflammatory (TNF-α ↓)
+        cite:
+          - shchulkin-2026
+    - kind: outcome
+      text:
+        value: Neuroplasticity (BDNF ↑, synaptogenesis)
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard dose (stroke)
+      value:
+        value: 30–50 mL / day IV
+        cite:
+          - staszewski-2026
+          - afridi-2026
+      notes:
+        value: Most trials use 30 mL in 100-250 mL saline over 30-60 min.
+        cite: []
+    - parameter: Lower dose (dementia)
+      value:
+        value: 10–20 mL / day IV or IM
+        cite:
+          - khatkova-2026
+      notes:
+        value: Chronic neurodegenerative conditions; intermittent courses.
+        cite: []
+    - parameter: High dose (TBI)
+      value:
+        value: 50 mL / day IV
+        cite:
+          - kobayashi-2025
+      notes:
+        value: CLINCH trial protocol for intracerebral hemorrhage.
+        cite: []
+    - parameter: Duration
+      value:
+        value: 10–21 days (acute); intermittent courses (chronic)
+        cite: []
+      notes:
+        value: Stroke trials typically 10-14 days; rehabilitation phases may use repeated 10-day courses.
+        cite: []
+    - parameter: Timing (stroke)
+      value:
+        value: Initiate within 12 hrs of symptom onset; up to 6 hrs optimal
+        cite: []
+      notes:
+        value: Earlier initiation associated with better outcomes.
+        cite: []
+    - parameter: Adjunct to thrombectomy
+      value:
+        value: 30-50 mL daily × 10-14 days, starting day of EVT
+        cite: []
+      notes:
+        value: Propensity-matched data show 12-mo mRS 0-2 improved from 35% to 49%.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Phase 3 RCT + observational
+        cite: []
+    - parameter: Administration route
+      value:
+        value: IV infusion (preferred) or IM injection
+        cite: []
+      notes:
+        value: IV allows higher doses; IM used in outpatient/chronic settings.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Injection site reaction
+      value:
+        value: Mild pain, erythema (IM route)
+        cite: []
+      severity: mild
+    - parameter: Infusion reaction
+      value:
+        value: 'Rare: flushing, transient hypotension during rapid IV'
+        cite: []
+      severity: mild
+    - parameter: Agitation / Restlessness
+      value:
+        value: Reported in <5% of patients; typically mild, self-limited
+        cite: []
+      severity: mild
+    - parameter: Headache
+      value:
+        value: Mild, transient; incidence not significantly elevated vs placebo
+        cite:
+          - patel-2025
+      severity: mild
+    - parameter: Serious adverse events
+      value:
+        value: No significant increase vs placebo (RR 1.02, 95% CI 0.87-1.20)
+        cite: []
+      severity: mild
+    - parameter: Hemorrhagic transformation
+      value:
+        value: Reduced incidence vs control (52% reduction in high-risk post-thrombolysis cohort)
+        cite:
+          - kalinin-2025
+      severity: mild
+    - parameter: Mortality
+      value:
+        value: No increase; meta-analysis RR 0.89 (0.68-1.18)
+        cite: []
+      severity: mild
+    - parameter: Allergic reaction
+      value:
+        value: Rare; porcine origin theoretically immunogenic but clinically insignificant
+        cite: []
+      severity: mild
+    - parameter: Seizure risk
+      value:
+        value: Not elevated; safe in epilepsy populations
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Known hypersensitivity to porcine-derived products
+      cite: []
+    - value: Active seizure disorder (relative — caution advised)
+      cite: []
+  contraindications_relative:
+    - value: Severe renal impairment (amino acid load — monitor)
+      cite: []
+    - value: Pregnancy / lactation (insufficient safety data)
+      cite: []
+administration:
+  steps:
+    - title: Preparation (IV infusion)
+      body: >-
+        Dilute prescribed dose (10-50 mL) in 100-250 mL 0.9% sodium chloride. Use immediately after
+        preparation. Do not mix with other medications in same infusion bag.
+      cite: []
+    - title: Infusion rate
+      body: >-
+        Administer over 30-60 minutes. Slower infusion reduces risk of transient hypotension or
+        flushing. Monitor vital signs during first administration.
+      cite: []
+    - title: IM injection (alternative)
+      body: >-
+        For 5-10 mL doses: inject deep IM into gluteal or deltoid muscle. Rotate sites if repeated
+        daily. IM preferred for outpatient/chronic use.
+      cite: []
+    - title: Timing
+      body: >-
+        Acute stroke: initiate within 6-12 hrs of symptom onset. Daily administration, preferably
+        same time each day. Continue 10-21 days per protocol.
+      cite: []
+    - title: Storage
+      body: >-
+        Store unopened ampoules at 15-25°C, protected from light. Do not freeze. Use diluted
+        solution immediately; discard unused portion.
+      cite: []
+    - title: Co-administration
+      body: >-
+        Compatible with standard stroke care (thrombolysis, thrombectomy, antiplatelet/anticoagulant
+        therapy). Does not interfere with reperfusion therapies.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: semax
+      partner_label: Semax
+      synergy: moderate
+      rationale: >-
+        Cerebrolysin (multimodal neurotrophic peptide mix) and Semax (ACTH(4-10) analogue) operate
+        through complementary neuroprotective pathways. Cerebrolysin elevates BDNF and suppresses
+        apoptosis/inflammation via TrkB/TrkA signaling, while Semax enhances neuroplasticity through
+        BDNF upregulation and dopaminergic modulation. Combined use in stroke or TBI may amplify
+        anti-apoptotic effects and accelerate cognitive/motor recovery, though no direct RCT data
+        exist for the combination.
+      protocol:
+        Cerebrolysin: 30 mL IV daily × 10-14 days
+        Semax: 300-600 mcg intranasal BID × 10-14 days
+        Timing: Concurrent during acute recovery phase
+      primary_benefit: Enhanced neuroprotection, accelerated motor/cognitive recovery post-stroke or TBI
+      cite: []
+    - partner_slug: bpc-157
+      partner_label: BPC-157
+      synergy: multi-pathway
+      rationale: >-
+        Cerebrolysin provides CNS-specific neurotrophic support (BDNF, NGF pathways), while BPC-157
+        offers systemic tissue repair via angiogenesis (VEGF upregulation) and anti-inflammatory
+        effects. In traumatic brain injury or stroke, Cerebrolysin addresses neuronal survival and
+        synaptic plasticity, whereas BPC-157 may enhance vascular repair and blood-brain barrier
+        integrity. The combination targets both neuronal and vascular compartments of brain injury,
+        though clinical validation is lacking.
+      protocol:
+        Cerebrolysin: 30-50 mL IV daily × 14 days
+        BPC-157: 250-500 mcg SQ daily × 14-28 days
+        Timing: Initiate both within 24-48 hrs of injury
+      primary_benefit: Dual neuronal + vascular repair in TBI or stroke; accelerated functional recovery
+      cite: []
+description_md: >-
+  ## Clinical Context
+
+
+  Cerebrolysin has been investigated in over 2,800 patients across 14 randomized controlled trials,
+  with meta-analytic evidence supporting neurological improvement (NIHSS reduction, functional
+  independence) in acute ischemic stroke. Propensity-matched 12-month data from a 238-patient cohort
+  show that adjunctive Cerebrolysin with mechanical thrombectomy increases mRS 0-2 (functional
+  independence) from 35% to 49%, representing a 40% relative improvement in favorable outcomes.
+
+
+  ## Mechanism Insights
+
+
+  The preparation contains bioactive peptides derived from enzymatic breakdown of porcine brain
+  proteins, yielding low-molecular-weight (<10 kDa) fragments that mimic endogenous neurotrophic
+  factors. Key mechanistic actions include:
+
+
+  - **BDNF elevation**: Rat MCA occlusion models show significant BDNF upregulation at 24 hours
+  post-reperfusion (Western blot).
+
+  - **Anti-apoptotic effects**: Bcl-2 upregulation, Bax downregulation, reduced caspase-3
+  activation.
+
+  - **Anti-inflammatory action**: TNF-α suppression observed in multiple preclinical models.
+
+  - **Hemorrhagic transformation reduction**: 52% lower HT incidence in high-risk post-thrombolysis
+  patients, with accelerated hazard stabilization permitting earlier anticoagulation resumption.
+
+
+  ## Regulatory Status
+
+
+  Approved in >30 countries (predominantly Eastern Europe, Asia, Latin America) for stroke,
+  dementia, and TBI. Not FDA-approved in the United States. Phase 3 data exist, but heterogeneity in
+  trial design and outcome reporting has limited global regulatory acceptance.
+
+
+  ## Dosing Nuances
+
+
+  - **Acute stroke**: 30-50 mL IV daily × 10-14 days, initiated within 6-12 hours.
+
+  - **Chronic dementia/TBI**: 10-20 mL IV or IM daily, intermittent courses (e.g., 10 days/month).
+
+  - **Intracerebral hemorrhage**: 50 mL IV daily × 14 days per CLINCH pilot trial.
+
+
+  ## Safety Profile
+
+
+  Meta-analysis of 14 RCTs shows no significant increase in serious adverse events (RR 1.02, 95% CI
+  0.87-1.20) or mortality (RR 0.89, 0.68-1.18) vs placebo. Hemorrhagic transformation risk is
+  reduced, not elevated. Porcine origin raises theoretical immunogenicity concerns, but clinically
+  significant allergic reactions are rare.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

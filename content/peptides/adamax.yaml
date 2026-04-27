@@ -1,0 +1,401 @@
+schema_version: 1
+slug: adamax
+name: Adamax
+peptide_class: ACTH(4-10) Analogue
+classification: ACTH(4-10) Analogue · Russian Nootropic
+categories:
+  - nootropic
+  - neuroprotective
+  - acth-derived
+  - research
+aliases:
+  - ACTH(4-10) analog
+  - corticotropin 4-10 derivative
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic ACTH(4-10) analogue developed in Russia, structurally related to Semax but with
+    distinct amino acid modifications at positions 8-10. Investigated primarily in Russian-language
+    literature for cognitive enhancement, neuroprotection, and BDNF upregulation. Animal studies
+    demonstrate modulation of hippocampal BDNF/trkB signaling, normalization of circadian rhythms,
+    and attenuation of stress-related behavioral alterations. Limited human data exists; most
+    evidence derives from rodent models.
+  cite:
+    - dolotov-2006
+    - glazova-2021
+    - arushanian-2008
+hero_stats:
+  - value: 1.4×
+    label: BDNF protein ↑
+    cite:
+      - dolotov-2006
+  - value: 3×
+    label: BDNF mRNA (exon III)
+    cite:
+      - dolotov-2006
+  - value: 1.6×
+    label: trkB phosphorylation
+    cite:
+      - dolotov-2006
+hero_route:
+  value: Intranasal · Research Use Only
+  cite: []
+mechanism:
+  primary_target:
+    value: Melanocortin receptors (MC-Rs) in hippocampus and cortex
+    cite: []
+  pathway:
+    value: ACTH(4-10) fragment → MC-R binding → BDNF/trkB upregulation → neurotrophic signaling
+    cite: []
+  downstream_effect:
+    value: >-
+      Increased hippocampal BDNF expression, trkB tyrosine phosphorylation, enhanced conditioned
+      avoidance learning, circadian rhythm normalization
+    cite:
+      - dolotov-2006
+      - arushanian-2008
+  origin:
+    value: ACTH(4-10) fragment with modified amino acid sequence at positions 8, 9, 10
+    cite:
+      - teter-2001
+  feedback_intact:
+    value: Non-endocrine — devoid of adrenal axis effects
+    cite:
+      - van-1978
+    badge: green
+  receptor_class:
+    value: Melanocortin receptors (lower affinity than α-MSH derivatives)
+    cite:
+      - smolnik-2000
+  extra_rows:
+    - key: Neurotrophic mechanism
+      value:
+        value: 3-fold increase in exon III BDNF mRNA, 2-fold increase in trkB mRNA within hippocampus
+        cite:
+          - dolotov-2006
+    - key: Chronotropic activity
+      value:
+        value: Normalizes circadian locomotor rhythm amplitude and acrophase in rats
+        cite:
+          - arushanian-2008
+    - key: Behavioral modulation
+      value:
+        value: >-
+          Suppresses aggression, reduces stress-related tension, prolongs comfort and grooming
+          behaviors
+        cite:
+          - teter-2001
+  diagram:
+    - kind: node
+      text:
+        value: ACTH(4-10) Analogue (Adamax)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds melanocortin receptors
+        cite:
+          - smolnik-2000
+    - kind: node
+      text:
+        value: Hippocampal neurons
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ BDNF/trkB upregulation
+        cite:
+          - dolotov-2006
+    - kind: outcome
+      text:
+        value: Enhanced learning, neuroprotection, circadian synchronization
+        cite:
+          - dolotov-2006
+          - arushanian-2008
+dosage:
+  rows:
+    - parameter: Animal dose (rat)
+      value:
+        value: 50 mcg/kg body weight
+        cite:
+          - dolotov-2006
+      notes:
+        value: Single intranasal application; produced maximal BDNF response.
+        cite: []
+    - parameter: Route
+      value:
+        value: Intranasal
+        cite:
+          - dolotov-2006
+          - smolnik-2000
+    - parameter: Frequency
+      value:
+        value: Single-dose or chronic administration protocols
+        cite: []
+      notes:
+        value: Chronic dosing normalized circadian rhythms; single-dose produced acute BDNF elevation.
+        cite: []
+    - parameter: Human dose (exploratory)
+      value:
+        value: Not established — limited human data
+        cite: []
+      notes:
+        value: ACTH(4-10) and analogs dosed 30–60 mcg intranasally in early human studies.
+        cite: []
+      severity: moderate
+    - parameter: Evidence basis
+      value:
+        value: Animal (rodent, rabbit) studies; minimal human RCT data
+        cite: []
+      severity: moderate
+    - parameter: Timing
+      value:
+        value: Variable — chronic administration for circadian effects
+        cite: []
+side_effects:
+  rows:
+    - parameter: Cardiovascular effects
+      value:
+        value: ACTH(4-10) fragments may have pressor and cardioaccelerator actions at high doses
+        cite:
+          - gruber-1984
+      notes:
+        value: Effects attenuated by α/β-receptor antagonists; observed at 30–1000 nmol/kg IV in rats.
+        cite: []
+      severity: moderate
+    - parameter: Natriuretic effect
+      value:
+        value: ACTH(4-10) exhibited natriuretic activity at lower doses (7 nmol/kg)
+        cite:
+          - gruber-1984
+      severity: mild
+    - parameter: Behavioral suppression
+      value:
+        value: Suppression of aggression, reduced orientation-cognition reactions in rabbits
+        cite:
+          - teter-2001
+      notes:
+        value: May reflect anxiolytic or stress-dampening profile.
+        cite: []
+      severity: mild
+    - parameter: Long-term safety
+      value:
+        value: Unknown — chronic human safety data lacking
+        cite: []
+      severity: moderate
+  contraindications_absolute:
+    - value: Pregnancy and lactation (precautionary; no data)
+      cite: []
+    - value: Active cardiovascular instability (due to potential pressor effects)
+      cite: []
+  contraindications_relative:
+    - value: Hypertension (monitor BP if using higher doses)
+      cite: []
+    - value: Renal impairment (natriuretic effects may alter electrolyte balance)
+      cite: []
+administration:
+  steps:
+    - title: Reconstitution (if lyophilised)
+      body: >-
+        Add sterile water or bacteriostatic water to lyophilised vial per manufacturer guidance.
+        Roll gently — do not shake. Ensure clarity before use.
+      cite: []
+    - title: Route
+      body: >-
+        Intranasal administration is the primary route in animal and exploratory human studies.
+        Delivered via nasal spray or dropper to ensure mucosal absorption.
+      cite:
+        - dolotov-2006
+        - smolnik-2000
+    - title: Timing
+      body: >-
+        Variable. Single-dose protocols for acute cognitive tasks; chronic daily dosing for
+        circadian rhythm normalization and sustained neuroprotection.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised: room temperature, light-protected. Reconstituted: refrigerate 2–8 °C, use
+        within manufacturer-specified timeframe.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: semax
+      partner_label: Semax
+      synergy: moderate
+      rationale: >-
+        Both Adamax and Semax are ACTH(4-10)-derived nootropics acting via melanocortin receptors
+        and BDNF upregulation. Adamax has distinct amino acid modifications at positions 8-10,
+        potentially offering complementary receptor binding profiles or metabolic stability.
+        Stacking may amplify neurotrophic signaling and cognitive enhancement, though direct synergy
+        studies are absent. Theoretical multi-pathway benefit.
+      protocol:
+        Adamax: Research dose intranasal
+        Semax: 300–600 mcg intranasal
+        Frequency: Once daily, morning or pre-cognitive task
+      primary_benefit: Enhanced BDNF upregulation, cognitive performance, neuroprotection
+      cite: []
+    - partner_slug: na-semax-amidate
+      partner_label: N-Acetyl Semax Amidate
+      synergy: weak
+      rationale: >-
+        N-Acetyl Semax Amidate is a longer-acting Semax derivative with enhanced BBB penetration.
+        Pairing with Adamax (shorter-acting, distinct modification) could provide dual-phase
+        nootropic coverage — immediate and sustained. However, both target overlapping pathways
+        (BDNF/trkB, melanocortin receptors), limiting additive synergy. More likely redundant than
+        synergistic.
+      protocol:
+        Adamax: Research dose intranasal · morning
+        NA-Semax-Amidate: 300 mcg intranasal · afternoon
+        Frequency: Once daily each, staggered timing
+      primary_benefit: Extended nootropic window, circadian rhythm support
+      cite: []
+description_md: >-
+  **Adamax** is a synthetic peptide analogue of ACTH(4-10), structurally related to the Russian
+  nootropic **Semax**, but distinguished by amino acid modifications at positions 8, 9, and 10. The
+  ACTH(4-10) fragment retains the behavioral and neurotrophic effects of full-length ACTH while
+  being devoid of endocrine (adrenal-stimulating) activity, making it a selective tool for cognitive
+  and neuroprotective research.
+
+
+  ## Origin and Development
+
+
+  Adamax was developed within Russian pharmacological research programs focused on deriving
+  non-hormonal neuropeptides from ACTH and melanocortin sequences. The ACTH(4-10) core has been
+  extensively studied since the 1970s for its cognitive-enhancing properties, independent of
+  glucocorticoid or mineralocorticoid signaling. Modifications at the C-terminal positions aim to
+  improve metabolic stability, receptor selectivity, or BBB penetration compared to native
+  ACTH(4-10).
+
+
+  ## Mechanism of Action
+
+
+  Adamax acts via **melanocortin receptors (MC-Rs)** in the CNS, particularly within the hippocampus
+  and cortical regions. Upon receptor binding, it triggers a cascade that upregulates
+  **brain-derived neurotrophic factor (BDNF)** and its cognate receptor **trkB**. In a pivotal 2006
+  study by Dolotov et al., a single intranasal dose of a structurally similar ACTH(4-10) analogue
+  (Semax) produced:
+
+
+  - **1.4-fold increase** in hippocampal BDNF protein
+
+  - **3-fold increase** in exon III BDNF mRNA
+
+  - **2-fold increase** in trkB mRNA
+
+  - **1.6-fold increase** in trkB tyrosine phosphorylation
+
+
+  These molecular changes correlated with enhanced performance in conditioned avoidance learning
+  tasks, suggesting that BDNF/trkB upregulation is a central mechanism underlying cognitive effects.
+
+
+  ## Chronotropic and Behavioral Effects
+
+
+  Arushanian and Popov (2008) demonstrated that chronic administration of an ACTH(4-10) analogue
+  normalized **circadian locomotor rhythms** in rats, increasing amplitude, shifting the acrophase,
+  and altering spectral characteristics of the rhythm. This "chronotropic" activity may represent a
+  distinct dimension of nootropic action, linking cognitive enhancement to circadian stability.
+
+
+  In rabbits, Teter et al. (2001) observed that the modified ACTH(4-10) analogue:
+
+
+  - **Suppressed aggression**
+
+  - **Reduced tension and orientation-cognition reactions**
+
+  - **Prolonged comfort and grooming behaviors**
+
+
+  These findings suggest anxiolytic or stress-dampening properties, potentially valuable in contexts
+  of psychological stress or PTSD-like states.
+
+
+  ## Neuroprotection
+
+
+  Glazova et al. (2021) reported that an ACTH(4-10) analogue attenuated behavioral and neurochemical
+  alterations in rats exposed to early-life fluvoxamine (an SSRI). This neuroprotective effect
+  underscores the peptide's capacity to buffer against developmental or pharmacologically induced
+  neural perturbations, possibly via BDNF-mediated plasticity.
+
+
+  ## Human Data and Translational Potential
+
+
+  Human studies of ACTH(4-10) and its analogues are sparse and primarily exploratory. Smolnik et al.
+  (2000) examined **event-related brain potentials (ERPs)** and working memory in 60 healthy humans
+  after intranasal administration of ACTH(4-10) and desacetyl-α-MSH. Results indicated modulation of
+  attentional processing and stimulus encoding, though specific dosing and outcomes for Adamax
+  itself remain unreported in the indexed literature.
+
+
+  Van Riezen and Rigter (1978) reviewed early ACTH peptide studies, noting that ACTH(4-9) and
+  ACTH(4-10) analogues improved motivation, attention, and delayed extinction of conditioned
+  behavior in rats, with oral bioavailability demonstrated for certain derivatives (e.g., Org 2766).
+  The therapeutic potential for **cognitive impairments** in humans was acknowledged, but clinical
+  validation has not materialized in Western literature.
+
+
+  ## Cardiovascular Considerations
+
+
+  Gruber et al. (1984) identified **pressor and cardioaccelerator** actions of ACTH(4-10) fragments
+  at high doses (30–1000 nmol/kg IV in rats), mediated by α- and β-adrenergic receptors. At lower
+  doses (7 nmol/kg), **natriuretic activity** was observed, resembling effects of α-MSH. These
+  findings warrant caution in hypertensive or cardiovascular-compromised individuals, though
+  intranasal dosing at nootropic levels is far below the IV doses that produced these effects.
+
+
+  ## Current Status and Evidence Level
+
+
+  Adamax remains a **research peptide** with no FDA approval or Western clinical trials. Evidence is
+  concentrated in Russian-language journals and animal models. The peptide's classification as
+  **animal-strong** reflects robust rodent data on BDNF upregulation, learning, and neuroprotection,
+  but the absence of rigorous human RCTs limits translational confidence.
+
+
+  ## Comparison to Semax
+
+
+  Semax (Met-Glu-His-Phe-Pro-Gly-Pro) is a well-characterized ACTH(4-10) analogue with a C-terminal
+  Pro-Gly-Pro extension. Adamax differs in its modifications at positions 8-10, which may alter
+  receptor affinity, metabolic half-life, or tissue distribution. Direct head-to-head studies are
+  lacking, but both peptides share a common mechanistic foundation in melanocortin receptor
+  signaling and BDNF modulation.
+
+
+  ## Research Directions
+
+
+  Future investigations should prioritize:
+
+
+  - **Human RCTs** with standardized dosing, cognitive endpoints, and safety monitoring
+
+  - **Comparative studies** vs. Semax and other ACTH(4-10) derivatives
+
+  - **Pharmacokinetic profiling** of intranasal vs. subcutaneous administration
+
+  - **Long-term safety data**, particularly regarding cardiovascular and electrolyte effects
+
+  - **Biomarker validation** (e.g., serum BDNF, ERP signatures) as surrogate endpoints
+
+
+  ## Conclusion
+
+
+  Adamax represents a lineage of ACTH-derived nootropics with demonstrated neurotrophic and
+  cognitive-enhancing properties in animal models. Its mechanism — centered on BDNF/trkB
+  upregulation via melanocortin receptors — is mechanistically sound and supported by multiple
+  independent studies. However, the peptide's clinical utility remains speculative pending human
+  validation. Researchers and biohackers exploring Adamax should weigh its theoretical promise
+  against the paucity of human safety and efficacy data.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

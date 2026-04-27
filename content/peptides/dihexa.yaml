@@ -1,0 +1,203 @@
+schema_version: 1
+slug: dihexa
+name: Dihexa
+peptide_class: Angiotensin IV Analogue
+classification: Angiotensin IV Analogue · Pre-Clinical
+categories:
+  - cognitive
+  - neuroprotective
+  - pre-clinical
+aliases:
+  - N-hexanoic-Tyr-Ile-(6) aminohexanoic amide
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic angiotensin IV analogue that activates the hepatocyte growth factor (HGF)/c-Met
+    receptor system, inducing dendritic arborization and synaptogenesis in rodent models. Animal
+    studies demonstrate cognitive enhancement and synapse formation in mouse Alzheimer's models. No
+    human clinical data available. Pre-clinical stage only.
+  cite: []
+hero_stats:
+  - value: Pre-clinical
+    label: Development stage
+    cite: []
+  - value: Rodent only
+    label: Evidence basis
+    cite:
+      - benoist-2014
+  - value: HGF/c-Met
+    label: Target system
+    cite:
+      - wright-2015
+hero_route:
+  value: Not established — animal studies only
+  cite: []
+mechanism:
+  primary_target:
+    value: c-Met receptor (HGF receptor tyrosine kinase)
+    cite: []
+  pathway:
+    value: >-
+      HGF/c-Met receptor activation → downstream signaling cascade → synaptogenesis and dendritic
+      arborization
+    cite: []
+  downstream_effect:
+    value: >-
+      Induction of dendritic arborization, synapse formation, neurogenesis, and neuroprotection in
+      rodent models
+    cite: []
+  origin:
+    value: Small-molecule angiotensin IV analogue designed to activate HGF/c-Met system
+    cite:
+      - wright-2015
+  receptor_class:
+    value: c-Met receptor tyrosine kinase (HGF receptor)
+    cite:
+      - wright-2015
+  extra_rows:
+    - key: HGF system functions
+      value:
+        value: >-
+          Mitogenesis, motogenesis, morphogenesis, stem cell differentiation, neurogenesis, tissue
+          protection
+        cite:
+          - wright-2015
+    - key: Synaptogenic mechanism
+      value:
+        value: Effects are dependent on c-Met activation; blocked by c-Met antagonists in animal studies
+        cite:
+          - benoist-2014
+  diagram:
+    - kind: node
+      text:
+        value: Dihexa (AngIV analogue)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds c-Met receptor
+        cite:
+          - benoist-2014
+    - kind: node
+      text:
+        value: HGF/c-Met system activation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Downstream signaling cascade
+        cite: []
+    - kind: outcome
+      text:
+        value: Dendritic arborization + Synaptogenesis
+        cite: []
+dosage:
+  rows:
+    - parameter: Human dosing
+      value:
+        value: Not established — no human trials
+        cite: []
+        badge: red
+    - parameter: Animal studies
+      value:
+        value: Mouse/rat models only — dosing not translatable to humans
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Pre-clinical / Rodent models
+        cite: []
+        badge: yellow
+    - parameter: Clinical status
+      value:
+        value: No Phase 1, 2, or 3 trials published
+        cite: []
+side_effects:
+  rows:
+    - parameter: Human safety data
+      value:
+        value: None available — no human clinical trials
+        cite: []
+        badge: red
+      severity: severe
+    - parameter: Theoretical c-Met risks
+      value:
+        value: >-
+          c-Met receptor activation has been implicated in tumorigenesis; unknown cancer risk
+          profile
+        cite: []
+        badge: red
+      severity: severe
+    - parameter: Pre-clinical tolerability
+      value:
+        value: Not systematically reported in available studies
+        cite: []
+  contraindications_absolute:
+    - value: Not approved for human use — research compound only
+      cite: []
+  contraindications_relative:
+    - value: >-
+        Theoretical contraindication: active or history of malignancy (c-Met pathway involvement in
+        cancer)
+      cite: []
+administration:
+  steps:
+    - title: Human administration
+      body: >-
+        No established protocol. Dihexa has not been tested in human subjects. Animal studies used
+        various routes (typically subcutaneous or intraperitoneal in rodents) not translatable to
+        clinical use.
+      cite: []
+    - title: Legal status
+      body: >-
+        Pre-clinical research compound. Not approved by FDA or any regulatory authority for human
+        use.
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Dihexa is a small-molecule angiotensin IV analogue developed to activate the hepatocyte growth
+  factor (HGF)/c-Met receptor system in the brain. In rodent models, it demonstrates procognitive
+  effects and induces synaptogenesis—dendritic arborization and new synapse formation—in mouse
+  Alzheimer's disease models.
+
+
+  ## Evidence Base
+
+
+  All available evidence is from **animal studies only**. There are no published Phase 1, 2, or 3
+  human clinical trials. The peptide was designed based on the hypothesis that the HGF/c-Met system
+  represents a therapeutic target for neurodegenerative diseases, particularly Alzheimer's disease.
+
+
+  Animal studies show:
+
+  - Cognitive enhancement in rodent models
+
+  - Synapse formation in mouse Alzheimer's models
+
+  - Dependence on c-Met receptor activation (effects blocked by c-Met antagonists)
+
+
+  ## Safety & Clinical Development
+
+
+  No human safety data exist. The c-Met receptor pathway has been implicated in tumorigenesis,
+  raising theoretical cancer risk concerns that would require extensive pre-clinical toxicology and
+  Phase 1 safety studies before human trials.
+
+
+  Dihexa is **not FDA-approved** and remains a research compound without established dosing,
+  administration protocols, or safety profile in humans.
+
+
+  ## Retraction Notice
+
+
+  One key study (Benoist et al., 2014, JPET) was **retracted in 2025** following an expression of
+  concern in 2021. This retraction affects the synaptogenic and procognitive evidence base, which
+  relies heavily on this publication.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

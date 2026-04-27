@@ -1683,3 +1683,214 @@ hossen-2013:
   pmid: '23871959'
   authors:
     - Hossen N
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+staszewski-2026:
+  id: staszewski-2026
+  type: journal
+  title: >-
+    Cerebrolysin after Endovascular Thrombectomy in Stroke: 12‑Month Functional Outcomes in a
+    Propensity‑Matched Cohort.
+  year: 2026
+  pmid: '41739286'
+  authors:
+    - Staszewski J
+
+rib-2026:
+  id: rib-2026
+  type: journal
+  title: >-
+    Cerebroprotection in acute ischemic stroke: Perspectives on combining cerebrolysin with
+    recanalization therapy.
+  year: 2026
+  pmid: '41349847'
+  authors:
+    - Ribó M
+
+afridi-2026:
+  id: afridi-2026
+  type: journal
+  title: >-
+    Efficacy and Safety of Cerebrolysin as an Adjunct to Mechanical Thrombectomy in Acute Ischemic
+    Stroke: A Systematic Review and Meta-Analysis of Observational Studies.
+  year: 2026
+  pmid: '41880098'
+  authors:
+    - Afridi A
+
+patel-2025:
+  id: patel-2025
+  type: journal
+  title: >-
+    Safety and Efficacy of Cerebrolysin for Neurorecovery After Acute Ischemic Stroke: A Systematic
+    Review and Meta-Analysis of 14 Randomized Controlled Trials.
+  year: 2025
+  pmid: '41018475'
+  authors:
+    - Patel PN
+
+khatkova-2026:
+  id: khatkova-2026
+  type: journal
+  title: >-
+    [Experience of using of Cerebrolysin in comprehensive rehabilitation of a patient after ischemic
+    stroke with motor deficit and aphasia].
+  year: 2026
+  pmid: '41661016'
+  authors:
+    - Khatkova SE
+
+shchulkin-2026:
+  id: shchulkin-2026
+  type: journal
+  title: >-
+    [The effect of neuroprotectors on the level of BDNF, tumor necrosis factor alpha and apoptosis
+    markers, and in acute cerebrovascular accidents].
+  year: 2026
+  pmid: '41782540'
+  authors:
+    - Shchulkin AV
+
+shmonin-2026:
+  id: shmonin-2026
+  type: journal
+  title: >-
+    [The effect of Cerebrolysin on the development of skills in patients after acute cerebrovascular
+    accidents].
+  year: 2026
+  pmid: '41782528'
+  authors:
+    - Shmonin AA
+
+kalinin-2025:
+  id: kalinin-2025
+  type: journal
+  title: >-
+    Cerebrolysin, hemorrhagic transformation, and anticoagulation timing after reperfusion therapy
+    in stroke: post hoc secondary analysis of the CEREHETIS trial.
+  year: 2025
+  pmid: '41640685'
+  authors:
+    - Kalinin MN
+
+kobayashi-2025:
+  id: kobayashi-2025
+  type: journal
+  title: >-
+    Safety and feasibility of cerebrolysin in treatment of primary intracerebral hemorrhage
+    (CLINCH)-a prospective, randomized, open-label, blinded endpoint pilot trial.
+  year: 2025
+  pmid: '41180520'
+  authors:
+    - Kobayashi A
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+dolotov-2006:
+  id: dolotov-2006
+  type: journal
+  title: >-
+    Semax, an analog of ACTH(4-10) with cognitive effects, regulates BDNF and trkB expression in the
+    rat hippocampus.
+  year: 2006
+  pmid: '16996037'
+  authors:
+    - Dolotov OV
+
+glazova-2021:
+  id: glazova-2021
+  type: journal
+  title: >-
+    Semax, synthetic ACTH(4-10) analogue, attenuates behavioural and neurochemical alterations
+    following early-life fluvoxamine exposure in white rats.
+  year: 2021
+  pmid: '33418449'
+  authors:
+    - Glazova NY
+
+arushanian-2008:
+  id: arushanian-2008
+  type: journal
+  title: '[Chronotropic activity of semax].'
+  year: 2008
+  pmid: '18488900'
+  authors:
+    - Arushanian EB
+
+smolnik-2000:
+  id: smolnik-2000
+  type: journal
+  title: >-
+    Event-related brain potentials and working memory function in healthy humans after single-dose
+    and prolonged intranasal administration of adrenocorticotropin 4-10 and
+    desacetyl-alpha-melanocyte stimulating hormone.
+  year: 2000
+  pmid: '10917406'
+  authors:
+    - Smolnik R
+
+strand-1993:
+  id: strand-1993
+  type: journal
+  title: Melanotropins as growth factors.
+  year: 1993
+  pmid: '8390155'
+  authors:
+    - Strand FL
+
+teter-2001:
+  id: teter-2001
+  type: journal
+  title: >-
+    Changes in rabbits' behaviour under the influence of corticotropin derivative analogue 4-10 in
+    spontaneous conditions.
+  year: 2001
+  pmid: '11977344'
+  authors:
+    - Teter M
+
+van-1978:
+  id: van-1978
+  type: journal
+  title: '[Possible consequence of ACTH-like peptides for human mental performance (author''s transl)].'
+  year: 1978
+  pmid: '223580'
+  authors:
+    - van Riezen H
+
+gruber-1984:
+  id: gruber-1984
+  type: journal
+  title: Natriuretic and hypertensive activities reside in a fragment of ACTH.
+  year: 1984
+  pmid: '6086516'
+  authors:
+    - Gruber KA
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+wright-2015:
+  id: wright-2015
+  type: journal
+  title: >-
+    The development of small molecule angiotensin IV analogs to treat Alzheimer's and Parkinson's
+    diseases.
+  year: 2015
+  pmid: '25455861'
+  authors:
+    - Wright JW
+
+benoist-2014:
+  id: benoist-2014
+  type: journal
+  title: >-
+    The procognitive and synaptogenic effects of angiotensin IV-derived peptides are dependent on
+    activation of the hepatocyte growth factor/c-met system.
+  year: 2014
+  pmid: '25187433'
+  authors:
+    - Benoist CC
