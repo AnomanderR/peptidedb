@@ -89,6 +89,18 @@ For 57 net-new plates:
 
 **Cadence**: batch 3-5 drafts per `gen:plate` session, then review them as a batch. Avoids context-switching cost.
 
+## Citation-repair policy (locked 2026-04-27)
+
+The Phase 1 audit caught 31 broken citations in the existing refs.yaml; 14 were repaired immediately (Tier 1+2) and 17 had their PMIDs stripped pending manual research (Tier 3 — see [citation-repair-2026-04-26.md](./citation-repair-2026-04-26.md)).
+
+**Do NOT pre-bulk-repair the 17 stripped citations.** Instead, repair them *as you author each plate*:
+
+- When authoring a Wave 1 plate (e.g. tesamorelin), check whether any of the 17 stripped IDs are cited in the new draft (e.g. `sevigny-2018`).
+- If cited: do the manual DOI / Google Scholar lookup at that moment, restore the PMID, re-run `bun run audit:citations`, and proceed.
+- If the manual lookup fails to find a real source: **drop the cite from the plate**. A claim with no findable source is an uncited claim — be honest about it.
+
+This avoids wasted research on citations that may not even be needed in the final plate set, and forces every authored plate through a clean citation chain.
+
 ## Quality gates
 
 A plate cannot be promoted past `auto-drafted` until:

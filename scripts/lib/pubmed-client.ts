@@ -20,6 +20,7 @@
 
 const ESEARCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi";
 const ESUMMARY = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi";
+const EFETCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi";
 
 export type FetchFn = typeof fetch;
 
@@ -163,12 +164,67 @@ export class PubmedClient {
   }
 
   /**
+   * Fetch the formatted abstract text for a PMID via efetch. NCBI's efetch
+   * with `rettype=abstract&retmode=text` returns a plain-text block with
+   * title, authors, journal, citation_string, and abstract — the same form
+   * a researcher copies from PubMed. Suitable as direct LLM context.
+   *
+   * Returns null on missing PMID, network failure, or empty response.
+   */
+  async fetchAbstract(pmid: string): Promise<string | null> {
+    if (!/^\d+$/.test(pmid)) {
+      this.log(`[pubmed] invalid PMID format: ${pmid}`);
+      return null;
+    }
+
+    await this.limiter.wait();
+
+    const params = new URLSearchParams({
+      db: "pubmed",
+      id: pmid,
+      rettype: "abstract",
+      retmode: "text",
+    });
+    if (this.apiKey) params.set("api_key", this.apiKey);
+
+    const url = `${EFETCH}?${params.toString()}`;
+    const text = await this.fetchText(url);
+    if (!text || !text.trim()) {
+      this.log(`[pubmed] empty abstract for PMID ${pmid}`);
+      return null;
+    }
+    return text.trim();
+  }
+
+  private async fetchJson(url: string): Promise<unknown> {
+    const res = await this.fetchWithRetry(url);
+    if (!res) return null;
+    try {
+      return await res.json();
+    } catch (e) {
+      this.log(`[pubmed] JSON parse failed: ${(e as Error).message}`);
+      return null;
+    }
+  }
+
+  private async fetchText(url: string): Promise<string | null> {
+    const res = await this.fetchWithRetry(url);
+    if (!res) return null;
+    try {
+      return await res.text();
+    } catch (e) {
+      this.log(`[pubmed] text decode failed: ${(e as Error).message}`);
+      return null;
+    }
+  }
+
+  /**
    * Fetch with up-to-2-retry on HTTP 429 (rate limit). NCBI's enforcement
    * is sometimes stricter than their published 3/s limit, so we accept
    * occasional 429s as transient and back off rather than treating them
-   * as fatal.
+   * as fatal. Returns the raw Response so callers can decode JSON or text.
    */
-  private async fetchJson(url: string): Promise<unknown> {
+  private async fetchWithRetry(url: string): Promise<Response | null> {
     const maxAttempts = 3;
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
       const ctrl = new AbortController();
@@ -186,7 +242,7 @@ export class PubmedClient {
           this.log(`[pubmed] HTTP ${res.status} for ${url}`);
           return null;
         }
-        return await res.json();
+        return res;
       } catch (e) {
         this.log(`[pubmed] fetch failed: ${(e as Error).message}`);
         return null;

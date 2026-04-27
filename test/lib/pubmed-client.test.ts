@@ -140,6 +140,83 @@ describe("PubmedClient.verifyPmid", () => {
   });
 });
 
+describe("PubmedClient.fetchAbstract", () => {
+  const ABSTRACT_TEXT = `1. N Engl J Med. 2007 Dec 6;357(23):2359-70.
+
+Metabolic effects of a growth hormone-releasing factor in patients with HIV.
+
+Falutz J, Allas S, Blot K, et al.
+
+BACKGROUND: HIV-infected patients treated with antiretroviral therapy can have
+abdominal fat accumulation. We assessed the effects of tesamorelin, a synthetic
+analogue of growth hormone-releasing factor.
+
+METHODS: In a double-blind, multicenter, placebo-controlled study, 412 patients
+were randomly assigned to receive 2 mg of tesamorelin or placebo subcutaneously
+once daily for 26 weeks.
+
+PMID: 18057338`;
+
+  test("returns the raw efetch text response", async () => {
+    const fetchFn: FetchFn = async () =>
+      new Response(ABSTRACT_TEXT, { status: 200, headers: { "content-type": "text/plain" } });
+    const client = new PubmedClient({ fetchFn });
+    const text = await client.fetchAbstract("18057338");
+    expect(text).toContain("Metabolic effects of a growth hormone-releasing factor");
+    expect(text).toContain("PMID: 18057338");
+  });
+
+  test("requests the abstract endpoint with rettype=abstract&retmode=text", async () => {
+    const calls: string[] = [];
+    const fetchFn: FetchFn = async (input) => {
+      calls.push(typeof input === "string" ? input : input.toString());
+      return new Response(ABSTRACT_TEXT, { status: 200 });
+    };
+    const client = new PubmedClient({ fetchFn });
+    await client.fetchAbstract("18057338");
+    expect(calls[0]).toContain("efetch.fcgi");
+    expect(calls[0]).toContain("rettype=abstract");
+    expect(calls[0]).toContain("retmode=text");
+    expect(calls[0]).toContain("id=18057338");
+  });
+
+  test("returns null on invalid PMID format without making a request", async () => {
+    const calls: string[] = [];
+    const fetchFn: FetchFn = async (input) => {
+      calls.push(typeof input === "string" ? input : input.toString());
+      return new Response(ABSTRACT_TEXT, { status: 200 });
+    };
+    const client = new PubmedClient({ fetchFn });
+    expect(await client.fetchAbstract("PMC123")).toBeNull();
+    expect(calls).toHaveLength(0);
+  });
+
+  test("returns null on empty body", async () => {
+    const fetchFn: FetchFn = async () => new Response("   \n  \n", { status: 200 });
+    const client = new PubmedClient({ fetchFn });
+    expect(await client.fetchAbstract("18057338")).toBeNull();
+  });
+
+  test("returns null on HTTP 404", async () => {
+    const fetchFn: FetchFn = async () => new Response("Not Found", { status: 404 });
+    const client = new PubmedClient({ fetchFn });
+    expect(await client.fetchAbstract("999999999")).toBeNull();
+  });
+
+  test("retries on HTTP 429 (shares retry path with verifyPmid)", async () => {
+    let calls = 0;
+    const fetchFn: FetchFn = async () => {
+      calls += 1;
+      if (calls === 1) return new Response("Too Many Requests", { status: 429 });
+      return new Response(ABSTRACT_TEXT, { status: 200 });
+    };
+    const client = new PubmedClient({ fetchFn });
+    const text = await client.fetchAbstract("18057338");
+    expect(text).not.toBeNull();
+    expect(calls).toBe(2);
+  });
+});
+
 describe("PubmedClient.searchPubmed", () => {
   test("returns the idlist from esearch", async () => {
     const { fetchFn } = makeFetch(() => ({
