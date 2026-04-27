@@ -1,0 +1,356 @@
+schema_version: 1
+slug: glutathione
+name: Glutathione
+peptide_class: Endogenous Tripeptide
+classification: Endogenous Tripeptide · Antioxidant
+categories:
+  - antioxidant
+  - tripeptide
+  - endogenous
+  - cytoprotective
+aliases:
+  - GSH
+  - γ-L-Glutamyl-L-cysteinyl-glycine
+  - L-Glutathione
+  - reduced glutathione
+color: cyan
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Endogenous tripeptide (γ-glutamyl-cysteinyl-glycine) — master cellular thiol and principal
+    non-enzymatic antioxidant. Synthesized via glutamate-cysteine ligase and glutathione synthetase.
+    Functions as cofactor for glutathione peroxidase and transferase; conjugates electrophiles,
+    reduces peroxides, maintains redox homeostasis. Investigated in IV, oral, and inhaled
+    formulations for oxidative stress mitigation, hepatic detoxification, and metabolic support.
+  cite: []
+hero_stats:
+  - value: γ-Glu-Cys-Gly
+    label: Structure
+    cite: []
+  - value: Ubiquitous
+    label: Tissue distribution
+    cite: []
+  - value: GCL + GS
+    label: Biosynthesis
+    cite:
+      - wang-2026
+      - aiana-2026
+hero_route:
+  value: IV · Oral · Inhaled
+  cite: []
+mechanism:
+  primary_target:
+    value: Intracellular redox systems, glutathione peroxidase, glutathione transferase
+    cite: []
+  pathway:
+    value: >-
+      Synthesized via glutamate-cysteine ligase (GCL) → γ-glutamylcysteine → glutathione synthetase
+      (GS) → GSH
+    cite: []
+  downstream_effect:
+    value: >-
+      Reduction of reactive oxygen species, conjugation of electrophiles, maintenance of cellular
+      thiol-disulfide balance, GPX4 activation for lipid peroxide reduction
+    cite: []
+  origin:
+    value: >-
+      Endogenous tripeptide; predominantly synthesized in liver, exported to extracellular space and
+      tissues
+    cite:
+      - terrell-2025
+      - hecht-2026
+  half_life_basis:
+    value: >-
+      Rapid intracellular turnover; plasma t½ ~2–3 hours; tissue-dependent synthesis maintains
+      steady-state
+    cite: []
+  extra_rows:
+    - key: Cysteine source
+      value:
+        value: >-
+          Extracellular GSH catabolism supplies cysteine to tumors and hepatocytes via γ-glutamyl
+          cycle
+        cite:
+          - hecht-2026
+          - terrell-2025
+    - key: Rate-limiting step
+      value:
+        value: Glutamate-cysteine ligase (GCL) — first enzyme in biosynthesis pathway
+        cite:
+          - aiana-2026
+          - wang-2026
+    - key: Redox coupling
+      value:
+        value: GSH/GSSG ratio maintained by glutathione reductase; NADPH-dependent
+        cite: []
+  diagram:
+    - kind: node
+      text:
+        value: Glutamate + Cysteine
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Glutamate-cysteine ligase (GCL)
+        cite: []
+    - kind: node
+      text:
+        value: γ-Glutamylcysteine
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Glutathione synthetase (GS) + Glycine
+        cite: []
+    - kind: node
+      text:
+        value: Glutathione (GSH)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ GPX4 cofactor · Conjugation · ROS scavenging
+        cite: []
+    - kind: outcome
+      text:
+        value: Oxidative Stress Mitigation
+        cite: []
+dosage:
+  rows:
+    - parameter: Endogenous synthesis
+      value:
+        value: Hepatic synthesis ~10 g/day (basal rate)
+        cite: []
+      notes:
+        value: Tissue-specific; demand-driven upregulation via Nrf2 signaling.
+        cite: []
+    - parameter: Exogenous oral
+      value:
+        value: 250–1000 mg/day
+        cite: []
+      notes:
+        value: Bioavailability limited; gastric hydrolysis reduces systemic uptake.
+        cite: []
+    - parameter: IV supplementation
+      value:
+        value: 600–1200 mg (research protocols)
+        cite: []
+      notes:
+        value: Used in clinical oxidative stress and hepatic detoxification studies.
+        cite: []
+    - parameter: Precursor strategy
+      value:
+        value: N-acetylcysteine (NAC) 600–1200 mg/day
+        cite: []
+      notes:
+        value: Provides cysteine for endogenous GSH synthesis; bypasses GI degradation.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal mechanistic + human mechanistic
+        cite: []
+side_effects:
+  rows:
+    - parameter: Oral supplementation
+      value:
+        value: GI discomfort, bloating (mild, dose-dependent)
+        cite: []
+      severity: mild
+    - parameter: IV administration
+      value:
+        value: Rare hypersensitivity, infusion site reaction
+        cite: []
+      severity: mild
+    - parameter: Inhalation
+      value:
+        value: Bronchospasm risk in asthma (rare)
+        cite: []
+      severity: moderate
+    - parameter: Tumor metabolism
+      value:
+        value: >-
+          Extracellular GSH catabolism supplies cysteine to tumors; theoretical concern in active
+          malignancy
+        cite:
+          - hecht-2026
+      severity: moderate
+  contraindications_relative:
+    - value: Active malignancy (theoretical cysteine supply risk)
+      cite:
+        - hecht-2026
+    - value: Severe asthma (inhaled formulations)
+      cite: []
+administration:
+  steps:
+    - title: Oral administration
+      body: >-
+        Capsule or liquid form, 250–1000 mg once daily. Take on empty stomach for improved
+        absorption, though GI hydrolysis limits bioavailability. NAC precursor strategy often
+        preferred.
+      cite: []
+    - title: Intravenous
+      body: >-
+        Clinical protocols: 600–1200 mg slow infusion over 30–60 minutes. Used for acute oxidative
+        stress, hepatic detoxification support. Administered in medical settings.
+      cite: []
+    - title: Inhaled formulations
+      body: >-
+        Nebulized GSH (research protocols). Monitor for bronchospasm in reactive airway patients.
+        Used experimentally for pulmonary oxidative stress.
+      cite: []
+    - title: Precursor supplementation
+      body: >-
+        N-acetylcysteine (NAC) 600–1200 mg/day PO. Provides cysteine substrate for endogenous GSH
+        synthesis. Bypasses gastric degradation, preferred for chronic supplementation.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: n-acetylcysteine
+      partner_label: N-Acetylcysteine (NAC)
+      synergy: strong
+      rationale: >-
+        NAC provides bioavailable cysteine substrate to overcome the rate-limiting step in
+        glutathione synthesis (glutamate-cysteine ligase). Direct GSH supplementation suffers from
+        poor oral bioavailability due to gastric hydrolysis; NAC bypasses this barrier and sustains
+        intracellular GSH pools. Combined, NAC precursor loading + direct GSH may optimize tissue
+        antioxidant capacity.
+      protocol:
+        NAC: 600–1200 mg/day PO
+        GSH: 250–500 mg/day PO or IV 600 mg (clinical setting)
+        Timing: NAC morning, GSH evening (if oral)
+      primary_benefit: Sustained cellular GSH synthesis, enhanced antioxidant defense
+      cite: []
+    - partner_slug: glycine
+      partner_label: Glycine
+      synergy: moderate
+      rationale: >-
+        Glycine is the third amino acid in glutathione tripeptide synthesis (γ-Glu-Cys-Gly). While
+        glycine is rarely limiting under normal conditions, supplementation (3–5 g/day) may support
+        maximal GSH production during high oxidative demand states (e.g., exercise, illness).
+        Combines well with cysteine precursors.
+      protocol:
+        Glycine: 3–5 g/day PO
+        GSH: 250–500 mg/day PO or NAC 600 mg/day
+        Timing: Glycine pre-sleep (NMDA modulation co-benefit)
+      primary_benefit: Substrate saturation for GSH synthesis, sleep quality co-benefit
+      cite: []
+description_md: >-
+  ## Background
+
+
+  Glutathione (GSH) is a ubiquitous tripeptide (γ-L-glutamyl-L-cysteinyl-glycine) synthesized in
+  virtually all mammalian cells. It serves as the principal non-enzymatic antioxidant and redox
+  buffer, maintaining the cellular thiol-disulfide balance critical for protein folding,
+  detoxification, and signaling.
+
+
+  ## Biosynthesis
+
+
+  GSH is synthesized via a two-step ATP-dependent pathway:
+
+
+  1. **Glutamate-cysteine ligase (GCL)** — rate-limiting enzyme; couples glutamate and cysteine to
+  form γ-glutamylcysteine.
+
+  2. **Glutathione synthetase (GS)** — adds glycine to complete the tripeptide.
+
+
+  Cysteine availability is the primary bottleneck. Extracellular GSH is catabolized by
+  γ-glutamyltransferase (GGT) to supply cysteine to tissues, including tumors.
+
+
+  ## Mechanism of Action
+
+
+  GSH functions via multiple pathways:
+
+
+  - **Direct ROS scavenging**: Reduces hydrogen peroxide, lipid peroxides, and reactive nitrogen
+  species.
+
+  - **GPX4 cofactor**: Glutathione peroxidase 4 uses GSH to reduce lipid hydroperoxides, preventing
+  ferroptosis.
+
+  - **Conjugation**: Glutathione S-transferases conjugate GSH to electrophiles (drugs, xenobiotics,
+  carcinogens) for excretion.
+
+  - **Protein redox regulation**: Glutathionylation of cysteine residues modulates enzyme activity
+  and signaling.
+
+
+  ## Clinical and Research Applications
+
+
+  GSH supplementation has been explored in:
+
+
+  - **Hepatic detoxification**: Acetaminophen overdose (N-acetylcysteine as precursor).
+
+  - **Oxidative stress**: Neurodegenerative disease, metabolic syndrome.
+
+  - **Aging**: GSH levels decline with age; supplementation investigated for mitochondrial function
+  and lifespan.
+
+  - **Cancer metabolism**: Paradoxical role — tumors rely on extracellular GSH catabolism for
+  cysteine supply; depletion strategies vs. antioxidant supplementation debated.
+
+
+  ## Formulation Challenges
+
+
+  Oral GSH bioavailability is limited by gastric and intestinal hydrolysis. Strategies include:
+
+
+  - **Liposomal GSH**: Encapsulation to bypass degradation.
+
+  - **Sublingual**: Direct mucosal absorption.
+
+  - **IV**: Medical settings for acute oxidative stress.
+
+  - **Precursor loading**: NAC, glycine, and glutamine to support endogenous synthesis.
+
+
+  ## Tissue-Specific Regulation
+
+
+  GSH synthesis is upregulated by the Nrf2-ARE pathway in response to oxidative stress. Hepatocytes
+  export GSH to plasma; extracellular GSH is taken up or catabolized by GGT. Tissue microstructures
+  (e.g., ECM fibrous scaffolds) directly regulate hepatic GSH bioavailability via integrin β1
+  mechanosignaling.
+
+
+  ## Research Frontiers
+
+
+  Recent work highlights:
+
+
+  - **Cancer metabolism**: Extracellular GSH catabolism as a cysteine source for tumor growth.
+
+  - **Ferroptosis inhibition**: GPX4-GSH axis as a critical defense against lipid
+  peroxidation-driven cell death.
+
+  - **Mechanobiology**: ECM microstructures regulate hepatocyte GSH synthesis independently of
+  substrate availability.
+
+  - **Agricultural biotechnology**: GCL overexpression in crops (potato, patchouli) reduces
+  oxidative stress and acrylamide formation.
+
+
+  ## Safety Profile
+
+
+  GSH is well-tolerated. Concerns include:
+
+
+  - **Tumor cysteine supply**: Theoretical risk in active malignancy.
+
+  - **Bronchospasm**: Rare with inhaled formulations in asthmatics.
+
+  - **GI discomfort**: Mild, dose-dependent with oral supplementation.
+
+
+  Precursor strategies (NAC) are generally preferred for chronic use due to superior bioavailability
+  and safety profile.
+maturity: human-reviewed
+contributors: []

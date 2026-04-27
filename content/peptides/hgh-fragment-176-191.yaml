@@ -1,0 +1,336 @@
+schema_version: 1
+slug: hgh-fragment-176-191
+name: HGH Fragment 176-191
+peptide_class: GH Fragment
+classification: GH Fragment · Pre-Clinical
+categories:
+  - gh-axis
+  - lipolytic
+  - pre-clinical
+aliases:
+  - AOD9604
+  - AOD-9604
+  - hGH 176-191
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    C-terminal fragment of human growth hormone spanning amino acids 176-191, with an additional
+    N-terminal tyrosine residue in the AOD9604 variant. Retains lipolytic activity of parent GH
+    without IGF-1 elevation or diabetogenic effects. Animal studies demonstrate 50% reduction in
+    weight gain and enhanced beta-3 adrenergic receptor expression in obese mice. No adverse effects
+    on insulin sensitivity observed in euglycemic clamp studies.
+  cite: []
+hero_stats:
+  - value: 50%
+    label: Weight gain reduction
+    cite:
+      - ng-2000
+  - value: ~26 min
+    label: Half-life (est.)
+    cite: []
+  - value: No IGF-1 ↑
+    label: GH axis impact
+    cite: []
+hero_route:
+  value: SQ · IP (animal) · Oral (tested)
+  cite: []
+mechanism:
+  primary_target:
+    value: Beta-3 adrenergic receptors on adipocytes
+    cite:
+      - heffernan-2001
+  pathway:
+    value: Fragment → β3-AR upregulation → Enhanced lipolytic sensitivity
+    cite:
+      - heffernan-2001
+  downstream_effect:
+    value: Increased lipolysis and beta-3 AR mRNA expression without IGF-1 axis activation
+    cite: []
+  origin:
+    value: >-
+      Synthetic peptide derived from hGH residues 176-191; AOD9604 includes N-terminal tyrosine
+      (177-191)
+    cite:
+      - cox-2015
+  feedback_intact:
+    value: N/A — does not interact with GH/IGF-1 axis
+    cite: []
+    badge: green
+  antibody_development:
+    value: Not reported in available studies
+    cite: []
+  receptor_class:
+    value: Beta-3 adrenergic (primary lipolytic mechanism)
+    cite:
+      - heffernan-2001
+  extra_rows:
+    - key: Beta-3 AR dependency
+      value:
+        value: Effect abolished in β3-AR knockout mice
+        cite:
+          - heffernan-2001
+    - key: Metabolic stability
+      value:
+        value: Primary metabolite CRSVEGSCG significantly more stable than parent
+        cite:
+          - cox-2015
+  diagram:
+    - kind: node
+      text:
+        value: hGH Fragment 176-191
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Upregulates β3-AR mRNA
+        cite:
+          - heffernan-2001
+    - kind: node
+      text:
+        value: Adipocyte β3-AR
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Enhanced lipolytic sensitivity
+        cite:
+          - heffernan-2001
+    - kind: outcome
+      text:
+        value: Fat Loss (no IGF-1 elevation)
+        cite: []
+dosage:
+  rows:
+    - parameter: Animal dose (oral)
+      value:
+        value: 500 mcg/kg body weight
+        cite:
+          - ng-2000
+      notes:
+        value: Obese Zucker rats, 19 days.
+        cite: []
+    - parameter: Animal dose (IP)
+      value:
+        value: Not specified (14-day chronic administration)
+        cite:
+          - heffernan-2001
+      notes:
+        value: Obese mice, daily IP injection.
+        cite: []
+    - parameter: Human equivalent dose
+      value:
+        value: Not established — no published human RCTs
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Once daily (animal models)
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal studies only
+        cite: []
+    - parameter: Duration tested
+      value:
+        value: 14–19 days
+        cite:
+          - heffernan-2001
+          - ng-2000
+    - parameter: Detection window
+      value:
+        value: 50 pg/mL LOD in urine; stable metabolite extends detection
+        cite:
+          - cox-2015
+      notes:
+        value: WADA-banned; anti-doping testing available.
+        cite: []
+    - parameter: Oral bioavailability
+      value:
+        value: Demonstrated efficacy in animal oral administration
+        cite:
+          - ng-2000
+      notes:
+        value: Potential for oral therapeutic development.
+        cite: []
+fat_loss:
+  evidence_strength: 45
+  evidence_level: animal-strong
+  evidence_meta:
+    value: >-
+      Multiple animal models (obese Zucker rats, obese mice, β3-AR knockout mice) · 14–19 days
+      chronic administration · No human RCTs published
+    cite: []
+  rows:
+    - parameter: Primary fat target
+      value:
+        value: Adipose tissue (general) — beta-3 AR mediated lipolysis
+        cite:
+          - heffernan-2001
+    - parameter: Weight gain reduction
+      value:
+        value: 50% reduction vs control (15.8 ± 0.6 g vs 35.6 ± 0.8 g)
+        cite:
+          - ng-2000
+      notes:
+        value: Obese Zucker rats, 19 days oral administration.
+        cite: []
+    - parameter: Body fat reduction
+      value:
+        value: Significant decrease in body weight and body fat in obese mice (14 days)
+        cite:
+          - heffernan-2001
+    - parameter: Lipolytic activity
+      value:
+        value: Increased adipose tissue lipolytic activity
+        cite:
+          - ng-2000
+      notes:
+        value: Direct measurement in treated animals.
+        cite: []
+    - parameter: Beta-3 AR expression
+      value:
+        value: Upregulated β3-AR mRNA in obese mice to lean-comparable levels
+        cite:
+          - heffernan-2001
+    - parameter: Insulin sensitivity
+      value:
+        value: No adverse effect — euglycemic clamp confirmed
+        cite:
+          - ng-2000
+      notes:
+        value: Contrasts with intact hGH diabetogenic effects.
+        cite: []
+    - parameter: IGF-1 impact
+      value:
+        value: No elevation — fragment does not activate GH/IGF-1 axis
+        cite: []
+    - parameter: Beta-3 AR dependency
+      value:
+        value: Effect abolished in β3-AR knockout mice
+        cite:
+          - heffernan-2001
+      notes:
+        value: Confirms β3-AR as primary mechanism.
+        cite: []
+    - parameter: Route of administration
+      value:
+        value: Efficacy demonstrated via oral and IP routes
+        cite:
+          - ng-2000
+          - heffernan-2001
+    - parameter: Human evidence
+      value:
+        value: None published — pre-clinical only
+        cite: []
+side_effects:
+  rows:
+    - parameter: Insulin sensitivity
+      value:
+        value: No adverse effects observed in euglycemic clamp (animal)
+        cite:
+          - ng-2000
+      severity: mild
+    - parameter: GH/IGF-1 axis
+      value:
+        value: No activation — avoids diabetogenic effects of full GH
+        cite:
+          - ng-2000
+    - parameter: Human safety data
+      value:
+        value: Not available — no published human trials
+        cite: []
+      severity: moderate
+    - parameter: WADA status
+      value:
+        value: Banned as performance-enhancing drug
+        cite:
+          - cox-2015
+    - parameter: Metabolic profile
+      value:
+        value: Six metabolites identified; CRSVEGSCG most stable
+        cite:
+          - cox-2015
+      notes:
+        value: Detection window implications for doping control.
+        cite: []
+  contraindications_absolute:
+    - value: Competitive athletes (WADA-banned)
+      cite:
+        - cox-2015
+  contraindications_relative:
+    - value: Absence of human safety data — experimental use only
+      cite: []
+administration:
+  steps:
+    - title: Route
+      body: >-
+        Subcutaneous injection primary route in research context. Oral administration demonstrated
+        efficacy in animal models at 500 mcg/kg.
+      cite: []
+    - title: Frequency
+      body: >-
+        Once daily dosing used in animal studies. Timing not specified; GH-independent mechanism
+        suggests flexibility.
+      cite: []
+    - title: Duration
+      body: 'Animal protocols: 14–19 days. Human duration not established — no published trials.'
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilized peptide storage per standard peptide protocols. Metabolite stability suggests
+        refrigerated reconstituted solution viable.
+      cite: []
+    - title: Detection
+      body: >-
+        Detectable in urine via SPE-LC-MS at 50 pg/mL LOD. Extended detection window via stable
+        metabolite CRSVEGSCG.
+      cite:
+        - cox-2015
+synergy:
+  stacks:
+    - partner_slug: yohimbine
+      partner_label: Yohimbine
+      synergy: moderate
+      rationale: >-
+        HGH Fragment 176-191 upregulates beta-3 adrenergic receptors and enhances lipolytic
+        sensitivity, while yohimbine acts as an alpha-2 adrenergic antagonist, blocking the
+        anti-lipolytic alpha-2 receptors that inhibit fat breakdown. This dual approach — enhancing
+        pro-lipolytic signaling (β3-AR) while blocking anti-lipolytic signaling (α2-AR) — creates
+        complementary adrenergic pathway modulation for fat mobilization.
+      protocol:
+        HGH Fragment: Animal-derived dose equivalent (not established in humans)
+        Yohimbine: 5–10 mg oral, fasted state
+        Timing: Once daily, morning fasted cardio window
+      primary_benefit: Enhanced fat mobilization via dual adrenergic modulation
+      cite: []
+description_md: >-
+  HGH Fragment 176-191 represents the C-terminal lipolytic domain of human growth hormone, spanning
+  amino acids 176-191. The AOD9604 variant includes an N-terminal tyrosine residue (177-191
+  numbering). This fragment was isolated based on the hypothesis that GH's fat-reducing properties
+  could be separated from its growth-promoting and diabetogenic effects.
+
+
+  Animal studies demonstrate significant fat loss through beta-3 adrenergic receptor upregulation
+  without IGF-1 axis activation. In obese Zucker rats, oral administration (500 mcg/kg for 19 days)
+  reduced weight gain by over 50% compared to controls, with enhanced adipose tissue lipolytic
+  activity and preserved insulin sensitivity via euglycemic clamp testing. Studies in obese mice
+  confirmed beta-3 AR mRNA upregulation to levels comparable with lean controls.
+
+
+  The mechanism was validated in beta-3 AR knockout mice, where the fragment failed to produce
+  weight loss or lipolysis observed in wild-type controls, confirming beta-3 AR as the primary
+  target. The fragment's independence from the GH/IGF-1 axis eliminates diabetogenic side effects
+  associated with full-length growth hormone.
+
+
+  Metabolic studies identified six potential metabolites, with CRSVEGSCG demonstrating significantly
+  greater stability than the parent compound. This metabolite extends the detection window for
+  anti-doping purposes — the peptide is banned by WADA and detectable in urine at 50 pg/mL.
+
+
+  Despite promising pre-clinical data, no peer-reviewed human clinical trials have been published.
+  The compound remains experimental, with efficacy, safety, and optimal dosing in humans
+  unestablished.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

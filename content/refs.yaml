@@ -2709,3 +2709,69 @@ valle-2016:
   pmid: '26909044'
   authors:
     - Vallée N
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+cox-2015:
+  id: cox-2015
+  type: journal
+  title: Detection and in vitro metabolism of AOD9604.
+  year: 2015
+  pmid: '25208511'
+  authors:
+    - Cox HD
+
+ng-2000:
+  id: ng-2000
+  type: journal
+  title: Metabolic studies of a synthetic lipolytic domain (AOD9604) of human growth hormone.
+  year: 2000
+  pmid: '11146367'
+  authors:
+    - Ng FM
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+hecht-2026:
+  id: hecht-2026
+  type: journal
+  title: Catabolism of extracellular glutathione supplies cysteine to support tumours.
+  year: 2026
+  pmid: '41851454'
+  authors:
+    - Hecht F
+
+terrell-2025:
+  id: terrell-2025
+  type: journal
+  title: >-
+    Extracellular Matrix Microstructures Directly Regulate Glutathione Bioavailability in Human
+    Hepatocytes.
+  year: 2025
+  pmid: '41215494'
+  authors:
+    - Terrell JA
+
+aiana-2026:
+  id: aiana-2026
+  type: journal
+  title: >-
+    Metabolic enhancement of glutathione biosynthesis via StGCL overexpression reduces acrylamide
+    formation and improves salinity and osmotic stress resilience in potato tubers.
+  year: 2026
+  pmid: '41967330'
+  authors:
+    - Aiana
+
+yan-2026:
+  id: yan-2026
+  type: journal
+  title: >-
+    Exogenous Glutathione Enhances Salt Tolerance in Patchouli by Promoting the Antioxidant Capacity
+    and Activating the Flavonoid Biosynthesis Pathway.
+  year: 2026
+  pmid: '41681620'
+  authors:
+    - Yan H
