@@ -14,7 +14,7 @@ evidence_level: fda-approved
 fda_approved: true
 approval_year: 2019
 last_reviewed: "2026-04-25"
-maturity: reviewed
+maturity: human-reviewed
 contributors: [peptidesdb-core]
 
 summary: >-

@@ -231,7 +231,23 @@ export const Peptide = z.object({
 
   description_md: z.string().optional(),
 
-  maturity: z.enum(["draft", "reviewed", "verified"]).default("draft"),
+  /**
+   * Editorial maturity ladder. Hard cutover from the legacy 3-tier
+   * (`draft` / `reviewed` / `verified`) to a 4-tier scheme that maps
+   * cleanly to the contribution workflow:
+   *
+   *   - `auto-drafted`     — pipeline-drafted, no human pass yet
+   *   - `human-reviewed`   — maintainer has read every claim + citation
+   *   - `community-edited` — at least one merged community PR
+   *   - `flagship`         — exemplar plate (rare; manually promoted)
+   *
+   * Tier governs the maturity badge atlas-rendering per DESIGN.md § 4.
+   * Migration mapping (locked 2026-04-26):
+   *   draft → auto-drafted, reviewed → human-reviewed, verified → flagship.
+   */
+  maturity: z
+    .enum(["auto-drafted", "human-reviewed", "community-edited", "flagship"])
+    .default("auto-drafted"),
   contributors: z
     .array(
       z

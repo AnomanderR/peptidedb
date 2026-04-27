@@ -1,4 +1,5 @@
-import type { Peptide, StackProtocol } from "./schemas/peptide";
+import type { EvidenceLevel, Peptide, StackProtocol } from "./schemas/peptide";
+import type { CitationRegistry } from "./schemas/citation";
 
 /* =========================================================
    Build-time peptide stats: count cited vs uncited claims so
@@ -130,4 +131,117 @@ export function computePeptideStats(p: Peptide): PeptideStats {
     citation_ratio: total === 0 ? 0 : cited / total,
     uncited_fields: uncited,
   };
+}
+
+/* =========================================================
+   Evidence tier — peptide-level rollup of EvidenceLevel.
+
+   `EvidenceLevel` is the per-section grade (fine-grained, 8 values).
+   `EvidenceTier` is the peptide-level rollup (4 buckets) used by:
+     - The plate's Hero card to surface evidence quality at a glance
+     - DESIGN.md § 14 conditional framing for Khavinson-school plates
+       (framing renders only when tier ∈ {animal, theoretical})
+     - The maturity badge atlas-rendering decisions
+
+   Tier is DERIVED at build time, never stored — keeps a single source
+   of truth (the per-section evidence_level fields) and lets the rollup
+   logic evolve without YAML edits.
+   ========================================================= */
+
+export type EvidenceTier = "fda-approved" | "clinical" | "animal" | "theoretical";
+
+/**
+ * Strength rank for the EvidenceLevel enum. Higher = stronger evidence.
+ * fda-approved (8) is the strongest; theoretical (1) is the weakest.
+ * Order matches schemas/peptide.ts EvidenceLevel ordering.
+ */
+const EVIDENCE_RANK: Record<EvidenceLevel, number> = {
+  "fda-approved": 8,
+  "phase-3": 7,
+  "phase-2": 6,
+  "phase-1": 5,
+  "animal-strong": 4,
+  "animal-mechanistic": 3,
+  "human-mechanistic": 2,
+  "theoretical": 1,
+};
+
+const EVIDENCE_TO_TIER: Record<EvidenceLevel, EvidenceTier> = {
+  "fda-approved": "fda-approved",
+  "phase-3": "clinical",
+  "phase-2": "clinical",
+  "phase-1": "clinical",
+  "animal-strong": "animal",
+  "animal-mechanistic": "animal",
+  "human-mechanistic": "animal",
+  "theoretical": "theoretical",
+};
+
+/**
+ * Roll up the peptide's evidence levels into a single tier. Takes the
+ * MAX (strongest) across all section-level evidence_level fields:
+ * peptide.evidence_level + fat_loss.evidence_level (when present).
+ *
+ * Tier values are coarser than EvidenceLevel by design — readers don't
+ * benefit from a 1-of-8 distinction at the page level. The 4 tiers map
+ * to UI affordances: badge color, framing copy, maturity-badge accent.
+ */
+export function computeEvidenceTier(p: Peptide): EvidenceTier {
+  const levels: EvidenceLevel[] = [p.evidence_level];
+  if (p.fat_loss?.evidence_level) levels.push(p.fat_loss.evidence_level);
+
+  const strongest = levels.reduce<EvidenceLevel>(
+    (best, cur) => (EVIDENCE_RANK[cur] > EVIDENCE_RANK[best] ? cur : best),
+    levels[0],
+  );
+  return EVIDENCE_TO_TIER[strongest];
+}
+
+/* =========================================================
+   Khavinson-tradition detection.
+
+   Returns true when this peptide cites at least one reference whose
+   registry entry has `russian_journal_ref` set — meaning the citation
+   comes from St. Petersburg Institute of Bioregulation and Gerontology
+   (Khavinson school) literature that isn't PubMed-indexed.
+
+   Used by DESIGN.md § 14 conditional framing: the explicit "Russian-
+   language clinical literature, primarily from the St. Petersburg
+   Institute…" line renders ONLY when this returns true AND the plate's
+   evidence_tier is `animal` or `theoretical`. (A Khavinson peptide
+   that later gets a Western RCT would auto-suppress the framing.)
+   ========================================================= */
+
+export function isKhavinsonTradition(
+  p: Peptide,
+  registry: CitationRegistry,
+): boolean {
+  for (const id of collectCiteIds(p)) {
+    const ref = registry[id];
+    if (ref?.russian_journal_ref) return true;
+  }
+  return false;
+}
+
+/** Walk the peptide tree and collect every cite-ID it uses, deduped. */
+function collectCiteIds(p: Peptide): Set<string> {
+  const ids = new Set<string>();
+
+  function visit(node: unknown): void {
+    if (!node) return;
+    if (Array.isArray(node)) {
+      node.forEach(visit);
+      return;
+    }
+    if (typeof node !== "object") return;
+    const obj = node as Record<string, unknown>;
+    const cite = obj.cite;
+    if (Array.isArray(cite)) {
+      for (const id of cite) if (typeof id === "string" && id) ids.add(id);
+    }
+    for (const v of Object.values(obj)) visit(v);
+  }
+
+  visit(p as unknown);
+  return ids;
 }

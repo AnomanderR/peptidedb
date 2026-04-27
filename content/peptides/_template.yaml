@@ -15,7 +15,7 @@ color: blue   # blue | green | purple | amber | rose | cyan | teal
 evidence_level: animal-mechanistic
 fda_approved: false
 last_reviewed: "2026-04-25"
-maturity: draft
+maturity: auto-drafted
 contributors: [your-github-handle]
 
 summary: >-

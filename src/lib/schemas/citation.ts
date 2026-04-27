@@ -53,6 +53,20 @@ export const Citation = z.object({
   /** Direct URL override. Use only when no PMID/DOI/NCT. */
   url: z.string().url().optional(),
 
+  /**
+   * Russian-tradition journal reference. Use for Khavinson-school /
+   * St. Petersburg Institute of Bioregulation and Gerontology citations
+   * that aren't PubMed-indexed. Free-form citation string in canonical
+   * form (e.g., "Bull Exp Biol Med 2002;134(2):81-3 (Russian)").
+   *
+   * Tags the citation as Russian-tradition for the DESIGN.md § 14
+   * conditional framing line on bioregulator plates. A citation may
+   * have BOTH a `pmid` and a `russian_journal_ref` (a few Khavinson
+   * papers are PubMed-indexed); the framing line still fires when
+   * any cited reference has the russian_journal_ref tag.
+   */
+  russian_journal_ref: z.string().optional(),
+
   /** Short pull-quote / context note. Optional. */
   note: z.string().optional(),
 });

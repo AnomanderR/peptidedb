@@ -13,7 +13,7 @@ color: cyan
 evidence_level: animal-strong
 fda_approved: false
 last_reviewed: "2026-04-25"
-maturity: draft
+maturity: auto-drafted
 contributors: [peptidesdb-core]
 
 summary: >-

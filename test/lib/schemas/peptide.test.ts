@@ -64,6 +64,49 @@ const validPeptide = {
   },
 };
 
+describe("maturity field (4-tier ladder, locked 2026-04-26)", () => {
+  test("accepts 'auto-drafted'", () => {
+    const r = Peptide.safeParse({ ...validPeptide, maturity: "auto-drafted" });
+    expect(r.success).toBe(true);
+  });
+
+  test("accepts 'human-reviewed'", () => {
+    const r = Peptide.safeParse({ ...validPeptide, maturity: "human-reviewed" });
+    expect(r.success).toBe(true);
+  });
+
+  test("accepts 'community-edited'", () => {
+    const r = Peptide.safeParse({ ...validPeptide, maturity: "community-edited" });
+    expect(r.success).toBe(true);
+  });
+
+  test("accepts 'flagship'", () => {
+    const r = Peptide.safeParse({ ...validPeptide, maturity: "flagship" });
+    expect(r.success).toBe(true);
+  });
+
+  test("rejects legacy 'draft' (migrated to 'auto-drafted')", () => {
+    const r = Peptide.safeParse({ ...validPeptide, maturity: "draft" });
+    expect(r.success).toBe(false);
+  });
+
+  test("rejects legacy 'reviewed' (migrated to 'human-reviewed')", () => {
+    const r = Peptide.safeParse({ ...validPeptide, maturity: "reviewed" });
+    expect(r.success).toBe(false);
+  });
+
+  test("rejects legacy 'verified' (migrated to 'flagship')", () => {
+    const r = Peptide.safeParse({ ...validPeptide, maturity: "verified" });
+    expect(r.success).toBe(false);
+  });
+
+  test("defaults to 'auto-drafted' when omitted", () => {
+    const r = Peptide.safeParse(validPeptide);
+    expect(r.success).toBe(true);
+    if (r.success) expect(r.data.maturity).toBe("auto-drafted");
+  });
+});
+
 describe("contributors field (D15 + D6 + D9)", () => {
   test("accepts plain GitHub handle 'AnomanderR'", () => {
     const result = Peptide.safeParse({
