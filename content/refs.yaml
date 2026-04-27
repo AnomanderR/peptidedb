@@ -1894,3 +1894,238 @@ benoist-2014:
   pmid: '25187433'
   authors:
     - Benoist CC
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+huijben-2026:
+  id: huijben-2026
+  type: journal
+  title: >-
+    Boosting Male Fertility: The Impact of Gonadotropin Therapy on Hypogonadotropic Hypogonadism-A
+    Systematic Review and Meta-Analysis.
+  year: 2026
+  pmid: '41987691'
+  authors:
+    - Huijben M
+
+zachariou-2026:
+  id: zachariou-2026
+  type: journal
+  title: >-
+    Fertility Outcomes in Men with Nonobstructive Azoospermia Due to Hypogonadotropic Hypogonadism
+    After Gonadotropin Therapy.
+  year: 2026
+  pmid: '41682884'
+  authors:
+    - Zachariou A
+
+konsam-2026:
+  id: konsam-2026
+  type: journal
+  title: >-
+    Comparing the response of triple therapy and conventional treatment in male congenital
+    hypogonadotropic hypogonadism: a randomized controlled trial.
+  year: 2026
+  pmid: '41993983'
+  authors:
+    - Konsam BD
+
+nariyoshi-2025:
+  id: nariyoshi-2025
+  type: journal
+  title: >-
+    Alterations in the ultrasound appearance of seminiferous tubules after gonadotropin treatment in
+    patients with azoospermia because of hypogonadotropic hypogonadism.
+  year: 2025
+  pmid: '41473567'
+  authors:
+    - Nariyoshi S
+
+schrderlange-2025:
+  id: schrderlange-2025
+  type: journal
+  title: Molecular characterization of the murine Leydig cell lines TM3 and MLTC-1.
+  year: 2025
+  pmid: '41476916'
+  authors:
+    - Schröder-Lange SK
+
+clift-2026:
+  id: clift-2026
+  type: journal
+  title: >-
+    Real-World Outcomes and Safety of Testosterone Therapy: A Longitudinal, Retrospective Cohort
+    Study of Over 9,000 Men.
+  year: 2026
+  pmid: '41508380'
+  authors:
+    - Clift AK
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+jia-2025:
+  id: jia-2025
+  type: journal
+  title: Triptorelin associated adverse events evaluated using FAERS pharmacovigilance data.
+  year: 2025
+  pmid: '40890214'
+  authors:
+    - Jia W
+
+yee-2025:
+  id: yee-2025
+  type: journal
+  title: >-
+    A 6-month sustained-release formulation of triptorelin for locally advanced or metastatic
+    prostate cancer: a real-world experience in Asia.
+  year: 2025
+  pmid: '40001059'
+  authors:
+    - Yee CH
+
+anon-2012:
+  id: anon-2012
+  type: journal
+  title: Triptorelin.
+  year: 2012
+  pmid: '31644065'
+  authors:
+    - Unknown
+
+chen-2024:
+  id: chen-2024
+  type: journal
+  title: >-
+    Resources Utilization Assessment and Cost-Minimization Analysis of the 6-Monthly Formulation of
+    Triptorelin in the Treatment of Prostate Cancer in China.
+  year: 2024
+  pmid: '39691726'
+  authors:
+    - Chen Y
+
+albrethsen-2023:
+  id: albrethsen-2023
+  type: journal
+  title: >-
+    Serum Insulin-like Factor 3, Testosterone, and LH in Experimental and Therapeutic Testicular
+    Suppression.
+  year: 2023
+  pmid: '37235781'
+  authors:
+    - Albrethsen J
+
+hafron-2025:
+  id: hafron-2025
+  type: journal
+  title: >-
+    Study of persistence and adherence to ADT in prostate cancer: relugolix, degarelix, and GnRH
+    agonists in the US.
+  year: 2025
+  pmid: '40189880'
+  authors:
+    - Hafron J
+
+preston-2024:
+  id: preston-2024
+  type: journal
+  title: >-
+    Risk of cardiovascular events following intermittent and continuous androgen deprivation therapy
+    in patients with nonmetastatic prostate cancer.
+  year: 2024
+  pmid: '39003108'
+  authors:
+    - Preston MA
+
+friedrich-2025:
+  id: friedrich-2025
+  type: journal
+  title: >-
+    Racial Differences in Adverse Events After Androgen Deprivation in Veterans With Prostate
+    Cancer.
+  year: 2025
+  pmid: '41259022'
+  authors:
+    - Friedrich NA
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+robin-2026:
+  id: robin-2026
+  type: journal
+  title: >-
+    Management of infertility in women with hypothalamic hypogonadotropic hypogonadism: an expert
+    opinion.
+  year: 2026
+  pmid: '41715131'
+  authors:
+    - Robin G
+
+tadesse-2026:
+  id: tadesse-2026
+  type: journal
+  title: >-
+    Clomiphene citrate in the management of anovulation: a review of mechanisms, outcomes, and
+    clinical challenges.
+  year: 2026
+  pmid: '41863134'
+  authors:
+    - Tadesse TM
+
+morris-2026:
+  id: morris-2026
+  type: journal
+  title: Robust serotonin activation of the kisspeptin GnRH pulse generator in male and female mice.
+  year: 2026
+  pmid: '41906629'
+  authors:
+    - Morris PG
+
+sharma-2026:
+  id: sharma-2026
+  type: journal
+  title: Delayed Puberty.
+  year: 2026
+  pmid: '31335042'
+  authors:
+    - Sharma L
+
+wittner-2026:
+  id: wittner-2026
+  type: journal
+  title: Novel KISS1 Gene Mutation Leading to Male Hypogonadotropic Hypogonadism.
+  year: 2026
+  pmid: '41786302'
+  authors:
+    - Wittner L
+
+guerrerogutierrez-2026:
+  id: guerrerogutierrez-2026
+  type: journal
+  title: Winter shearing enhances basal and GnRH-stimulated testosterone secretion in rams.
+  year: 2026
+  pmid: '41655364'
+  authors:
+    - Guerrero-Gutierrez M
+
+zikopoulos-2026:
+  id: zikopoulos-2026
+  type: journal
+  title: Leptin Receptor b (LEPRb) Mutations Disrupt Hypothalamic Control of the Reproductive Axis.
+  year: 2026
+  pmid: '41828698'
+  authors:
+    - Zikopoulos A
+
+damoulaki-2025:
+  id: damoulaki-2025
+  type: journal
+  title: >-
+    Polycystic Ovary Syndrome-Associated Acne: The Interplay of Hyperandrogenism, Insulin
+    Resistance, and Therapeutic Strategies.
+  year: 2025
+  pmid: '41473651'
+  authors:
+    - Damoulaki E

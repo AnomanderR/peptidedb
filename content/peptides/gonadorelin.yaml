@@ -1,0 +1,320 @@
+schema_version: 1
+slug: gonadorelin
+name: Gonadorelin
+peptide_class: GnRH Analogue
+classification: GnRH Analogue · Diagnostic & Therapeutic
+categories:
+  - gnrh
+  - reproductive-axis
+  - diagnostic
+  - hypogonadism
+aliases:
+  - GnRH
+  - LHRH
+  - gonadotropin-releasing hormone
+  - luteinizing hormone-releasing hormone
+color: purple
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 1980
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic decapeptide identical to endogenous gonadotropin-releasing hormone. Pulsatile
+    administration restores physiological LH/FSH secretion in hypothalamic hypogonadism by mimicking
+    native GnRH pulsatility. Single-dose administration used diagnostically to assess pituitary
+    gonadotrope responsiveness. Continuous exposure paradoxically downregulates GnRH receptors,
+    forming the basis for GnRH agonist desensitization protocols.
+  cite: []
+hero_stats:
+  - value: 90 min
+    label: Pulsatile interval
+    cite: []
+  - value: 73%
+    label: Ovulation restoration
+    cite:
+      - tadesse-2026
+  - value: 2–4 min
+    label: Plasma half-life
+    cite: []
+hero_route:
+  value: IV / SQ · Pulsatile Pump (Therapeutic) · Single Bolus (Diagnostic)
+  cite: []
+mechanism:
+  primary_target:
+    value: GnRH receptors on anterior pituitary gonadotropes
+    cite: []
+  pathway:
+    value: GnRH → Pituitary gonadotrope → LH/FSH secretion → Gonadal steroidogenesis
+    cite:
+      - sharma-2026
+  downstream_effect:
+    value: >-
+      Pulsatile LH/FSH release stimulates testicular testosterone or ovarian estradiol/progesterone
+      synthesis; initiates folliculogenesis and spermatogenesis
+    cite:
+      - robin-2026
+      - sharma-2026
+  origin:
+    value: >-
+      Synthetic decapeptide (pGlu-His-Trp-Ser-Tyr-Gly-Leu-Arg-Pro-Gly-NH2) identical to native
+      hypothalamic GnRH
+    cite: []
+  feedback_intact:
+    value: >-
+      Yes — pulsatile delivery preserves negative feedback loops; continuous exposure desensitizes
+      receptors
+    cite: []
+    badge: green
+  receptor_class:
+    value: G-protein coupled receptor (Gq/11 pathway)
+    cite: []
+  half_life_basis:
+    value: Rapid enzymatic degradation by hypothalamic endopeptidases; plasma t½ ~2–4 minutes
+    cite: []
+  extra_rows:
+    - key: Pulsatility requirement
+      value:
+        value: >-
+          Essential — continuous exposure downregulates GnRH receptors within 7–14 days, suppressing
+          gonadotropins
+        cite:
+          - robin-2026
+    - key: Kisspeptin regulation
+      value:
+        value: >-
+          Endogenous GnRH neurons are activated by arcuate kisspeptin neurons, which synchronize to
+          generate pulsatile GnRH release
+        cite:
+          - morris-2026
+          - wittner-2026
+  diagram:
+    - kind: node
+      text:
+        value: Hypothalamic GnRH neurons
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Pulsatile GnRH secretion (90 min intervals)
+        cite: []
+    - kind: node
+      text:
+        value: Anterior pituitary gonadotropes
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ LH & FSH release
+        cite: []
+    - kind: node
+      text:
+        value: Gonads (testes / ovaries)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Testosterone / Estradiol synthesis
+        cite: []
+    - kind: outcome
+      text:
+        value: Puberty, Spermatogenesis, Folliculogenesis
+        cite: []
+dosage:
+  rows:
+    - parameter: Diagnostic test (pituitary function)
+      value:
+        value: 100 mcg IV or SQ bolus
+        cite: []
+      notes:
+        value: >-
+          Measure baseline LH/FSH, then 30/60/90 min post-injection. Normal response: LH ≥2×
+          baseline.
+        cite: []
+    - parameter: Therapeutic (hypothalamic hypogonadism)
+      value:
+        value: 5–20 mcg IV bolus every 90–120 minutes
+        cite: []
+      notes:
+        value: >-
+          Requires portable pulsatile pump. Dose individualized to achieve normal gonadotropin
+          pulsatility.
+        cite:
+          - robin-2026
+    - parameter: Pulsatile interval
+      value:
+        value: 90 minutes (females) · 120 minutes (males)
+        cite: []
+      notes:
+        value: Mimics physiological GnRH pulse frequency.
+        cite: []
+    - parameter: Route
+      value:
+        value: IV preferred (therapeutic) · SQ acceptable (diagnostic)
+        cite: []
+    - parameter: Duration
+      value:
+        value: Continuous until pregnancy achieved or fertility goals met
+        cite: []
+      notes:
+        value: 3–6 month courses typical for ovulation induction.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: RCT / Expert consensus
+        cite: []
+        badge: green
+    - parameter: Half-life
+      value:
+        value: 2–4 minutes (plasma)
+        cite: []
+      notes:
+        value: Necessitates frequent pulsatile administration.
+        cite: []
+    - parameter: Alternative protocols
+      value:
+        value: Exogenous gonadotropins (hCG/hMG) often preferred due to convenience vs pump requirement
+        cite: []
+fat_loss:
+  evidence_strength: 0
+  evidence_level: theoretical
+  evidence_meta:
+    value: No direct lipolytic mechanisms. Primary indication is reproductive axis restoration.
+    cite: []
+  rows:
+    - parameter: Fat loss mechanism
+      value:
+        value: None — gonadorelin acts exclusively on reproductive axis
+        cite: []
+    - parameter: Indirect metabolic effects
+      value:
+        value: Restoration of sex hormones may normalize body composition in hypogonadal states
+        cite: []
+      notes:
+        value: Effect mediated by downstream testosterone/estradiol, not GnRH itself.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Injection site reaction
+      value:
+        value: Erythema, irritation (pulsatile pump catheter site)
+        cite: []
+      severity: mild
+    - parameter: Headache
+      value:
+        value: Common with bolus administration
+        cite: []
+      severity: mild
+    - parameter: Nausea / abdominal discomfort
+      value:
+        value: Transient, dose-related
+        cite: []
+      severity: mild
+    - parameter: Ovarian hyperstimulation syndrome (OHSS)
+      value:
+        value: Risk with ovulation induction protocols; monitor follicular development via ultrasound
+        cite: []
+        badge: yellow
+      severity: moderate
+    - parameter: Multiple gestation
+      value:
+        value: Increased risk with fertility protocols (twins ~10–15%)
+        cite: []
+        badge: yellow
+      severity: moderate
+    - parameter: Anaphylaxis
+      value:
+        value: Rare hypersensitivity reaction
+        cite: []
+        badge: red
+      severity: severe
+    - parameter: Pump malfunction / infection
+      value:
+        value: Mechanical failure or catheter-site infection with long-term IV pump use
+        cite: []
+        badge: yellow
+      severity: moderate
+    - parameter: Receptor desensitization
+      value:
+        value: Continuous (non-pulsatile) exposure paradoxically suppresses gonadotropins
+        cite:
+          - robin-2026
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - value: Pregnancy (except therapeutic infertility protocols)
+      cite: []
+    - value: Hypersensitivity to gonadorelin or excipients
+      cite: []
+    - value: >-
+        Hormone-dependent tumors (prostate, breast) — risk of tumor stimulation via sex hormone
+        elevation
+      cite: []
+  contraindications_relative:
+    - value: Ovarian cysts or PCOS (monitor for OHSS)
+      cite: []
+    - value: Pituitary adenoma or other sellar mass (may worsen with gonadotropin surge)
+      cite: []
+administration:
+  steps:
+    - title: Diagnostic protocol
+      body: >-
+        Administer 100 mcg IV or SQ bolus. Draw baseline LH/FSH, then at 30, 60, 90 minutes. Normal
+        response: LH ≥2× baseline, FSH modest rise. Blunted response suggests pituitary pathology;
+        exaggerated response may indicate primary hypogonadism.
+      cite: []
+    - title: Therapeutic pump setup (pulsatile)
+      body: >-
+        Requires programmable infusion pump with IV catheter. Set pulse interval to 90 min (females)
+        or 120 min (males). Bolus dose 5–20 mcg per pulse. Pump worn continuously; catheter site
+        rotated every 48–72 hrs to prevent infection.
+      cite: []
+    - title: Reconstitution
+      body: >-
+        Lyophilised gonadorelin reconstituted with sterile saline or provided diluent. Typically
+        0.8–3.2 mg dissolved in 8 mL for pump reservoir. Solution stable 7–14 days refrigerated.
+      cite: []
+    - title: Monitoring
+      body: >-
+        For fertility protocols: ultrasound follicular tracking + serial estradiol/LH measurements.
+        Adjust pulse dose to achieve mid-follicular LH 5–10 IU/L. Ovulation confirmed by
+        progesterone rise or ultrasound.
+      cite: []
+    - title: Timing
+      body: >-
+        Pulsatile therapy initiated at any point in cycle. Diagnostic test performed in morning
+        (higher baseline LH). For ovulation induction, treatment begins early follicular phase.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: hcg
+      partner_label: hCG (Human Chorionic Gonadotropin)
+      synergy: multi-pathway
+      rationale: >-
+        In hypogonadotropic hypogonadism protocols, gonadorelin restores pituitary LH/FSH
+        pulsatility, while exogenous hCG directly stimulates Leydig cells (acting as LH mimetic) to
+        maintain testosterone production. This dual approach ensures both central axis restoration
+        and immediate gonadal steroidogenesis, preventing testicular atrophy during fertility
+        treatment. hCG's longer half-life (24–36 hrs) complements gonadorelin's pulsatile
+        short-acting profile.
+      protocol:
+        Gonadorelin: 5–10 mcg IV every 120 min (pulsatile pump)
+        hCG: 1500–2000 IU SQ · 2–3× per week
+        Duration: 12–24 weeks for spermatogenesis induction
+      primary_benefit: Fertility restoration in hypothalamic hypogonadism with maintained testicular function
+      cite: []
+    - partner_slug: hmg
+      partner_label: hMG (Human Menopausal Gonadotropin)
+      synergy: multi-pathway
+      rationale: >-
+        For ovulation induction in hypothalamic amenorrhea, gonadorelin provides pulsatile GnRH
+        stimulation while hMG supplies exogenous FSH/LH to directly drive folliculogenesis. This
+        combination is reserved for refractory cases or when pump therapy is impractical. hMG
+        bypasses the need for endogenous pituitary response, ensuring follicular recruitment even
+        with suboptimal gonadotrope function.
+      protocol:
+        Gonadorelin: 5–20 mcg IV every 90 min (pulsatile pump) OR
+        hMG: 75–150 IU SQ daily (if pump unavailable)
+        Monitoring: Ultrasound + estradiol every 2–3 days
+      primary_benefit: Controlled ovulation induction with lower OHSS risk vs hMG monotherapy
+      cite: []
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

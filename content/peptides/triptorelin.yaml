@@ -1,0 +1,331 @@
+schema_version: 1
+slug: triptorelin
+name: Triptorelin
+peptide_class: GnRH Agonist
+classification: GnRH Agonist · FDA-Approved
+categories:
+  - gnrh-agonist
+  - hormone-suppression
+  - fda-approved
+  - oncology
+aliases:
+  - Trelstar
+  - Decapeptyl
+  - Diphereline
+  - GnRH agonist
+color: purple
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 1999
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic decapeptide gonadotropin-releasing hormone (GnRH) agonist, FDA-approved for advanced
+    prostate cancer, endometriosis, and central precocious puberty. Initial pituitary flare (1–3
+    weeks) followed by receptor downregulation produces sustained suppression of LH, FSH, and
+    downstream sex hormones. Available in 1-month, 3-month, and 6-month depot formulations.
+    Distinguished by biphasic mechanism: transient stimulation, then prolonged castration-level
+    testosterone (<50 ng/dL).
+  cite:
+    - jia-2025
+    - yee-2025
+    - anon-2012
+hero_stats:
+  - value: 3.75–22.5 mg
+    label: Depot dose range
+    cite:
+      - yee-2025
+      - chen-2024
+  - value: <50 ng/dL
+    label: Testosterone target
+    cite: []
+  - value: 1–6 months
+    label: Depot duration
+    cite:
+      - yee-2025
+      - chen-2024
+hero_route:
+  value: IM · Depot Injection · Monthly to 6-Monthly
+  cite:
+    - yee-2025
+mechanism:
+  primary_target:
+    value: Pituitary GnRH receptors
+    cite:
+      - anon-2012
+  pathway:
+    value: >-
+      GnRH receptor agonism → initial flare (LH/FSH spike) → receptor desensitization → sustained
+      LH/FSH suppression
+    cite: []
+  downstream_effect:
+    value: >-
+      Castration-level suppression of testosterone (men) and estrogen (women) within 2–4 weeks
+      post-flare
+    cite: []
+  origin:
+    value: >-
+      Synthetic decapeptide analogue of native GnRH with amino acid substitutions for enhanced
+      receptor affinity and stability
+    cite: []
+  feedback_intact:
+    value: No — bypasses physiological pulsatility; continuous agonism produces paradoxical suppression
+    cite: []
+    badge: red
+  half_life_basis:
+    value: 'Depot formulation: 1-month (3.75 mg), 3-month (11.25 mg), 6-month (22.5 mg) sustained release'
+    cite:
+      - yee-2025
+      - chen-2024
+  extra_rows:
+    - key: Initial flare period
+      value:
+        value: 1–3 weeks; transient ↑ LH/FSH/testosterone before suppression
+        cite:
+          - jia-2025
+    - key: Castration threshold
+      value:
+        value: Testosterone <50 ng/dL achieved in >95% at 4 weeks
+        cite:
+          - yee-2025
+  diagram:
+    - kind: node
+      text:
+        value: Hypothalamus
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Triptorelin (GnRH analogue)
+        cite: []
+    - kind: node
+      text:
+        value: Pituitary GnRH-R
+        cite: []
+    - kind: arrow
+      text:
+        value: '↓ Phase 1: Flare (↑ LH/FSH 1–3 wks)'
+        cite: []
+    - kind: arrow
+      text:
+        value: '↓ Phase 2: Receptor desensitization'
+        cite: []
+    - kind: node
+      text:
+        value: Gonads (Testes/Ovaries)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Sustained ↓↓ LH/FSH
+        cite: []
+    - kind: outcome
+      text:
+        value: Castration-level Sex Hormones
+        cite: []
+dosage:
+  rows:
+    - parameter: 1-month depot
+      value:
+        value: 3.75 mg IM
+        cite: []
+      notes:
+        value: Most common formulation for prostate cancer.
+        cite: []
+    - parameter: 3-month depot
+      value:
+        value: 11.25 mg IM
+        cite:
+          - yee-2025
+      notes:
+        value: Reduced injection frequency.
+        cite: []
+    - parameter: 6-month depot
+      value:
+        value: 22.5 mg IM
+        cite:
+          - yee-2025
+          - chen-2024
+      notes:
+        value: Long-acting formulation; improved adherence in real-world use.
+        cite:
+          - yee-2025
+    - parameter: Administration route
+      value:
+        value: Intramuscular (IM) — gluteal or deltoid
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Every 1, 3, or 6 months per formulation
+        cite: []
+    - parameter: 'Indication: Prostate cancer'
+      value:
+        value: Advanced (metastatic or locally advanced)
+        cite: []
+      notes:
+        value: Androgen deprivation therapy (ADT) backbone.
+        cite: []
+    - parameter: 'Indication: Endometriosis'
+      value:
+        value: 3.75 mg monthly
+        cite: []
+      notes:
+        value: FDA-approved; typically 6-month course.
+        cite: []
+    - parameter: 'Indication: Central precocious puberty'
+      value:
+        value: Pediatric use (≥2 years)
+        cite:
+          - jia-2025
+      notes:
+        value: Weight-based dosing per FDA label.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Multiple Phase 3 RCTs · FDA-approved 1999
+        cite: []
+    - parameter: Duration (prostate cancer)
+      value:
+        value: Continuous or intermittent ADT protocols
+        cite:
+          - preston-2024
+      notes:
+        value: Intermittent ADT may reduce side effects; cardiovascular risk similar to continuous.
+        cite: []
+    - parameter: Monitoring
+      value:
+        value: Serum testosterone, PSA (prostate cancer), bone density, lipids, glucose
+        cite: []
+side_effects:
+  rows:
+    - parameter: Initial flare symptoms
+      value:
+        value: Bone pain, urinary obstruction, spinal cord compression (first 2 weeks)
+        cite: []
+      notes:
+        value: Antiandrogen co-treatment (bicalutamide) mitigates flare in metastatic disease.
+        cite: []
+      severity: moderate
+    - parameter: Cardiovascular events
+      value:
+        value: MI, stroke, arrhythmia — GnRH agonists show higher CV risk vs antagonists in meta-analyses
+        cite:
+          - patel-2025
+          - preston-2024
+      severity: severe
+    - parameter: Hot flashes
+      value:
+        value: Very common (>60%); vasomotor instability
+        cite: []
+      severity: mild
+    - parameter: Bone loss / Osteoporosis
+      value:
+        value: Accelerated bone mineral density decline; fracture risk ↑
+        cite:
+          - friedrich-2025
+      notes:
+        value: Baseline DEXA scan recommended; bisphosphonates or denosumab may be indicated.
+        cite: []
+      severity: moderate
+    - parameter: Metabolic syndrome
+      value:
+        value: Weight gain, insulin resistance, dyslipidemia, diabetes risk
+        cite: []
+      severity: moderate
+    - parameter: Sexual dysfunction
+      value:
+        value: Erectile dysfunction, loss of libido (expected pharmacological effect)
+        cite:
+          - jia-2025
+      severity: moderate
+    - parameter: Injection site reactions
+      value:
+        value: Pain, erythema, sterile abscess (rare with depot formulations)
+        cite: []
+      severity: mild
+    - parameter: Gynecomastia / Breast tenderness
+      value:
+        value: Common (10–20%); peripheral aromatization of residual androgens
+        cite: []
+      severity: mild
+    - parameter: Fatigue / Mood changes
+      value:
+        value: Anemia, depression, cognitive changes reported in long-term ADT
+        cite: []
+      severity: moderate
+    - parameter: Hepatotoxicity
+      value:
+        value: Transient transaminase elevations; clinically apparent liver injury rare
+        cite: []
+      severity: mild
+    - parameter: Racial differences (ADT)
+      value:
+        value: Black veterans show higher CV event rates vs White veterans on GnRH agonists
+        cite: []
+      severity: moderate
+  contraindications_absolute:
+    - value: Hypersensitivity to triptorelin, GnRH, or GnRH agonist analogues
+      cite: []
+    - value: Pregnancy (Category X)
+      cite: []
+  contraindications_relative:
+    - value: Active cardiovascular disease — consider GnRH antagonist alternative
+      cite: []
+    - value: Metastatic vertebral disease with spinal cord compression risk (flare hazard)
+      cite: []
+    - value: Severe urinary obstruction — may worsen during flare
+      cite: []
+    - value: Osteoporosis or high fracture risk (requires bone-protective therapy)
+      cite: []
+administration:
+  steps:
+    - title: Formulation selection
+      body: >-
+        Choose 1-month (3.75 mg), 3-month (11.25 mg), or 6-month (22.5 mg) depot based on adherence
+        needs and clinical context. 6-month formulation shows improved real-world adherence in
+        Asia-Pacific cohorts.
+      cite: []
+    - title: Injection site
+      body: >-
+        Intramuscular — gluteal or deltoid muscle. Use 21–23G needle. Aspirate to confirm
+        non-vascular placement. Rotate sites with repeat injections.
+      cite: []
+    - title: Initial flare mitigation
+      body: >-
+        For metastatic prostate cancer: co-administer antiandrogen (e.g., bicalutamide 50 mg daily)
+        starting 1 week before first injection and continuing 2–4 weeks to prevent tumor flare.
+      cite: []
+    - title: Monitoring schedule
+      body: >-
+        Baseline: testosterone, PSA, bone density (DEXA), lipids, glucose. Follow-up: testosterone
+        at 4 weeks (confirm <50 ng/dL castration), PSA monthly × 3, then quarterly. Annual DEXA for
+        bone loss.
+      cite: []
+    - title: Storage
+      body: >-
+        Store vials at room temperature (20–25 °C), protect from light. Do not freeze. Reconstituted
+        suspension should be used immediately.
+      cite: []
+    - title: Intermittent ADT protocol (optional)
+      body: >-
+        Some protocols use on-treatment periods (9–12 months) alternating with off-treatment
+        intervals until PSA rises. Cardiovascular risk appears similar to continuous ADT.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: bicalutamide
+      partner_label: Bicalutamide
+      synergy: strong
+      rationale: >-
+        Triptorelin produces an initial testosterone flare (1–3 weeks) that can transiently worsen
+        metastatic prostate cancer symptoms, including bone pain and spinal cord compression.
+        Bicalutamide, a non-steroidal antiandrogen, blocks androgen receptors peripherally,
+        preventing flare-related tumor stimulation. This combination is standard-of-care in advanced
+        prostate cancer to safely transition into sustained castration.
+      protocol:
+        Triptorelin: 3.75 mg IM (or long-acting depot)
+        Bicalutamide: 50 mg oral daily, start 1 week pre-triptorelin
+        Duration: Continue bicalutamide 2–4 weeks post-injection
+      primary_benefit: Prevents tumor flare, safer ADT initiation in metastatic disease
+      cite: []
+maturity: human-reviewed
+contributors:
+  - peptidesdb-ai
