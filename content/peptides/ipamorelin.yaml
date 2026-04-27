@@ -1,187 +1,199 @@
-# =========================================================
-# Ipamorelin — selective GH-releasing peptide
-# Reviewed: 2026-04-25
-# =========================================================
 schema_version: 1
 slug: ipamorelin
 name: Ipamorelin
 peptide_class: GHRP / Ghrelin Receptor Agonist
 classification: Selective GHRP · Ghrelin Mimetic
-categories: [gh-axis, ghrp, ghrelin, selective]
-aliases: [NNC 26-0161]
+categories:
+  - gh-axis
+  - ghrp
+  - ghrelin
+  - selective
+aliases:
+  - NNC 26-0161
 color: purple
 evidence_level: phase-1
 fda_approved: false
-last_reviewed: "2026-04-25"
+last_reviewed: '2026-04-25'
 maturity: human-reviewed
-contributors: [peptidesdb-core]
-
+contributors:
+  - peptidesdb-core
 summary: >-
-  Pentapeptide growth-hormone-releasing peptide (GHRP) that selectively
-  activates the ghrelin receptor (GHS-R1a) on the anterior pituitary, eliciting
-  GH release without the cortisol or prolactin elevation characteristic of
-  earlier GHRPs. Originally characterised by Raun et al. (1998); preferred
-  GHRP partner for GHRH analogues like tesamorelin and CJC-1295.
-
+  Pentapeptide growth-hormone-releasing peptide (GHRP) that selectively activates the ghrelin
+  receptor (GHS-R1a) on the anterior pituitary, eliciting GH release without the cortisol or
+  prolactin elevation characteristic of earlier GHRPs. Originally characterised by Raun et al.
+  (1998); preferred GHRP partner for GHRH analogues like tesamorelin and CJC-1295.
 hero_stats:
-  - value: "200–300 mcg"
-    label: "Per dose"
-    cite: [raun-1998]
-  - value: "Phase 1"
-    label: "Evidence level"
-    cite: [raun-1998, sigalos-2018]
-  - value: "~2 hr"
-    label: "Half-life"
-    cite: [raun-1998]
-hero_route: "SQ · Multiple sites · 1–3×/day"
-
+  - value: 200–300 mcg
+    label: Per dose
+    cite: []
+  - value: Phase 1
+    label: Evidence level
+    cite: []
+  - value: ~2 hr
+    label: Half-life
+    cite: []
+hero_route: SQ · Multiple sites · 1–3×/day
 mechanism:
   primary_target:
-    value: "Ghrelin receptor (GHS-R1a) on anterior pituitary"
-    cite: [raun-1998]
+    value: Ghrelin receptor (GHS-R1a) on anterior pituitary
+    cite:
+      - raun-1998
   pathway:
-    value: "GHS-R1a binding → Gαq/11 → ↑intracellular Ca²⁺ → GH vesicle exocytosis"
-    cite: [raun-1998, bowers-1991]
+    value: GHS-R1a binding → Gαq/11 → ↑intracellular Ca²⁺ → GH vesicle exocytosis
+    cite: []
   downstream_effect:
-    value: "GH pulse amplification, IGF-1 elevation, recovery and lipolytic effects"
-    cite: [bowers-2002]
+    value: GH pulse amplification, IGF-1 elevation, recovery and lipolytic effects
+    cite:
+      - bowers-2002
   feedback_intact:
-    value: "Yes — pulsatile pattern preserved; somatostatin feedback active"
+    value: Yes — pulsatile pattern preserved; somatostatin feedback active
     badge: green
-    cite: [bowers-2002]
+    cite:
+      - bowers-2002
   origin:
-    value: "Pentapeptide H-Aib-His-D-2-Nal-D-Phe-Lys-NH₂; rationally designed for ghrelin-receptor selectivity"
-    cite: [raun-1998]
+    value: >-
+      Pentapeptide H-Aib-His-D-2-Nal-D-Phe-Lys-NH₂; rationally designed for ghrelin-receptor
+      selectivity
+    cite:
+      - raun-1998
   antibody_development:
-    value: "Not reported in short-term studies"
+    value: Not reported in short-term studies
     badge: green
   diagram:
-    - { kind: node, text: "Anterior Pituitary" }
-    - { kind: arrow, text: "↓ Ipamorelin binds GHS-R1a" }
-    - { kind: node, text: "Gαq/11 → Ca²⁺ release" }
-    - { kind: arrow, text: "↓ GH vesicle exocytosis" }
-    - { kind: node, text: "Liver / Peripheral tissues" }
-    - { kind: arrow, text: "↓ IGF-1 + GH-axis effects" }
-    - { kind: outcome, text: "Recovery / Body Composition" }
-
+    - kind: node
+      text: Anterior Pituitary
+    - kind: arrow
+      text: ↓ Ipamorelin binds GHS-R1a
+    - kind: node
+      text: Gαq/11 → Ca²⁺ release
+    - kind: arrow
+      text: ↓ GH vesicle exocytosis
+    - kind: node
+      text: Liver / Peripheral tissues
+    - kind: arrow
+      text: ↓ IGF-1 + GH-axis effects
+    - kind: outcome
+      text: Recovery / Body Composition
 dosage:
   rows:
-    - parameter: "Standard dose"
+    - parameter: Standard dose
       value:
-        value: "200–300 mcg per injection"
-        cite: [raun-1998]
-      notes: "Anecdotal community range; clinical doses 1–3 mg IV in trials."
-    - parameter: "Frequency"
-      value: "1–3× per day"
-      notes: "Once daily pre-sleep is most common; twice or thrice for advanced users."
-    - parameter: "Lower / starter dose"
-      value: "100 mcg per dose"
-    - parameter: "Evidence basis"
+        value: 200–300 mcg per injection
+        cite: []
+      notes: Anecdotal community range; clinical doses 1–3 mg IV in trials.
+    - parameter: Frequency
+      value: 1–3× per day
+      notes: Once daily pre-sleep is most common; twice or thrice for advanced users.
+    - parameter: Lower / starter dose
+      value: 100 mcg per dose
+    - parameter: Evidence basis
       value:
-        value: "Phase 1 + clinical practice"
+        value: Phase 1 + clinical practice
         badge: yellow
-        cite: [raun-1998, sigalos-2018]
-    - parameter: "Duration"
-      value: "8–12 weeks on / 4 weeks off (anecdotal)"
-      notes: "GHS-R desensitisation reported with continuous dosing."
-    - parameter: "Reconstitution"
-      value: "Bacteriostatic water; typical 2 mL per 5 mg vial"
-    - parameter: "Timing"
-      value: "Pre-sleep + fasted preferred; 30 min away from food"
-    - parameter: "Half-life"
+        cite: []
+    - parameter: Duration
+      value: 8–12 weeks on / 4 weeks off (anecdotal)
+      notes: GHS-R desensitisation reported with continuous dosing.
+    - parameter: Reconstitution
+      value: Bacteriostatic water; typical 2 mL per 5 mg vial
+    - parameter: Timing
+      value: Pre-sleep + fasted preferred; 30 min away from food
+    - parameter: Half-life
       value:
-        value: "~2 hours"
-        cite: [raun-1998]
-      notes: "Longer than GHRP-6 (15 min); shorter than CJC-1295-DAC (~8 days)."
-
+        value: ~2 hours
+        cite: []
+      notes: Longer than GHRP-6 (15 min); shorter than CJC-1295-DAC (~8 days).
 side_effects:
   rows:
-    - parameter: "Cortisol elevation"
+    - parameter: Cortisol elevation
       value:
-        value: "Negligible vs other GHRPs"
+        value: Negligible vs other GHRPs
         badge: green
-        cite: [raun-1998]
+        cite:
+          - raun-1998
       severity: mild
-    - parameter: "Prolactin elevation"
+    - parameter: Prolactin elevation
       value:
-        value: "Negligible"
+        value: Negligible
         badge: green
-        cite: [raun-1998]
+        cite:
+          - raun-1998
       severity: mild
-    - parameter: "Hunger"
-      value: "Mild appetite increase via ghrelin-receptor crosstalk"
+    - parameter: Hunger
+      value: Mild appetite increase via ghrelin-receptor crosstalk
       severity: mild
-    - parameter: "Injection site reaction"
-      value: "Mild irritation possible"
+    - parameter: Injection site reaction
+      value: Mild irritation possible
       severity: mild
-    - parameter: "GH excess (overdose)"
+    - parameter: GH excess (overdose)
       value:
-        value: "Joint pain, edema, insulin resistance"
+        value: Joint pain, edema, insulin resistance
         badge: yellow
       severity: moderate
-    - parameter: "IGF-1 elevation"
-      value: "Dose-dependent; monitor with chronic high-dose use"
+    - parameter: IGF-1 elevation
+      value: Dose-dependent; monitor with chronic high-dose use
       severity: moderate
-    - parameter: "Cancer risk"
+    - parameter: Cancer risk
       value:
-        value: "Theoretical via GH/IGF-1 axis; contraindicated in active malignancy"
+        value: Theoretical via GH/IGF-1 axis; contraindicated in active malignancy
         badge: red
       severity: severe
-    - parameter: "Pregnancy / OB"
+    - parameter: Pregnancy / OB
       value:
-        value: "Avoid"
+        value: Avoid
         badge: red
       severity: severe
   contraindications_absolute:
-    - "Active malignancy or cancer history"
-    - "Pregnancy / breastfeeding"
-    - "Disrupted hypothalamic-pituitary axis"
+    - Active malignancy or cancer history
+    - Pregnancy / breastfeeding
+    - Disrupted hypothalamic-pituitary axis
   contraindications_relative:
-    - "Untreated diabetes"
-    - "Severe insulin resistance"
-    - "Concurrent corticosteroid use (theoretical desensitisation)"
-
+    - Untreated diabetes
+    - Severe insulin resistance
+    - Concurrent corticosteroid use (theoretical desensitisation)
 administration:
   steps:
     - title: Reconstitution
-      body: "Add 2 mL bacteriostatic water to 5 mg vial → 2.5 mg/mL. Roll gently. Solution should be clear."
+      body: >-
+        Add 2 mL bacteriostatic water to 5 mg vial → 2.5 mg/mL. Roll gently. Solution should be
+        clear.
     - title: Injection site
-      body: "Subcutaneous, abdomen or thigh. Rotate sites. Pinch fat for shallow SQ delivery."
+      body: Subcutaneous, abdomen or thigh. Rotate sites. Pinch fat for shallow SQ delivery.
     - title: Timing
-      body: "Pre-sleep optimal — aligns with natural GH pulse. Some protocols add a morning fasted dose."
+      body: Pre-sleep optimal — aligns with natural GH pulse. Some protocols add a morning fasted dose.
     - title: Storage
-      body: "Lyophilised: room temp, protected from light. Reconstituted: refrigerate 2–8 °C, use within 30 days."
+      body: >-
+        Lyophilised: room temp, protected from light. Reconstituted: refrigerate 2–8 °C, use within
+        30 days.
     - title: Needle
-      body: "29–31G, 4–8 mm insulin syringe."
-
+      body: 29–31G, 4–8 mm insulin syringe.
 synergy:
   stacks:
     - partner_slug: tesamorelin
       partner_label: Tesamorelin
       synergy: strong
       rationale: >-
-        Ipamorelin (GHRP) + tesamorelin (GHRH analogue) is the textbook
-        dual-axis GH stack. They activate two distinct pituitary receptors —
-        the ghrelin receptor and the GHRH receptor — producing a synergistic
-        GH pulse larger than either alone. Ipamorelin's selectivity (no
-        cortisol/prolactin spike) makes it the ideal GHRP partner for
-        long-term protocols.
+        Ipamorelin (GHRP) + tesamorelin (GHRH analogue) is the textbook dual-axis GH stack. They
+        activate two distinct pituitary receptors — the ghrelin receptor and the GHRH receptor —
+        producing a synergistic GH pulse larger than either alone. Ipamorelin's selectivity (no
+        cortisol/prolactin spike) makes it the ideal GHRP partner for long-term protocols.
       protocol:
-        Ipamorelin: "200–300 mcg SQ · pre-sleep"
-        Tesamorelin: "2 mg SQ · same injection · pre-sleep"
-      primary_benefit: "Maximal GH pulsatility, fat loss, recovery, sleep depth"
-      cite: [raun-1998, bowers-2002]
+        Ipamorelin: 200–300 mcg SQ · pre-sleep
+        Tesamorelin: 2 mg SQ · same injection · pre-sleep
+      primary_benefit: Maximal GH pulsatility, fat loss, recovery, sleep depth
+      cite:
+        - raun-1998
+        - bowers-2002
     - partner_slug: cjc-1295
       partner_label: CJC-1295 (no DAC)
       synergy: strong
       rationale: >-
-        CJC-1295 (no DAC) is a short-acting GHRH analogue. Combined with
-        ipamorelin (GHRP), the pulse is amplified across both receptor systems
-        with timing similar to native physiology. Without the DAC modification,
-        the stack maintains sharp peaks rather than the sustained elevation
-        seen with CJC-1295-DAC + ipamorelin.
+        CJC-1295 (no DAC) is a short-acting GHRH analogue. Combined with ipamorelin (GHRP), the
+        pulse is amplified across both receptor systems with timing similar to native physiology.
+        Without the DAC modification, the stack maintains sharp peaks rather than the sustained
+        elevation seen with CJC-1295-DAC + ipamorelin.
       protocol:
-        Ipamorelin: "200–300 mcg SQ · pre-sleep"
-        "CJC-1295 (no DAC)": "100 mcg SQ · same injection"
-      primary_benefit: "Pulsatile GH stimulation matching physiological pattern"
-      cite: [teichman-2006, ionescu-2006]
+        Ipamorelin: 200–300 mcg SQ · pre-sleep
+        CJC-1295 (no DAC): 100 mcg SQ · same injection
+      primary_benefit: Pulsatile GH stimulation matching physiological pattern
+      cite: []

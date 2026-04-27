@@ -1,625 +1,807 @@
-# =========================================================
-# PeptidesDB — Citation Registry
-# Each entry is keyed by stable ID (lowercase + hyphens).
-# Order: alphabetical by ID. Add new entries via PR.
-# Schema: src/lib/schemas/citation.ts
-# =========================================================
-
 falutz-2007:
   id: falutz-2007
   type: journal
-  authors: [Falutz J, Allas S, Blot K, et al.]
-  title: "Metabolic effects of a growth hormone-releasing factor in patients with HIV"
-  journal: "N Engl J Med"
+  authors:
+    - Falutz J
+    - Allas S
+    - Blot K
+    - et al.
+  title: Metabolic effects of a growth hormone-releasing factor in patients with HIV
+  journal: N Engl J Med
   year: 2007
-  citation_string: "357(23):2359-2370"
-  pmid: "18057338"
-  doi: "10.1056/NEJMoa072375"
-  note: "Phase 3 RCT, 412 patients, 26 weeks; basis of FDA tesamorelin approval."
-
+  citation_string: 357(23):2359-2370
+  pmid: '18057338'
+  doi: 10.1056/NEJMoa072375
+  note: Phase 3 RCT, 412 patients, 26 weeks; basis of FDA tesamorelin approval.
 falutz-2010:
   id: falutz-2010
   type: journal
-  authors: [Falutz J, Mamputu JC, Potvin D, et al.]
-  title: "Effects of tesamorelin (TH9507), a growth hormone-releasing factor analog, in human immunodeficiency virus-infected patients with excess abdominal fat: a pooled analysis of two multicenter, double-blind placebo-controlled phase 3 trials with safety extension data"
-  journal: "J Clin Endocrinol Metab"
+  authors:
+    - Falutz J
+    - Mamputu JC
+    - Potvin D
+    - et al.
+  title: >-
+    Effects of tesamorelin (TH9507), a growth hormone-releasing factor analog, in human immunodeficiency virus-infected
+    patients with excess abdominal fat: a pooled analysis of two multicenter, double-blind placebo-controlled phase 3
+    trials with safety extension data
+  journal: J Clin Endocrinol Metab
   year: 2010
-  citation_string: "95(9):4291-4304"
-  pmid: "20554713"
-  doi: "10.1210/jc.2010-0490"
-  note: "Pooled 26-week analysis of FDA pivotal trials. 15-20% VAT reduction figure."
-
+  citation_string: 95(9):4291-4304
+  pmid: '20554713'
+  doi: 10.1210/jc.2010-0490
+  note: Pooled 26-week analysis of FDA pivotal trials. 15-20% VAT reduction figure.
 fda-egrifta-label-2010:
   id: fda-egrifta-label-2010
   type: fda-label
-  title: "EGRIFTA® (tesamorelin for injection) prescribing information"
+  title: EGRIFTA® (tesamorelin for injection) prescribing information
   year: 2010
-  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022505lbl.pdf"
-  note: "FDA-approved label, NDA 022505. Source for approved indication, dose, and contraindications."
-
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022505lbl.pdf
+  note: FDA-approved label, NDA 022505. Source for approved indication, dose, and contraindications.
 clarke-2018:
   id: clarke-2018
   type: journal
-  authors: [Clarke BL, Khosla S, Holets MF, McCready LK, Atkinson EJ]
-  title: "Effects of tesamorelin on insulin sensitivity and lipid metabolism in HIV-infected patients with abdominal fat accumulation"
-  journal: "Metabolism"
+  authors:
+    - Clarke BL
+    - Khosla S
+    - Holets MF
+    - McCready LK
+    - Atkinson EJ
+  title: >-
+    Effects of tesamorelin on insulin sensitivity and lipid metabolism in HIV-infected patients with abdominal fat
+    accumulation
+  journal: Metabolism
   year: 2018
-
+  note: >-
+    PubMed search found no Clarke 2018 tesamorelin paper. Likely fabricated. Plates relying on this should switch to
+    stanley-2014 (PMID 25038357) or drop the cite.
 lee-2015:
   id: lee-2015
   type: journal
-  authors: [Lee C, Zeng J, Drew BG, et al.]
-  title: "The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance"
-  journal: "Cell Metab"
+  authors:
+    - Lee C
+    - Zeng J
+    - Drew BG
+    - et al.
+  title: The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance
+  journal: Cell Metab
   year: 2015
-  citation_string: "21(3):443-454"
-  pmid: "25738459"
-  doi: "10.1016/j.cmet.2015.02.009"
-  note: "Discovery paper for MOTS-c. Murine HFD model: AMPK-driven fat oxidation, glucose tolerance restoration."
-
+  citation_string: 21(3):443-454
+  pmid: '25738459'
+  doi: 10.1016/j.cmet.2015.02.009
+  note: 'Discovery paper for MOTS-c. Murine HFD model: AMPK-driven fat oxidation, glucose tolerance restoration.'
 reynolds-2021:
   id: reynolds-2021
   type: journal
-  authors: [Reynolds JC, Lai RW, Woodhead JST, et al.]
-  title: "MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle homeostasis"
-  journal: "Nat Commun"
+  authors:
+    - Reynolds JC
+    - Lai RW
+    - Woodhead JST
+    - et al.
+  title: >-
+    MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle
+    homeostasis
+  journal: Nat Commun
   year: 2021
-  citation_string: "12:470"
-  pmid: "33473109"
-  doi: "10.1038/s41467-020-20790-0"
-  note: "Demonstrates exercise-mimetic action; declines with age; rescues age-related muscle loss in mice."
-
+  citation_string: '12:470'
+  pmid: '33473109'
+  doi: 10.1038/s41467-020-20790-0
+  note: Demonstrates exercise-mimetic action; declines with age; rescues age-related muscle loss in mice.
 kim-2018:
   id: kim-2018
   type: journal
-  authors: [Kim KH, Son JM, Benayoun BA, Lee C]
-  title: "The mitochondrial-encoded peptide MOTS-c translocates to the nucleus to regulate nuclear gene expression in response to metabolic stress"
-  journal: "Cell Metab"
+  authors:
+    - Kim KH
+    - Son JM
+    - Benayoun BA
+    - Lee C
+  title: >-
+    The mitochondrial-encoded peptide MOTS-c translocates to the nucleus to regulate nuclear gene expression in response
+    to metabolic stress
+  journal: Cell Metab
   year: 2018
-  citation_string: "28(3):516-524"
-  pmid: "29983246"
-  doi: "10.1016/j.cmet.2018.06.008"
-  note: "Establishes nuclear translocation + AMPK-dependent transcriptional regulation."
-
+  citation_string: 28(3):516-524
+  pmid: '29983246'
+  doi: 10.1016/j.cmet.2018.06.008
+  note: Establishes nuclear translocation + AMPK-dependent transcriptional regulation.
 cb4211-phase1-2021:
   id: cb4211-phase1-2021
   type: clinical-trial
-  title: "A first-in-human phase 1 study of CB4211 (a MOTS-c analog) in obese subjects with type 2 diabetes"
+  title: A first-in-human phase 1 study of CB4211 (a MOTS-c analog) in obese subjects with type 2 diabetes
   year: 2021
-  nct: "NCT04004273"
-  note: "First-in-human MOTS-c-analog (CB4211) Phase 1a/1b. Topline showed safety + signal but limited efficacy data published."
-
+  nct: NCT04004273
+  note: >-
+    First-in-human MOTS-c-analog (CB4211) Phase 1a/1b. Topline showed safety + signal but limited efficacy data
+    published.
 clemmons-2002:
   id: clemmons-2002
   type: journal
-  authors: [Clemmons DR]
-  title: "Roles of insulin-like growth factor-I and growth hormone in mediating insulin resistance in acromegaly"
-  journal: "Pituitary"
+  authors:
+    - Clemmons DR
+  title: Roles of insulin-like growth factor-I and growth hormone in mediating insulin resistance in acromegaly
+  journal: Pituitary
   year: 2002
-  note: "Background on GH/IGF-1 axis and glucose handling — relevant to tesamorelin glucose-tolerance signal."
-
+  note: Background on GH/IGF-1 axis and glucose handling — relevant to tesamorelin glucose-tolerance signal.
+  pmid: '12812310'
 raun-1998:
   id: raun-1998
   type: journal
-  authors: [Raun K, Hansen BS, Johansen NL, et al.]
-  title: "Ipamorelin, the first selective growth hormone secretagogue"
-  journal: "Eur J Endocrinol"
+  authors:
+    - Raun K
+    - Hansen BS
+    - Johansen NL
+    - et al.
+  title: Ipamorelin, the first selective growth hormone secretagogue
+  journal: Eur J Endocrinol
   year: 1998
-  citation_string: "139(5):552-561"
-  pmid: "9849822"
-  note: "Original characterisation of ipamorelin's selectivity vs cortisol/prolactin."
-
+  citation_string: 139(5):552-561
+  pmid: '9849822'
+  note: Original characterisation of ipamorelin's selectivity vs cortisol/prolactin.
 sevigny-2018:
   id: sevigny-2018
   type: journal
-  authors: [Sévigny J, Côté F, Mamputu JC, et al.]
-  title: "Long-term safety and effects of tesamorelin"
-  journal: "AIDS"
-  year: 2018
-  note: "Long-term (52-week) safety extension data."
-
+  authors:
+    - Sévigny J
+    - Côté F
+    - Mamputu JC
+    - et al.
+  title: >-
+    Long-term safety and effects of tesamorelin, a growth hormone-releasing factor analogue, in HIV patients with
+    abdominal fat accumulation
+  journal: AIDS
+  year: 2008
+  note: >-
+    Authors actually Falutz J et al. ID retained for stable cite-ID; underlying paper is the Falutz 2008 long-term
+    safety extension.
+  pmid: '18690162'
 sikiric-2018:
   id: sikiric-2018
   type: journal
-  authors: [Sikiric P, Seiwerth S, Rucman R, et al.]
-  title: "Stable gastric pentadecapeptide BPC 157, an effective anti-inflammatory agent: a comprehensive review"
-  journal: "Curr Pharm Des"
+  authors:
+    - Sikiric P
+    - Seiwerth S
+    - Rucman R
+    - et al.
+  title: >-
+    Novel Cytoprotective Mediator, Stable Gastric Pentadecapeptide BPC 157. Vascular Recruitment and Gastrointestinal
+    Tract Healing
+  journal: Curr Pharm Des
   year: 2018
-  citation_string: "24(18):1990-2001"
-  note: "Comprehensive review of BPC-157 mechanism + tissue-healing data across 20+ animal models."
-
+  citation_string: 24(18):1990-2001
+  note: Comprehensive review of BPC-157 mechanism + tissue-healing data across 20+ animal models.
+  pmid: '29879879'
 chang-2014:
   id: chang-2014
   type: journal
-  authors: [Chang CH, Tsai WC, Lin MS, Hsu YH, Pang JH]
-  title: "The promoting effect of pentadecapeptide BPC 157 on tendon healing involves tendon outgrowth, cell survival, and cell migration"
-  journal: "J Appl Physiol"
+  authors:
+    - Chang CH
+    - Tsai WC
+    - Lin MS
+    - Hsu YH
+    - Pang JH
+  title: >-
+    The promoting effect of pentadecapeptide BPC 157 on tendon healing involves tendon outgrowth, cell survival, and
+    cell migration
+  journal: J Appl Physiol
   year: 2011
-  pmid: "21030672"
-  note: "Demonstrates BPC-157 tendon-fibroblast outgrowth + migration via FAK-paxillin pathway."
-
+  pmid: '21030672'
+  note: Demonstrates BPC-157 tendon-fibroblast outgrowth + migration via FAK-paxillin pathway.
 cerovecki-2010:
   id: cerovecki-2010
   type: journal
-  authors: [Cerovecki T, Bojanic I, Brcic L, et al.]
-  title: "Pentadecapeptide BPC 157 (PL 14736) improves ligament healing in the rat"
-  journal: "J Orthop Res"
+  authors:
+    - Cerovecki T
+    - Bojanic I
+    - Brcic L
+    - et al.
+  title: Pentadecapeptide BPC 157 (PL 14736) improves ligament healing in the rat
+  journal: J Orthop Res
   year: 2010
-  pmid: "20225319"
-  note: "Rat ACL ligament healing model. PL 14736 = BPC-157 clinical-trial designation."
-
+  pmid: '20225319'
+  note: Rat ACL ligament healing model. PL 14736 = BPC-157 clinical-trial designation.
 hwang-2016:
   id: hwang-2016
   type: journal
-  authors: [Hwang H, Cho HJ, Lee KM, et al.]
-  title: "BPC 157 (PL 14736) — Crohn's disease phase II clinical trial"
-  journal: "Inflamm Bowel Dis"
+  authors:
+    - Hwang H
+    - Cho HJ
+    - Lee KM
+    - et al.
+  title: BPC 157 (PL 14736) — Crohn's disease phase II clinical trial
+  journal: Inflamm Bowel Dis
   year: 2016
-  note: "PL-14736 Phase 2 trial for ulcerative colitis (NCT00305513). Modest efficacy signal, well tolerated."
-  nct: "NCT00305513"
-
+  note: PL-14736 Phase 2 trial for ulcerative colitis (NCT00305513). Modest efficacy signal, well tolerated.
+  nct: NCT00305513
 bowers-1991:
   id: bowers-1991
   type: journal
-  authors: [Bowers CY]
-  title: "GH releasing peptides — structure and kinetics"
-  journal: "J Pediatr Endocrinol"
-  year: 1991
-  note: "Foundational characterisation of GHRP family from which ipamorelin descends."
-
+  authors:
+    - Bowers CY
+  title: GH releasing peptides — structure and kinetics
+  journal: J Pediatr Endocrinol
+  year: 1993
+  note: Foundational characterisation of GHRP family from which ipamorelin descends.
+  pmid: '8374685'
 teichman-2006:
   id: teichman-2006
   type: journal
-  authors: [Teichman SL, Neale A, Lawrence B, Gagnon C, Castaigne JP, Frohman LA]
-  title: "Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting analog of GH-releasing hormone, in healthy adults"
-  journal: "J Clin Endocrinol Metab"
+  authors:
+    - Teichman SL
+    - Neale A
+    - Lawrence B
+    - Gagnon C
+    - Castaigne JP
+    - Frohman LA
+  title: >-
+    Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting
+    analog of GH-releasing hormone, in healthy adults
+  journal: J Clin Endocrinol Metab
   year: 2006
-  citation_string: "91(3):799-805"
-  pmid: "16352683"
-  doi: "10.1210/jc.2005-1536"
-  note: "Phase 1 CJC-1295 (with DAC) study — established sustained GH/IGF-1 elevation kinetics."
-
+  citation_string: 91(3):799-805
+  pmid: '16352683'
+  doi: 10.1210/jc.2005-1536
+  note: Phase 1 CJC-1295 (with DAC) study — established sustained GH/IGF-1 elevation kinetics.
 ionescu-2006:
   id: ionescu-2006
   type: journal
-  authors: [Ionescu M, Frohman LA]
-  title: "Pulsatile secretion of growth hormone induced by a new GH releasing factor analog (CJC-1295) in subjects with adult GH deficiency"
-  journal: "J Clin Endocrinol Metab"
+  authors:
+    - Ionescu M
+    - Frohman LA
+  title: >-
+    Pulsatile secretion of growth hormone (GH) persists during continuous stimulation by CJC-1295, a long-acting
+    GH-releasing hormone analog
+  journal: J Clin Endocrinol Metab
   year: 2006
-  note: "CJC-1295 PK/PD in adults with GH deficiency."
-
+  note: CJC-1295 PK/PD in adults with GH deficiency.
+  pmid: '17018654'
 sigalos-2018:
   id: sigalos-2018
   type: journal
-  authors: [Sigalos JT, Pastuszak AW]
-  title: "The safety and efficacy of growth hormone secretagogues"
-  journal: "Sex Med Rev"
+  authors:
+    - Sigalos JT
+    - Pastuszak AW
+  title: The safety and efficacy of growth hormone secretagogues
+  journal: Sex Med Rev
   year: 2018
-  note: "Review of GHS safety data including ipamorelin, CJC-1295, GHRP-2/6."
-
+  note: Review of GHS safety data including ipamorelin, CJC-1295, GHRP-2/6.
+  pmid: '28400207'
 bowers-2002:
   id: bowers-2002
   type: journal
-  authors: [Bowers CY]
-  title: "Growth hormone secretagogues: history, mechanism of action, and clinical development"
-  journal: "JCEM"
+  authors:
+    - Bowers CY
+  title: 'Growth hormone secretagogues: history, mechanism of action, and clinical development'
+  journal: JCEM
   year: 2002
-  note: "Foundational review of the GHRP family including ipamorelin's selectivity profile."
-
+  note: Foundational review of the GHRP family including ipamorelin's selectivity profile.
 wilding-2021:
   id: wilding-2021
   type: journal
-  authors: [Wilding JPH, Batterham RL, Calanna S, et al.]
-  title: "Once-Weekly Semaglutide in Adults with Overweight or Obesity"
-  journal: "N Engl J Med"
+  authors:
+    - Wilding JPH
+    - Batterham RL
+    - Calanna S
+    - et al.
+  title: Once-Weekly Semaglutide in Adults with Overweight or Obesity
+  journal: N Engl J Med
   year: 2021
-  citation_string: "384(11):989-1002"
-  pmid: "33567185"
-  doi: "10.1056/NEJMoa2032183"
-  note: "STEP 1 trial. 1961 adults, 68 weeks, semaglutide 2.4 mg/wk. -14.9% body weight vs -2.4% placebo."
-
+  citation_string: 384(11):989-1002
+  pmid: '33567185'
+  doi: 10.1056/NEJMoa2032183
+  note: STEP 1 trial. 1961 adults, 68 weeks, semaglutide 2.4 mg/wk. -14.9% body weight vs -2.4% placebo.
 jastreboff-2022:
   id: jastreboff-2022
   type: journal
-  authors: [Jastreboff AM, Aronne LJ, Ahmad NN, et al.]
-  title: "Tirzepatide Once Weekly for the Treatment of Obesity"
-  journal: "N Engl J Med"
+  authors:
+    - Jastreboff AM
+    - Aronne LJ
+    - Ahmad NN
+    - et al.
+  title: Tirzepatide Once Weekly for the Treatment of Obesity
+  journal: N Engl J Med
   year: 2022
-  citation_string: "387(3):205-216"
-  pmid: "35658024"
-  doi: "10.1056/NEJMoa2206038"
-  note: "SURMOUNT-1. 2539 adults, 72 weeks. -20.9% body weight at 15 mg dose."
-
+  citation_string: 387(3):205-216
+  pmid: '35658024'
+  doi: 10.1056/NEJMoa2206038
+  note: SURMOUNT-1. 2539 adults, 72 weeks. -20.9% body weight at 15 mg dose.
 fda-wegovy-label-2021:
   id: fda-wegovy-label-2021
   type: fda-label
-  title: "WEGOVY (semaglutide) injection prescribing information"
+  title: WEGOVY (semaglutide) injection prescribing information
   year: 2021
-  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf"
-  note: "FDA-approved for chronic weight management at 2.4 mg/week SC."
-
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf
+  note: FDA-approved for chronic weight management at 2.4 mg/week SC.
 fda-zepbound-label-2023:
   id: fda-zepbound-label-2023
   type: fda-label
-  title: "ZEPBOUND (tirzepatide) injection prescribing information"
+  title: ZEPBOUND (tirzepatide) injection prescribing information
   year: 2023
-  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf"
-  note: "FDA-approved for chronic weight management. GIP/GLP-1 dual agonist."
-
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf
+  note: FDA-approved for chronic weight management. GIP/GLP-1 dual agonist.
 pickart-2018:
   id: pickart-2018
   type: journal
-  authors: [Pickart L, Margolina A]
-  title: "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data"
-  journal: "Int J Mol Sci"
+  authors:
+    - Pickart L
+    - Margolina A
+  title: Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data
+  journal: Int J Mol Sci
   year: 2018
-  citation_string: "19(7):1987"
-  pmid: "29986520"
-  doi: "10.3390/ijms19071987"
-  note: "Comprehensive review of GHK-Cu mechanism in skin regeneration, wound healing, hair growth."
-
+  citation_string: 19(7):1987
+  pmid: '29986520'
+  doi: 10.3390/ijms19071987
+  note: Comprehensive review of GHK-Cu mechanism in skin regeneration, wound healing, hair growth.
 goldstein-2012:
   id: goldstein-2012
   type: journal
-  authors: [Goldstein AL, Hannappel E, Sosne G, Kleinman HK]
-  title: "Thymosin β4: a multi-functional regenerative peptide. Basic properties and clinical applications"
-  journal: "Expert Opin Biol Ther"
+  authors:
+    - Goldstein AL
+    - Hannappel E
+    - Sosne G
+    - Kleinman HK
+  title: 'Thymosin β4: a multi-functional regenerative peptide. Basic properties and clinical applications'
+  journal: Expert Opin Biol Ther
   year: 2012
-  pmid: "22074294"
-  note: "Mechanism + clinical trial review for TB-500 / Thymosin β4."
-
+  pmid: '22074294'
+  note: Mechanism + clinical trial review for TB-500 / Thymosin β4.
 heffernan-2001:
   id: heffernan-2001
   type: journal
-  authors: [Heffernan M, Summers RJ, Thorburn A, et al.]
-  title: "The effects of human GH and its lipolytic fragment (AOD9604) on lipid metabolism following chronic treatment in obese mice and beta(3)-AR knock-out mice"
-  journal: "Endocrinology"
+  authors:
+    - Heffernan M
+    - Summers RJ
+    - Thorburn A
+    - et al.
+  title: >-
+    The effects of human GH and its lipolytic fragment (AOD9604) on lipid metabolism following chronic treatment in
+    obese mice and beta(3)-AR knock-out mice
+  journal: Endocrinology
   year: 2001
-  pmid: "11713213"
-  note: "Demonstrates AOD-9604 lipolytic activity without IGF-1 elevation."
-
+  pmid: '11713213'
+  note: Demonstrates AOD-9604 lipolytic activity without IGF-1 elevation.
 ng-2008:
   id: ng-2008
   type: journal
-  authors: [Ng FM, Sun J, Sharma L, Libinaka R, Jiang WJ, Gianello R]
-  title: "Metabolic studies of a synthetic lipolytic domain (AOD9604) of human growth hormone"
-  journal: "Horm Res"
+  authors:
+    - Ng FM
+    - Sun J
+    - Sharma L
+    - Libinaka R
+    - Jiang WJ
+    - Gianello R
+  title: Metabolic studies of a synthetic lipolytic domain (AOD9604) of human growth hormone
+  journal: Horm Res
   year: 2000
-  pmid: "11146367"
-  note: "AOD-9604 mechanism: β3-AR-mediated lipolysis."
-
+  pmid: '11146367'
+  note: 'AOD-9604 mechanism: β3-AR-mediated lipolysis.'
 zink-2003:
   id: zink-2003
   type: journal
-  authors: [Zink E, Pichotta P, Pickart L]
-  title: "GHK and the regulation of skin homeostasis"
-  journal: "J Cosmet Sci"
+  authors:
+    - Zink E
+    - Pichotta P
+    - Pickart L
+  title: GHK and the regulation of skin homeostasis
+  journal: J Cosmet Sci
   year: 2003
-  note: "GHK-Cu binding affinity for copper + tissue homeostasis."
-
+  note: GHK-Cu binding affinity for copper + tissue homeostasis.
 malinda-1999:
   id: malinda-1999
   type: journal
-  authors: [Malinda KM, Sidhu GS, Mani H, et al.]
-  title: "Thymosin beta4 accelerates wound healing"
-  journal: "J Invest Dermatol"
+  authors:
+    - Malinda KM
+    - Sidhu GS
+    - Mani H
+    - et al.
+  title: Thymosin beta4 accelerates wound healing
+  journal: J Invest Dermatol
   year: 1999
-  note: "Murine wound-healing model — TB-500 accelerates re-epithelialization."
-
+  note: Murine wound-healing model — TB-500 accelerates re-epithelialization.
+  pmid: '10469335'
 frias-2018:
   id: frias-2018
   type: journal
-  authors: [Frias JP, Nauck MA, Van J, et al.]
-  title: "Efficacy and safety of LY3298176, a novel dual GIP and GLP-1 receptor agonist, in patients with type 2 diabetes: a randomised, placebo-controlled and active comparator-controlled phase 2 trial"
-  journal: "Lancet"
+  authors:
+    - Frias JP
+    - Nauck MA
+    - Van J
+    - et al.
+  title: >-
+    Efficacy and safety of LY3298176, a novel dual GIP and GLP-1 receptor agonist, in patients with type 2 diabetes: a
+    randomised, placebo-controlled and active comparator-controlled phase 2 trial
+  journal: Lancet
   year: 2018
-  pmid: "30293770"
-  note: "Tirzepatide (LY3298176) Phase 2b — first proof of GIP+GLP-1 dual agonism efficacy."
-
+  pmid: '30293770'
+  note: Tirzepatide (LY3298176) Phase 2b — first proof of GIP+GLP-1 dual agonism efficacy.
 jastreboff-2023-reta:
   id: jastreboff-2023-reta
   type: journal
-  authors: [Jastreboff AM, Kaplan LM, Frias JP, et al.]
-  title: "Triple-Hormone-Receptor Agonist Retatrutide for Obesity"
-  journal: "N Engl J Med"
+  authors:
+    - Jastreboff AM
+    - Kaplan LM
+    - Frias JP
+    - et al.
+  title: Triple-Hormone-Receptor Agonist Retatrutide for Obesity
+  journal: N Engl J Med
   year: 2023
-  citation_string: "389(6):514-526"
-  pmid: "37888926"
-  doi: "10.1056/NEJMoa2301972"
-  note: "Phase 2 retatrutide trial. -24.2% body weight at 12 mg over 48 weeks."
-
+  citation_string: 389(6):514-526
+  pmid: '37888926'
+  doi: 10.1056/NEJMoa2301972
+  note: Phase 2 retatrutide trial. -24.2% body weight at 12 mg over 48 weeks.
 walker-1994:
   id: walker-1994
   type: journal
-  authors: [Walker RF, Codd EE, Barone FC, Nelson AH, Goodwin T, Campbell SA]
-  title: "Sermorelin: a better approach to management of adult-onset growth hormone insufficiency"
-  journal: "Clin Interv Aging"
+  authors:
+    - Walker RF
+    - Codd EE
+    - Barone FC
+    - Nelson AH
+    - Goodwin T
+    - Campbell SA
+  title: 'Sermorelin: a better approach to management of adult-onset growth hormone insufficiency'
+  journal: Clin Interv Aging
   year: 1994
-  note: "Foundational Sermorelin pharmacology + clinical use review."
-
+  note: Foundational Sermorelin pharmacology + clinical use review.
 simerly-2023:
   id: simerly-2023
   type: journal
-  authors: [Simerly RB, Rivera HM]
-  title: "Bremelanotide (PT-141): clinical pharmacology + safety review"
-  journal: "Sex Med Rev"
+  authors:
+    - Simerly RB
+    - Rivera HM
+  title: 'Bremelanotide (PT-141): clinical pharmacology + safety review'
+  journal: Sex Med Rev
   year: 2023
-  note: "PT-141 mechanism (MC4R agonism) + Vyleesi FDA approval review."
-
+  note: PT-141 mechanism (MC4R agonism) + Vyleesi FDA approval review.
 fda-vyleesi-label-2019:
   id: fda-vyleesi-label-2019
   type: fda-label
-  title: "VYLEESI (bremelanotide injection) prescribing information"
+  title: VYLEESI (bremelanotide injection) prescribing information
   year: 2019
-  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/210557s000lbl.pdf"
-  note: "FDA-approved 2019 for hypoactive sexual desire disorder (HSDD) in pre-menopausal women."
-
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/210557s000lbl.pdf
+  note: FDA-approved 2019 for hypoactive sexual desire disorder (HSDD) in pre-menopausal women.
 szilagyi-2009:
   id: szilagyi-2009
   type: journal
-  authors: [Szilagyi A, Birkas E, Toth G, Petho L, Mesko J, Jurányi J, Bajnok I, Toldi J]
-  title: "SS-31 protects mitochondria during ischemia-reperfusion"
-  journal: "Stroke"
+  authors:
+    - Szilagyi A
+    - Birkas E
+    - Toth G
+    - Petho L
+    - Mesko J
+    - Jurányi J
+    - Bajnok I
+    - Toldi J
+  title: SS-31 protects mitochondria during ischemia-reperfusion
+  journal: Stroke
   year: 2009
-  note: "Foundational SS-31 (Bendavia/Elamipretide) cardio-protective mechanism paper."
-
+  note: Foundational SS-31 (Bendavia/Elamipretide) cardio-protective mechanism paper.
 szeto-2014:
   id: szeto-2014
   type: journal
-  authors: [Szeto HH]
-  title: "First-in-class cardiolipin-protective compound as a therapeutic agent to restore mitochondrial bioenergetics"
-  journal: "Br J Pharmacol"
+  authors:
+    - Szeto HH
+  title: First-in-class cardiolipin-protective compound as a therapeutic agent to restore mitochondrial bioenergetics
+  journal: Br J Pharmacol
   year: 2014
-  pmid: "24117165"
-  note: "SS-31 cardiolipin-binding mechanism review."
-
+  pmid: '24117165'
+  note: SS-31 cardiolipin-binding mechanism review.
 khavinson-2003:
   id: khavinson-2003
   type: journal
-  authors: [Khavinson VKh, Bondarev IE, Butyugov AA]
-  title: "Epithalon peptide induces telomerase activity and telomere elongation in human somatic cells"
-  journal: "Bull Exp Biol Med"
+  authors:
+    - Khavinson VKh
+    - Bondarev IE
+    - Butyugov AA
+  title: Epithalon peptide induces telomerase activity and telomere elongation in human somatic cells
+  journal: Bull Exp Biol Med
   year: 2003
-  pmid: "12937682"
-  note: "Original Epitalon telomerase activation paper."
-
+  pmid: '12937682'
+  note: Original Epitalon telomerase activation paper.
 clayton-2015:
   id: clayton-2015
   type: journal
-  authors: [Clayton AH, Althof SE, Kingsberg S, et al.]
-  title: "Bremelanotide for female sexual dysfunctions in premenopausal women"
-  journal: "J Sex Med"
-  year: 2015
-  note: "Bremelanotide Phase 2/3 efficacy + safety."
-
+  authors:
+    - Clayton AH
+    - Althof SE
+    - Kingsberg S
+    - et al.
+  title: >-
+    Bremelanotide for female sexual dysfunctions in premenopausal women: a randomized, placebo-controlled dose-finding
+    trial
+  journal: J Sex Med
+  year: 2016
+  note: Bremelanotide Phase 2/3 efficacy + safety.
+  pmid: '27181790'
 molteno-2013:
   id: molteno-2013
   type: journal
-  authors: [Molteno R, Holdcroft A]
-  title: "Sermorelin GHRH 1-29 acetate — review"
-  journal: "Endocr Rev"
+  authors:
+    - Molteno R
+    - Holdcroft A
+  title: Sermorelin GHRH 1-29 acetate — review
+  journal: Endocr Rev
   year: 2013
-  note: "Sermorelin pharmacokinetic + clinical efficacy review for GH deficiency."
-
+  note: Sermorelin pharmacokinetic + clinical efficacy review for GH deficiency.
 murphy-2001-mk677:
   id: murphy-2001-mk677
   type: journal
-  authors: [Murphy MG, Plunkett LM, Gertz BJ, et al.]
-  title: "MK-677, an orally active growth hormone secretagogue, reverses diet-induced catabolism"
-  journal: "JCEM"
+  authors:
+    - Murphy MG
+    - Plunkett LM
+    - Gertz BJ
+    - et al.
+  title: MK-677, an orally active growth hormone secretagogue, reverses diet-induced catabolism
+  journal: JCEM
   year: 1998
-  pmid: "9467534"
-  note: "Foundational MK-677 (ibutamoren) Phase 2 — diet-induced catabolism reversal in adults."
-
+  pmid: '9467534'
+  note: Foundational MK-677 (ibutamoren) Phase 2 — diet-induced catabolism reversal in adults.
 nass-2008-mk677:
   id: nass-2008-mk677
   type: journal
-  authors: [Nass R, Pezzoli SS, Oliveri MC, et al.]
-  title: "Effects of an oral ghrelin mimetic on body composition and clinical outcomes in healthy older adults"
-  journal: "Ann Intern Med"
+  authors:
+    - Nass R
+    - Pezzoli SS
+    - Oliveri MC
+    - et al.
+  title: Effects of an oral ghrelin mimetic on body composition and clinical outcomes in healthy older adults
+  journal: Ann Intern Med
   year: 2008
-  citation_string: "149(9):601-611"
-  pmid: "18981485"
-  note: "MK-677 2-yr trial in elderly: lean mass + IGF-1 elevation, glucose intolerance."
-
+  citation_string: 149(9):601-611
+  pmid: '18981485'
+  note: 'MK-677 2-yr trial in elderly: lean mass + IGF-1 elevation, glucose intolerance.'
 smith-1996-hexarelin:
   id: smith-1996-hexarelin
   type: journal
-  authors: [Smith RG, Cheng K, Schoen WR, et al.]
-  title: "A nonpeptidyl growth hormone secretagogue"
-  journal: "Science"
-  year: 1996
-  note: "Foundational paper on the GHRP class; Hexarelin is a hexapeptide member."
-
+  authors:
+    - Smith RG
+    - Cheng K
+    - Schoen WR
+    - et al.
+  title: A nonpeptidyl growth hormone secretagogue
+  journal: Science
+  year: 1993
+  note: Foundational paper on the GHRP class; Hexarelin is a hexapeptide member.
+  pmid: '8503009'
 ghigo-1997-hexarelin:
   id: ghigo-1997-hexarelin
   type: journal
-  authors: [Ghigo E, Arvat E, Muccioli G, Camanni F]
-  title: "Growth hormone-releasing peptides"
-  journal: "Eur J Endocrinol"
+  authors:
+    - Ghigo E
+    - Arvat E
+    - Muccioli G
+    - Camanni F
+  title: Growth hormone-releasing peptides
+  journal: Eur J Endocrinol
   year: 1997
-  note: "Hexarelin pharmacology + cardio-tropic effects review."
-
+  note: Hexarelin pharmacology + cardio-tropic effects review.
+  pmid: '9186261'
 semenistaya-2010:
   id: semenistaya-2010
   type: journal
-  authors: [Semenistaya E, Zvereva I, Krotov G, Rodchenkov G]
-  title: "Determination of growth hormone-releasing peptides for sports doping control"
-  journal: "Anal Bioanal Chem"
-  year: 2010
-  note: "Hexarelin / GHRP-2 / GHRP-6 PK + half-life data."
-
+  authors:
+    - Semenistaya E
+    - Zvereva I
+    - Krotov G
+    - Rodchenkov G
+  title: >-
+    Determination of growth hormone releasing peptides metabolites in human urine after nasal administration of GHRP-1,
+    GHRP-2, GHRP-6, Hexarelin, and Ipamorelin
+  journal: Drug Test Anal
+  year: 2015
+  note: Original 2010 paper not on PubMed; pointed at corrected Semenistaya 2015 paper instead.
+  pmid: '25869809'
 zaderej-2014:
   id: zaderej-2014
   type: journal
-  authors: [Zaderej V, Khavinson V, Linkova N, et al.]
-  title: "Selank: anxiolytic effects + immunomodulation"
-  journal: "Bull Exp Biol Med"
+  authors:
+    - Zaderej V
+    - Khavinson V
+    - Linkova N
+    - et al.
+  title: 'Selank: anxiolytic effects + immunomodulation'
+  journal: Bull Exp Biol Med
   year: 2014
-  note: "Selank Russian anxiolytic peptide review."
-
+  note: Selank Russian anxiolytic peptide review.
 medvedev-2007:
   id: medvedev-2007
   type: journal
-  authors: [Medvedev IO, Berezhny VV, Garibova TL, et al.]
-  title: "Pharmacology of Selank — anti-anxiety + cognitive effects"
-  journal: "Eksp Klin Farmakol"
+  authors:
+    - Medvedev IO
+    - Berezhny VV
+    - Garibova TL
+    - et al.
+  title: Pharmacology of Selank — anti-anxiety + cognitive effects
+  journal: Eksp Klin Farmakol
   year: 2007
-  note: "Foundational Selank pharmacology paper."
-
+  note: Not PubMed-indexed. Russian-language Selank pharmacology paper.
+  russian_journal_ref: Eksp Klin Farmakol 2007 (Russian-only; no PubMed indexing for this byline)
 dalle-pang-2024:
   id: dalle-pang-2024
   type: journal
-  authors: [Dalle-Pang R, Cao H, et al.]
-  title: "KPV peptide as an anti-inflammatory and gut-barrier protective agent"
-  journal: "Inflamm Bowel Dis"
+  authors:
+    - Dalle-Pang R
+    - Cao H
+    - et al.
+  title: KPV peptide as an anti-inflammatory and gut-barrier protective agent
+  journal: Inflamm Bowel Dis
   year: 2024
-  note: "KPV C-terminal alpha-MSH fragment review for IBD."
-
+  note: KPV C-terminal alpha-MSH fragment review for IBD.
 wegovy-pioglitazone-2010:
   id: wegovy-pioglitazone-2010
   type: journal
-  authors: [Marso SP, Daniels GH, Brown-Frandsen K, et al.]
-  title: "Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes"
-  journal: "N Engl J Med"
+  authors:
+    - Marso SP
+    - Daniels GH
+    - Brown-Frandsen K
+    - et al.
+  title: Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes
+  journal: N Engl J Med
   year: 2016
-  note: "LEADER trial — liraglutide CV outcomes in T2D."
-
+  note: LEADER trial — liraglutide CV outcomes in T2D.
+  pmid: '27295427'
 fda-saxenda-label-2014:
   id: fda-saxenda-label-2014
   type: fda-label
-  title: "SAXENDA (liraglutide) injection prescribing information"
+  title: SAXENDA (liraglutide) injection prescribing information
   year: 2014
-  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/206321Orig1s000lbl.pdf"
-  note: "Liraglutide FDA label for chronic weight management at 3.0 mg/day SC."
-
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/206321Orig1s000lbl.pdf
+  note: Liraglutide FDA label for chronic weight management at 3.0 mg/day SC.
 bowers-1990-ghrp2:
   id: bowers-1990-ghrp2
   type: journal
-  authors: [Bowers CY, Reynolds GA, Durham D, et al.]
-  title: "Growth hormone (GH)-releasing peptide stimulates GH release in normal men"
-  journal: "JCEM"
+  authors:
+    - Bowers CY
+    - Reynolds GA
+    - Durham D
+    - et al.
+  title: >-
+    Growth hormone (GH)-releasing peptide stimulates GH release in normal men and acts synergistically with GH-releasing
+    hormone
+  journal: JCEM
   year: 1990
-  note: "Foundational GHRP-2 / GHRP-6 GH-stimulation study."
-
+  note: Foundational GHRP-2 / GHRP-6 GH-stimulation study.
+  pmid: '2108187'
 malagon-1999:
   id: malagon-1999
   type: journal
-  authors: [Malagón MM, Luque RM, et al.]
-  title: "Comparative GHRP-6 vs GHRP-2 GH-axis kinetics"
-  journal: "Endocrinology"
+  authors:
+    - Malagón MM
+    - Luque RM
+    - et al.
+  title: Comparative GHRP-6 vs GHRP-2 GH-axis kinetics
+  journal: Endocrinology
   year: 1999
-  note: "Comparative pharmacokinetics of the GHRP class."
-
+  note: Comparative pharmacokinetics of the GHRP class.
 dorr-1996-mt2:
   id: dorr-1996-mt2
   type: journal
-  authors: [Dorr RT, Lines R, Levine N, et al.]
-  title: "Evaluation of melanotan-II, a superpotent cyclic melanotropic peptide in a pilot phase-I clinical study"
-  journal: "Life Sci"
+  authors:
+    - Dorr RT
+    - Lines R
+    - Levine N
+    - et al.
+  title: Evaluation of melanotan-II, a superpotent cyclic melanotropic peptide in a pilot phase-I clinical study
+  journal: Life Sci
   year: 1996
-  pmid: "8637402"
-  note: "Original Melanotan-II human studies — tanning + sexual response."
-
+  pmid: '8637402'
+  note: Original Melanotan-II human studies — tanning + sexual response.
 astrup-2008-tesofensine:
   id: astrup-2008-tesofensine
   type: journal
-  authors: [Astrup A, Madsbad S, Breum L, et al.]
-  title: "Effect of tesofensine on bodyweight loss, body composition, and quality of life in obese patients: a randomised, double-blind, placebo-controlled trial"
-  journal: "Lancet"
+  authors:
+    - Astrup A
+    - Madsbad S
+    - Breum L
+    - et al.
+  title: >-
+    Effect of tesofensine on bodyweight loss, body composition, and quality of life in obese patients: a randomised,
+    double-blind, placebo-controlled trial
+  journal: Lancet
   year: 2008
-  pmid: "18950853"
-  note: "Phase 2b tesofensine — 9.2 kg weight loss over 24 weeks at 0.5 mg/day oral."
-
+  pmid: '18950853'
+  note: Phase 2b tesofensine — 9.2 kg weight loss over 24 weeks at 0.5 mg/day oral.
 neelakantan-2018-namq:
   id: neelakantan-2018-namq
   type: journal
-  authors: [Neelakantan H, Vance V, Wetzel MD, et al.]
-  title: "Selective and membrane-permeable small molecule inhibitors of nicotinamide N-methyltransferase reverse high fat diet-induced obesity in mice"
-  journal: "Biochem Pharmacol"
+  authors:
+    - Neelakantan H
+    - Vance V
+    - Wetzel MD
+    - et al.
+  title: >-
+    Selective and membrane-permeable small molecule inhibitors of nicotinamide N-methyltransferase reverse high fat
+    diet-induced obesity in mice
+  journal: Biochem Pharmacol
   year: 2018
-  note: "5-Amino-1MQ (NNMT inhibitor) reverses HFD obesity in mice."
-
+  note: 5-Amino-1MQ (NNMT inhibitor) reverses HFD obesity in mice.
+  pmid: '29155147'
 khavinson-2014-pinealon:
   id: khavinson-2014-pinealon
   type: journal
-  authors: [Khavinson VKh, Linkova NS, Polyakova VO, et al.]
-  title: "Tetrapeptide pinealon: neuroprotective and antioxidant effects"
-  journal: "Bull Exp Biol Med"
+  authors:
+    - Khavinson VKh
+    - Linkova NS
+    - Polyakova VO
+    - et al.
+  title: 'Tetrapeptide pinealon: neuroprotective and antioxidant effects'
+  journal: Bull Exp Biol Med
   year: 2014
-  note: "Pinealon (Glu-Asp-Arg) Russian peptide bioregulator — neuroprotection."
-
+  note: Pinealon (Glu-Asp-Arg) Russian peptide bioregulator — neuroprotection.
 khavinson-2002-thymalin:
   id: khavinson-2002-thymalin
   type: journal
-  authors: [Khavinson VKh]
-  title: "Peptides and Ageing"
-  journal: "Neuroendocrinol Lett"
+  authors:
+    - Khavinson VKh
+  title: Peptides and Ageing
+  journal: Neuroendocrinol Lett
   year: 2002
-  note: "Thymalin foundational immune-modulator review by Khavinson group."
-
+  note: Thymalin foundational immune-modulator review by Khavinson group.
+  pmid: '12374906'
 camerini-2001-talpha1:
   id: camerini-2001-talpha1
   type: journal
-  authors: [Camerini R, Garaci E]
-  title: "Thymosin alpha-1: a clinical update"
-  journal: "Curr Opin Investig Drugs"
+  authors:
+    - Camerini R
+    - Garaci E
+  title: 'Thymosin alpha-1: a clinical update'
+  journal: Curr Opin Investig Drugs
   year: 2001
-  note: "Thymosin α-1 immune modulation review."
-
+  note: Thymosin α-1 immune modulation review.
 iyer-2007-talpha1:
   id: iyer-2007-talpha1
   type: journal
-  authors: [Iyer R, et al.]
-  title: "Zadaxin (Thymalfasin) for chronic hepatitis B and C"
-  journal: "Curr Pharm Des"
+  authors:
+    - Iyer R
+    - et al.
+  title: Zadaxin (Thymalfasin) for chronic hepatitis B and C
+  journal: Curr Pharm Des
   year: 2007
-  note: "Thymosin α-1 (Zadaxin) clinical review for hepatitis."
-
+  note: Thymosin α-1 (Zadaxin) clinical review for hepatitis.
 schneider-1986-dsip:
   id: schneider-1986-dsip
   type: journal
-  authors: [Schneider HH, Schmiechen R, Brezinski M, et al.]
-  title: "Stress and DSIP — sleep modulation"
-  journal: "Eur J Pharmacol"
+  authors:
+    - Schneider HH
+    - Schmiechen R
+    - Brezinski M
+    - et al.
+  title: Stress and DSIP — sleep modulation
+  journal: Eur J Pharmacol
   year: 1986
-  note: "DSIP (Trp-Ala-Gly-Gly-Asp-Ala-Ser-Gly-Glu) sleep induction profile."
-
+  note: DSIP (Trp-Ala-Gly-Gly-Asp-Ala-Ser-Gly-Glu) sleep induction profile.
 kaplan-2017-semax:
   id: kaplan-2017-semax
   type: journal
-  authors: [Kaplan AYa, Kropotov YuD, Shevtsova IA, et al.]
-  title: "Semax — synthetic ACTH(4-10) analog: cognitive enhancement"
-  journal: "Neurosci Behav Physiol"
+  authors:
+    - Kaplan AYa
+    - Kropotov YuD
+    - Shevtsova IA
+    - et al.
+  title: 'Semax — synthetic ACTH(4-10) analog: cognitive enhancement'
+  journal: Neurosci Behav Physiol
   year: 2017
-  note: "Semax Russian nootropic peptide review (heptapeptide ACTH-derived)."
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
+  note: Semax Russian nootropic peptide review (heptapeptide ACTH-derived).
 yamauchi-2026:
   id: yamauchi-2026
   type: journal
   title: >-
-    Efficacy and safety of co-administered cagrilintide and semaglutide versus semaglutide alone in
-    adults with overweight or obesity with or without type 2 diabetes in Japan and Taiwan (REDEFINE
-    5): a multicentre, randomised, active-controlled, phase 3a trial.
+    Efficacy and safety of co-administered cagrilintide and semaglutide versus semaglutide alone in adults with
+    overweight or obesity with or without type 2 diabetes in Japan and Taiwan (REDEFINE 5): a multicentre, randomised,
+    active-controlled, phase 3a trial.
   year: 2026
   pmid: '42009015'
   authors:
     - Yamauchi T
-
 ahmed-2026:
   id: ahmed-2026
   type: journal
   title: >-
-    Efficacy and Safety of Cagrilintide and Cagrisema Versus Semaglutide as Anti-Obesity
-    Medications: A Systematic Review, Meta-Analysis and Meta-Regression.
+    Efficacy and Safety of Cagrilintide and Cagrisema Versus Semaglutide as Anti-Obesity Medications: A Systematic
+    Review, Meta-Analysis and Meta-Regression.
   year: 2026
   pmid: '41834765'
   authors:
     - Ahmed M
-
 bailey-2026:
   id: bailey-2026
   type: journal
@@ -628,18 +810,16 @@ bailey-2026:
   pmid: '41747885'
   authors:
     - Bailey CJ
-
 lempesis-2026:
   id: lempesis-2026
   type: journal
   title: >-
-    Obesity pharmacotherapy reimagined: The era of multi-receptor agonists and next-generation
-    metabolic modulators, perspectives and controversies.
+    Obesity pharmacotherapy reimagined: The era of multi-receptor agonists and next-generation metabolic modulators,
+    perspectives and controversies.
   year: 2026
   pmid: '41948476'
   authors:
     - Lempesis IG
-
 old-2026:
   id: old-2026
   type: journal
@@ -648,29 +828,24 @@ old-2026:
   pmid: '41852165'
   authors:
     - Old V
-
 pardali-2026:
   id: pardali-2026
   type: journal
-  title: >-
-    New Drugs on the Block: Dietary Management and Nutritional Considerations During the Use of
-    Anti-Obesity Medication.
+  title: 'New Drugs on the Block: Dietary Management and Nutritional Considerations During the Use of Anti-Obesity Medication.'
   year: 2026
   pmid: '41901137'
   authors:
     - Pardali EC
-
 gadelmawla-2026:
   id: gadelmawla-2026
   type: journal
   title: >-
-    CagriSema Versus Semaglutide Monotherapy or Placebo for Obesity: A Systematic Review and
-    Meta-Analysis of Randomized Controlled Trials with GRADE Assessment.
+    CagriSema Versus Semaglutide Monotherapy or Placebo for Obesity: A Systematic Review and Meta-Analysis of Randomized
+    Controlled Trials with GRADE Assessment.
   year: 2026
   pmid: '41759565'
   authors:
     - Gadelmawla AF
-
 muhundan-2026:
   id: muhundan-2026
   type: journal
@@ -679,10 +854,6 @@ muhundan-2026:
   pmid: '41627368'
   authors:
     - Muhundan M
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 yathindra-2026:
   id: yathindra-2026
   type: journal
@@ -691,40 +862,36 @@ yathindra-2026:
   pmid: '41855048'
   authors:
     - Yathindra MR
-
 rubino-2026:
   id: rubino-2026
   type: journal
   title: >-
-    Optimization of patient and site engagement in the SYNCHRONIZE™ phase 3 clinical trial program
-    for survodutide in obesity through clinical trial simulation.
+    Optimization of patient and site engagement in the SYNCHRONIZE™ phase 3 clinical trial program for survodutide in
+    obesity through clinical trial simulation.
   year: 2026
   pmid: '41704810'
   authors:
     - Rubino DM
-
 zimmermann-2026:
   id: zimmermann-2026
   type: journal
   title: >-
-    Survodutide acts through circumventricular organs in the brain and activates neuronal regions
-    associated with appetite regulation.
+    Survodutide acts through circumventricular organs in the brain and activates neuronal regions associated with
+    appetite regulation.
   year: 2026
   pmid: '41638399'
   authors:
     - Zimmermann T
-
 long-2026:
   id: long-2026
   type: journal
   title: >-
-    Hepatic GCGR is required for the superior weight loss and metabolic effects of a structurally
-    related analogue of the dual GCGR/GLP-1R agonist survodutide in mice.
+    Hepatic GCGR is required for the superior weight loss and metabolic effects of a structurally related analogue of
+    the dual GCGR/GLP-1R agonist survodutide in mice.
   year: 2026
   pmid: '41388343'
   authors:
     - Long F
-
 elmendorf-2026:
   id: elmendorf-2026
   type: journal
@@ -733,215 +900,178 @@ elmendorf-2026:
   pmid: '41478576'
   authors:
     - Elmendorf AJ
-
 patil-2026:
   id: patil-2026
   type: journal
   title: >-
-    Metabolic Dysfunction-Associated Steatohepatitis (MASH)-Cirrhosis Clinical Trials: Lessons
-    Learned and Future Directions.
+    Metabolic Dysfunction-Associated Steatohepatitis (MASH)-Cirrhosis Clinical Trials: Lessons Learned and Future
+    Directions.
   year: 2026
   pmid: '41831171'
   authors:
     - Patil R
-
 andonie-2026:
   id: andonie-2026
   type: journal
   title: >-
-    Comparative Analysis of Glucagon Receptor Agonists vs. Resmetirom in MASLD and MASH: Network
-    Meta-Analysis of Clinical Trials.
+    Comparative Analysis of Glucagon Receptor Agonists vs. Resmetirom in MASLD and MASH: Network Meta-Analysis of
+    Clinical Trials.
   year: 2026
   pmid: '41466530'
   authors:
     - Andonie CR
-
 abulehia-2026:
   id: abulehia-2026
   type: journal
   title: >-
-    Comparative Efficacy and Safety of Glucagon Receptor Agonists on Metabolic Outcomes: A Network
-    Meta-Analysis of Randomised Controlled Trials.
+    Comparative Efficacy and Safety of Glucagon Receptor Agonists on Metabolic Outcomes: A Network Meta-Analysis of
+    Randomised Controlled Trials.
   year: 2026
   pmid: '41787737'
   authors:
     - Abulehia A
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 azam-2026:
   id: azam-2026
   type: journal
   title: >-
-    Efficacy and Safety of Mazdutide in Managing Overweight and Obesity Among Non-Diabetic Adults: A
-    Meta-Analysis of Randomised Controlled Trials.
+    Efficacy and Safety of Mazdutide in Managing Overweight and Obesity Among Non-Diabetic Adults: A Meta-Analysis of
+    Randomised Controlled Trials.
   year: 2026
   pmid: '41804840'
   authors:
     - Azam MH
-
 ji-2026:
   id: ji-2026
   type: journal
   title: >-
-    Mazdutide 9 mg in Chinese adults with a body mass index ≥30 kg/m(2) but without diabetes: A
-    phase 2 randomized controlled trial.
+    Mazdutide 9 mg in Chinese adults with a body mass index ≥30 kg/m(2) but without diabetes: A phase 2 randomized
+    controlled trial.
   year: 2026
   pmid: '41875890'
   authors:
     - Ji L
-
 abdul-2026:
   id: abdul-2026
   type: journal
   title: >-
-    Patent landscape and therapeutic evolution of mazdutide: a dual GLP-1/Glucagon receptor agonist
-    for obesity and type 2 diabetes.
+    Patent landscape and therapeutic evolution of mazdutide: a dual GLP-1/Glucagon receptor agonist for obesity and type
+    2 diabetes.
   year: 2026
   pmid: '41820018'
   authors:
     - Abdul Fasi M
-
 gan-2026:
   id: gan-2026
   type: journal
   title: >-
-    Mazdutide Ameliorates Metabolic Dysfunction-Associated Steatotic Liver Disease by Modulating
-    Endoplasmic Reticulum Stress, Improving Lipid Metabolism and Alleviating Inflammation.
+    Mazdutide Ameliorates Metabolic Dysfunction-Associated Steatotic Liver Disease by Modulating Endoplasmic Reticulum
+    Stress, Improving Lipid Metabolism and Alleviating Inflammation.
   year: 2026
   pmid: '41901218'
   authors:
     - Gan L
-
 li-2025:
   id: li-2025
   type: journal
   title: >-
-    Research progress on multidimensional intervention strategies for hyperuricemia: Western
-    medicine, Traditional Chinese Medicine, and emerging therapies.
+    Research progress on multidimensional intervention strategies for hyperuricemia: Western medicine, Traditional
+    Chinese Medicine, and emerging therapies.
   year: 2025
   pmid: '41488145'
   authors:
     - Li X
-
 chan-2026:
   id: chan-2026
   type: journal
-  title: >-
-    Incretin-Based Dual and Triple Agonists in Overweight or Obese Individuals: A Systematic Review
-    and Meta-Analysis.
+  title: 'Incretin-Based Dual and Triple Agonists in Overweight or Obese Individuals: A Systematic Review and Meta-Analysis.'
   year: 2026
   pmid: '41711462'
   authors:
     - Chan ZH
-
 chen-2026:
   id: chen-2026
   type: journal
-  title: >-
-    A Clinical Comprehensive Evaluation of Long-Acting GLP-1 Receptor Agonists in Type 2 Diabetes
-    Management.
+  title: A Clinical Comprehensive Evaluation of Long-Acting GLP-1 Receptor Agonists in Type 2 Diabetes Management.
   year: 2026
   pmid: '41710707'
   authors:
     - Chen Q
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 liu-2024:
   id: liu-2024
   type: journal
-  title: >-
-    The protective effect of erythropoietin and its novel derived peptides in peripheral nerve
-    injury.
+  title: The protective effect of erythropoietin and its novel derived peptides in peripheral nerve injury.
   year: 2024
   pmid: '38943972'
   authors:
     - Liu G
-
 sun-2025:
   id: sun-2025
   type: journal
-  title: >-
-    Phase-targeted erythropoietin derivatives for traumatic brain injury: bridging mechanisms to
-    precision therapy.
+  title: 'Phase-targeted erythropoietin derivatives for traumatic brain injury: bridging mechanisms to precision therapy.'
   year: 2025
   pmid: '41659975'
   authors:
     - Sun Y
-
 awida-2021:
   id: awida-2021
   type: journal
   title: >-
-    The Non-Erythropoietic EPO Analogue Cibinetide Inhibits Osteoclastogenesis In Vitro and
-    Increases Bone Mineral Density in Mice.
+    The Non-Erythropoietic EPO Analogue Cibinetide Inhibits Osteoclastogenesis In Vitro and Increases Bone Mineral
+    Density in Mice.
   year: 2021
   pmid: '35008482'
   authors:
     - Awida Z
-
 wang-2024:
   id: wang-2024
   type: journal
   title: >-
-    Erythropoietin-derived peptide ARA290 mediates brain tissue protection through the β-common
-    receptor in mice with cerebral ischemic stroke.
+    Erythropoietin-derived peptide ARA290 mediates brain tissue protection through the β-common receptor in mice with
+    cerebral ischemic stroke.
   year: 2024
   pmid: '38488446'
   authors:
     - Wang RL
-
 ghassemibarghi-2023:
   id: ghassemibarghi-2023
   type: journal
   title: >-
-    Mechanistic Approach for Protective Effect of ARA290, a Specific Ligand for the
-    Erythropoietin/CD131 Heteroreceptor, against Cisplatin-Induced Nephrotoxicity, the Involvement
-    of Apoptosis and Inflammation Pathways.
+    Mechanistic Approach for Protective Effect of ARA290, a Specific Ligand for the Erythropoietin/CD131 Heteroreceptor,
+    against Cisplatin-Induced Nephrotoxicity, the Involvement of Apoptosis and Inflammation Pathways.
   year: 2023
   pmid: '36085231'
   authors:
     - Ghassemi-Barghi N
-
 winicki-2022:
   id: winicki-2022
   type: journal
   title: >-
-    A small erythropoietin derived non-hematopoietic peptide reduces cardiac inflammation,
-    attenuates age associated declines in heart function and prolongs healthspan.
+    A small erythropoietin derived non-hematopoietic peptide reduces cardiac inflammation, attenuates age associated
+    declines in heart function and prolongs healthspan.
   year: 2022
   pmid: '36741836'
   authors:
     - Winicki NM
-
 dennhardt-2022:
   id: dennhardt-2022
   type: journal
   title: >-
-    Targeting the innate repair receptor axis via erythropoietin or pyroglutamate helix B surface
-    peptide attenuates hemolytic-uremic syndrome in mice.
+    Targeting the innate repair receptor axis via erythropoietin or pyroglutamate helix B surface peptide attenuates
+    hemolytic-uremic syndrome in mice.
   year: 2022
   pmid: '36211426'
   authors:
     - Dennhardt S
-
 yao-2021:
   id: yao-2021
   type: journal
   title: >-
-    Cibinetide Protects Isolated Human Islets in a Stressful Environment and Improves Engraftment in
-    the Perspective of Intra Portal Islet Transplantation.
+    Cibinetide Protects Isolated Human Islets in a Stressful Environment and Improves Engraftment in the Perspective of
+    Intra Portal Islet Transplantation.
   year: 2021
   pmid: '34498509'
   authors:
     - Yao M
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 pan-2026:
   id: pan-2026
   type: journal
@@ -950,43 +1080,36 @@ pan-2026:
   pmid: '41389801'
   authors:
     - Pan XF
-
 luo-2026:
   id: luo-2026
   type: journal
   title: >-
-    Mazdutide versus Semaglutide for the treatment of type 2 diabetes and obesity: Rationale, design
-    and baseline data of DREAMS-3 phase 3 trial.
+    Mazdutide versus Semaglutide for the treatment of type 2 diabetes and obesity: Rationale, design and baseline data
+    of DREAMS-3 phase 3 trial.
   year: 2026
   pmid: '41260459'
   authors:
     - Luo Y
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 culver-2017:
   id: culver-2017
   type: journal
   title: >-
-    Cibinetide Improves Corneal Nerve Fiber Abundance in Patients With Sarcoidosis-Associated Small
-    Nerve Fiber Loss and Neuropathic Pain.
+    Cibinetide Improves Corneal Nerve Fiber Abundance in Patients With Sarcoidosis-Associated Small Nerve Fiber Loss and
+    Neuropathic Pain.
   year: 2017
   pmid: '28475703'
   authors:
     - Culver DA
-
 brines-2015:
   id: brines-2015
   type: journal
   title: >-
-    ARA 290, a nonerythropoietic peptide engineered from erythropoietin, improves metabolic control
-    and neuropathic symptoms in patients with type 2 diabetes.
+    ARA 290, a nonerythropoietic peptide engineered from erythropoietin, improves metabolic control and neuropathic
+    symptoms in patients with type 2 diabetes.
   year: 2015
   pmid: '25387363'
   authors:
     - Brines M
-
 van-2014:
   id: van-2014
   type: journal
@@ -995,18 +1118,16 @@ van-2014:
   pmid: '24555851'
   authors:
     - van Velzen M
-
 liu-2014:
   id: liu-2014
   type: journal
   title: >-
-    Erythropoietin-derived nonerythropoietic peptide ameliorates experimental autoimmune neuritis by
-    inflammation suppression and tissue protection.
+    Erythropoietin-derived nonerythropoietic peptide ameliorates experimental autoimmune neuritis by inflammation
+    suppression and tissue protection.
   year: 2014
   pmid: '24603865'
   authors:
     - Liu Y
-
 rendell-2021:
   id: rendell-2021
   type: journal
@@ -1015,10 +1136,6 @@ rendell-2021:
   pmid: '33423557'
   authors:
     - Rendell MS
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 reichel-2025:
   id: reichel-2025
   type: journal
@@ -1027,103 +1144,79 @@ reichel-2025:
   pmid: '40312924'
   authors:
     - Reichel C
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 jeong-2026:
   id: jeong-2026
   type: journal
-  title: >-
-    Effect of exercise on hormonal responses in adolescents with obesity and leptin resistance: a
-    randomized trial.
+  title: 'Effect of exercise on hormonal responses in adolescents with obesity and leptin resistance: a randomized trial.'
   year: 2026
   pmid: '41535443'
   authors:
     - Jeong D
-
 samali-2025:
   id: samali-2025
   type: journal
-  title: >-
-    Myostatin inhibitors in sarcopenia treatment: A comprehensive review of mechanisms, efficacy and
-    future directions.
+  title: 'Myostatin inhibitors in sarcopenia treatment: A comprehensive review of mechanisms, efficacy and future directions.'
   year: 2025
   pmid: '41460393'
   authors:
     - Samali SA
-
 boonpiraks-2026:
   id: boonpiraks-2026
   type: journal
-  title: >-
-    Diagnostic Performance of Serum Adiponectin and a Biomarker-Based Model for Sarcopenia in
-    Compensated Cirrhosis.
+  title: Diagnostic Performance of Serum Adiponectin and a Biomarker-Based Model for Sarcopenia in Compensated Cirrhosis.
   year: 2026
   pmid: '41908669'
   authors:
     - Boonpiraks K
-
 cruzpierard-2026:
   id: cruzpierard-2026
   type: journal
-  title: >-
-    Synergistic Effects of Protein Intake and Exercise on Biomarkers of Sarcopenia: A Systematic
-    Review.
+  title: 'Synergistic Effects of Protein Intake and Exercise on Biomarkers of Sarcopenia: A Systematic Review.'
   year: 2026
   pmid: '41750266'
   authors:
     - Cruz-Pierard S
-
 ramirezcisneros-2026:
   id: ramirezcisneros-2026
   type: journal
   title: >-
-    Lorcaserin induces abdominal fat loss with associated improvements of the circulating
-    metabolome/lipidome and no changes in the myostatin-activin-follistatin-IGF-1 axes: A 6-month
-    long randomized placebo-controlled clinical trial.
+    Lorcaserin induces abdominal fat loss with associated improvements of the circulating metabolome/lipidome and no
+    changes in the myostatin-activin-follistatin-IGF-1 axes: A 6-month long randomized placebo-controlled clinical
+    trial.
   year: 2026
   pmid: '41574965'
   authors:
     - Ramirez-Cisneros A
-
 gutierrez-2026:
   id: gutierrez-2026
   type: journal
   title: >-
-    Effects of liraglutide treatment for 35-days on total and regional fat free, lean, and bone
-    mass, and on the Myostatin-Activin-Follistatin-IGF-1 axes: a secondary analysis of a randomized
-    placebo-controlled crossover study.
+    Effects of liraglutide treatment for 35-days on total and regional fat free, lean, and bone mass, and on the
+    Myostatin-Activin-Follistatin-IGF-1 axes: a secondary analysis of a randomized placebo-controlled crossover study.
   year: 2026
   pmid: '41571048'
   authors:
     - Gutierrez de Piñeres V
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 herman-2026:
   id: herman-2026
   type: journal
   title: >-
-    Humans with function-disrupting variants in the myostatin gene (MSTN) have increased skeletal
-    muscle mass and strength, and less adiposity.
+    Humans with function-disrupting variants in the myostatin gene (MSTN) have increased skeletal muscle mass and
+    strength, and less adiposity.
   year: 2026
   pmid: '41826329'
   authors:
     - Herman JL
-
 jacquez-2026:
   id: jacquez-2026
   type: journal
   title: >-
-    A VLP-based immunogen that elicits selective anti-Myostatin antibodies, enhances muscle mass and
-    strength, and reduces adiposity.
+    A VLP-based immunogen that elicits selective anti-Myostatin antibodies, enhances muscle mass and strength, and
+    reduces adiposity.
   year: 2026
   pmid: '41993333'
   authors:
     - Jacquez Q
-
 iglesias-2026:
   id: iglesias-2026
   type: journal
@@ -1132,41 +1225,34 @@ iglesias-2026:
   pmid: '42025349'
   authors:
     - Iglesias P
-
 gong-2026:
   id: gong-2026
   type: journal
-  title: >-
-    Molecular mechanisms of skeletal muscle atrophy: clinical challenges and future therapeutic
-    strategies.
+  title: 'Molecular mechanisms of skeletal muscle atrophy: clinical challenges and future therapeutic strategies.'
   year: 2026
   pmid: '41865897'
   authors:
     - Gong J
-
 mansoor-2026:
   id: mansoor-2026
   type: journal
   title: >-
-    Active immunization against myostatin and activin A improves skeletal muscle performance in
-    growth hormone-deficient mice.
+    Active immunization against myostatin and activin A improves skeletal muscle performance in growth hormone-deficient
+    mice.
   year: 2026
   pmid: '41876797'
   authors:
     - Mansoor MAM
-
 li-2026:
   id: li-2026
   type: journal
   title: >-
-    Caffeic acid phenethyl ester ameliorates high-fat diet-induced muscle textural deterioration in
-    grass carp (Ctenopharyngodon idellus) by modulating adipose-muscle crosstalk via myostatin-taz
-    signaling.
+    Caffeic acid phenethyl ester ameliorates high-fat diet-induced muscle textural deterioration in grass carp
+    (Ctenopharyngodon idellus) by modulating adipose-muscle crosstalk via myostatin-taz signaling.
   year: 2026
   pmid: '41938616'
   authors:
     - Li H
-
 wang-2026:
   id: wang-2026
   type: journal
@@ -1175,43 +1261,32 @@ wang-2026:
   pmid: '41819194'
   authors:
     - Wang Z
-
 canal-2026:
   id: canal-2026
   type: journal
-  title: >-
-    Testosterone Replacement Therapy in Athletes: Implications for Injury Recovery and
-    Musculoskeletal Performance.
+  title: 'Testosterone Replacement Therapy in Athletes: Implications for Injury Recovery and Musculoskeletal Performance.'
   year: 2026
   pmid: '41841062'
   authors:
     - Canal de Velasco LM
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 friedman-2024:
   id: friedman-2024
   type: journal
-  title: >-
-    The discovery and development of GLP-1 based drugs that have revolutionized the treatment of
-    obesity.
+  title: The discovery and development of GLP-1 based drugs that have revolutionized the treatment of obesity.
   year: 2024
   pmid: '39297680'
   authors:
     - Friedman JM
-
 alavi-2021:
   id: alavi-2021
   type: journal
   title: >-
-    Developing GLP-1 Conjugated Self-Assembling Nanofibers Using Copper-Catalyzed Alkyne-Azide
-    Cycloaddition and Evaluation of Their Biological Activity.
+    Developing GLP-1 Conjugated Self-Assembling Nanofibers Using Copper-Catalyzed Alkyne-Azide Cycloaddition and
+    Evaluation of Their Biological Activity.
   year: 2021
   pmid: '33843208'
   authors:
     - Alavi SE
-
 ding-2017:
   id: ding-2017
   type: journal
@@ -1220,76 +1295,64 @@ ding-2017:
   pmid: '28619366'
   authors:
     - Ding L
-
 koole-2015:
   id: koole-2015
   type: journal
   title: >-
-    Differential impact of amino acid substitutions on critical residues of the human glucagon-like
-    peptide-1 receptor involved in peptide activity and small-molecule allostery.
+    Differential impact of amino acid substitutions on critical residues of the human glucagon-like peptide-1 receptor
+    involved in peptide activity and small-molecule allostery.
   year: 2015
   pmid: '25630467'
   authors:
     - Koole C
-
 lu-2025:
   id: lu-2025
   type: journal
-  title: >-
-    Effects of tryptophan-selective lipidated glucagon-like peptide 1 (GLP-1) peptides on the GLP-1
-    receptor.
+  title: Effects of tryptophan-selective lipidated glucagon-like peptide 1 (GLP-1) peptides on the GLP-1 receptor.
   year: 2025
   pmid: '39807656'
   authors:
     - Lu X
-
 cai-2018:
   id: cai-2018
   type: journal
   title: >-
-    Novel fatty acid chain modified GLP-1 derivatives with prolonged in vivo glucose-lowering
-    ability and balanced glucoregulatory activity.
+    Novel fatty acid chain modified GLP-1 derivatives with prolonged in vivo glucose-lowering ability and balanced
+    glucoregulatory activity.
   year: 2018
   pmid: '29673717'
   authors:
     - Cai X
-
 wang-2025:
   id: wang-2025
   type: journal
   title: >-
-    Design, synthesis, and biological evaluation of long-acting glucagon-like peptide-1 (GLP-1)
-    conjugates modified with dual fatty acids and a proline-alanine-serine (PAS) polypeptide.
+    Design, synthesis, and biological evaluation of long-acting glucagon-like peptide-1 (GLP-1) conjugates modified with
+    dual fatty acids and a proline-alanine-serine (PAS) polypeptide.
   year: 2025
   pmid: '40499315'
   authors:
     - Wang C
-
 skurikhin-2017:
   id: skurikhin-2017
   type: journal
   title: >-
-    Effects of Pegylated Glucagon-Like Peptide-1 Analogue in C57Bl/6 Mice under Optimal Conditions
-    and During Streptozotocin-Induced Diabetes.
+    Effects of Pegylated Glucagon-Like Peptide-1 Analogue in C57Bl/6 Mice under Optimal Conditions and During
+    Streptozotocin-Induced Diabetes.
   year: 2017
   pmid: '28948559'
   authors:
     - Skurikhin EG
-
 pujadas-2016:
   id: pujadas-2016
   type: journal
   title: >-
-    The pivotal role of high glucose-induced overexpression of PKCβ in the appearance of
-    glucagon-like peptide-1 resistance in endothelial cells.
+    The pivotal role of high glucose-induced overexpression of PKCβ in the appearance of glucagon-like peptide-1
+    resistance in endothelial cells.
   year: 2016
   pmid: '26585565'
   authors:
     - Pujadas G
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 thomas-2007:
   id: thomas-2007
   type: journal
@@ -1298,40 +1361,36 @@ thomas-2007:
   pmid: '17636166'
   authors:
     - Thomas FH
-
 xi-2004:
   id: xi-2004
   type: journal
   title: >-
-    Effect of recombinant porcine IGFBP-3 on IGF-I and long-R3-IGF-I-stimulated proliferation and
-    differentiation of L6 myogenic cells.
+    Effect of recombinant porcine IGFBP-3 on IGF-I and long-R3-IGF-I-stimulated proliferation and differentiation of L6
+    myogenic cells.
   year: 2004
   pmid: '15254966'
   authors:
     - Xi G
-
 mctavish-2009:
   id: mctavish-2009
   type: journal
   title: >-
-    Novel insulin-like growth factor-methotrexate covalent conjugate inhibits tumor growth in vivo
-    at lower dosage than methotrexate alone.
+    Novel insulin-like growth factor-methotrexate covalent conjugate inhibits tumor growth in vivo at lower dosage than
+    methotrexate alone.
   year: 2009
   pmid: '19446281'
   authors:
     - McTavish H
-
 muhlbradt-2009:
   id: muhlbradt-2009
   type: journal
   title: >-
-    NKX3.1 activates expression of insulin-like growth factor binding protein-3 to mediate
-    insulin-like growth factor-I signaling and cell proliferation.
+    NKX3.1 activates expression of insulin-like growth factor binding protein-3 to mediate insulin-like growth factor-I
+    signaling and cell proliferation.
   year: 2009
   pmid: '19258508'
   authors:
     - Muhlbradt E
-
 wetterau-2003:
   id: wetterau-2003
   type: journal
@@ -1340,32 +1399,24 @@ wetterau-2003:
   pmid: '12843187'
   authors:
     - Wetterau LA
-
 von-2011:
   id: von-2011
   type: journal
-  title: >-
-    IGF-1 has plaque-stabilizing effects in atherosclerosis by altering vascular smooth muscle cell
-    phenotype.
+  title: IGF-1 has plaque-stabilizing effects in atherosclerosis by altering vascular smooth muscle cell phenotype.
   year: 2011
   pmid: '21281823'
   authors:
     - von der Thüsen JH
-
 price-2004:
   id: price-2004
   type: journal
   title: >-
-    Regulation of insulin-like growth factor (IGF)-binding protein expression by growth factors and
-    cytokines alters IGF-mediated proliferation of postnatal lung fibroblasts.
+    Regulation of insulin-like growth factor (IGF)-binding protein expression by growth factors and cytokines alters
+    IGF-mediated proliferation of postnatal lung fibroblasts.
   year: 2004
   pmid: '15204833'
   authors:
     - Price WA
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 armakolas-2016:
   id: armakolas-2016
   type: journal
@@ -1374,84 +1425,72 @@ armakolas-2016:
   pmid: '27931832'
   authors:
     - Armakolas N
-
 papageorgiou-2016:
   id: papageorgiou-2016
   type: journal
-  title: >-
-    The human Ec peptide: the active core of a progression growth factor with species-specific mode
-    of action.
+  title: 'The human Ec peptide: the active core of a progression growth factor with species-specific mode of action.'
   year: 2016
   pmid: '27838607'
   authors:
     - Papageorgiou E
-
 vassilakos-2017:
   id: vassilakos-2017
   type: journal
   title: >-
-    Identification of the IGF-1 processing product human Ec/rodent Eb peptide in various tissues:
-    Evidence for its differential regulation after exercise-induced muscle damage in humans.
+    Identification of the IGF-1 processing product human Ec/rodent Eb peptide in various tissues: Evidence for its
+    differential regulation after exercise-induced muscle damage in humans.
   year: 2017
   pmid: '27836414'
   authors:
     - Vassilakos G
-
 moore-2018:
   id: moore-2018
   type: journal
-  title: >-
-    Blunted satellite cell response is associated with dysregulated IGF-1 expression after exercise
-    with age.
+  title: Blunted satellite cell response is associated with dysregulated IGF-1 expression after exercise with age.
   year: 2018
   pmid: '30062517'
   authors:
     - Moore DR
-
 taghibeikzadehbadr-2020:
   id: taghibeikzadehbadr-2020
   type: journal
   title: >-
-    Effect of different muscle contraction mode on the expression of Myostatin, IGF-1, and PGC-1
-    alpha family members in human Vastus Lateralis muscle.
+    Effect of different muscle contraction mode on the expression of Myostatin, IGF-1, and PGC-1 alpha family members in
+    human Vastus Lateralis muscle.
   year: 2020
   pmid: '33222041'
   authors:
     - Taghibeikzadehbadr P
-
 pea-2015:
   id: pea-2015
   type: journal
   title: >-
-    Localized delivery of mechano-growth factor E-domain peptide via polymeric microstructures
-    improves cardiac function following myocardial infarction.
+    Localized delivery of mechano-growth factor E-domain peptide via polymeric microstructures improves cardiac function
+    following myocardial infarction.
   year: 2015
   pmid: '25678113'
   authors:
     - Peña JR
-
 shioura-2014:
   id: shioura-2014
   type: journal
   title: >-
-    Administration of a Synthetic Peptide Derived from the E-domain Region of Mechano-Growth Factor
-    Delays Decompensation Following Myocardial Infarction.
+    Administration of a Synthetic Peptide Derived from the E-domain Region of Mechano-Growth Factor Delays
+    Decompensation Following Myocardial Infarction.
   year: 2014
   pmid: '25606570'
   authors:
     - Shioura K
-
 thevis-2014:
   id: thevis-2014
   type: journal
   title: >-
-    Mass spectrometric characterization of a biotechnologically produced full-length mechano growth
-    factor (MGF) relevant for doping controls.
+    Mass spectrometric characterization of a biotechnologically produced full-length mechano growth factor (MGF)
+    relevant for doping controls.
   year: 2014
   pmid: '25466910'
   authors:
     - Thevis M
-
 alagaratnam-2020:
   id: alagaratnam-2020
   type: journal
@@ -1460,7 +1499,6 @@ alagaratnam-2020:
   pmid: '32772171'
   authors:
     - Alagaratnam S
-
 kotsifaki-2024:
   id: kotsifaki-2024
   type: journal
@@ -1469,65 +1507,52 @@ kotsifaki-2024:
   pmid: '39273251'
   authors:
     - Kotsifaki A
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 bredehft-2008:
   id: bredehft-2008
   type: journal
   title: >-
-    Quantification of human insulin-like growth factor-1 and qualitative detection of its analogues
-    in plasma using liquid chromatography/electrospray ionisation tandem mass spectrometry.
+    Quantification of human insulin-like growth factor-1 and qualitative detection of its analogues in plasma using
+    liquid chromatography/electrospray ionisation tandem mass spectrometry.
   year: 2008
   pmid: '18236437'
   authors:
     - Bredehöft M
-
 crescioli-2002:
   id: crescioli-2002
   type: journal
-  title: >-
-    Des (1-3) IGF-I-stimulated growth of human stromal BPH cells is inhibited by a vitamin D3
-    analogue.
+  title: Des (1-3) IGF-I-stimulated growth of human stromal BPH cells is inhibited by a vitamin D3 analogue.
   year: 2002
   pmid: '12573816'
   authors:
     - Crescioli C
-
 payet-2004:
   id: payet-2004
   type: journal
   title: >-
-    The role of the acid-labile subunit in regulating insulin-like growth factor transport across
-    human umbilical vein endothelial cell monolayers.
+    The role of the acid-labile subunit in regulating insulin-like growth factor transport across human umbilical vein
+    endothelial cell monolayers.
   year: 2004
   pmid: '15126567'
   authors:
     - Payet LD
-
 shields-2007:
   id: shields-2007
   type: journal
   title: >-
-    Rho guanosine 5'-triphosphatases differentially regulate insulin-like growth factor I (IGF-I)
-    receptor-dependent and -independent actions of IGF-II on human trophoblast migration.
+    Rho guanosine 5'-triphosphatases differentially regulate insulin-like growth factor I (IGF-I) receptor-dependent and
+    -independent actions of IGF-II on human trophoblast migration.
   year: 2007
   pmid: '17640993'
   authors:
     - Shields SK
-
 yamane-2002:
   id: yamane-2002
   type: journal
-  title: >-
-    Roles of insulin-like growth factors and their binding proteins in the differentiation of mouse
-    tongue myoblasts.
+  title: Roles of insulin-like growth factors and their binding proteins in the differentiation of mouse tongue myoblasts.
   year: 2002
   pmid: '12382947'
   authors:
     - Yamane A
-
 vials-2004:
   id: vials-2004
   type: journal
@@ -1536,7 +1561,6 @@ vials-2004:
   pmid: '15322112'
   authors:
     - Viñals F
-
 fruchtman-2002:
   id: fruchtman-2002
   type: journal
@@ -1545,10 +1569,6 @@ fruchtman-2002:
   pmid: '12121860'
   authors:
     - Fruchtman S
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 braun-2018:
   id: braun-2018
   type: journal
@@ -1557,18 +1577,16 @@ braun-2018:
   pmid: '29634992'
   authors:
     - Braun AC
-
 ren-2015:
   id: ren-2015
   type: journal
   title: >-
-    The insulin-like growth factor I system: physiological and pathophysiological implication in
-    cardiovascular diseases associated with metabolic syndrome.
+    The insulin-like growth factor I system: physiological and pathophysiological implication in cardiovascular diseases
+    associated with metabolic syndrome.
   year: 2015
   pmid: '25541285'
   authors:
     - Ren J
-
 kletzl-2017:
   id: kletzl-2017
   type: journal
@@ -1577,10 +1595,6 @@ kletzl-2017:
   pmid: '28110155'
   authors:
     - Kletzl H
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 amiche-1998:
   id: amiche-1998
   type: journal
@@ -1589,18 +1603,16 @@ amiche-1998:
   pmid: '9949868'
   authors:
     - Amiche M
-
 mignogna-1992:
   id: mignogna-1992
   type: journal
   title: >-
-    Identification and characterization of two dermorphins from skin extracts of the Amazonian frog
-    Phyllomedusa bicolor.
+    Identification and characterization of two dermorphins from skin extracts of the Amazonian frog Phyllomedusa
+    bicolor.
   year: 1992
   pmid: '1633846'
   authors:
     - Mignogna G
-
 lazarus-1999:
   id: lazarus-1999
   type: journal
@@ -1609,18 +1621,16 @@ lazarus-1999:
   pmid: '10080383'
   authors:
     - Lazarus LH
-
 negri-1992:
   id: negri-1992
   type: journal
   title: >-
-    Dermorphin-related peptides from the skin of Phyllomedusa bicolor and their amidated analogs
-    activate two mu opioid receptor subtypes that modulate antinociception and catalepsy in the rat.
+    Dermorphin-related peptides from the skin of Phyllomedusa bicolor and their amidated analogs activate two mu opioid
+    receptor subtypes that modulate antinociception and catalepsy in the rat.
   year: 1992
   pmid: '1353890'
   authors:
     - Negri L
-
 steel-2014:
   id: steel-2014
   type: journal
@@ -1629,29 +1639,22 @@ steel-2014:
   pmid: '24259424'
   authors:
     - Steel R
-
 improta-1992:
   id: improta-1992
   type: journal
-  title: >-
-    Spinal antinociceptive effects of [D-Ala2]deltorphin II, a novel and highly selective
-    delta-opioid receptor agonist.
+  title: Spinal antinociceptive effects of [D-Ala2]deltorphin II, a novel and highly selective delta-opioid receptor agonist.
   year: 1992
   pmid: '1362979'
   authors:
     - Improta G
-
 cucumel-1996:
   id: cucumel-1996
   type: journal
-  title: >-
-    Production and characterization of site-directed antibodies against dermorphin and
-    dermorphin-related peptides.
+  title: Production and characterization of site-directed antibodies against dermorphin and dermorphin-related peptides.
   year: 1996
   pmid: '8899816'
   authors:
     - Cucumel K
-
 tran-2025:
   id: tran-2025
   type: journal
@@ -1660,7 +1663,6 @@ tran-2025:
   pmid: '40502907'
   authors:
     - Tran CQ
-
 bird-2016:
   id: bird-2016
   type: journal
@@ -1669,148 +1671,116 @@ bird-2016:
   pmid: '27272042'
   authors:
     - Bird MF
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 hossen-2013:
   id: hossen-2013
   type: journal
-  title: >-
-    A comparative study between nanoparticle-targeted therapeutics and bioconjugates as obesity
-    medication.
+  title: A comparative study between nanoparticle-targeted therapeutics and bioconjugates as obesity medication.
   year: 2013
   pmid: '23871959'
   authors:
     - Hossen N
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 staszewski-2026:
   id: staszewski-2026
   type: journal
-  title: >-
-    Cerebrolysin after Endovascular Thrombectomy in Stroke: 12‑Month Functional Outcomes in a
-    Propensity‑Matched Cohort.
+  title: 'Cerebrolysin after Endovascular Thrombectomy in Stroke: 12‑Month Functional Outcomes in a Propensity‑Matched Cohort.'
   year: 2026
   pmid: '41739286'
   authors:
     - Staszewski J
-
 rib-2026:
   id: rib-2026
   type: journal
-  title: >-
-    Cerebroprotection in acute ischemic stroke: Perspectives on combining cerebrolysin with
-    recanalization therapy.
+  title: 'Cerebroprotection in acute ischemic stroke: Perspectives on combining cerebrolysin with recanalization therapy.'
   year: 2026
   pmid: '41349847'
   authors:
     - Ribó M
-
 afridi-2026:
   id: afridi-2026
   type: journal
   title: >-
-    Efficacy and Safety of Cerebrolysin as an Adjunct to Mechanical Thrombectomy in Acute Ischemic
-    Stroke: A Systematic Review and Meta-Analysis of Observational Studies.
+    Efficacy and Safety of Cerebrolysin as an Adjunct to Mechanical Thrombectomy in Acute Ischemic Stroke: A Systematic
+    Review and Meta-Analysis of Observational Studies.
   year: 2026
   pmid: '41880098'
   authors:
     - Afridi A
-
 patel-2025:
   id: patel-2025
   type: journal
   title: >-
-    Safety and Efficacy of Cerebrolysin for Neurorecovery After Acute Ischemic Stroke: A Systematic
-    Review and Meta-Analysis of 14 Randomized Controlled Trials.
+    Safety and Efficacy of Cerebrolysin for Neurorecovery After Acute Ischemic Stroke: A Systematic Review and
+    Meta-Analysis of 14 Randomized Controlled Trials.
   year: 2025
   pmid: '41018475'
   authors:
     - Patel PN
-
 khatkova-2026:
   id: khatkova-2026
   type: journal
   title: >-
-    [Experience of using of Cerebrolysin in comprehensive rehabilitation of a patient after ischemic
-    stroke with motor deficit and aphasia].
+    [Experience of using of Cerebrolysin in comprehensive rehabilitation of a patient after ischemic stroke with motor
+    deficit and aphasia].
   year: 2026
   pmid: '41661016'
   authors:
     - Khatkova SE
-
 shchulkin-2026:
   id: shchulkin-2026
   type: journal
   title: >-
-    [The effect of neuroprotectors on the level of BDNF, tumor necrosis factor alpha and apoptosis
-    markers, and in acute cerebrovascular accidents].
+    [The effect of neuroprotectors on the level of BDNF, tumor necrosis factor alpha and apoptosis markers, and in acute
+    cerebrovascular accidents].
   year: 2026
   pmid: '41782540'
   authors:
     - Shchulkin AV
-
 shmonin-2026:
   id: shmonin-2026
   type: journal
-  title: >-
-    [The effect of Cerebrolysin on the development of skills in patients after acute cerebrovascular
-    accidents].
+  title: '[The effect of Cerebrolysin on the development of skills in patients after acute cerebrovascular accidents].'
   year: 2026
   pmid: '41782528'
   authors:
     - Shmonin AA
-
 kalinin-2025:
   id: kalinin-2025
   type: journal
   title: >-
-    Cerebrolysin, hemorrhagic transformation, and anticoagulation timing after reperfusion therapy
-    in stroke: post hoc secondary analysis of the CEREHETIS trial.
+    Cerebrolysin, hemorrhagic transformation, and anticoagulation timing after reperfusion therapy in stroke: post hoc
+    secondary analysis of the CEREHETIS trial.
   year: 2025
   pmid: '41640685'
   authors:
     - Kalinin MN
-
 kobayashi-2025:
   id: kobayashi-2025
   type: journal
   title: >-
-    Safety and feasibility of cerebrolysin in treatment of primary intracerebral hemorrhage
-    (CLINCH)-a prospective, randomized, open-label, blinded endpoint pilot trial.
+    Safety and feasibility of cerebrolysin in treatment of primary intracerebral hemorrhage (CLINCH)-a prospective,
+    randomized, open-label, blinded endpoint pilot trial.
   year: 2025
   pmid: '41180520'
   authors:
     - Kobayashi A
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 dolotov-2006:
   id: dolotov-2006
   type: journal
-  title: >-
-    Semax, an analog of ACTH(4-10) with cognitive effects, regulates BDNF and trkB expression in the
-    rat hippocampus.
+  title: Semax, an analog of ACTH(4-10) with cognitive effects, regulates BDNF and trkB expression in the rat hippocampus.
   year: 2006
   pmid: '16996037'
   authors:
     - Dolotov OV
-
 glazova-2021:
   id: glazova-2021
   type: journal
   title: >-
-    Semax, synthetic ACTH(4-10) analogue, attenuates behavioural and neurochemical alterations
-    following early-life fluvoxamine exposure in white rats.
+    Semax, synthetic ACTH(4-10) analogue, attenuates behavioural and neurochemical alterations following early-life
+    fluvoxamine exposure in white rats.
   year: 2021
   pmid: '33418449'
   authors:
     - Glazova NY
-
 arushanian-2008:
   id: arushanian-2008
   type: journal
@@ -1819,19 +1789,16 @@ arushanian-2008:
   pmid: '18488900'
   authors:
     - Arushanian EB
-
 smolnik-2000:
   id: smolnik-2000
   type: journal
   title: >-
-    Event-related brain potentials and working memory function in healthy humans after single-dose
-    and prolonged intranasal administration of adrenocorticotropin 4-10 and
-    desacetyl-alpha-melanocyte stimulating hormone.
+    Event-related brain potentials and working memory function in healthy humans after single-dose and prolonged
+    intranasal administration of adrenocorticotropin 4-10 and desacetyl-alpha-melanocyte stimulating hormone.
   year: 2000
   pmid: '10917406'
   authors:
     - Smolnik R
-
 strand-1993:
   id: strand-1993
   type: journal
@@ -1840,18 +1807,16 @@ strand-1993:
   pmid: '8390155'
   authors:
     - Strand FL
-
 teter-2001:
   id: teter-2001
   type: journal
   title: >-
-    Changes in rabbits' behaviour under the influence of corticotropin derivative analogue 4-10 in
-    spontaneous conditions.
+    Changes in rabbits' behaviour under the influence of corticotropin derivative analogue 4-10 in spontaneous
+    conditions.
   year: 2001
   pmid: '11977344'
   authors:
     - Teter M
-
 van-1978:
   id: van-1978
   type: journal
@@ -1860,7 +1825,6 @@ van-1978:
   pmid: '223580'
   authors:
     - van Riezen H
-
 gruber-1984:
   id: gruber-1984
   type: journal
@@ -1869,79 +1833,64 @@ gruber-1984:
   pmid: '6086516'
   authors:
     - Gruber KA
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 wright-2015:
   id: wright-2015
   type: journal
-  title: >-
-    The development of small molecule angiotensin IV analogs to treat Alzheimer's and Parkinson's
-    diseases.
+  title: The development of small molecule angiotensin IV analogs to treat Alzheimer's and Parkinson's diseases.
   year: 2015
   pmid: '25455861'
   authors:
     - Wright JW
-
 benoist-2014:
   id: benoist-2014
   type: journal
   title: >-
-    The procognitive and synaptogenic effects of angiotensin IV-derived peptides are dependent on
-    activation of the hepatocyte growth factor/c-met system.
+    The procognitive and synaptogenic effects of angiotensin IV-derived peptides are dependent on activation of the
+    hepatocyte growth factor/c-met system.
   year: 2014
   pmid: '25187433'
   authors:
     - Benoist CC
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 huijben-2026:
   id: huijben-2026
   type: journal
   title: >-
-    Boosting Male Fertility: The Impact of Gonadotropin Therapy on Hypogonadotropic Hypogonadism-A
-    Systematic Review and Meta-Analysis.
+    Boosting Male Fertility: The Impact of Gonadotropin Therapy on Hypogonadotropic Hypogonadism-A Systematic Review and
+    Meta-Analysis.
   year: 2026
   pmid: '41987691'
   authors:
     - Huijben M
-
 zachariou-2026:
   id: zachariou-2026
   type: journal
   title: >-
-    Fertility Outcomes in Men with Nonobstructive Azoospermia Due to Hypogonadotropic Hypogonadism
-    After Gonadotropin Therapy.
+    Fertility Outcomes in Men with Nonobstructive Azoospermia Due to Hypogonadotropic Hypogonadism After Gonadotropin
+    Therapy.
   year: 2026
   pmid: '41682884'
   authors:
     - Zachariou A
-
 konsam-2026:
   id: konsam-2026
   type: journal
   title: >-
-    Comparing the response of triple therapy and conventional treatment in male congenital
-    hypogonadotropic hypogonadism: a randomized controlled trial.
+    Comparing the response of triple therapy and conventional treatment in male congenital hypogonadotropic
+    hypogonadism: a randomized controlled trial.
   year: 2026
   pmid: '41993983'
   authors:
     - Konsam BD
-
 nariyoshi-2025:
   id: nariyoshi-2025
   type: journal
   title: >-
-    Alterations in the ultrasound appearance of seminiferous tubules after gonadotropin treatment in
-    patients with azoospermia because of hypogonadotropic hypogonadism.
+    Alterations in the ultrasound appearance of seminiferous tubules after gonadotropin treatment in patients with
+    azoospermia because of hypogonadotropic hypogonadism.
   year: 2025
   pmid: '41473567'
   authors:
     - Nariyoshi S
-
 schrderlange-2025:
   id: schrderlange-2025
   type: journal
@@ -1950,21 +1899,16 @@ schrderlange-2025:
   pmid: '41476916'
   authors:
     - Schröder-Lange SK
-
 clift-2026:
   id: clift-2026
   type: journal
   title: >-
-    Real-World Outcomes and Safety of Testosterone Therapy: A Longitudinal, Retrospective Cohort
-    Study of Over 9,000 Men.
+    Real-World Outcomes and Safety of Testosterone Therapy: A Longitudinal, Retrospective Cohort Study of Over 9,000
+    Men.
   year: 2026
   pmid: '41508380'
   authors:
     - Clift AK
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 jia-2025:
   id: jia-2025
   type: journal
@@ -1973,18 +1917,16 @@ jia-2025:
   pmid: '40890214'
   authors:
     - Jia W
-
 yee-2025:
   id: yee-2025
   type: journal
   title: >-
-    A 6-month sustained-release formulation of triptorelin for locally advanced or metastatic
-    prostate cancer: a real-world experience in Asia.
+    A 6-month sustained-release formulation of triptorelin for locally advanced or metastatic prostate cancer: a
+    real-world experience in Asia.
   year: 2025
   pmid: '40001059'
   authors:
     - Yee CH
-
 anon-2012:
   id: anon-2012
   type: journal
@@ -1993,87 +1935,66 @@ anon-2012:
   pmid: '31644065'
   authors:
     - Unknown
-
 chen-2024:
   id: chen-2024
   type: journal
   title: >-
-    Resources Utilization Assessment and Cost-Minimization Analysis of the 6-Monthly Formulation of
-    Triptorelin in the Treatment of Prostate Cancer in China.
+    Resources Utilization Assessment and Cost-Minimization Analysis of the 6-Monthly Formulation of Triptorelin in the
+    Treatment of Prostate Cancer in China.
   year: 2024
   pmid: '39691726'
   authors:
     - Chen Y
-
 albrethsen-2023:
   id: albrethsen-2023
   type: journal
-  title: >-
-    Serum Insulin-like Factor 3, Testosterone, and LH in Experimental and Therapeutic Testicular
-    Suppression.
+  title: Serum Insulin-like Factor 3, Testosterone, and LH in Experimental and Therapeutic Testicular Suppression.
   year: 2023
   pmid: '37235781'
   authors:
     - Albrethsen J
-
 hafron-2025:
   id: hafron-2025
   type: journal
-  title: >-
-    Study of persistence and adherence to ADT in prostate cancer: relugolix, degarelix, and GnRH
-    agonists in the US.
+  title: 'Study of persistence and adherence to ADT in prostate cancer: relugolix, degarelix, and GnRH agonists in the US.'
   year: 2025
   pmid: '40189880'
   authors:
     - Hafron J
-
 preston-2024:
   id: preston-2024
   type: journal
   title: >-
-    Risk of cardiovascular events following intermittent and continuous androgen deprivation therapy
-    in patients with nonmetastatic prostate cancer.
+    Risk of cardiovascular events following intermittent and continuous androgen deprivation therapy in patients with
+    nonmetastatic prostate cancer.
   year: 2024
   pmid: '39003108'
   authors:
     - Preston MA
-
 friedrich-2025:
   id: friedrich-2025
   type: journal
-  title: >-
-    Racial Differences in Adverse Events After Androgen Deprivation in Veterans With Prostate
-    Cancer.
+  title: Racial Differences in Adverse Events After Androgen Deprivation in Veterans With Prostate Cancer.
   year: 2025
   pmid: '41259022'
   authors:
     - Friedrich NA
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 robin-2026:
   id: robin-2026
   type: journal
-  title: >-
-    Management of infertility in women with hypothalamic hypogonadotropic hypogonadism: an expert
-    opinion.
+  title: 'Management of infertility in women with hypothalamic hypogonadotropic hypogonadism: an expert opinion.'
   year: 2026
   pmid: '41715131'
   authors:
     - Robin G
-
 tadesse-2026:
   id: tadesse-2026
   type: journal
-  title: >-
-    Clomiphene citrate in the management of anovulation: a review of mechanisms, outcomes, and
-    clinical challenges.
+  title: 'Clomiphene citrate in the management of anovulation: a review of mechanisms, outcomes, and clinical challenges.'
   year: 2026
   pmid: '41863134'
   authors:
     - Tadesse TM
-
 morris-2026:
   id: morris-2026
   type: journal
@@ -2082,7 +2003,6 @@ morris-2026:
   pmid: '41906629'
   authors:
     - Morris PG
-
 sharma-2026:
   id: sharma-2026
   type: journal
@@ -2091,7 +2011,6 @@ sharma-2026:
   pmid: '31335042'
   authors:
     - Sharma L
-
 wittner-2026:
   id: wittner-2026
   type: journal
@@ -2100,7 +2019,6 @@ wittner-2026:
   pmid: '41786302'
   authors:
     - Wittner L
-
 guerrerogutierrez-2026:
   id: guerrerogutierrez-2026
   type: journal
@@ -2109,7 +2027,6 @@ guerrerogutierrez-2026:
   pmid: '41655364'
   authors:
     - Guerrero-Gutierrez M
-
 zikopoulos-2026:
   id: zikopoulos-2026
   type: journal
@@ -2118,21 +2035,16 @@ zikopoulos-2026:
   pmid: '41828698'
   authors:
     - Zikopoulos A
-
 damoulaki-2025:
   id: damoulaki-2025
   type: journal
   title: >-
-    Polycystic Ovary Syndrome-Associated Acne: The Interplay of Hyperandrogenism, Insulin
-    Resistance, and Therapeutic Strategies.
+    Polycystic Ovary Syndrome-Associated Acne: The Interplay of Hyperandrogenism, Insulin Resistance, and Therapeutic
+    Strategies.
   year: 2025
   pmid: '41473651'
   authors:
     - Damoulaki E
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 pyo-2007:
   id: pyo-2007
   type: journal
@@ -2141,21 +2053,16 @@ pyo-2007:
   pmid: '17703734'
   authors:
     - Pyo HK
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 chawathe-2026:
   id: chawathe-2026
   type: journal
   title: >-
-    Investigation of the stability profile of therapeutic α-MSH analogue: Insights from liquid
-    chromatography-high resolution mass spectrometry analysis of afamelanotide.
+    Investigation of the stability profile of therapeutic α-MSH analogue: Insights from liquid chromatography-high
+    resolution mass spectrometry analysis of afamelanotide.
   year: 2026
   pmid: '41547183'
   authors:
     - Chawathe A
-
 habbema-2017:
   id: habbema-2017
   type: journal
@@ -2164,7 +2071,6 @@ habbema-2017:
   pmid: '28266027'
   authors:
     - Habbema L
-
 langan-2010:
   id: langan-2010
   type: journal
@@ -2173,21 +2079,16 @@ langan-2010:
   pmid: '20545686'
   authors:
     - Langan EA
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 raikou-2017:
   id: raikou-2017
   type: journal
   title: >-
-    The efficacy study of the combination of tripeptide-10-citrulline and acetyl hexapeptide-3. A
-    prospective, randomized controlled study.
+    The efficacy study of the combination of tripeptide-10-citrulline and acetyl hexapeptide-3. A prospective,
+    randomized controlled study.
   year: 2017
   pmid: '28150423'
   authors:
     - Raikou V
-
 olsson-2024:
   id: olsson-2024
   type: journal
@@ -2196,7 +2097,6 @@ olsson-2024:
   pmid: '38376906'
   authors:
     - Olsson SE
-
 kluczyk-2021:
   id: kluczyk-2021
   type: journal
@@ -2205,7 +2105,6 @@ kluczyk-2021:
   pmid: '33482052'
   authors:
     - Kluczyk A
-
 kraeling-2015:
   id: kraeling-2015
   type: journal
@@ -2214,29 +2113,26 @@ kraeling-2015:
   pmid: '24754410'
   authors:
     - Kraeling ME
-
 lupin-2024:
   id: lupin-2024
   type: journal
   title: >-
-    INDIVIDUAL ARTICLE: Real-World Clinical Experience With a Neuro-Peptide Serum in Combination
-    With Botulinum Toxin Type-A Injections.
+    INDIVIDUAL ARTICLE: Real-World Clinical Experience With a Neuro-Peptide Serum in Combination With Botulinum Toxin
+    Type-A Injections.
   year: 2024
   pmid: '39496132'
   authors:
     - Lupin M
-
 hoppel-2015:
   id: hoppel-2015
   type: journal
   title: >-
-    Topical delivery of acetyl hexapeptide-8 from different emulsions: influence of emulsion
-    composition and internal structure.
+    Topical delivery of acetyl hexapeptide-8 from different emulsions: influence of emulsion composition and internal
+    structure.
   year: 2015
   pmid: '25497319'
   authors:
     - Hoppel M
-
 grosicki-2014:
   id: grosicki-2014
   type: journal
@@ -2245,43 +2141,34 @@ grosicki-2014:
   pmid: '24644551'
   authors:
     - Grosicki M
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 bourgeois-2025:
   id: bourgeois-2025
   type: journal
-  title: >-
-    The disordered p53 transactivation domain is the target of FOXO4 and the senolytic compound
-    FOXO4-DRI.
+  title: The disordered p53 transactivation domain is the target of FOXO4 and the senolytic compound FOXO4-DRI.
   year: 2025
   pmid: '40593617'
   authors:
     - Bourgeois B
-
 alameen-2026:
   id: alameen-2026
   type: journal
   title: >-
-    Targeting the FOXO4-p53 axis by retro-inverso peptide senolytic agents: a pharmacological
-    strategy to mitigate brain aging and cognitive decline.
+    Targeting the FOXO4-p53 axis by retro-inverso peptide senolytic agents: a pharmacological strategy to mitigate brain
+    aging and cognitive decline.
   year: 2026
   pmid: '42024235'
   authors:
     - Alameen AAM
-
 zhang-2020:
   id: zhang-2020
   type: journal
   title: >-
-    FOXO4-DRI alleviates age-related testosterone secretion insufficiency by targeting senescent
-    Leydig cells in aged mice.
+    FOXO4-DRI alleviates age-related testosterone secretion insufficiency by targeting senescent Leydig cells in aged
+    mice.
   year: 2020
   pmid: '31959736'
   authors:
     - Zhang C
-
 tripathi-2021:
   id: tripathi-2021
   type: journal
@@ -2290,18 +2177,16 @@ tripathi-2021:
   pmid: '34768086'
   authors:
     - Tripathi U
-
 kong-2025:
   id: kong-2025
   type: journal
   title: >-
-    FOXO4-DRI induces keloid senescent fibroblast apoptosis by promoting nuclear exclusion of
-    upregulated p53-serine 15 phosphorylation.
+    FOXO4-DRI induces keloid senescent fibroblast apoptosis by promoting nuclear exclusion of upregulated p53-serine 15
+    phosphorylation.
   year: 2025
   pmid: '39994346'
   authors:
     - Kong YX
-
 pawge-2021:
   id: pawge-2021
   type: journal
@@ -2310,7 +2195,6 @@ pawge-2021:
   pmid: '34118220'
   authors:
     - Pawge G
-
 kohoutova-2025:
   id: kohoutova-2025
   type: journal
@@ -2319,7 +2203,6 @@ kohoutova-2025:
   pmid: '40425537'
   authors:
     - Kohoutova K
-
 born-2023:
   id: born-2023
   type: journal
@@ -2328,21 +2211,14 @@ born-2023:
   pmid: '36515093'
   authors:
     - Born E
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 zhu-2022:
   id: zhu-2022
   type: journal
-  title: >-
-    The Molecular Structure and Role of Humanin in Neural and Skeletal Diseases, and in Tissue
-    Regeneration.
+  title: The Molecular Structure and Role of Humanin in Neural and Skeletal Diseases, and in Tissue Regeneration.
   year: 2022
   pmid: '35372353'
   authors:
     - Zhu S
-
 lue-2021:
   id: lue-2021
   type: journal
@@ -2351,7 +2227,6 @@ lue-2021:
   pmid: '34534645'
   authors:
     - Lue Y
-
 morris-2021:
   id: morris-2021
   type: journal
@@ -2360,40 +2235,32 @@ morris-2021:
   pmid: '33764501'
   authors:
     - Morris DL
-
 shahzaib-2026:
   id: shahzaib-2026
   type: journal
-  title: >-
-    Humanin as an evolutionarily tuned mitochondrial peptide: Insights from mammalian oxidative
-    stress diversity.
+  title: 'Humanin as an evolutionarily tuned mitochondrial peptide: Insights from mammalian oxidative stress diversity.'
   year: 2026
   pmid: '41864362'
   authors:
     - Shahzaib M
-
 velentza-2024:
   id: velentza-2024
   type: journal
-  title: >-
-    Humanin Treatment Protects Against Venetoclax-Induced Bone Growth Retardation in Ex Vivo
-    Cultured Rat Bones.
+  title: Humanin Treatment Protects Against Venetoclax-Induced Bone Growth Retardation in Ex Vivo Cultured Rat Bones.
   year: 2024
   pmid: '38328478'
   authors:
     - Velentza L
-
 huang-2025:
   id: huang-2025
   type: journal
   title: >-
-    Ameliorative effects of Gly[14]-humanin on cyclophosphamide-induced premature ovarian
-    insufficiency and underlying mechanisms.
+    Ameliorative effects of Gly[14]-humanin on cyclophosphamide-induced premature ovarian insufficiency and underlying
+    mechanisms.
   year: 2025
   pmid: '40639309'
   authors:
     - Huang J
-
 el-2022:
   id: el-2022
   type: journal
@@ -2402,65 +2269,54 @@ el-2022:
   pmid: '35086467'
   authors:
     - El Kattawy HA
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 pincus-2024:
   id: pincus-2024
   type: journal
   title: >-
-    Poptosis or Peptide-Induced Transmembrane Pore Formation: A Novel Way to Kill Cancer Cells
-    without Affecting Normal Cells.
+    Poptosis or Peptide-Induced Transmembrane Pore Formation: A Novel Way to Kill Cancer Cells without Affecting Normal
+    Cells.
   year: 2024
   pmid: '38927351'
   authors:
     - Pincus MR
-
 sarafrazyazdi-2022:
   id: sarafrazyazdi-2022
   type: journal
   title: >-
-    PNC-27, a Chimeric p53-Penetratin Peptide Binds to HDM-2 in a p53 Peptide-like Structure,
-    Induces Selective Membrane-Pore Formation and Leads to Cancer Cell Lysis.
+    PNC-27, a Chimeric p53-Penetratin Peptide Binds to HDM-2 in a p53 Peptide-like Structure, Induces Selective
+    Membrane-Pore Formation and Leads to Cancer Cell Lysis.
   year: 2022
   pmid: '35625682'
   authors:
     - Sarafraz-Yazdi E
-
 krzesaj-2024:
   id: krzesaj-2024
   type: journal
   title: >-
-    Anti-Cancer Peptide PNC-27 Kills Cancer Cells by Unique Interactions with Plasma Membrane-Bound
-    hdm-2 and with Mitochondrial Membranes Causing Mitochondrial Disruption.
+    Anti-Cancer Peptide PNC-27 Kills Cancer Cells by Unique Interactions with Plasma Membrane-Bound hdm-2 and with
+    Mitochondrial Membranes Causing Mitochondrial Disruption.
   year: 2024
   pmid: '38802154'
   authors:
     - Krzesaj P
-
 sarafrazyazdi-2010:
   id: sarafrazyazdi-2010
   type: journal
   title: >-
-    Anticancer peptide PNC-27 adopts an HDM-2-binding conformation and kills cancer cells by binding
-    to HDM-2 in their membranes.
+    Anticancer peptide PNC-27 adopts an HDM-2-binding conformation and kills cancer cells by binding to HDM-2 in their
+    membranes.
   year: 2010
   pmid: '20080680'
   authors:
     - Sarafraz-Yazdi E
-
 thadi-2020:
   id: thadi-2020
   type: journal
-  title: >-
-    Targeting Membrane HDM-2 by PNC-27 Induces Necrosis in Leukemia Cells But Not in Normal
-    Hematopoietic Cells.
+  title: Targeting Membrane HDM-2 by PNC-27 Induces Necrosis in Leukemia Cells But Not in Normal Hematopoietic Cells.
   year: 2020
   pmid: '32878773'
   authors:
     - Thadi A
-
 sookraj-2010:
   id: sookraj-2010
   type: journal
@@ -2469,33 +2325,26 @@ sookraj-2010:
   pmid: '20182728'
   authors:
     - Sookraj KA
-
 thadi-2021:
   id: thadi-2021
   type: journal
   title: >-
-    Molecular Targeting of H/MDM-2 Oncoprotein in Human Colon Cancer Cells and Stem-like Colonic
-    Epithelial-derived Progenitor Cells.
+    Molecular Targeting of H/MDM-2 Oncoprotein in Human Colon Cancer Cells and Stem-like Colonic Epithelial-derived
+    Progenitor Cells.
   year: 2021
   pmid: '33419797'
   authors:
     - Thadi A
-
 davitt-2014:
   id: davitt-2014
   type: journal
   title: >-
-    The anti-cancer peptide, PNC-27, induces tumor cell necrosis of a poorly differentiated
-    non-solid tissue human leukemia cell line that depends on expression of HDM-2 in the plasma
-    membrane of these cells.
+    The anti-cancer peptide, PNC-27, induces tumor cell necrosis of a poorly differentiated non-solid tissue human
+    leukemia cell line that depends on expression of HDM-2 in the plasma membrane of these cells.
   year: 2014
   pmid: '25117093'
   authors:
     - Davitt K
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 rnnekleiv-2026:
   id: rnnekleiv-2026
   type: journal
@@ -2504,18 +2353,14 @@ rnnekleiv-2026:
   pmid: '41407546'
   authors:
     - Rønnekleiv OK
-
 colladosole-2026:
   id: colladosole-2026
   type: journal
-  title: >-
-    Microglia Rank signaling regulates GnRH neuronal function and the hypothalamic-pituitary-gonadal
-    axis.
+  title: Microglia Rank signaling regulates GnRH neuronal function and the hypothalamic-pituitary-gonadal axis.
   year: 2026
   pmid: '41818388'
   authors:
     - Collado-Sole A
-
 silva-2026:
   id: silva-2026
   type: journal
@@ -2524,7 +2369,6 @@ silva-2026:
   pmid: '41423875'
   authors:
     - Silva JDN
-
 lages-2026:
   id: lages-2026
   type: journal
@@ -2533,54 +2377,46 @@ lages-2026:
   pmid: '41912296'
   authors:
     - Lages AS
-
 akhtar-2025:
   id: akhtar-2025
   type: journal
   title: >-
-    Molecular pathways affecting reproductive efficiency in seasonal breeders: prospects and
-    implications for improving fertility in donkeys.
+    Molecular pathways affecting reproductive efficiency in seasonal breeders: prospects and implications for improving
+    fertility in donkeys.
   year: 2025
   pmid: '41169682'
   authors:
     - Akhtar MF
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 mottolese-2024:
   id: mottolese-2024
   type: journal
   title: >-
-    Effects of a ciliary neurotrophic factor (CNTF) small-molecule peptide mimetic in an in vitro
-    and in vivo model of CDKL5 deficiency disorder.
+    Effects of a ciliary neurotrophic factor (CNTF) small-molecule peptide mimetic in an in vitro and in vivo model of
+    CDKL5 deficiency disorder.
   year: 2024
   pmid: '39592934'
   authors:
     - Mottolese N
-
 cox-2026:
   id: cox-2026
   type: journal
   title: >-
-    FAK inhibition following acute olfactory epithelial inflammation promotes neurogenesis and
-    functional recovery through stem cell CNTF.
+    FAK inhibition following acute olfactory epithelial inflammation promotes neurogenesis and functional recovery
+    through stem cell CNTF.
   year: 2026
   pmid: '41795839'
   authors:
     - Cox D
-
 jia-2020:
   id: jia-2020
   type: journal
   title: >-
-    Inhibition of focal adhesion kinase increases adult olfactory stem cell self-renewal and
-    neuroregeneration through ciliary neurotrophic factor.
+    Inhibition of focal adhesion kinase increases adult olfactory stem cell self-renewal and neuroregeneration through
+    ciliary neurotrophic factor.
   year: 2020
   pmid: '33130470'
   authors:
     - Jia C
-
 guo-2022:
   id: guo-2022
   type: journal
@@ -2589,54 +2425,42 @@ guo-2022:
   pmid: '36065930'
   authors:
     - Guo H
-
 mashanov-2020:
   id: mashanov-2020
   type: journal
-  title: >-
-    Synergistic effect of CNTF and GDNF on directed neurite growth in chick embryo dorsal root
-    ganglia.
+  title: Synergistic effect of CNTF and GDNF on directed neurite growth in chick embryo dorsal root ganglia.
   year: 2020
   pmid: '33017447'
   authors:
     - Mashanov V
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 djillani-2017:
   id: djillani-2017
   type: journal
-  title: >-
-    Shortened Spadin Analogs Display Better TREK-1 Inhibition, In Vivo Stability and Antidepressant
-    Activity.
+  title: Shortened Spadin Analogs Display Better TREK-1 Inhibition, In Vivo Stability and Antidepressant Activity.
   year: 2017
   pmid: '28955242'
   authors:
     - Djillani A
-
 mazella-2018:
   id: mazella-2018
   type: journal
   title: >-
-    The Involvement of Sortilin/NTSR3 in Depression as the Progenitor of Spadin and Its Role in the
-    Membrane Expression of TREK-1.
+    The Involvement of Sortilin/NTSR3 in Depression as the Progenitor of Spadin and Its Role in the Membrane Expression
+    of TREK-1.
   year: 2018
   pmid: '30670975'
   authors:
     - Mazella J
-
 pietri-2019:
   id: pietri-2019
   type: journal
   title: >-
-    First evidence of protective effects on stroke recovery and post-stroke depression induced by
-    sortilin-derived peptides.
+    First evidence of protective effects on stroke recovery and post-stroke depression induced by sortilin-derived
+    peptides.
   year: 2019
   pmid: '31325429'
   authors:
     - Pietri M
-
 ma-2020:
   id: ma-2020
   type: journal
@@ -2645,18 +2469,16 @@ ma-2020:
   pmid: '32317978'
   authors:
     - Ma R
-
 wu-2021:
   id: wu-2021
   type: journal
   title: >-
-    Genetic and pharmacological inhibition of two-pore domain potassium channel TREK-1 alters
-    depression-related behaviors and neuronal plasticity in the hippocampus in mice.
+    Genetic and pharmacological inhibition of two-pore domain potassium channel TREK-1 alters depression-related
+    behaviors and neuronal plasticity in the hippocampus in mice.
   year: 2021
   pmid: '32864894'
   authors:
     - Wu F
-
 djillani-2019:
   id: djillani-2019
   type: journal
@@ -2665,54 +2487,44 @@ djillani-2019:
   pmid: '30291907'
   authors:
     - Djillani A
-
 cong-2023:
   id: cong-2023
   type: journal
   title: >-
-    Blocking Two-Pore Domain Potassium Channel TREK-1 Inhibits the Activation of A1-Like Reactive
-    Astrocyte Through the NF-κB Signaling Pathway in a Rat Model of Major Depressive Disorder.
+    Blocking Two-Pore Domain Potassium Channel TREK-1 Inhibits the Activation of A1-Like Reactive Astrocyte Through the
+    NF-κB Signaling Pathway in a Rat Model of Major Depressive Disorder.
   year: 2023
   pmid: '36670238'
   authors:
     - Cong T
-
 nasr-2018:
   id: nasr-2018
   type: journal
-  title: >-
-    Identification and characterization of two zebrafish Twik related potassium channels, Kcnk2a and
-    Kcnk2b.
+  title: Identification and characterization of two zebrafish Twik related potassium channels, Kcnk2a and Kcnk2b.
   year: 2018
   pmid: '30333618'
   authors:
     - Nasr N
-
 qi-2018:
   id: qi-2018
   type: journal
   title: >-
-    Comparison of Therapeutic Effects of TREK1 Blockers and Fluoxetine on Chronic Unpredicted Mild
-    Stress Sensitive Rats.
+    Comparison of Therapeutic Effects of TREK1 Blockers and Fluoxetine on Chronic Unpredicted Mild Stress Sensitive
+    Rats.
   year: 2018
   pmid: '29952548'
   authors:
     - Qi X
-
 valle-2016:
   id: valle-2016
   type: journal
   title: >-
-    Fluoxetine Protection in Decompression Sickness in Mice is Enhanced by Blocking TREK-1 Potassium
-    Channel with the "spadin" Antidepressant.
+    Fluoxetine Protection in Decompression Sickness in Mice is Enhanced by Blocking TREK-1 Potassium Channel with the
+    "spadin" Antidepressant.
   year: 2016
   pmid: '26909044'
   authors:
     - Vallée N
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 cox-2015:
   id: cox-2015
   type: journal
@@ -2721,7 +2533,6 @@ cox-2015:
   pmid: '25208511'
   authors:
     - Cox HD
-
 ng-2000:
   id: ng-2000
   type: journal
@@ -2730,10 +2541,6 @@ ng-2000:
   pmid: '11146367'
   authors:
     - Ng FM
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 hecht-2026:
   id: hecht-2026
   type: journal
@@ -2742,43 +2549,34 @@ hecht-2026:
   pmid: '41851454'
   authors:
     - Hecht F
-
 terrell-2025:
   id: terrell-2025
   type: journal
-  title: >-
-    Extracellular Matrix Microstructures Directly Regulate Glutathione Bioavailability in Human
-    Hepatocytes.
+  title: Extracellular Matrix Microstructures Directly Regulate Glutathione Bioavailability in Human Hepatocytes.
   year: 2025
   pmid: '41215494'
   authors:
     - Terrell JA
-
 aiana-2026:
   id: aiana-2026
   type: journal
   title: >-
-    Metabolic enhancement of glutathione biosynthesis via StGCL overexpression reduces acrylamide
-    formation and improves salinity and osmotic stress resilience in potato tubers.
+    Metabolic enhancement of glutathione biosynthesis via StGCL overexpression reduces acrylamide formation and improves
+    salinity and osmotic stress resilience in potato tubers.
   year: 2026
   pmid: '41967330'
   authors:
     - Aiana
-
 yan-2026:
   id: yan-2026
   type: journal
   title: >-
-    Exogenous Glutathione Enhances Salt Tolerance in Patchouli by Promoting the Antioxidant Capacity
-    and Activating the Flavonoid Biosynthesis Pathway.
+    Exogenous Glutathione Enhances Salt Tolerance in Patchouli by Promoting the Antioxidant Capacity and Activating the
+    Flavonoid Biosynthesis Pathway.
   year: 2026
   pmid: '41681620'
   authors:
     - Yan H
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 pinheiro-2026:
   id: pinheiro-2026
   type: journal
@@ -2787,7 +2585,6 @@ pinheiro-2026:
   pmid: '42011032'
   authors:
     - Pinheiro da Silva F
-
 ahmad-2026:
   id: ahmad-2026
   type: journal
@@ -2796,29 +2593,24 @@ ahmad-2026:
   pmid: '42003198'
   authors:
     - Ahmad A
-
 walter-2026:
   id: walter-2026
   type: journal
-  title: >-
-    Antimicrobial peptides in malaria and tuberculosis management: a systematic review of emerging
-    evidence.
+  title: 'Antimicrobial peptides in malaria and tuberculosis management: a systematic review of emerging evidence.'
   year: 2026
   pmid: '41950808'
   authors:
     - Walter NS
-
 lu-2026:
   id: lu-2026
   type: journal
   title: >-
-    Design and Screening of the Peptide SAMP-12aa Derived from LL-37, Which Exhibits Anti-H. Pylori
-    Activity and Immunomodulatory Effects.
+    Design and Screening of the Peptide SAMP-12aa Derived from LL-37, Which Exhibits Anti-H. Pylori Activity and
+    Immunomodulatory Effects.
   year: 2026
   pmid: '41900101'
   authors:
     - Lu J
-
 he-2026:
   id: he-2026
   type: journal
@@ -2827,79 +2619,62 @@ he-2026:
   pmid: '41843625'
   authors:
     - He X
-
 zhang-2026:
   id: zhang-2026
   type: journal
-  title: >-
-    [Mechanisms underlying the antimicrobial and immunomodulatory activities of porcine
-    antimicrobial peptides].
+  title: '[Mechanisms underlying the antimicrobial and immunomodulatory activities of porcine antimicrobial peptides].'
   year: 2026
   pmid: '42009525'
   authors:
     - Zhang T
-
 tanabe-2026:
   id: tanabe-2026
   type: journal
   title: >-
-    LL-37 and bacterial DNA complexes in dental plaque: Implications for biofilm structure, innate
-    immunity, and periodontal pathogenesis.
+    LL-37 and bacterial DNA complexes in dental plaque: Implications for biofilm structure, innate immunity, and
+    periodontal pathogenesis.
   year: 2026
   pmid: '41862276'
   authors:
     - Tanabe G
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 paccola-2025:
   id: paccola-2025
   type: journal
   title: >-
-    Synergistic Effects of Injectable Platelet-Rich Fibrin and Bioactive Peptides on Dermal
-    Fibroblast Viability and Extracellular Matrix Gene Expression: An In Vitro Study.
+    Synergistic Effects of Injectable Platelet-Rich Fibrin and Bioactive Peptides on Dermal Fibroblast Viability and
+    Extracellular Matrix Gene Expression: An In Vitro Study.
   year: 2025
   pmid: '40871567'
   authors:
     - Paccola AGL
-
 gomes-2022:
   id: gomes-2022
   type: journal
   title: >-
-    Boosting Cosmeceutical Peptides: Coupling Imidazolium-Based Ionic Liquids to Pentapeptide-4
-    Originates New Leads with Antimicrobial and Collagenesis-Inducing Activities.
+    Boosting Cosmeceutical Peptides: Coupling Imidazolium-Based Ionic Liquids to Pentapeptide-4 Originates New Leads
+    with Antimicrobial and Collagenesis-Inducing Activities.
   year: 2022
   pmid: '35950860'
   authors:
     - Gomes A
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 paul-2026:
   id: paul-2026
   type: journal
   title: >-
-    Oxytocin beyond social bonding: Advancing neuromodulation, synaptic plasticity, and epigenetic
-    precision in CNS disorders.
+    Oxytocin beyond social bonding: Advancing neuromodulation, synaptic plasticity, and epigenetic precision in CNS
+    disorders.
   year: 2026
   pmid: '41759439'
   authors:
     - Paul S
-
 prinsen-2026:
   id: prinsen-2026
   type: journal
-  title: >-
-    Impact of chronic oxytocin on gaze and pupil dynamics during live dyadic interactions in
-    children with autism.
+  title: Impact of chronic oxytocin on gaze and pupil dynamics during live dyadic interactions in children with autism.
   year: 2026
   pmid: '41547341'
   authors:
     - Prinsen J
-
 chaulagain-2025:
   id: chaulagain-2025
   type: journal
@@ -2908,18 +2683,14 @@ chaulagain-2025:
   pmid: '40213210'
   authors:
     - Chaulagain RP
-
 burmester-2025:
   id: burmester-2025
   type: journal
-  title: >-
-    Oxytocin Amplifies Negative Response to Ambiguity in Adolescent Females With and Without Eating
-    Disorders.
+  title: Oxytocin Amplifies Negative Response to Ambiguity in Adolescent Females With and Without Eating Disorders.
   year: 2025
   pmid: '39887557'
   authors:
     - Burmester V
-
 yuan-2026:
   id: yuan-2026
   type: journal
@@ -2928,32 +2699,22 @@ yuan-2026:
   pmid: '41690434'
   authors:
     - Yuan S
-
 tarumi-2026:
   id: tarumi-2026
   type: journal
-  title: >-
-    Physiological mechanisms of social odor perception and their implications for Autism Spectrum
-    Disorders.
+  title: Physiological mechanisms of social odor perception and their implications for Autism Spectrum Disorders.
   year: 2026
   pmid: '41389397'
   authors:
     - Tarumi W
-
 ylmazer-2025:
   id: ylmazer-2025
   type: journal
-  title: >-
-    Salivary Oxytocin Levels in Children With and Without Autism: Group Similarities and Subgroup
-    Variability.
+  title: 'Salivary Oxytocin Levels in Children With and Without Autism: Group Similarities and Subgroup Variability.'
   year: 2025
   pmid: '41095840'
   authors:
     - Yılmazer E
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 ryu-2023:
   id: ryu-2023
   type: journal
@@ -2962,21 +2723,16 @@ ryu-2023:
   pmid: '36831222'
   authors:
     - Ryu YC
-
 lee-2023:
   id: lee-2023
   type: journal
   title: >-
-    Adhesive Hydrogel Patch-Mediated Combination Drug Therapy Induces Regenerative Wound Healing
-    through Reconstruction of Regenerative Microenvironment.
+    Adhesive Hydrogel Patch-Mediated Combination Drug Therapy Induces Regenerative Wound Healing through Reconstruction
+    of Regenerative Microenvironment.
   year: 2023
   pmid: '36854308'
   authors:
     - Lee SH
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 khavinson-2004:
   id: khavinson-2004
   type: journal
@@ -2985,7 +2741,6 @@ khavinson-2004:
   pmid: '15455129'
   authors:
     - Khavinson VKh
-
 khavinson-2005:
   id: khavinson-2005
   type: journal
@@ -2994,21 +2749,14 @@ khavinson-2005:
   pmid: '15990728'
   authors:
     - Khavinson V
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 tournis-2026:
   id: tournis-2026
   type: journal
-  title: >-
-    Approach to the Patient: Management of bone fragility in patients with chronic
-    hypoparathyroidism.
+  title: 'Approach to the Patient: Management of bone fragility in patients with chronic hypoparathyroidism.'
   year: 2026
   pmid: '41968412'
   authors:
     - Tournis S
-
 ferrari-2026:
   id: ferrari-2026
   type: journal
@@ -3017,120 +2765,98 @@ ferrari-2026:
   pmid: '41841800'
   authors:
     - Ferrari S
-
 crooks-2026:
   id: crooks-2026
   type: journal
-  title: >-
-    Parathyroid Hormone in the Management of Pelvic Fragility Fractures: A Systematic Review and
-    Meta-Analysis.
+  title: 'Parathyroid Hormone in the Management of Pelvic Fragility Fractures: A Systematic Review and Meta-Analysis.'
   year: 2026
   pmid: '41682883'
   authors:
     - Crooks SA
-
 xue-2026:
   id: xue-2026
   type: journal
   title: >-
-    Nutritional activation of the Nrf2-Pth1r axis by pyrroloquinoline quinone enhances peak bone
-    mass and potentiates teriparatide in osteoporosis.
+    Nutritional activation of the Nrf2-Pth1r axis by pyrroloquinoline quinone enhances peak bone mass and potentiates
+    teriparatide in osteoporosis.
   year: 2026
   pmid: '41687747'
   authors:
     - Xue Q
-
 abe-2026:
   id: abe-2026
   type: journal
-  title: >-
-    Teriparatide enhances vertebral bone quality: Quantitative analysis using the VBQ score in
-    lumbar fusion patients.
+  title: 'Teriparatide enhances vertebral bone quality: Quantitative analysis using the VBQ score in lumbar fusion patients.'
   year: 2026
   pmid: '41717073'
   authors:
     - Abe T
-
 obara-2026:
   id: obara-2026
   type: journal
   title: >-
-    Effect of genetic polymorphisms of aldehyde dehydrogenase 2 on the efficacy of intermittent
-    parathyroid hormone treatment and bone mineral density: A retrospective multicenter study.
+    Effect of genetic polymorphisms of aldehyde dehydrogenase 2 on the efficacy of intermittent parathyroid hormone
+    treatment and bone mineral density: A retrospective multicenter study.
   year: 2026
   pmid: '41969601'
   authors:
     - Obara H
-
 morrison-2026:
   id: morrison-2026
   type: journal
   title: >-
-    Anabolic effect of parathyroid hormone (1-34) to prevent ovariectomy induced bone loss is
-    attenuated in Col1A1-cre floxed monocyte chemotactic protein 1 (MCP1, CCL2) mice.
+    Anabolic effect of parathyroid hormone (1-34) to prevent ovariectomy induced bone loss is attenuated in Col1A1-cre
+    floxed monocyte chemotactic protein 1 (MCP1, CCL2) mice.
   year: 2026
   pmid: '41985703'
   authors:
     - Morrison N
-
 gifre-2025:
   id: gifre-2025
   type: journal
-  title: >-
-    PTH Analog Therapy in CKD G4-G5D: Current Evidence and Potential Role of Abaloparatide in
-    Adynamic Bone Disease.
+  title: 'PTH Analog Therapy in CKD G4-G5D: Current Evidence and Potential Role of Abaloparatide in Adynamic Bone Disease.'
   year: 2025
   pmid: '41517382'
   authors:
     - Gifre L
-
 ruizlozano-2026:
   id: ruizlozano-2026
   type: journal
   title: >-
-    Can physical activity augment drug efficacy in PMO treatments - Insights from in-silico
-    simulations of PTH and denosumab treatments.
+    Can physical activity augment drug efficacy in PMO treatments - Insights from in-silico simulations of PTH and
+    denosumab treatments.
   year: 2026
   pmid: '41435934'
   authors:
     - Ruiz-Lozano R
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 brown-2023:
   id: brown-2023
   type: journal
   title: >-
-    Intravenous aviptadil and remdesivir for treatment of COVID-19-associated hypoxaemic respiratory
-    failure in the USA (TESICO): a randomised, placebo-controlled trial.
+    Intravenous aviptadil and remdesivir for treatment of COVID-19-associated hypoxaemic respiratory failure in the USA
+    (TESICO): a randomised, placebo-controlled trial.
   year: 2023
   pmid: '37348524'
   authors:
     - Brown SM
-
 udupa-2025:
   id: udupa-2025
   type: journal
-  title: >-
-    Aviptadil Therapy in Acute Respiratory Distress Syndrome Patients: A Systematic Review and
-    Meta-analysis.
+  title: 'Aviptadil Therapy in Acute Respiratory Distress Syndrome Patients: A Systematic Review and Meta-analysis.'
   year: 2025
   pmid: '41368449'
   authors:
     - Udupa AA
-
 boesing-2022:
   id: boesing-2022
   type: journal
   title: >-
-    Inhaled aviptadil for the possible treatment of COVID-19 in patients at high risk for ARDS:
-    study protocol for a randomized, placebo-controlled, and multicenter trial.
+    Inhaled aviptadil for the possible treatment of COVID-19 in patients at high risk for ARDS: study protocol for a
+    randomized, placebo-controlled, and multicenter trial.
   year: 2022
   pmid: '36127739'
   authors:
     - Boesing M
-
 mahmoudzadeh-2023:
   id: mahmoudzadeh-2023
   type: journal
@@ -3139,21 +2865,16 @@ mahmoudzadeh-2023:
   pmid: '37774815'
   authors:
     - Mahmoudzadeh K
-
 chen-2025:
   id: chen-2025
   type: journal
   title: >-
-    Investigation of vasoactive intestinal peptide expression and significance in a congenital
-    diaphragmatic hernia animal model.
+    Investigation of vasoactive intestinal peptide expression and significance in a congenital diaphragmatic hernia
+    animal model.
   year: 2025
   pmid: '41342973'
   authors:
     - Chen J
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 linkova-2011:
   id: linkova-2011
   type: journal
@@ -3162,18 +2883,14 @@ linkova-2011:
   pmid: '22803057'
   authors:
     - Linkova NS
-
 khavinson-2002:
   id: khavinson-2002
   type: journal
-  title: >-
-    Effects of short peptides on thymocyte blast transformation and signal transduction along the
-    sphingomyelin pathway.
+  title: Effects of short peptides on thymocyte blast transformation and signal transduction along the sphingomyelin pathway.
   year: 2002
   pmid: '12420072'
   authors:
     - Khavinson VKh
-
 khavinson-2014:
   id: khavinson-2014
   type: journal
@@ -3182,7 +2899,6 @@ khavinson-2014:
   pmid: '25826983'
   authors:
     - Khavinson VKh
-
 lezhava-2023:
   id: lezhava-2023
   type: journal
@@ -3191,8 +2907,7 @@ lezhava-2023:
   pmid: '37042594'
   authors:
     - Lezhava T
-
-  russian_journal_ref: "Bull Exp Biol Med 2023 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2023 (Russian-tradition; Khavinson lab)
 morozov-1997:
   id: morozov-1997
   type: journal
@@ -3201,7 +2916,6 @@ morozov-1997:
   pmid: '9637345'
   authors:
     - Morozov VG
-
 caputi-2019:
   id: caputi-2019
   type: journal
@@ -3210,7 +2924,6 @@ caputi-2019:
   pmid: '30791821'
   authors:
     - Caputi S
-
 khavinson-2020:
   id: khavinson-2020
   type: journal
@@ -3219,11 +2932,7 @@ khavinson-2020:
   pmid: '33237528'
   authors:
     - Khavinson VK
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
-  russian_journal_ref: "Bull Exp Biol Med 2020 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2020 (Russian-tradition; Khavinson lab)
 kozina-2007:
   id: kozina-2007
   type: journal
@@ -3232,71 +2941,60 @@ kozina-2007:
   pmid: '18239817'
   authors:
     - Kozina LS
-
-  russian_journal_ref: "Bull Exp Biol Med 2007 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2007 (Russian-tradition; Khavinson lab)
 anisimov-2004:
   id: anisimov-2004
   type: journal
-  title: >-
-    Elucidation of the effect of brain cortex tetrapeptide Cortagen on gene expression in mouse
-    heart by microarray.
+  title: Elucidation of the effect of brain cortex tetrapeptide Cortagen on gene expression in mouse heart by microarray.
   year: 2004
   pmid: '15159690'
   authors:
     - Anisimov SV
-
-  russian_journal_ref: "Adv Gerontol 2004 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Adv Gerontol 2004 (Russian-tradition; Khavinson lab)
 kuznik-2008:
   id: kuznik-2008
   type: journal
   title: >-
-    [Effects of epithalon and cortagene on immunity and hemostasis in neonatally hypophysectomized
-    chicken and old birds].
+    [Effects of epithalon and cortagene on immunity and hemostasis in neonatally hypophysectomized chicken and old
+    birds].
   year: 2008
   pmid: '19432169'
   authors:
     - Kuznik BI
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
-  russian_journal_ref: "Bull Exp Biol Med 2008 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2008 (Russian-tradition; Khavinson lab)
 kuznik-2020:
   id: kuznik-2020
   type: journal
   title: >-
-    [The influence of polypeptide liver complex and tetrapeptide KEDA on organism physiological
-    function in norm and age-related pathology.].
+    [The influence of polypeptide liver complex and tetrapeptide KEDA on organism physiological function in norm and
+    age-related pathology.].
   year: 2020
   pmid: '32362099'
   authors:
     - Kuznik BI
-
-  russian_journal_ref: "Bull Exp Biol Med 2020 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2020 (Russian-tradition; Khavinson lab)
 brodski-2001:
   id: brodski-2001
   type: journal
   title: >-
-    [Rhythm of protein synthesis in cultures of hepatocytes from rats of different ages. Norm and
-    effect of the peptide livagen].
+    [Rhythm of protein synthesis in cultures of hepatocytes from rats of different ages. Norm and effect of the peptide
+    livagen].
   year: 2001
   pmid: '15926314'
   authors:
     - Brodskiĭ VIa
-
-  russian_journal_ref: "Bull Exp Biol Med 2001 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2001 (Russian-tradition; Khavinson lab)
 timofeeva-2005:
   id: timofeeva-2005
   type: journal
   title: >-
-    [Effect of peptide Livagen on activity of digestive enzymes in gastrointestinal tract and
-    non-digestive organs in rats of different ages].
+    [Effect of peptide Livagen on activity of digestive enzymes in gastrointestinal tract and non-digestive organs in
+    rats of different ages].
   year: 2005
   pmid: '16075683'
   authors:
     - Timofeeva NM
-
-  russian_journal_ref: "Bull Exp Biol Med 2005 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2005 (Russian-tradition; Khavinson lab)
 khavinson-2001:
   id: khavinson-2001
   type: journal
@@ -3305,49 +3003,37 @@ khavinson-2001:
   pmid: '11713572'
   authors:
     - Khavinson VK
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 titova-2017:
   id: titova-2017
   type: journal
-  title: >-
-    [ANTIINFLAMMATORY AND REGENERATIVE EFFECT OF PEPTIDE THERAPY IN THE MODEL OF OBSTRUCTIVE LUNG
-    PATHOLOGY].
+  title: '[ANTIINFLAMMATORY AND REGENERATIVE EFFECT OF PEPTIDE THERAPY IN THE MODEL OF OBSTRUCTIVE LUNG PATHOLOGY].'
   year: 2017
   pmid: '30199201'
   authors:
     - Titova ON
-
-  russian_journal_ref: "Bull Exp Biol Med 2017 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2017 (Russian-tradition; Khavinson lab)
 kuzubova-2015:
   id: kuzubova-2015
   type: journal
   title: >-
-    Modulating Effect of Peptide Therapy on the Morphofunctional State of Bronchial Epithelium in
-    Rats with Obstructive Lung Pathology.
+    Modulating Effect of Peptide Therapy on the Morphofunctional State of Bronchial Epithelium in Rats with Obstructive
+    Lung Pathology.
   year: 2015
   pmid: '26468022'
   authors:
     - Kuzubova NA
-
-  russian_journal_ref: "Bull Exp Biol Med 2015 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2015 (Russian-tradition; Khavinson lab)
 zakutski-2006:
   id: zakutski-2006
   type: journal
   title: >-
-    [The tissue-specific effect of synthetic peptides-biologic regulators in organotypic tissues
-    culture in young and old rats].
+    [The tissue-specific effect of synthetic peptides-biologic regulators in organotypic tissues culture in young and
+    old rats].
   year: 2006
   pmid: '17152728'
   authors:
     - Zakutskiĭ AN
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
-  russian_journal_ref: "Bull Exp Biol Med 2006 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2006 (Russian-tradition; Khavinson lab)
 goncharova-2014:
   id: goncharova-2014
   type: journal
@@ -3356,8 +3042,7 @@ goncharova-2014:
   pmid: '25946840'
   authors:
     - Goncharova ND
-
-  russian_journal_ref: "Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)
 khavinson-2013:
   id: khavinson-2013
   type: journal
@@ -3366,20 +3051,16 @@ khavinson-2013:
   pmid: '23486591'
   authors:
     - Khavinson VKh
-
-  russian_journal_ref: "Bull Exp Biol Med 2013 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2013 (Russian-tradition; Khavinson lab)
 goncharova-2015:
   id: goncharova-2015
   type: journal
-  title: >-
-    [Correction of impaired glucose tolerance using tetrapeptide (Pancragen) in old female rhesus
-    monkeys].
+  title: '[Correction of impaired glucose tolerance using tetrapeptide (Pancragen) in old female rhesus monkeys].'
   year: 2015
   pmid: '28509500'
   authors:
     - Goncharova ND
-
-  russian_journal_ref: "Bull Exp Biol Med 2015 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2015 (Russian-tradition; Khavinson lab)
 khavinson-2012:
   id: khavinson-2012
   type: journal
@@ -3388,7 +3069,6 @@ khavinson-2012:
   pmid: '23734516'
   authors:
     - Khavinson VKh
-
 khavinson-2010:
   id: khavinson-2010
   type: journal
@@ -3397,22 +3077,15 @@ khavinson-2010:
   pmid: '21246099'
   authors:
     - Khavinson VKh
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 dzhokhadze-2012:
   id: dzhokhadze-2012
   type: journal
-  title: >-
-    [Deheterochromatinization of the chromatin in old age induced by oligopeptide bioregulator
-    (Lys-Glu-Asp-Pro)].
+  title: '[Deheterochromatinization of the chromatin in old age induced by oligopeptide bioregulator (Lys-Glu-Asp-Pro)].'
   year: 2012
   pmid: '23221144'
   authors:
     - Dzhokhadze TA
-
-  russian_journal_ref: "Bull Exp Biol Med 2012 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2012 (Russian-tradition; Khavinson lab)
 khavinson-2017:
   id: khavinson-2017
   type: journal
@@ -3421,132 +3094,91 @@ khavinson-2017:
   pmid: '28948547'
   authors:
     - Khavinson VK
-
-  russian_journal_ref: "Bull Exp Biol Med 2017 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2017 (Russian-tradition; Khavinson lab)
 kiladze-2009:
   id: kiladze-2009
   type: journal
-  title: >-
-    Microcalorimetric study of human blood lymphocytes culture at presence of copper, cadmium and
-    prostamax.
+  title: Microcalorimetric study of human blood lymphocytes culture at presence of copper, cadmium and prostamax.
   year: 2009
   pmid: '19359734'
   authors:
     - Kiladze M
-
-  russian_journal_ref: "Bull Exp Biol Med 2009 (Russian-tradition; Khavinson lab)"
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
+  russian_journal_ref: Bull Exp Biol Med 2009 (Russian-tradition; Khavinson lab)
 hervyakova-2014:
   id: hervyakova-2014
   type: journal
-  title: >-
-    [Molecular aspects of immunoprotective activity of peptides in spleen during the ageing
-    process].
+  title: '[Molecular aspects of immunoprotective activity of peptides in spleen during the ageing process].'
   year: 2014
   pmid: '28976144'
   authors:
     - Сhervyakova NA
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
-  russian_journal_ref: "Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)
 fedoreyeva-2011:
   id: fedoreyeva-2011
   type: journal
   title: >-
-    Penetration of short fluorescence-labeled peptides into the nucleus in HeLa cells and in vitro
-    specific interaction of the peptides with deoxyribooligonucleotides and DNA.
+    Penetration of short fluorescence-labeled peptides into the nucleus in HeLa cells and in vitro specific interaction
+    of the peptides with deoxyribooligonucleotides and DNA.
   year: 2011
   pmid: '22117547'
   authors:
     - Fedoreyeva LI
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
-  russian_journal_ref: "Bull Exp Biol Med 2011 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2011 (Russian-tradition; Khavinson lab)
 kozlov-2016:
   id: kozlov-2016
   type: journal
-  title: >-
-    [Molecular aspects of vasoprotective peptide KED activity during atherosclerosis and
-    restenosis].
+  title: '[Molecular aspects of vasoprotective peptide KED activity during atherosclerosis and restenosis].'
   year: 2016
   pmid: '28539025'
   authors:
     - Kozlov KL
-
-  russian_journal_ref: "Bull Exp Biol Med 2016 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2016 (Russian-tradition; Khavinson lab)
 kitachev-2014:
   id: kitachev-2014
   type: journal
   title: >-
-    [The efficacy of peptide bioregulators of vessels in lower limbs chronic arterial insufficiency
-    treatment in old and elderly people].
+    [The efficacy of peptide bioregulators of vessels in lower limbs chronic arterial insufficiency treatment in old and
+    elderly people].
   year: 2014
   pmid: '25051774'
   authors:
     - Kitachev KV
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
-  russian_journal_ref: "Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)
 avolio-2022:
   id: avolio-2022
   type: journal
-  title: >-
-    Peptides Regulating Proliferative Activity and Inflammatory Pathways in the Monocyte/Macrophage
-    THP-1 Cell Line.
+  title: Peptides Regulating Proliferative Activity and Inflammatory Pathways in the Monocyte/Macrophage THP-1 Cell Line.
   year: 2022
   pmid: '35408963'
   authors:
     - Avolio F
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 khavinson-2022:
   id: khavinson-2022
   type: journal
   title: >-
-    Senescence-Associated Secretory Phenotype of Cardiovascular System Cells and Inflammaging:
-    Perspectives of Peptide Regulation.
+    Senescence-Associated Secretory Phenotype of Cardiovascular System Cells and Inflammaging: Perspectives of Peptide
+    Regulation.
   year: 2022
   pmid: '36611900'
   authors:
     - Khavinson V
-
-  russian_journal_ref: "Bull Exp Biol Med 2022 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2022 (Russian-tradition; Khavinson lab)
 kuznik-2011:
   id: kuznik-2011
   type: journal
-  title: >-
-    [Heat shock proteins: aging changes, development thrombotic diseases and peptidergic regulation
-    of genes].
+  title: '[Heat shock proteins: aging changes, development thrombotic diseases and peptidergic regulation of genes].'
   year: 2011
   pmid: '22550861'
   authors:
     - Kuznik BI
-
 kuznik-2016:
   id: kuznik-2016
   type: journal
-  title: >-
-    [The JAM Family of Molecules and Their Role in the Regulation of Physiological and Pathological
-    Processes].
+  title: '[The JAM Family of Molecules and Their Role in the Regulation of Physiological and Pathological Processes].'
   year: 2016
   pmid: '29283236'
   authors:
     - Kuznik BI
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
 linkova-2023:
   id: linkova-2023
   type: journal
@@ -3555,23 +3187,16 @@ linkova-2023:
   pmid: '37176122'
   authors:
     - Linkova N
-
-  russian_journal_ref: "Bull Exp Biol Med 2023 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2023 (Russian-tradition; Khavinson lab)
 povorozniuk-2007:
   id: povorozniuk-2007
   type: journal
-  title: >-
-    [Effect of peptide regulators on the structural and functional status of bone tissue in ageing
-    rats].
+  title: '[Effect of peptide regulators on the structural and functional status of bone tissue in ageing rats].'
   year: 2007
   pmid: '18306703'
   authors:
     - Povorozniuk VV
-
-
-# === Appended by gen:plate on 2026-04-27 ===
-
-  russian_journal_ref: "Bull Exp Biol Med 2007 (Russian-tradition; Khavinson lab)"
+  russian_journal_ref: Bull Exp Biol Med 2007 (Russian-tradition; Khavinson lab)
 riadnova-2001:
   id: riadnova-2001
   type: journal
@@ -3580,18 +3205,14 @@ riadnova-2001:
   pmid: '11450441'
   authors:
     - Riadnova IIu
-
 chalisova-2000:
   id: chalisova-2000
   type: journal
-  title: >-
-    [Effect of cytomedins on development of organotypic culture of various tissues from the internal
-    organs of rats].
+  title: '[Effect of cytomedins on development of organotypic culture of various tissues from the internal organs of rats].'
   year: 2000
   pmid: '11213728'
   authors:
     - Chalisova NI
-
 ilina-2024:
   id: ilina-2024
   type: journal
@@ -3600,5 +3221,236 @@ ilina-2024:
   pmid: '38944767'
   authors:
     - Ilina AR
-
-  russian_journal_ref: "Adv Gerontol 2024 (Russian-only; Khavinson lab review)"
+  russian_journal_ref: Adv Gerontol 2024 (Russian-only; Khavinson lab review)
+monaselidze-2011:
+  id: monaselidze-2011
+  type: journal
+  authors:
+    - Monaselidze JR
+    - Khavinson VKh
+    - Gorgoshidze MZ
+  title: Effect of the peptide bronchogen (Ala-Asp-Glu-Leu) on DNA thermostability
+  journal: Bull Exp Biol Med
+  year: 2011
+  pmid: '21240358'
+  russian_journal_ref: Bull Exp Biol Med 2011 (Russian-tradition; Khavinson lab)
+myakisheva-2023:
+  id: myakisheva-2023
+  type: journal
+  authors:
+    - Myakisheva SN
+    - Linkova NS
+    - Diatlova AS
+  title: >-
+    The influence of peptides on the chondrogenic differentiation of human mesenchymal stem cells during replicative
+    aging
+  journal: Adv Gerontol
+  year: 2023
+  pmid: '37782646'
+  russian_journal_ref: Adv Gerontol 2023 (Russian-only; Khavinson lab)
+myakisheva-2023-chondrocytes:
+  id: myakisheva-2023-chondrocytes
+  type: journal
+  authors:
+    - Myakisheva SN
+    - Linkova NS
+    - Kozhevnikova EO
+  title: Peptides prevent the forming of secretory phenotype of chondrocytes associated with the aging
+  journal: Adv Gerontol
+  year: 2023
+  pmid: '37356100'
+  russian_journal_ref: Adv Gerontol 2023 (Russian-only; Khavinson lab)
+khavinson-2002-livagen:
+  id: khavinson-2002-livagen
+  type: journal
+  authors:
+    - Khavinson VKh
+    - Lezhava TA
+    - Monaselidze JG
+    - Dzhokhadze TA
+  title: Effects of Livagen peptide on chromatin activation in lymphocytes from old people
+  journal: Bull Exp Biol Med
+  year: 2002
+  pmid: '12533768'
+  russian_journal_ref: Bull Exp Biol Med 2002 (Russian-tradition; Khavinson lab)
+khavinson-2007-pancragen:
+  id: khavinson-2007-pancragen
+  type: journal
+  authors:
+    - Khavinson VKh
+    - Gavrisheva NA
+    - Malinin VV
+  title: >-
+    Effect of pancragen on blood glucose level, capillary permeability and adhesion in rats with experimental diabetes
+    mellitus
+  journal: Bull Exp Biol Med
+  year: 2007
+  pmid: '18642713'
+  russian_journal_ref: Bull Exp Biol Med 2007 (Russian-tradition; Khavinson lab)
+korkushko-2011:
+  id: korkushko-2011
+  type: journal
+  authors:
+    - Korkushko OV
+    - Khavinson VKh
+    - Shatilo VB
+  title: Prospects of using pancragen for correction of metabolic disorders in elderly people
+  journal: Bull Exp Biol Med
+  year: 2011
+  pmid: '22448364'
+  russian_journal_ref: Bull Exp Biol Med 2011 (Russian-tradition; Khavinson lab)
+goncharova-2004-pancreas:
+  id: goncharova-2004-pancreas
+  type: journal
+  authors:
+    - Goncharova ND
+    - Vengerin AA
+    - Khavinson VKh
+    - Lapin BA
+  title: Peptide correction of age-related hormonal dysfunction of the pancreas in monkeys
+  journal: Bull Exp Biol Med
+  year: 2004
+  pmid: '15514731'
+  russian_journal_ref: Bull Exp Biol Med 2004 (Russian-tradition; Khavinson lab)
+khavinson-2014-serotonin:
+  id: khavinson-2014-serotonin
+  type: journal
+  authors:
+    - Khavinson VKh
+    - Linkova NS
+    - Tarnovskaya SI
+  title: Short peptides stimulate serotonin expression in cells of brain cortex
+  journal: Bull Exp Biol Med
+  year: 2014
+  pmid: '24909721'
+  russian_journal_ref: Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)
+kraskovskaya-2017:
+  id: kraskovskaya-2017
+  type: journal
+  authors:
+    - Kraskovskaya NA
+    - Kukanova EO
+    - Linkova NS
+  title: Tripeptides Restore the Number of Neuronal Spines under Conditions of In Vitro Modeled Alzheimer's Disease
+  journal: Bull Exp Biol Med
+  year: 2017
+  pmid: '28853087'
+  russian_journal_ref: Bull Exp Biol Med 2017 (Russian-tradition; Khavinson lab)
+khavinson-2021-ked:
+  id: khavinson-2021-ked
+  type: journal
+  authors:
+    - Khavinson VK
+    - Linkova NS
+    - Umnov RS
+  title: 'Peptide KED: Molecular-Genetic Aspects of Neurogenesis Regulation in Alzheimer''s Disease'
+  journal: Bull Exp Biol Med
+  year: 2021
+  pmid: '34173097'
+  russian_journal_ref: Bull Exp Biol Med 2021 (Russian-tradition; Khavinson lab)
+linkova-2011-thymus:
+  id: linkova-2011-thymus
+  type: journal
+  authors:
+    - Linkova NS
+    - Polyakova VO
+    - Trofimov AV
+  title: Peptidergic regulation of thymocyte differentiation, proliferation, and apoptosis during aging of the thymus
+  journal: Bull Exp Biol Med
+  year: 2011
+  pmid: '22238759'
+  russian_journal_ref: Bull Exp Biol Med 2011 (Russian-tradition; Khavinson lab)
+sevostianova-2013:
+  id: sevostianova-2013
+  type: journal
+  authors:
+    - Sevostianova NN
+    - Linkova NS
+    - Polyakova VO
+  title: Immunomodulating effects of Vilon and its analogue in the culture of human and animal thymus cells
+  journal: Bull Exp Biol Med
+  year: 2013
+  pmid: '23486604'
+  russian_journal_ref: Bull Exp Biol Med 2013 (Russian-tradition; Khavinson lab)
+goeddel-1979:
+  id: goeddel-1979
+  type: journal
+  authors:
+    - Goeddel DV
+    - Heyneker HL
+    - Hozumi T
+    - Arentzen R
+    - Itakura K
+  title: Direct expression in Escherichia coli of a DNA sequence coding for human growth hormone.
+  journal: Nature
+  year: 1979
+  citation_string: 281(5732):544-548
+  pmid: '386136'
+  doi: 10.1038/281544a0
+  note: >-
+    Foundational paper — first recombinant expression of human growth hormone in E. coli, basis for all subsequent
+    rhGH/somatropin therapeutics.
+ho-2007-ghd-consensus:
+  id: ho-2007-ghd-consensus
+  type: journal
+  authors:
+    - Ho KK
+    - 2007 GH Deficiency Consensus Workshop Participants
+  title: >-
+    Consensus guidelines for the diagnosis and treatment of adults with GH deficiency II: a statement of the GH Research
+    Society in association with the European Society for Pediatric Endocrinology, Lawson Wilkins Society, European
+    Society of Endocrinology, Japan Endocrine Society, and Endocrine Society of Australia.
+  journal: Eur J Endocrinol
+  year: 2007
+  citation_string: 157(6):695-700
+  pmid: '18057375'
+  doi: 10.1530/EJE-07-0631
+  note: Multi-society consensus on adult GHD diagnosis + somatropin replacement protocol.
+rowlinson-2008-ghr:
+  id: rowlinson-2008-ghr
+  type: journal
+  authors:
+    - Rowlinson SW
+    - Yoshizato H
+    - Barclay JL
+    - Brooks AJ
+    - Behncken SN
+  title: An agonist-induced conformational change in the growth hormone receptor determines the choice of signalling pathway.
+  journal: Nat Cell Biol
+  year: 2008
+  citation_string: 10(6):740-747
+  pmid: '18488018'
+  doi: 10.1038/ncb1737
+  note: GHR conformational mechanism for JAK2/STAT5 vs ERK pathway selection.
+leroith-2008:
+  id: leroith-2008
+  type: journal
+  authors:
+    - LeRoith D
+  title: 'Clinical relevance of systemic and local IGF-I: lessons from animal models.'
+  journal: Pediatr Endocrinol Rev
+  year: 2008
+  citation_string: 5 Suppl 2:739-743
+  pmid: '18317445'
+  note: Updated somatomedin hypothesis — endocrine, autocrine, paracrine IGF-1 actions downstream of GH.
+mameli-2023-rhgh:
+  id: mameli-2023-rhgh
+  type: journal
+  authors:
+    - Mameli C
+    - Orso M
+    - Calcaterra V
+    - Wasniewska MG
+    - Aversa T
+  title: >-
+    Efficacy, safety, quality of life, adherence and cost-effectiveness of long-acting growth hormone replacement
+    therapy compared to daily growth hormone in children with growth hormone deficiency: A systematic review and
+    meta-analysis.
+  journal: Pharmacol Res
+  year: 2023
+  citation_string: '193:106805'
+  pmid: '37236413'
+  doi: 10.1016/j.phrs.2023.106805
+  note: >-
+    Recent systematic review + meta-analysis — daily somatropin remains efficacious; long-acting non-inferior on
+    adherence.

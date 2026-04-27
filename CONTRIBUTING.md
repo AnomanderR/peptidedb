@@ -13,6 +13,8 @@ Thanks for considering a contribution. PeptidesDB grows when researchers add pep
 
 ## Adding a new peptide
 
+> Fastest path: run `bun run gen:plate "<peptide name>"`. The pipeline searches PubMed, drafts the YAML against the schema, appends new citations to `refs.yaml`, and writes `content/peptides/<slug>.yaml` at `maturity: auto-drafted`. See [ATLAS.md](./ATLAS.md) for the full flow including audits and editorial review. The manual steps below are still valid if you'd rather hand-author.
+
 1. Pick a `slug` — lowercase, hyphenated, unique. e.g. `bpc-157`, `tirzepatide`, `ghk-cu`.
 2. Copy `content/peptides/_template.yaml` to `content/peptides/<slug>.yaml`. (If the template is absent, model your file on `content/peptides/tesamorelin.yaml`.)
 3. Fill in:

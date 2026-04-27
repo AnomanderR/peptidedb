@@ -20,41 +20,48 @@ approval_year: 1985
 last_reviewed: '2026-04-27'
 summary:
   value: >-
-    Recombinant 191-amino-acid human growth hormone identical in sequence to endogenous pituitary
-    hGH. FDA-approved (1985) for growth hormone deficiency, Turner syndrome, chronic renal
-    insufficiency, Prader-Willi syndrome, AIDS wasting, idiopathic short stature, and other
-    indications. Binds GH receptors systemically to promote linear growth, protein synthesis,
-    lipolysis, and IGF-1 production. Daily subcutaneous administration replaces or supplements
+    Recombinant 191-amino-acid human growth hormone identical in sequence to endogenous pituitary hGH. FDA-approved
+    (1985) for growth hormone deficiency, Turner syndrome, chronic renal insufficiency, Prader-Willi syndrome, AIDS
+    wasting, idiopathic short stature, and other indications. Binds GH receptors systemically to promote linear growth,
+    protein synthesis, lipolysis, and IGF-1 production. Daily subcutaneous administration replaces or supplements
     deficient endogenous GH.
-  cite: []
+  cite:
+    - goeddel-1979
+    - ho-2007-ghd-consensus
 hero_stats:
   - value: 0.024–0.034 mg/kg/day
     label: Pediatric GHD dose
-    cite: []
+    cite:
+      - ho-2007-ghd-consensus
   - value: 2–4 hours
     label: Plasma half-life
-    cite: []
+    cite:
+      - mameli-2023-rhgh
   - value: 191 AA
     label: Sequence length
-    cite: []
+    cite:
+      - goeddel-1979
 hero_route:
   value: SQ · Daily · Evening preferred
-  cite: []
+  cite:
+    - ho-2007-ghd-consensus
 mechanism:
   primary_target:
     value: Growth hormone receptor (GHR) — JAK2/STAT5 pathway
-    cite: []
+    cite:
+      - rowlinson-2008-ghr
   pathway:
     value: GHR activation → JAK2/STAT5 → liver IGF-1 synthesis + direct metabolic effects
-    cite: []
+    cite:
+      - rowlinson-2008-ghr
   downstream_effect:
-    value: >-
-      Linear growth, lipolysis, protein synthesis, nitrogen retention, carbohydrate metabolism
-      modulation
-    cite: []
+    value: Linear growth, lipolysis, protein synthesis, nitrogen retention, carbohydrate metabolism modulation
+    cite:
+      - leroith-2008
   origin:
     value: Recombinant DNA technology — 191 AA, identical to pituitary hGH, no methionyl residue
-    cite: []
+    cite:
+      - goeddel-1979
   feedback_intact:
     value: No — exogenous GH bypasses hypothalamic-pituitary axis, suppresses endogenous pulsatility
     cite: []
@@ -178,9 +185,7 @@ fat_loss:
         cite: []
     - parameter: Clinical context
       value:
-        value: >-
-          FDA-approved for AIDS wasting (cachexia). Off-label use for body recomposition lacks
-          long-term safety data.
+        value: FDA-approved for AIDS wasting (cachexia). Off-label use for body recomposition lacks long-term safety data.
         cite: []
 side_effects:
   rows:
@@ -201,9 +206,7 @@ side_effects:
       severity: moderate
     - parameter: Intracranial hypertension
       value:
-        value: >-
-          Benign intracranial hypertension (pseudotumor cerebri) — headache, visual changes,
-          papilledema
+        value: Benign intracranial hypertension (pseudotumor cerebri) — headache, visual changes, papilledema
         cite: []
       severity: severe
     - parameter: Slipped capital femoral epiphysis
@@ -223,16 +226,12 @@ side_effects:
       severity: moderate
     - parameter: Cancer risk
       value:
-        value: >-
-          Contraindicated in active malignancy. Theoretical risk in cancer survivors
-          (controversial).
+        value: Contraindicated in active malignancy. Theoretical risk in cancer survivors (controversial).
         cite: []
       severity: severe
     - parameter: Antibody formation
       value:
-        value: >-
-          Rare (<2%), typically non-neutralizing. Loss of efficacy if neutralizing antibodies
-          develop.
+        value: Rare (<2%), typically non-neutralizing. Loss of efficacy if neutralizing antibodies develop.
         cite: []
       severity: mild
     - parameter: Pancreatitis
@@ -246,9 +245,7 @@ side_effects:
         cite: []
       severity: mild
   contraindications_absolute:
-    - value: >-
-        Active malignancy or history of cancer (especially childhood cancer survivors with risk
-        factors)
+    - value: Active malignancy or history of cancer (especially childhood cancer survivors with risk factors)
       cite: []
     - value: Acute critical illness (post-cardiac surgery, trauma, acute respiratory failure)
       cite: []
@@ -273,35 +270,31 @@ administration:
   steps:
     - title: Reconstitution (if lyophilized)
       body: >-
-        Add diluent (sterile water or bacteriostatic water per manufacturer) to vial. Swirl gently —
-        do not shake. Solution should be clear, colorless. Concentration varies by brand (e.g., 5 mg
-        or 10 mg per vial).
+        Add diluent (sterile water or bacteriostatic water per manufacturer) to vial. Swirl gently — do not shake.
+        Solution should be clear, colorless. Concentration varies by brand (e.g., 5 mg or 10 mg per vial).
       cite: []
     - title: Injection site
       body: >-
-        Subcutaneous — rotate sites: abdomen, thigh, buttocks, upper arm. Avoid same site within 1
-        cm for 2 weeks to prevent lipodystrophy.
+        Subcutaneous — rotate sites: abdomen, thigh, buttocks, upper arm. Avoid same site within 1 cm for 2 weeks to
+        prevent lipodystrophy.
       cite: []
     - title: Timing
       body: >-
-        Once daily, evening preferred (6–8 PM or pre-sleep). Mimics physiological nocturnal GH
-        secretion. Consistency is critical.
+        Once daily, evening preferred (6–8 PM or pre-sleep). Mimics physiological nocturnal GH secretion. Consistency is
+        critical.
       cite: []
     - title: Storage
       body: >-
-        Unreconstituted: refrigerate 2–8 °C, protect from light. Reconstituted: refrigerate, use
-        within 14–28 days (brand-specific). Do not freeze.
+        Unreconstituted: refrigerate 2–8 °C, protect from light. Reconstituted: refrigerate, use within 14–28 days
+        (brand-specific). Do not freeze.
       cite: []
     - title: Needle
-      body: >-
-        27–31G, 4–8 mm insulin syringe or pen device. Pinch skin, 45–90° angle depending on
-        subcutaneous thickness.
+      body: 27–31G, 4–8 mm insulin syringe or pen device. Pinch skin, 45–90° angle depending on subcutaneous thickness.
       cite: []
     - title: Monitoring
       body: >-
-        Baseline and periodic: IGF-1 (target age/sex-adjusted midrange), fasting glucose, HbA1c,
-        thyroid function (TSH, free T4), bone age (children), lipid panel. Fundoscopy if
-        headache/visual symptoms.
+        Baseline and periodic: IGF-1 (target age/sex-adjusted midrange), fasting glucose, HbA1c, thyroid function (TSH,
+        free T4), bone age (children), lipid panel. Fundoscopy if headache/visual symptoms.
       cite: []
 synergy:
   stacks:
@@ -309,11 +302,10 @@ synergy:
       partner_label: Ipamorelin
       synergy: moderate
       rationale: >-
-        Ipamorelin (GHRP) stimulates endogenous GH release, which is redundant when exogenous rhGH
-        is administered. However, ipamorelin may still amplify pulsatility of remaining endogenous
-        secretion in partial GHD or during GH dose titration. Not typically combined in standard
-        clinical practice; more common in experimental or off-label protocols. Limited evidence for
-        additive benefit.
+        Ipamorelin (GHRP) stimulates endogenous GH release, which is redundant when exogenous rhGH is administered.
+        However, ipamorelin may still amplify pulsatility of remaining endogenous secretion in partial GHD or during GH
+        dose titration. Not typically combined in standard clinical practice; more common in experimental or off-label
+        protocols. Limited evidence for additive benefit.
       protocol:
         HGH 191AA: Standard dose per indication
         Ipamorelin: 100–200 mcg SQ · morning (if used)
@@ -324,10 +316,9 @@ synergy:
       partner_label: Tesamorelin
       synergy: weak
       rationale: >-
-        Tesamorelin (GHRH analogue) stimulates endogenous GH secretion, which is unnecessary when
-        exogenous rhGH is already provided. Combining both offers no mechanistic advantage and
-        increases cost, side effects, and IGF-1 elevation risk. Not recommended in clinical
-        practice.
+        Tesamorelin (GHRH analogue) stimulates endogenous GH secretion, which is unnecessary when exogenous rhGH is
+        already provided. Combining both offers no mechanistic advantage and increases cost, side effects, and IGF-1
+        elevation risk. Not recommended in clinical practice.
       protocol:
         Note: Combination not recommended — choose one GH modality
       primary_benefit: None — redundant mechanisms
@@ -336,59 +327,55 @@ description_md: >-
   ## Overview
 
 
-  HGH 191AA (somatropin) is the recombinant form of human growth hormone, synthesized via
-  recombinant DNA technology to match the 191-amino-acid sequence of endogenous pituitary GH. First
-  approved by the FDA in 1985, it has become the standard treatment for growth hormone deficiency
-  (GHD) in children and adults, as well as multiple other indications including Turner syndrome,
-  chronic renal insufficiency, Prader-Willi syndrome, idiopathic short stature, and AIDS wasting.
+  HGH 191AA (somatropin) is the recombinant form of human growth hormone, synthesized via recombinant DNA technology to
+  match the 191-amino-acid sequence of endogenous pituitary GH. First approved by the FDA in 1985, it has become the
+  standard treatment for growth hormone deficiency (GHD) in children and adults, as well as multiple other indications
+  including Turner syndrome, chronic renal insufficiency, Prader-Willi syndrome, idiopathic short stature, and AIDS
+  wasting.
 
 
   ## Clinical Context
 
 
-  In children, GH therapy promotes linear growth by stimulating epiphyseal plate chondrocytes,
-  increasing IGF-1 synthesis, and enhancing protein anabolism. In adults, GH replacement improves
-  body composition (reducing fat mass, increasing lean mass), bone density, exercise capacity, and
-  quality of life. The hormone exerts both direct metabolic effects (lipolysis, anti-insulin
-  actions) and indirect effects via hepatic IGF-1 production.
+  In children, GH therapy promotes linear growth by stimulating epiphyseal plate chondrocytes, increasing IGF-1
+  synthesis, and enhancing protein anabolism. In adults, GH replacement improves body composition (reducing fat mass,
+  increasing lean mass), bone density, exercise capacity, and quality of life. The hormone exerts both direct metabolic
+  effects (lipolysis, anti-insulin actions) and indirect effects via hepatic IGF-1 production.
 
 
   ## Evidence Base
 
 
-  Decades of randomized controlled trials and real-world data support GH therapy efficacy and safety
-  in FDA-approved populations. Long-term registries (e.g., KIGS, GeNeSIS) track growth outcomes,
-  safety signals, and rare adverse events. Post-marketing surveillance continues to refine
-  risk-benefit understanding, particularly regarding cancer risk in childhood cancer survivors
-  (ongoing debate).
+  Decades of randomized controlled trials and real-world data support GH therapy efficacy and safety in FDA-approved
+  populations. Long-term registries (e.g., KIGS, GeNeSIS) track growth outcomes, safety signals, and rare adverse
+  events. Post-marketing surveillance continues to refine risk-benefit understanding, particularly regarding cancer risk
+  in childhood cancer survivors (ongoing debate).
 
 
   ## Key Considerations
 
 
-  - **Diagnosis Confirmation**: GH therapy requires biochemical confirmation of GHD via stimulation
-  testing (insulin tolerance test, glucagon test, etc.) or clear syndromic diagnosis (Turner,
-  Prader-Willi).
+  - **Diagnosis Confirmation**: GH therapy requires biochemical confirmation of GHD via stimulation testing (insulin
+  tolerance test, glucagon test, etc.) or clear syndromic diagnosis (Turner, Prader-Willi).
 
-  - **IGF-1 Monitoring**: Dose titration targets age- and sex-adjusted IGF-1 midrange.
-  Supraphysiological IGF-1 increases side effect risk.
+  - **IGF-1 Monitoring**: Dose titration targets age- and sex-adjusted IGF-1 midrange. Supraphysiological IGF-1
+  increases side effect risk.
 
-  - **Glucose Surveillance**: GH opposes insulin action; monitor fasting glucose and HbA1c,
-  especially in high-dose regimens (AIDS wasting).
+  - **Glucose Surveillance**: GH opposes insulin action; monitor fasting glucose and HbA1c, especially in high-dose
+  regimens (AIDS wasting).
 
-  - **Thyroid Axis**: GH may unmask central hypothyroidism; check thyroid function before and during
-  therapy.
+  - **Thyroid Axis**: GH may unmask central hypothyroidism; check thyroid function before and during therapy.
 
-  - **Epiphyseal Closure**: In children, treatment continues until growth plates fuse (bone age ~14
-  years girls, ~16 years boys).
+  - **Epiphyseal Closure**: In children, treatment continues until growth plates fuse (bone age ~14 years girls, ~16
+  years boys).
 
 
   ## Off-Label Use
 
 
-  rhGH is used off-label for anti-aging, body recomposition, and athletic performance enhancement.
-  These uses lack FDA approval and long-term safety data. Ethical, legal, and medical professional
-  guidelines strongly discourage such use outside of diagnosed GHD or other approved indications.
+  rhGH is used off-label for anti-aging, body recomposition, and athletic performance enhancement. These uses lack FDA
+  approval and long-term safety data. Ethical, legal, and medical professional guidelines strongly discourage such use
+  outside of diagnosed GHD or other approved indications.
 maturity: human-reviewed
 contributors:
   - peptidesdb-core

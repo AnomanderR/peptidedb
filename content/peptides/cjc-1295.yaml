@@ -1,166 +1,179 @@
-# =========================================================
-# CJC-1295 (no DAC) — short-acting GHRH analogue
-# Reviewed: 2026-04-25
-# =========================================================
 schema_version: 1
 slug: cjc-1295
 name: CJC-1295 (no DAC)
 peptide_class: GHRH Analogue (modified GRF 1-29)
 classification: Short-acting GHRH · No DAC variant
-categories: [gh-axis, ghrh, short-acting]
-aliases: ["CJC-1295 without DAC", "Mod GRF 1-29", "CJC-1295 no DAC"]
+categories:
+  - gh-axis
+  - ghrh
+  - short-acting
+aliases:
+  - CJC-1295 without DAC
+  - Mod GRF 1-29
+  - CJC-1295 no DAC
 color: blue
 evidence_level: phase-1
 fda_approved: false
-last_reviewed: "2026-04-25"
+last_reviewed: '2026-04-25'
 maturity: human-reviewed
-contributors: [peptidesdb-core]
-
+contributors:
+  - peptidesdb-core
 summary: >-
-  29-amino-acid GHRH analogue based on the active N-terminal fragment of human
-  GHRH (GRF 1-29) with four amino-acid substitutions for stability against
-  enzymatic degradation. Unlike CJC-1295 with DAC (Drug Affinity Complex),
-  the no-DAC variant lacks the maleimide that binds serum albumin, giving it
-  a short pulsatile half-life (~30 min) similar to native GHRH. Pairs naturally
-  with selective GHRPs like ipamorelin for dual-axis GH stimulation.
-
+  29-amino-acid GHRH analogue based on the active N-terminal fragment of human GHRH (GRF 1-29) with
+  four amino-acid substitutions for stability against enzymatic degradation. Unlike CJC-1295 with
+  DAC (Drug Affinity Complex), the no-DAC variant lacks the maleimide that binds serum albumin,
+  giving it a short pulsatile half-life (~30 min) similar to native GHRH. Pairs naturally with
+  selective GHRPs like ipamorelin for dual-axis GH stimulation.
 hero_stats:
-  - value: "100 mcg"
-    label: "Per dose"
-    cite: [teichman-2006]
-  - value: "~30 min"
-    label: "Half-life"
-    cite: [ionescu-2006]
-  - value: "Phase 1"
-    label: "Evidence level"
-    cite: [teichman-2006, sigalos-2018]
-hero_route: "SQ · Pre-sleep · 1–2×/day"
-
+  - value: 100 mcg
+    label: Per dose
+    cite: []
+  - value: ~30 min
+    label: Half-life
+    cite:
+      - ionescu-2006
+  - value: Phase 1
+    label: Evidence level
+    cite:
+      - teichman-2006
+      - sigalos-2018
+hero_route: SQ · Pre-sleep · 1–2×/day
 mechanism:
   primary_target:
-    value: "Pituitary GHRH receptor"
-    cite: [teichman-2006]
+    value: Pituitary GHRH receptor
+    cite:
+      - teichman-2006
   pathway:
-    value: "GHRH-R → Gαs → cAMP → PKA → GH vesicle exocytosis"
-    cite: [teichman-2006]
+    value: GHRH-R → Gαs → cAMP → PKA → GH vesicle exocytosis
+    cite: []
   downstream_effect:
-    value: "Pulsatile GH release matching physiological pattern; subsequent IGF-1 elevation"
-    cite: [ionescu-2006]
+    value: Pulsatile GH release matching physiological pattern; subsequent IGF-1 elevation
+    cite:
+      - ionescu-2006
   feedback_intact:
-    value: "Yes — short pulse preserves somatostatin negative feedback"
+    value: Yes — short pulse preserves somatostatin negative feedback
     badge: green
-    cite: [ionescu-2006]
+    cite:
+      - ionescu-2006
   origin:
-    value: "Modified human GRF 1-29 with four substitutions (D-Ala²/Gln⁸/Ala¹⁵/Leu²⁷) for protease resistance"
-    cite: [teichman-2006]
+    value: >-
+      Modified human GRF 1-29 with four substitutions (D-Ala²/Gln⁸/Ala¹⁵/Leu²⁷) for protease
+      resistance
+    cite: []
   antibody_development:
-    value: "Not reported in short-term studies"
+    value: Not reported in short-term studies
     badge: green
   diagram:
-    - { kind: node, text: "Anterior Pituitary" }
-    - { kind: arrow, text: "↓ CJC-1295 (no DAC) binds GHRH-R" }
-    - { kind: node, text: "Gαs → cAMP → PKA" }
-    - { kind: arrow, text: "↓ Pulsatile GH release" }
-    - { kind: node, text: "Liver" }
-    - { kind: arrow, text: "↓ IGF-1 synthesis" }
-    - { kind: outcome, text: "Recovery / Body Composition" }
-
+    - kind: node
+      text: Anterior Pituitary
+    - kind: arrow
+      text: ↓ CJC-1295 (no DAC) binds GHRH-R
+    - kind: node
+      text: Gαs → cAMP → PKA
+    - kind: arrow
+      text: ↓ Pulsatile GH release
+    - kind: node
+      text: Liver
+    - kind: arrow
+      text: ↓ IGF-1 synthesis
+    - kind: outcome
+      text: Recovery / Body Composition
 dosage:
   rows:
-    - parameter: "Standard dose"
+    - parameter: Standard dose
       value:
-        value: "100 mcg per injection"
-        cite: [teichman-2006]
-      notes: "Often paired with ipamorelin in same syringe."
-    - parameter: "Frequency"
-      value: "1–2× daily (pre-sleep ± morning)"
-    - parameter: "Lower / starter dose"
-      value: "50 mcg per dose"
-    - parameter: "Evidence basis"
+        value: 100 mcg per injection
+        cite: []
+      notes: Often paired with ipamorelin in same syringe.
+    - parameter: Frequency
+      value: 1–2× daily (pre-sleep ± morning)
+    - parameter: Lower / starter dose
+      value: 50 mcg per dose
+    - parameter: Evidence basis
       value:
-        value: "Phase 1 (CJC-1295 with DAC); analog data"
+        value: Phase 1 (CJC-1295 with DAC); analog data
         badge: yellow
-        cite: [teichman-2006, ionescu-2006]
-      notes: "No-DAC variant is less studied directly; PK extrapolated from native GHRH."
-    - parameter: "Duration"
-      value: "8–12 weeks on / 4 off (anecdotal)"
-    - parameter: "Reconstitution"
-      value: "Bacteriostatic water"
-    - parameter: "Timing"
-      value: "Pre-sleep + fasted preferred"
-    - parameter: "Half-life"
+        cite:
+          - teichman-2006
+          - ionescu-2006
+      notes: No-DAC variant is less studied directly; PK extrapolated from native GHRH.
+    - parameter: Duration
+      value: 8–12 weeks on / 4 off (anecdotal)
+    - parameter: Reconstitution
+      value: Bacteriostatic water
+    - parameter: Timing
+      value: Pre-sleep + fasted preferred
+    - parameter: Half-life
       value:
-        value: "~30 min"
-        cite: [ionescu-2006]
-      notes: "Short pulse vs CJC-1295-DAC (~8 days). Choose no-DAC for pulsatile, DAC for sustained."
-
+        value: ~30 min
+        cite:
+          - ionescu-2006
+      notes: Short pulse vs CJC-1295-DAC (~8 days). Choose no-DAC for pulsatile, DAC for sustained.
 side_effects:
   rows:
-    - parameter: "Injection site reaction"
-      value: "Erythema, mild pruritus"
+    - parameter: Injection site reaction
+      value: Erythema, mild pruritus
       severity: mild
-    - parameter: "Flushing / headache"
-      value: "Common transient effect"
+    - parameter: Flushing / headache
+      value: Common transient effect
       severity: mild
-    - parameter: "Cortisol elevation"
-      value: "Minimal at standard doses"
+    - parameter: Cortisol elevation
+      value: Minimal at standard doses
       severity: mild
-    - parameter: "Prolactin elevation"
-      value: "Minimal"
+    - parameter: Prolactin elevation
+      value: Minimal
       severity: mild
-    - parameter: "Glucose intolerance"
+    - parameter: Glucose intolerance
       value:
-        value: "Possible at high cumulative doses"
+        value: Possible at high cumulative doses
         badge: yellow
       severity: moderate
-    - parameter: "IGF-1 elevation"
-      value: "Dose-dependent; monitor with chronic use"
+    - parameter: IGF-1 elevation
+      value: Dose-dependent; monitor with chronic use
       severity: moderate
-    - parameter: "Cancer risk"
+    - parameter: Cancer risk
       value:
-        value: "Contraindicated in active malignancy (GH/IGF-1 axis)"
+        value: Contraindicated in active malignancy (GH/IGF-1 axis)
         badge: red
       severity: severe
-    - parameter: "Pregnancy / OB"
+    - parameter: Pregnancy / OB
       value:
-        value: "Avoid"
+        value: Avoid
         badge: red
       severity: severe
   contraindications_absolute:
-    - "Active malignancy or cancer history"
-    - "Pregnancy / breastfeeding"
-    - "Disrupted hypothalamic-pituitary axis"
+    - Active malignancy or cancer history
+    - Pregnancy / breastfeeding
+    - Disrupted hypothalamic-pituitary axis
   contraindications_relative:
-    - "Untreated diabetes"
-    - "Severe insulin resistance"
-
+    - Untreated diabetes
+    - Severe insulin resistance
 administration:
   steps:
     - title: Reconstitution
-      body: "Add 2 mL bacteriostatic water to 2 mg vial → 1 mg/mL = 100 mcg per 0.1 mL. Roll gently."
+      body: Add 2 mL bacteriostatic water to 2 mg vial → 1 mg/mL = 100 mcg per 0.1 mL. Roll gently.
     - title: Injection site
-      body: "Subcutaneous, abdomen or thigh. Rotate sites."
+      body: Subcutaneous, abdomen or thigh. Rotate sites.
     - title: Timing
-      body: "Pre-sleep preferred. Often combined with ipamorelin in the same syringe."
+      body: Pre-sleep preferred. Often combined with ipamorelin in the same syringe.
     - title: Storage
-      body: "Lyophilised: room temp, protected from light. Reconstituted: refrigerate 2–8 °C, use within 30 days."
+      body: >-
+        Lyophilised: room temp, protected from light. Reconstituted: refrigerate 2–8 °C, use within
+        30 days.
     - title: Needle
-      body: "29–31G, 4–8 mm insulin syringe."
-
+      body: 29–31G, 4–8 mm insulin syringe.
 synergy:
   stacks:
     - partner_slug: ipamorelin
       partner_label: Ipamorelin
       synergy: strong
       rationale: >-
-        CJC-1295 (no DAC) and ipamorelin are the canonical "GHRH + GHRP"
-        dual-axis stack at physiological timing. Both peak within 30 min
-        and clear within 2 hours, producing a sharp, high-amplitude GH
-        pulse closely resembling natural physiology. Preferred over the
-        CJC-1295-DAC + ipamorelin stack when pulsatility (vs sustained
-        elevation) is the goal.
+        CJC-1295 (no DAC) and ipamorelin are the canonical "GHRH + GHRP" dual-axis stack at
+        physiological timing. Both peak within 30 min and clear within 2 hours, producing a sharp,
+        high-amplitude GH pulse closely resembling natural physiology. Preferred over the
+        CJC-1295-DAC + ipamorelin stack when pulsatility (vs sustained elevation) is the goal.
       protocol:
-        "CJC-1295 (no DAC)": "100 mcg SQ · pre-sleep"
-        Ipamorelin: "200–300 mcg SQ · same injection"
-      primary_benefit: "Pulsatile GH stimulation, recovery, body composition"
-      cite: [teichman-2006, raun-1998]
+        CJC-1295 (no DAC): 100 mcg SQ · pre-sleep
+        Ipamorelin: 200–300 mcg SQ · same injection
+      primary_benefit: Pulsatile GH stimulation, recovery, body composition
+      cite: []

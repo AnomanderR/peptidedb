@@ -4,6 +4,8 @@
 
 PeptidesDB is the first peer-reviewable, citation-native peptide research reference. Every claim links to a paper. Every change ships as a pull request. Every contributor is named.
 
+81 plates, 333 citation entries. See [ATLAS.md](./ATLAS.md) for the contributor map.
+
 [**Live site →**](https://peptidesdb.org)
 
 ## Why PeptidesDB
@@ -58,7 +60,7 @@ Every claim-bearing value carries a `cite: [...]` slot — even when uncited (em
 
 ## Contributing
 
-PRs welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the peptide template, citation style, and review checklist.
+PRs welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the peptide template, citation style, and review checklist. New plates run through `bun run gen:plate <name>` — see [ATLAS.md](./ATLAS.md) for the full pipeline.
 
 ## License
 
